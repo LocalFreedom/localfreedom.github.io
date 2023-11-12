@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/post/</link>
-        <description>Recent content in Posts on 离线以自由的博客</description>
+        <title>VM on 离线以自由的博客</title>
+        <link>https://reserve2freedom.github.io/tags/vm/</link>
+        <description>Recent content in VM on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 12 Nov 2023 13:59:06 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Nov 2023 13:59:06 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows 11 使用技巧</title>
         <link>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
@@ -51,32 +51,6 @@
 &lt;h2 id=&#34;随机mac地址&#34;&gt;随机Mac地址&lt;/h2&gt;
 &lt;p&gt;可以在连上的Wifi中设置随机mac地址每日更换。
 该功能需要网卡驱动配合支持。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Hello World</title>
-        <link>https://reserve2freedom.github.io/p/hello-world/</link>
-        <pubDate>Sat, 11 Nov 2023 12:33:08 +0000</pubDate>
-        
-        <guid>https://reserve2freedom.github.io/p/hello-world/</guid>
-        <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
-&lt;p&gt;一直想分享自己在信息技术和隐私方面折腾的经验。
-隐私向的创作分享，当然应当有比较可靠而持久的匿名方式。&lt;/p&gt;
-&lt;p&gt;终于发现github上的静态博客是一个比较均衡的方式，
-支持匿名，平台稳定，无费用，用户多，聚集了目标读者。&lt;/p&gt;
-&lt;p&gt;经历了一系列大大小小的变故，不知道意外和明天哪一个先到来，终于在双十一开启了博客。
-希望这个博客能让读者有所收获。&lt;/p&gt;
-&lt;h2 id=&#34;写作目的&#34;&gt;写作目的&lt;/h2&gt;
-&lt;p&gt;传播数字权利意识，普及隐私保护技术，塑造匿名生活方式。&lt;/p&gt;
-&lt;h2 id=&#34;内容规划&#34;&gt;内容规划&lt;/h2&gt;
-&lt;p&gt;初步考虑以技术笔记分享为主:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;折腾各种自由软件和开源软件的一些技巧&lt;/li&gt;
-&lt;li&gt;数字工具栈的参考配置流程&lt;/li&gt;
-&lt;li&gt;匿名化生活的方式方法&lt;/li&gt;
-&lt;li&gt;收集的一些有趣的资源&lt;/li&gt;
-&lt;li&gt;发展趋势、管理、社区建设、八卦等&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         

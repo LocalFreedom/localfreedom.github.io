@@ -6,22 +6,69 @@
         <description>Recent content on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 11 Nov 2023 12:33:08 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Nov 2023 13:59:06 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows 11 使用技巧</title>
+        <link>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+        <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+        <description>&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网&lt;/h2&gt;
+&lt;p&gt;Windows从11版本开始，强化在线功能。
+家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。
+家庭版安装时的强制联网目前可以用bug跳过，进入离线账户的步骤。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在要求联网的界面，按Shift+F10打开命令行。&lt;/li&gt;
+&lt;li&gt;执行 &lt;code&gt;taskmgr&lt;/code&gt; 开启任务管理器。&lt;/li&gt;
+&lt;li&gt;在详细信息中结束进程 &lt;code&gt;OOBENetworkConnectionFlow.exe&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;22h2进一步限制，专业版也要求联网，上面方法失效。
+可以在要求联网的界面按Shift+F10打开命令行，执行&lt;code&gt;oobe\bypassnro&lt;/code&gt;，重启后可跳过。&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机安装&#34;&gt;虚拟机安装&lt;/h2&gt;
+&lt;p&gt;Win11由于对TPM的要求导致虚拟机安装出现困难，在等待虚拟机软件厂商支持的过程中有一些技巧可以实现虚拟机安装。&lt;/p&gt;
+&lt;h3 id=&#34;vmware&#34;&gt;VMware&lt;/h3&gt;
+&lt;p&gt;从16.2版本开始官方加入了TPM支持，可以直接安装。
+但是TPM支持需要配置加密比较麻烦可以通过如下方法免配置加密开启TPM支持。
+.vmx中加入&lt;code&gt;managedvm.autoAddVTPM=&amp;quot;software&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;virtualbox&#34;&gt;Virtualbox&lt;/h3&gt;
+&lt;p&gt;从7.0版本开始Virtualbox继承了TPM组件，可直接安装。&lt;/p&gt;
+&lt;h4 id=&#34;win11-硬件限制跳过&#34;&gt;Win11 硬件限制跳过&lt;/h4&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;此方法在Win11v1测试可用，更新后不可用。&lt;/li&gt;
+&lt;li&gt;跳过密钥后按&lt;code&gt;Shift+F10&lt;/code&gt;打开终端。&lt;/li&gt;
+&lt;li&gt;输入&lt;code&gt;regedit&lt;/code&gt;进入注册表编辑器。&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\Setup&lt;/code&gt;新建项&lt;code&gt;LabConfig&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;LabConfig&lt;/code&gt;中新建三个&lt;code&gt;DWORD(32-bit)&lt;/code&gt;值。
+&lt;ul&gt;
+&lt;li&gt;BypassTPMCheck = 1&lt;/li&gt;
+&lt;li&gt;BypassRAMCheck = 1&lt;/li&gt;
+&lt;li&gt;BypassSecureBootCheck = 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;退回到安装界面即可继续。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;移动硬盘插上没反应&#34;&gt;移动硬盘插上没反应&lt;/h2&gt;
+&lt;p&gt;Win11似乎有不自动分配盘符的bug,需要在设备管理器-磁盘管理中手动分配盘符。&lt;/p&gt;
+&lt;h2 id=&#34;随机mac地址&#34;&gt;随机Mac地址&lt;/h2&gt;
+&lt;p&gt;可以在连上的Wifi中设置随机mac地址每日更换。
+该功能需要网卡驱动配合支持。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Hello World</title>
         <link>https://reserve2freedom.github.io/p/hello-world/</link>
         <pubDate>Sat, 11 Nov 2023 12:33:08 +0000</pubDate>
         
         <guid>https://reserve2freedom.github.io/p/hello-world/</guid>
-        <description>&lt;h1 id=&#34;hello-world&#34;&gt;Hello World&lt;/h1&gt;
+        <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello World&lt;/h2&gt;
 &lt;p&gt;一直想分享自己在信息技术和隐私方面折腾的经验。
 隐私向的创作分享，当然应当有比较可靠而持久的匿名方式。&lt;/p&gt;
 &lt;p&gt;终于发现github上的静态博客是一个比较均衡的方式，
 支持匿名，平台稳定，无费用，用户多，聚集了目标读者。&lt;/p&gt;
 &lt;p&gt;经历了一系列大大小小的变故，不知道意外和明天哪一个先到来，终于在双十一开启了博客。
 希望这个博客能让读者有所收获。&lt;/p&gt;
-&lt;h1 id=&#34;写作目的&#34;&gt;写作目的&lt;/h1&gt;
+&lt;h2 id=&#34;写作目的&#34;&gt;写作目的&lt;/h2&gt;
 &lt;p&gt;传播数字权利意识，普及隐私保护技术，塑造匿名生活方式。&lt;/p&gt;
-&lt;h1 id=&#34;内容规划&#34;&gt;内容规划&lt;/h1&gt;
+&lt;h2 id=&#34;内容规划&#34;&gt;内容规划&lt;/h2&gt;
 &lt;p&gt;初步考虑以技术笔记分享为主:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;折腾各种自由软件和开源软件的一些技巧&lt;/li&gt;
