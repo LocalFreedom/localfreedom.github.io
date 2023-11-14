@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Introduce to installing win11 in VM without network.'>
-<title>Windows 11 使用技巧</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Backup drivers of the Windows to recover hardware usage offline.'>
+<title>Windows 驱动备份</title>
 
-<link rel='canonical' href='https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel='canonical' href='https://reserve2freedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Windows 11 使用技巧'>
-<meta property='og:description' content='Introduce to installing win11 in VM without network.'>
-<meta property='og:url' content='https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Windows 驱动备份'>
+<meta property='og:description' content='Backup drivers of the Windows to recover hardware usage offline.'>
+<meta property='og:url' content='https://reserve2freedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/'>
 <meta property='og:site_name' content='离线以自由的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Crack' /><meta property='article:tag' content='VM' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2023-11-12T13:59:06&#43;00:00'/><meta property='article:modified_time' content='2023-11-12T13:59:06&#43;00:00'/>
-<meta name="twitter:title" content="Windows 11 使用技巧">
-<meta name="twitter:description" content="Introduce to installing win11 in VM without network.">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2023-11-14T13:59:02&#43;00:00'/><meta property='article:modified_time' content='2023-11-14T13:59:02&#43;00:00'/>
+<meta name="twitter:title" content="Windows 驱动备份">
+<meta name="twitter:description" content="Backup drivers of the Windows to recover hardware usage offline.">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -203,19 +203,11 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#跳过联网">跳过联网</a></li>
-    <li><a href="#虚拟机安装">虚拟机安装</a>
-      <ol>
-        <li><a href="#vmware">VMware</a></li>
-        <li><a href="#virtualbox">Virtualbox</a>
-          <ol>
-            <li><a href="#win11-硬件限制跳过">Win11 硬件限制跳过</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
-    <li><a href="#移动硬盘插上没反应">移动硬盘插上没反应</a></li>
-    <li><a href="#随机mac地址">随机Mac地址</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#导出当前驱动">导出当前驱动</a></li>
+    <li><a href="#optional去掉旧版本驱动">[Optional]去掉旧版本驱动</a></li>
+    <li><a href="#在新系统中重新安装驱动">在新系统中重新安装驱动</a></li>
+    <li><a href="#optional备份存储优化">[Optional]备份存储优化</a></li>
   </ol>
 </nav>
         </div>
@@ -243,12 +235,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">Windows 11 使用技巧</a>
+            <a href="/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/">Windows 驱动备份</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Introduce to installing win11 in VM without network.
+            Backup drivers of the Windows to recover hardware usage offline.
         </h3>
         
     </div>
@@ -269,7 +261,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 12, 2023</time>
+                <time class="article-time--published">Nov 14, 2023</time>
             </div>
         
 
@@ -299,45 +291,41 @@
     <section class="article-content">
     
     
-    <h2 id="跳过联网">跳过联网</h2>
-<p>Windows从11版本开始，强化在线功能。
-家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。
-家庭版安装时的强制联网目前可以用bug跳过，进入离线账户的步骤。</p>
-<ol>
-<li>在要求联网的界面，按Shift+F10打开命令行。</li>
-<li>执行 <code>taskmgr</code> 开启任务管理器。</li>
-<li>在详细信息中结束进程 <code>OOBENetworkConnectionFlow.exe</code>。</li>
-</ol>
-<p>22h2进一步限制，专业版也要求联网，上面方法失效。
-可以在要求联网的界面按Shift+F10打开命令行，执行<code>oobe\bypassnro</code>，重启后可跳过。</p>
-<h2 id="虚拟机安装">虚拟机安装</h2>
-<p>Win11由于对TPM的要求导致虚拟机安装出现困难，在等待虚拟机软件厂商支持的过程中有一些技巧可以实现虚拟机安装。</p>
-<h3 id="vmware">VMware</h3>
-<p>从16.2版本开始官方加入了TPM支持，可以直接安装。
-但是TPM支持需要配置加密比较麻烦可以通过如下方法免配置加密开启TPM支持。
-.vmx中加入<code>managedvm.autoAddVTPM=&quot;software&quot;</code></p>
-<h3 id="virtualbox">Virtualbox</h3>
-<p>从7.0版本开始Virtualbox继承了TPM组件，可直接安装。</p>
-<h4 id="win11-硬件限制跳过">Win11 硬件限制跳过</h4>
-<ol start="0">
-<li>此方法在Win11v1测试可用，更新后不可用。</li>
-<li>跳过密钥后按<code>Shift+F10</code>打开终端。</li>
-<li>输入<code>regedit</code>进入注册表编辑器。</li>
-<li>在<code>HKEY_LOCAL_MACHINE\SYSTEM\Setup</code>新建项<code>LabConfig</code>。</li>
-<li>在<code>LabConfig</code>中新建三个<code>DWORD(32-bit)</code>值。
-<ul>
-<li>BypassTPMCheck = 1</li>
-<li>BypassRAMCheck = 1</li>
-<li>BypassSecureBootCheck = 1</li>
-</ul>
-</li>
-<li>退回到安装界面即可继续。</li>
-</ol>
-<h2 id="移动硬盘插上没反应">移动硬盘插上没反应</h2>
-<p>Win11似乎有不自动分配盘符的bug,需要在设备管理器-磁盘管理中手动分配盘符。</p>
-<h2 id="随机mac地址">随机Mac地址</h2>
-<p>可以在连上的Wifi中设置随机mac地址每日更换。
-该功能需要网卡驱动配合支持。</p>
+    <h2 id="前言">前言</h2>
+<p>如果想重装系统后离线使用，除了系统安装盘，通常还需要准备驱动。
+计算机制造商通常会提供驱动，但这可能不全面或已经过时。
+导出当前正常运行状态的驱动，并在重装系统后再次导入，能期望获得最完美的硬件连续使用体验。
+就像制造商网站提供的驱动区分系统版本，这一方法在前后系统大版本不一致时很可能出现兼容性问题。</p>
+<h2 id="导出当前驱动">导出当前驱动</h2>
+<p>有很多工具软件可以实现这一功能。
+既然Windows系统自带了这一功能，从信任链和攻击面的角度当然尽可能使用自带功能。
+用管理员权限运行cmd或powershell,执行下列命令即可导出当前系统的驱动。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">dism</span> <span class="p">/</span><span class="n">online</span> <span class="p">/</span><span class="nb">export-driver</span> <span class="p">/</span><span class="n">destination</span><span class="err">:</span><span class="n">E:</span><span class="p">\</span><span class="n">MyDrivers</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中<code>E:\MyDrivers</code>是你想导出的位置目录。</p>
+<p>导出的文件原位置在<code>C:\Windows\System32\DriverStore\FileRepository</code>，也可以尝试手动复制。</p>
+<h2 id="optional去掉旧版本驱动">[Optional]去掉旧版本驱动</h2>
+<p>如果驱动在计算机使用过程中更新了，那么所有使用过的驱动版本都会被保留一并导出。
+为了节省存储空间，可以考虑删掉旧版本的驱动。</p>
+<p>进入导出驱动的目录，每个驱动会存放在一个名为<code>[驱动名].inf_amd64_[编译号]</code>的文件夹。
+驱动名相同，编译号不同的文件夹即是同一驱动的不同版本。</p>
+<p>编译号字典序并不表示先后关系，需要进入文件夹对比<code>[驱动名].inf</code>文件中的日期和版本号。
+也可以借助驱动管理软件来快捷分析，如<code>Sanppy Driver Installer Origin</code>。</p>
+<h2 id="在新系统中重新安装驱动">在新系统中重新安装驱动</h2>
+<p><strong>有些驱动如果被系统安装过程依赖，要提前并入安装介质，如硬盘驱动！</strong></p>
+<p>安装好新系统后将导出驱动的文件夹拷贝，依次进入每个文件夹<code>[驱动名].inf_amd64_[编译号]</code>，右键<code>[驱动名].inf</code>选择<code>安装</code>即可安装每个驱动，恢复之前的硬件驱动状态。</p>
+<p>也可以在设备管理器中针对每个未知设备搜索驱动，选择从本地存放导出驱动的文件夹搜索即可。
+这样可以省略一些不那么关键的驱动，同时很多优化更新类的驱动容易被忽略，因为这类设备不会被标记为未知设备。</p>
+<h2 id="optional备份存储优化">[Optional]备份存储优化</h2>
+<p>这样导出的驱动是不压缩的，手动压缩可能比例也不高。
+其中占用空间较大的通常是显卡驱动，可以考虑显卡驱动采用Intel或Nvidia等厂商的官方安装包，可节省存储空间。
+而且显卡驱动的厂商安装包通常支持多个大版本的系统，可以在不同驱动备份中复用。</p>
 
 </section>
 
@@ -345,10 +333,6 @@
     <footer class="article-footer">
     
     <section class="article-tags">
-        
-            <a href="/tags/crack/">Crack</a>
-        
-            <a href="/tags/vm/">VM</a>
         
             <a href="/tags/windows/">Windows</a>
         
@@ -408,12 +392,12 @@
             
                 
 <article class="">
-    <a href="/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/">
+    <a href="/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Windows 驱动备份</h2>
+            <h2 class="article-title">Windows 11 使用技巧</h2>
         </div>
     </a>
 </article>
