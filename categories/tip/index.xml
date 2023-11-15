@@ -6,7 +6,37 @@
         <description>Recent content in Tip on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 Nov 2023 13:59:02 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 15 Nov 2023 12:13:15 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>RAR 妙用</title>
+        <link>https://reserve2freedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</link>
+        <pubDate>Wed, 15 Nov 2023 12:13:15 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;RAR是最知名、使用最为广泛的压缩软件之一。
+官网是 &lt;a class=&#34;link&#34; href=&#34;https://www.rarlab.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.rarlab.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;获取旧版本&#34;&gt;获取旧版本&lt;/h2&gt;
+&lt;p&gt;虽然官网只有最新release和beta版本的下载连接，但官方也提供了FTP可以下载以前的版本。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;ftp://ftp.rarlab.com/rar&#34; &gt;ftp://ftp.rarlab.com/rar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;鉴于当前主流浏览器不再支持ftp可能需要filezilla等软件来获取旧版本安装包。
+6.10开始不再支持XP，XPsp3只能使用32位版本。&lt;/p&gt;
+&lt;p&gt;比较特殊的是&lt;strong&gt;5.91&lt;/strong&gt;版本，这是5系列最后一版本，同时也是Win7SP1可以直接识别数字签名的版本，非常时候收藏以离线安装使用。
+但是当年RAR的数字签名除了问题，ftp上提供的是重新签名后的版本，并不能被Win7SP1识别。
+作者在这里放上当年从官网下载的&lt;code&gt;winrar-x64-591.exe&lt;/code&gt;的SHA256值&lt;code&gt;1c30d74f20ea721d63061d2a06ac00a9270fc7823004ff4f572d354990d4c1ae&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;激活&#34;&gt;激活&lt;/h2&gt;
+&lt;p&gt;RAR是专有收费软件，尽管很多人都没有意识到。
+RAR作者也非常良心，只要忍受每次开起的广告就可以一直试用。
+购买正版对于很多国家可能并不简单，不过激活还是很容易做到的。
+在RAR安装目录&lt;code&gt;C:\Program Files\WinRAR&lt;/code&gt;下新建&lt;code&gt;rarreg.key&lt;/code&gt;，输入纯文本注册信息即可激活。
+注册信息就麻烦读者自行检索吧。&lt;/p&gt;
+&lt;h2 id=&#34;防乱码&#34;&gt;防乱码&lt;/h2&gt;
+&lt;p&gt;使用最广泛的开源的ZIP格式，没有在压缩包中包含字符编码的说明。
+对于中文用户，从WinXP或Win7打包的文件可能在MacOS或Linux上文件名目录乱码。
+而RAR格式是包含字符编码信息的，便于在其他语言或默认字符编码的系统中正确识别文件名和目录的字符编码。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Windows 驱动备份</title>
         <link>https://reserve2freedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</link>
         <pubDate>Tue, 14 Nov 2023 13:59:02 +0000</pubDate>
