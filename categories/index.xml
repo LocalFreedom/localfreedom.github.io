@@ -6,7 +6,15 @@
         <description>Recent content in Categories on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 15 Nov 2023 12:13:15 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 18 Nov 2023 10:41:25 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Usage</title>
+        <link>https://reserve2freedom.github.io/categories/usage/</link>
+        <pubDate>Sat, 18 Nov 2023 10:41:25 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/categories/usage/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Tip</title>
         <link>https://reserve2freedom.github.io/categories/tip/</link>
         <pubDate>Wed, 15 Nov 2023 12:13:15 +0000</pubDate>
