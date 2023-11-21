@@ -6,7 +6,52 @@
         <description>Recent content in Posts on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 18 Nov 2023 10:41:25 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Nov 2023 10:32:17 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GPT4ALL</title>
+        <link>https://reserve2freedom.github.io/p/gpt4all/</link>
+        <pubDate>Tue, 21 Nov 2023 10:32:17 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/gpt4all/</guid>
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;GPT4All是一个本地软件，用于将大语言模型(LargeLanguageModel)通过浮点优化等方法在本地离线提供服务。&lt;/p&gt;
+&lt;p&gt;在ChatGPT大火之后，很多厂商模仿推出了开源或专有的大语言对话模型，但这些模型要么以web服务方式提供要么过于需要计算资源而难以本地使用。&lt;/p&gt;
+&lt;p&gt;随着facebook的llama的泄漏，一个不错的离线替代品出现，同时&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggerganov/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;llama.cpp&lt;/a&gt;项目通过浮点计算优化让笔记本也能勉强运行起大模型来。
+GPT4All项目将相关技术和资源整合制作了QT桌面软件，让用户能方便的本地离线运行公开的大语言模型，当然它也提供OpenAI的接口以同时使用线上服务。&lt;/p&gt;
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+&lt;p&gt;官网会提供&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-win64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Windows&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-darwin.dmg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MacOS&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-linux.run&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Linux&lt;/a&gt;的安装包，但每次安装还是会联网检索信息，无法离线安装，只要官网能访问就可以简单的“下一步”安装完成。
+也可以从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nomic-ai/gpt4all&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;源代码&lt;/a&gt;编译。&lt;/p&gt;
+&lt;h1 id=&#34;下载模型&#34;&gt;下载模型&lt;/h1&gt;
+&lt;p&gt;官方会预配置一些模型可供直接使用，由于网络的封锁这一步可以离线进行。&lt;/p&gt;
+&lt;p&gt;模型列表来自官网，下载时会跳转到一个github地址 &lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/models/models.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://gpt4all.io/models/models.json&lt;/a&gt;
+可以手动下载后放到 &lt;code&gt;~/AppData/Roaming/nomic.ai/models.json&lt;/code&gt;
+之后点击界面左侧的 &lt;code&gt;Download&lt;/code&gt; 按钮就可以看到可选模型列表了。&lt;/p&gt;
+&lt;p&gt;由于huggingface被彻底封锁，只能手动科学下载。
+在&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网首页&lt;/a&gt;下来可以看到模型介绍，选择想下载的模型，点击下方卡片的箭头按钮就可以下载。
+下载后放到&lt;code&gt;~/AppData/Local/nomic.ai/GPT4ALL/&lt;/code&gt;里就能被软件自动识别到。&lt;/p&gt;
+&lt;h1 id=&#34;对话&#34;&gt;对话&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://reserve2freedom.github.io/img/gpt4all.gif&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UI&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;从上方的菜单选择已经下载好被识别的模型，即可像ChatGPT一样对话。
+这些模型通常要求16G的内存即可。
+对话效果差强人意，而且基本只支持英文输出。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>火狐浏览器离线使用扩展推荐</title>
         <link>https://reserve2freedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
         <pubDate>Sat, 18 Nov 2023 10:41:25 +0000</pubDate>
