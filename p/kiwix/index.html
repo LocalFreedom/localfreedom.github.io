@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Create LaTeX environment.'>
-<title>LaTeX 环境搭建</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Offline wikipedia and other documents.'>
+<title>kiwix</title>
 
-<link rel='canonical' href='https://reserve2freedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/'>
+<link rel='canonical' href='https://reserve2freedom.github.io/p/kiwix/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='LaTeX 环境搭建'>
-<meta property='og:description' content='Create LaTeX environment.'>
-<meta property='og:url' content='https://reserve2freedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='kiwix'>
+<meta property='og:description' content='Offline wikipedia and other documents.'>
+<meta property='og:url' content='https://reserve2freedom.github.io/p/kiwix/'>
 <meta property='og:site_name' content='离线以自由的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Creative' /><meta property='article:published_time' content='2023-11-28T08:06:45&#43;00:00'/><meta property='article:modified_time' content='2023-11-28T08:06:45&#43;00:00'/><meta property='og:image' content='https://reserve2freedom.github.io/img/latex-project-logo.svg' />
-<meta name="twitter:title" content="LaTeX 环境搭建">
-<meta name="twitter:description" content="Create LaTeX environment."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://reserve2freedom.github.io/img/latex-project-logo.svg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Offline' /><meta property='article:tag' content='Utility' /><meta property='article:published_time' content='2023-12-03T03:58:12&#43;00:00'/><meta property='article:modified_time' content='2023-12-03T03:58:12&#43;00:00'/>
+<meta name="twitter:title" content="kiwix">
+<meta name="twitter:description" content="Offline wikipedia and other documents.">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -248,22 +247,15 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#latex介绍">LaTeX介绍</a></li>
-    <li><a href="#安装latextexlive">安装LaTeX(TexLive)</a>
+    <li><a href="#离线知识库工具">离线知识库工具</a></li>
+    <li><a href="#离线知识库">离线知识库</a>
       <ol>
-        <li><a href="#下载">下载</a></li>
-        <li><a href="#安装">安装</a></li>
-        <li><a href="#注意">注意</a></li>
+        <li><a href="#资源网址">资源网址</a></li>
+        <li><a href="#各种版本">各种版本</a></li>
+        <li><a href="#下载方式">下载方式</a></li>
       </ol>
     </li>
-    <li><a href="#编辑器vscode">编辑器VSCode</a>
-      <ol>
-        <li><a href="#选择理由">选择理由</a></li>
-        <li><a href="#安装-1">安装</a></li>
-        <li><a href="#配置">配置</a></li>
-      </ol>
-    </li>
-    <li><a href="#后记">后记</a></li>
+    <li><a href="#kiwix的意义">kiwix的意义</a></li>
   </ol>
 </nav>
         </div>
@@ -275,23 +267,15 @@
 
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-                
-                    <img src="/img/latex-project-logo.svg" loading="lazy" alt="Featured image of post LaTeX 环境搭建" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
     <header class="article-category">
         
-            <a href="/categories/pipeline/" >
-                Pipeline
+            <a href="/categories/usage/" >
+                Usage
             </a>
         
     </header>
@@ -299,12 +283,12 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">LaTeX 环境搭建</a>
+            <a href="/p/kiwix/">kiwix</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Create LaTeX environment.
+            Offline wikipedia and other documents.
         </h3>
         
     </div>
@@ -325,7 +309,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 28, 2023</time>
+                <time class="article-time--published">Dec 03, 2023</time>
             </div>
         
 
@@ -340,7 +324,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -355,193 +339,44 @@
     <section class="article-content">
     
     
-    <h2 id="latex介绍">LaTeX介绍</h2>
-<p>LaTeX(LATEX，音译“拉泰赫”)是一种基于ΤeΧ的排版系统。区别于MSOfficeWord这类的所见即所得形式的编辑，LaTeX是一种代码式的排版工具，善于用命令精确规范文档的格式。
-可以把LaTeX和TeX的关系比作STL和C++的关系。这里配置的环境当然也是包括TEX的。</p>
-<p>LaTeX的写作环境就像编程，分为编译引擎和编辑工具。
-编译引擎现在通常选择TexLive发行版。
-编辑工具可以使用任意文本编辑器，如notepad,vim,emacs,gedit,vscode等。
-有一些专门用于LaTeX的编辑软件，按<a class="link" href="https://alternativeto.net"  target="_blank" rel="noopener"
-    >alternativeto</a>的排序如LyX,TexMaker,TeXstudio,MiKTeX,Kile,Gummi,TeXworks,Latexila等。</p>
-<h2 id="安装latextexlive">安装LaTeX(TexLive)</h2>
-<h3 id="下载">下载</h3>
-<p><a class="link" href="https://www.latex-project.org"  target="_blank" rel="noopener"
-    >LaTeX官网</a> 并不直接提供下载，而是像Linux一样<a class="link" href="https://www.tug.org/interest.html#free"  target="_blank" rel="noopener"
-    >选择发行版</a>。
-这里推荐最跨平台的<a class="link" href="https://www.tug.org/texlive/"  target="_blank" rel="noopener"
-    >TexLive</a>版本，网页很朴素可以看到如下获取选项：</p>
+    <h2 id="离线知识库工具">离线知识库工具</h2>
+<p><a class="link" href="https://kiwix.org"  target="_blank" rel="noopener"
+    >kiwix</a>是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
+当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
+可以说kiwix是<strong>实现自由的离线生活的重要基础设施</strong>。</p>
+<p>kiwix<a class="link" href="https://kiwix.org/en/applications/"  target="_blank" rel="noopener"
+    >支持Windows、MacOS/iOS、GNU/Linux、Android等</a>，可以说是完全跨平台软件，也有很好的国际化多语言支持。
+软件很小巧值得收藏。
+kiwix还有<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline"  target="_blank" rel="noopener"
+    >Firefox插件版本</a>可以体验。
+博主测试浏览器插件使用效果目前还不太稳定。</p>
+<h2 id="离线知识库">离线知识库</h2>
+<h3 id="资源网址">资源网址</h3>
+<p><a class="link" href="https://library.kiwix.org"  target="_blank" rel="noopener"
+    >https://library.kiwix.org</a> 列出了官方背书的知识库，可以筛选查找。</p>
+<p><a class="link" href="https://download.kiwix.org/zim/"  target="_blank" rel="noopener"
+    >https://download.kiwix.org/zim/</a> 这里可以下载官方的资源。</p>
+<h3 id="各种版本">各种版本</h3>
+<p>维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
+每种语言有完全版本(all)和精选版本(top)。
+网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。</p>
+<p>比如 <a class="link" href="https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim"  target="_blank" rel="noopener"
+    >https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim</a> 就是维基百科-中文-完全-无图片版本。</p>
+<p>其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
+目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。</p>
+<h3 id="下载方式">下载方式</h3>
 <ul>
-<li><strong>Ways to acquire TeX Live:</strong>
-<ul>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-netinstall.html"  target="_blank" rel="noopener"
-    >download</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-dvd.html"  target="_blank" rel="noopener"
-    >on DVD</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-iso.html"  target="_blank" rel="noopener"
-    >an ISO image or via torrent</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire.html"  target="_blank" rel="noopener"
-    >other methods</a>.</li>
+<li>直接下载，从<a class="link" href="https://download.kiwix.org/zim/"  target="_blank" rel="noopener"
+    >网页</a>直接点击下载。</li>
+<li>BT下载，在zim下载连接后面加上<code>.torrent</code>即可下载种子文件，然后用喜欢的BT工具下载即可。</li>
+<li>镜像下载，很多镜像站会镜像整个<a class="link" href="https://download.kiwix.org/"  target="_blank" rel="noopener"
+    >数据网站</a>也可以去那里下载。</li>
 </ul>
-</li>
-</ul>
-<p>完全安装大约有7G，联网安装很慢容易断，所以不要直接点download，而是选择<code>an ISO image or via torrent</code>。</p>
-<p>接下来随便怎么下载，下好后用页面上提供的sha256或其他checksum检验一下就好。
-如此伟大的软件当然应该把其签名<a class="link" href="https://www.tug.org/texlive/files/texlive.asc"  target="_blank" rel="noopener"
-    >公钥</a>纳入自己的GPG。这里就不详谈密码学和公钥信任体系了。</p>
-<p>下载好ISO文件并用sha256检验完整后，用虚拟光驱打开光盘。现在Ubuntu和Win10等系统应该都是自带虚拟光驱功能的。</p>
-<h3 id="安装">安装</h3>
-<p>进入光盘根目录。</p>
-<p>Linux/MacOS上执行<code>install-tl</code>，Windows执行<code>install-tl-windows.bat</code>。
-Linux如果安装了<code>perl-tk</code>包的话可以加上<code>-gui</code>参数开启图形界面，不过字符界面安装已经足够好用了。</p>
-<pre><code>Installing TeX Live 2023 from: ... 
-Platform: x86_64-linux =&gt; ’GNU/Linux on x86_64’ 
-Distribution: inst (compressed) 
-Directory for temporary files: /tmp 
-... 
- Detected platform: GNU/Linux on Intel x86_64 
- 
- &lt;B&gt; binary platforms: 1 out of 16 
- 
- &lt;S&gt; set installation scheme: scheme-full 
- 
- &lt;C&gt; customizing installation collections 
-     40 collections out of 41, disk space required: 7620 MB (free: 138718 MB) 
- 
- &lt;D&gt; directories: 
-   TEXDIR (the main TeX directory): 
-     /usr/local/texlive/2023 
-   ... 
- 
- &lt;O&gt; options: 
-   [ ] use letter size instead of A4 by default 
-   ... 
- 
- &lt;V&gt; set up for portable installation 
- 
-Actions: 
- &lt;I&gt; start installation to hard disk 
- &lt;P&gt; save installation profile to ’texlive.profile’ and exit 
- &lt;H&gt; help 
- &lt;Q&gt; quit
-</code></pre>
-<p>看说明可选择V进行可移动安装，这个看个人习惯，后续步骤一样。</p>
-<p>大写字母D设置安装路径。</p>
-<p>然后再输入大写字母I就可以安装到磁盘。</p>
-<p>注意P选项，暂存配置但下次打开运行安装程序并不会自动读取，最好一气呵成，反正也没几个设置的。</p>
-<p>这一套装完几乎会用到的宏包(依赖)就都齐全了，而且包括<a class="link" href="https://ctex.org"  target="_blank" rel="noopener"
-    >CTEX</a>中文套件。</p>
-<h3 id="注意">注意</h3>
-<ul>
-<li>安装结束的时候会有提示将路径加入环境变量<code>$PATH</code>。</li>
-<li>Linux也可以考虑从发行版仓库里安装texlive-full。</li>
-<li>建议不要精简安装，中文涉及的依赖很复杂。</li>
-</ul>
-<h2 id="编辑器vscode">编辑器VSCode</h2>
-<h3 id="选择理由">选择理由</h3>
-<ul>
-<li>轻量，占用资源少。</li>
-<li>用户多，文档和资料多，便于调试。</li>
-<li>免费，微软开源软件，官方有移动版，还有更自由的替代品<a class="link" href="https://vscodium.com/"  target="_blank" rel="noopener"
-    >VSCodium</a>。</li>
-<li>有很好的插件<a class="link" href="https://github.com/James-Yu/LaTeX-Workshop"  target="_blank" rel="noopener"
-    >latex-workshop</a>，便于对中文特殊情况做灵活的配置，而且在VSCodium也默认可用。</li>
-</ul>
-<h3 id="安装-1">安装</h3>
-<ul>
-<li><a class="link" href="https://code.visualstudio.com/"  target="_blank" rel="noopener"
-    >VSCode</a>或<a class="link" href="https://vscodium.com/"  target="_blank" rel="noopener"
-    >VSCodium</a>
-<ul>
-<li>官网下载</li>
-<li>推荐非管理员权限的安装方式。</li>
-<li>官方Linux<a class="link" href="https://github.com/microsoft/vscode/blob/main/resources/linux/code.desktop"  target="_blank" rel="noopener"
-    >desktop文件</a></li>
-</ul>
-</li>
-<li>latex插件
-<ul>
-<li>点开左侧的EXTENSION按钮</li>
-<li>搜索<code>latex</code>，选择<code>latex-workshop</code>安装。</li>
-</ul>
-</li>
-<li>fonts字体
-<ul>
-<li>通常作品的编译需要adobe字体，Linux下可能需要Windows字体</li>
-<li>Linux下建议用字体管理器安装到用户目录</li>
-<li>Linux下可能出现字体文件名大小写的问题</li>
-<li>adobe的opentype字体可以考虑复制到<code>C:\texlive\2023\texmf-dist\fonts\opentype\adobe</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="配置">配置</h3>
-<ul>
-<li>vscode
-<ul>
-<li>File-&gt;Preferences-&gt;Settings</li>
-<li>搜索tele，禁用远程遥测</li>
-<li>搜索auto，禁用自动更新</li>
-</ul>
-</li>
-<li>latex-workshop
-<ul>
-<li>左侧插件菜单点击设置，搜索<code>recipes</code>，或在全局设置搜索<code>latex-workshop.latex.recipes</code></li>
-<li>点击<code>Edit in settings.json</code></li>
-<li>设置包含recipes和tools两部分，如果没看见tools再搜索结果里找一下点击。</li>
-<li>recipes对应左侧扩展操作面板里的BUILD方法</li>
-<li>recipes里每一项的内容为依次调用tools里的定义
-<ul>
-<li>name 面板中显示的名称</li>
-<li>tools 依次调用的项目(tools定义)数组</li>
-<li>如
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;tools&#34;</span><span class="err">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;xelatex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-jrnl.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-conf.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-patent.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;makeindex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;xelatex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-</li>
-<li>tools
-<ul>
-<li>name 项目名称</li>
-<li>command 命令名称，即一个tools项目是一条命令行，这里填命令名</li>
-<li>args 参数数组，命令行中的空格都改成逗号分隔</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>部分编译组件的用途
-<ul>
-<li>xelatex 编译包含中文的正文</li>
-<li>bibtex 编译参考文献</li>
-<li>makeindex 生成图表索引及目录</li>
-</ul>
-</li>
-</ul>
-<h2 id="后记">后记</h2>
-<p>装好编译引擎(TexLive)和编辑工具(VSCode)后就可以尝试LaTeX写作了，也许<a class="link" href="https://latex-tutorial.com/"  target="_blank" rel="noopener"
-    >教程</a>学习曲线比较陡峭，但相信各位读者尤其是程序员读者会逐渐感受到这一工具的魅力。
-记笔记写博客常用的<code>markdown </code>可以看作LaTeX的简化版，其中包括嵌入LaTeX数学公式，可见其表达能力是非常强的。
-LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资源与使用。</p>
+<p>zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。</p>
+<h2 id="kiwix的意义">kiwix的意义</h2>
+<p>kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
+既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
+离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。</p>
 
 </section>
 
@@ -550,7 +385,9 @@ LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资
     
     <section class="article-tags">
         
-            <a href="/tags/creative/">Creative</a>
+            <a href="/tags/offline/">Offline</a>
+        
+            <a href="/tags/utility/">Utility</a>
         
     </section>
 
@@ -600,6 +437,41 @@ LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/gpt4all/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">GPT4ALL</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">火狐浏览器离线使用扩展推荐</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

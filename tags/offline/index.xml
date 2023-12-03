@@ -6,199 +6,50 @@
         <description>Recent content in Offline on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 28 Nov 2023 08:06:45 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>LaTeX 环境搭建</title>
-        <link>https://reserve2freedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
-        <pubDate>Tue, 28 Nov 2023 08:06:45 +0000</pubDate>
+        <lastBuildDate>Sun, 03 Dec 2023 03:58:12 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>kiwix</title>
+        <link>https://reserve2freedom.github.io/p/kiwix/</link>
+        <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-        <description>&lt;img src="https://reserve2freedom.github.io/img/latex-project-logo.svg" alt="Featured image of post LaTeX 环境搭建" /&gt;&lt;h2 id=&#34;latex介绍&#34;&gt;LaTeX介绍&lt;/h2&gt;
-&lt;p&gt;LaTeX(LATEX，音译“拉泰赫”)是一种基于ΤeΧ的排版系统。区别于MSOfficeWord这类的所见即所得形式的编辑，LaTeX是一种代码式的排版工具，善于用命令精确规范文档的格式。
-可以把LaTeX和TeX的关系比作STL和C++的关系。这里配置的环境当然也是包括TEX的。&lt;/p&gt;
-&lt;p&gt;LaTeX的写作环境就像编程，分为编译引擎和编辑工具。
-编译引擎现在通常选择TexLive发行版。
-编辑工具可以使用任意文本编辑器，如notepad,vim,emacs,gedit,vscode等。
-有一些专门用于LaTeX的编辑软件，按&lt;a class=&#34;link&#34; href=&#34;https://alternativeto.net&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;alternativeto&lt;/a&gt;的排序如LyX,TexMaker,TeXstudio,MiKTeX,Kile,Gummi,TeXworks,Latexila等。&lt;/p&gt;
-&lt;h2 id=&#34;安装latextexlive&#34;&gt;安装LaTeX(TexLive)&lt;/h2&gt;
-&lt;h3 id=&#34;下载&#34;&gt;下载&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.latex-project.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;LaTeX官网&lt;/a&gt; 并不直接提供下载，而是像Linux一样&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/interest.html#free&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;选择发行版&lt;/a&gt;。
-这里推荐最跨平台的&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;TexLive&lt;/a&gt;版本，网页很朴素可以看到如下获取选项：&lt;/p&gt;
+        <guid>https://reserve2freedom.github.io/p/kiwix/</guid>
+        <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
+当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
+可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;kiwix&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org/en/applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持Windows、MacOS/iOS、GNU/Linux、Android等&lt;/a&gt;，可以说是完全跨平台软件，也有很好的国际化多语言支持。
+软件很小巧值得收藏。
+kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Firefox插件版本&lt;/a&gt;可以体验。
+博主测试浏览器插件使用效果目前还不太稳定。&lt;/p&gt;
+&lt;h2 id=&#34;离线知识库&#34;&gt;离线知识库&lt;/h2&gt;
+&lt;h3 id=&#34;资源网址&#34;&gt;资源网址&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://library.kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://library.kiwix.org&lt;/a&gt; 列出了官方背书的知识库，可以筛选查找。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.kiwix.org/zim/&lt;/a&gt; 这里可以下载官方的资源。&lt;/p&gt;
+&lt;h3 id=&#34;各种版本&#34;&gt;各种版本&lt;/h3&gt;
+&lt;p&gt;维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
+每种语言有完全版本(all)和精选版本(top)。
+网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。&lt;/p&gt;
+&lt;p&gt;比如 &lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&lt;/a&gt; 就是维基百科-中文-完全-无图片版本。&lt;/p&gt;
+&lt;p&gt;其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
+目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。&lt;/p&gt;
+&lt;h3 id=&#34;下载方式&#34;&gt;下载方式&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Ways to acquire TeX Live:&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/acquire-netinstall.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;download&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/acquire-dvd.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;on DVD&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/acquire-iso.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;an ISO image or via torrent&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/acquire.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;other methods&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;直接下载，从&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页&lt;/a&gt;直接点击下载。&lt;/li&gt;
+&lt;li&gt;BT下载，在zim下载连接后面加上&lt;code&gt;.torrent&lt;/code&gt;即可下载种子文件，然后用喜欢的BT工具下载即可。&lt;/li&gt;
+&lt;li&gt;镜像下载，很多镜像站会镜像整个&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;数据网站&lt;/a&gt;也可以去那里下载。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;完全安装大约有7G，联网安装很慢容易断，所以不要直接点download，而是选择&lt;code&gt;an ISO image or via torrent&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;接下来随便怎么下载，下好后用页面上提供的sha256或其他checksum检验一下就好。
-如此伟大的软件当然应该把其签名&lt;a class=&#34;link&#34; href=&#34;https://www.tug.org/texlive/files/texlive.asc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;公钥&lt;/a&gt;纳入自己的GPG。这里就不详谈密码学和公钥信任体系了。&lt;/p&gt;
-&lt;p&gt;下载好ISO文件并用sha256检验完整后，用虚拟光驱打开光盘。现在Ubuntu和Win10等系统应该都是自带虚拟光驱功能的。&lt;/p&gt;
-&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
-&lt;p&gt;进入光盘根目录。&lt;/p&gt;
-&lt;p&gt;Linux/MacOS上执行&lt;code&gt;install-tl&lt;/code&gt;，Windows执行&lt;code&gt;install-tl-windows.bat&lt;/code&gt;。
-Linux如果安装了&lt;code&gt;perl-tk&lt;/code&gt;包的话可以加上&lt;code&gt;-gui&lt;/code&gt;参数开启图形界面，不过字符界面安装已经足够好用了。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Installing TeX Live 2023 from: ... 
-Platform: x86_64-linux =&amp;gt; ’GNU/Linux on x86_64’ 
-Distribution: inst (compressed) 
-Directory for temporary files: /tmp 
-... 
- Detected platform: GNU/Linux on Intel x86_64 
- 
- &amp;lt;B&amp;gt; binary platforms: 1 out of 16 
- 
- &amp;lt;S&amp;gt; set installation scheme: scheme-full 
- 
- &amp;lt;C&amp;gt; customizing installation collections 
-     40 collections out of 41, disk space required: 7620 MB (free: 138718 MB) 
- 
- &amp;lt;D&amp;gt; directories: 
-   TEXDIR (the main TeX directory): 
-     /usr/local/texlive/2023 
-   ... 
- 
- &amp;lt;O&amp;gt; options: 
-   [ ] use letter size instead of A4 by default 
-   ... 
- 
- &amp;lt;V&amp;gt; set up for portable installation 
- 
-Actions: 
- &amp;lt;I&amp;gt; start installation to hard disk 
- &amp;lt;P&amp;gt; save installation profile to ’texlive.profile’ and exit 
- &amp;lt;H&amp;gt; help 
- &amp;lt;Q&amp;gt; quit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;看说明可选择V进行可移动安装，这个看个人习惯，后续步骤一样。&lt;/p&gt;
-&lt;p&gt;大写字母D设置安装路径。&lt;/p&gt;
-&lt;p&gt;然后再输入大写字母I就可以安装到磁盘。&lt;/p&gt;
-&lt;p&gt;注意P选项，暂存配置但下次打开运行安装程序并不会自动读取，最好一气呵成，反正也没几个设置的。&lt;/p&gt;
-&lt;p&gt;这一套装完几乎会用到的宏包(依赖)就都齐全了，而且包括&lt;a class=&#34;link&#34; href=&#34;https://ctex.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;CTEX&lt;/a&gt;中文套件。&lt;/p&gt;
-&lt;h3 id=&#34;注意&#34;&gt;注意&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;安装结束的时候会有提示将路径加入环境变量&lt;code&gt;$PATH&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;Linux也可以考虑从发行版仓库里安装texlive-full。&lt;/li&gt;
-&lt;li&gt;建议不要精简安装，中文涉及的依赖很复杂。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;编辑器vscode&#34;&gt;编辑器VSCode&lt;/h2&gt;
-&lt;h3 id=&#34;选择理由&#34;&gt;选择理由&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;轻量，占用资源少。&lt;/li&gt;
-&lt;li&gt;用户多，文档和资料多，便于调试。&lt;/li&gt;
-&lt;li&gt;免费，微软开源软件，官方有移动版，还有更自由的替代品&lt;a class=&#34;link&#34; href=&#34;https://vscodium.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;VSCodium&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;有很好的插件&lt;a class=&#34;link&#34; href=&#34;https://github.com/James-Yu/LaTeX-Workshop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;latex-workshop&lt;/a&gt;，便于对中文特殊情况做灵活的配置，而且在VSCodium也默认可用。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;安装-1&#34;&gt;安装&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;VSCode&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://vscodium.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;VSCodium&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;官网下载&lt;/li&gt;
-&lt;li&gt;推荐非管理员权限的安装方式。&lt;/li&gt;
-&lt;li&gt;官方Linux&lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/vscode/blob/main/resources/linux/code.desktop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;desktop文件&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;latex插件
-&lt;ul&gt;
-&lt;li&gt;点开左侧的EXTENSION按钮&lt;/li&gt;
-&lt;li&gt;搜索&lt;code&gt;latex&lt;/code&gt;，选择&lt;code&gt;latex-workshop&lt;/code&gt;安装。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;fonts字体
-&lt;ul&gt;
-&lt;li&gt;通常作品的编译需要adobe字体，Linux下可能需要Windows字体&lt;/li&gt;
-&lt;li&gt;Linux下建议用字体管理器安装到用户目录&lt;/li&gt;
-&lt;li&gt;Linux下可能出现字体文件名大小写的问题&lt;/li&gt;
-&lt;li&gt;adobe的opentype字体可以考虑复制到&lt;code&gt;C:\texlive\2023\texmf-dist\fonts\opentype\adobe&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;vscode
-&lt;ul&gt;
-&lt;li&gt;File-&amp;gt;Preferences-&amp;gt;Settings&lt;/li&gt;
-&lt;li&gt;搜索tele，禁用远程遥测&lt;/li&gt;
-&lt;li&gt;搜索auto，禁用自动更新&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;latex-workshop
-&lt;ul&gt;
-&lt;li&gt;左侧插件菜单点击设置，搜索&lt;code&gt;recipes&lt;/code&gt;，或在全局设置搜索&lt;code&gt;latex-workshop.latex.recipes&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;点击&lt;code&gt;Edit in settings.json&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;设置包含recipes和tools两部分，如果没看见tools再搜索结果里找一下点击。&lt;/li&gt;
-&lt;li&gt;recipes对应左侧扩展操作面板里的BUILD方法&lt;/li&gt;
-&lt;li&gt;recipes里每一项的内容为依次调用tools里的定义
-&lt;ul&gt;
-&lt;li&gt;name 面板中显示的名称&lt;/li&gt;
-&lt;li&gt;tools 依次调用的项目(tools定义)数组&lt;/li&gt;
-&lt;li&gt;如
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tools&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;xelatex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;bibtex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;bibtex-jrnl.aux&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;bibtex-conf.aux&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;bibtex-patent.aux&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;makeindex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;xelatex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;tools
-&lt;ul&gt;
-&lt;li&gt;name 项目名称&lt;/li&gt;
-&lt;li&gt;command 命令名称，即一个tools项目是一条命令行，这里填命令名&lt;/li&gt;
-&lt;li&gt;args 参数数组，命令行中的空格都改成逗号分隔&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;部分编译组件的用途
-&lt;ul&gt;
-&lt;li&gt;xelatex 编译包含中文的正文&lt;/li&gt;
-&lt;li&gt;bibtex 编译参考文献&lt;/li&gt;
-&lt;li&gt;makeindex 生成图表索引及目录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
-&lt;p&gt;装好编译引擎(TexLive)和编辑工具(VSCode)后就可以尝试LaTeX写作了，也许&lt;a class=&#34;link&#34; href=&#34;https://latex-tutorial.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;教程&lt;/a&gt;学习曲线比较陡峭，但相信各位读者尤其是程序员读者会逐渐感受到这一工具的魅力。
-记笔记写博客常用的&lt;code&gt;markdown &lt;/code&gt;可以看作LaTeX的简化版，其中包括嵌入LaTeX数学公式，可见其表达能力是非常强的。
-LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资源与使用。&lt;/p&gt;
+&lt;p&gt;zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。&lt;/p&gt;
+&lt;h2 id=&#34;kiwix的意义&#34;&gt;kiwix的意义&lt;/h2&gt;
+&lt;p&gt;kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
+既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
+离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。&lt;/p&gt;
 </description>
         </item>
         

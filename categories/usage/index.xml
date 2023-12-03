@@ -6,7 +6,53 @@
         <description>Recent content in Usage on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 21 Nov 2023 10:32:17 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/usage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 03 Dec 2023 03:58:12 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/usage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>kiwix</title>
+        <link>https://reserve2freedom.github.io/p/kiwix/</link>
+        <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/kiwix/</guid>
+        <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
+当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
+可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;kiwix&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org/en/applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持Windows、MacOS/iOS、GNU/Linux、Android等&lt;/a&gt;，可以说是完全跨平台软件，也有很好的国际化多语言支持。
+软件很小巧值得收藏。
+kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Firefox插件版本&lt;/a&gt;可以体验。
+博主测试浏览器插件使用效果目前还不太稳定。&lt;/p&gt;
+&lt;h2 id=&#34;离线知识库&#34;&gt;离线知识库&lt;/h2&gt;
+&lt;h3 id=&#34;资源网址&#34;&gt;资源网址&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://library.kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://library.kiwix.org&lt;/a&gt; 列出了官方背书的知识库，可以筛选查找。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.kiwix.org/zim/&lt;/a&gt; 这里可以下载官方的资源。&lt;/p&gt;
+&lt;h3 id=&#34;各种版本&#34;&gt;各种版本&lt;/h3&gt;
+&lt;p&gt;维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
+每种语言有完全版本(all)和精选版本(top)。
+网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。&lt;/p&gt;
+&lt;p&gt;比如 &lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&lt;/a&gt; 就是维基百科-中文-完全-无图片版本。&lt;/p&gt;
+&lt;p&gt;其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
+目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。&lt;/p&gt;
+&lt;h3 id=&#34;下载方式&#34;&gt;下载方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;直接下载，从&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;网页&lt;/a&gt;直接点击下载。&lt;/li&gt;
+&lt;li&gt;BT下载，在zim下载连接后面加上&lt;code&gt;.torrent&lt;/code&gt;即可下载种子文件，然后用喜欢的BT工具下载即可。&lt;/li&gt;
+&lt;li&gt;镜像下载，很多镜像站会镜像整个&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;数据网站&lt;/a&gt;也可以去那里下载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。&lt;/p&gt;
+&lt;h2 id=&#34;kiwix的意义&#34;&gt;kiwix的意义&lt;/h2&gt;
+&lt;p&gt;kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
+既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
+离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>GPT4ALL</title>
         <link>https://reserve2freedom.github.io/p/gpt4all/</link>
         <pubDate>Tue, 21 Nov 2023 10:32:17 +0000</pubDate>
