@@ -16,7 +16,8 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
 当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
-可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。&lt;/p&gt;
+可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。
+关键kiwix还集成实现了全文检索功能。&lt;/p&gt;
 &lt;p&gt;kiwix&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org/en/applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;支持Windows、MacOS/iOS、GNU/Linux、Android等&lt;/a&gt;，可以说是完全跨平台软件，也有很好的国际化多语言支持。
 软件很小巧值得收藏。

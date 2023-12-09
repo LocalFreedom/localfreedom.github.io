@@ -6,7 +6,79 @@
         <description>Recent content in Offline on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 03 Dec 2023 03:58:12 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GOG 游戏库</title>
+        <link>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
+        <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
+&lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GOG&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;GOG.com是一家提供电子游戏等数位商品发行平台，它由GOG公司运营，母公司为&lt;code&gt;CD Projekt&lt;/code&gt;(波兰蠢驴)，总部位于波兰华沙。GOG.com通过无数字版权管理（DRM-free）的方式提供适用于Windows、OS X和Linux平台的电子游戏。在早期，GOG只發行年代較久的遊戲，自2012年3月，它开始售卖较为新款的游戏。
+2017年6月22日，GOG.com加入了简体中文支持以及人民币结算，包括支付宝、银联、微信支付等方式。&lt;/p&gt;
+&lt;p&gt;DRM-free意味着从GOG.com购买的电子游戏可以直接获得离线安装包，没有任何安装次数或设备的限制。当然正规平台也没有版权风险或被捆绑恶意软体的风险。也便于充分实现单机游戏的匿名游玩，你完全可以注册账号购买游戏，用钱行使赞助的权利，然后从任意渠道获得的安装包进行游戏。&lt;/p&gt;
+&lt;h2 id=&#34;离线用法&#34;&gt;离线用法&lt;/h2&gt;
+&lt;p&gt;从GOG.com的网页就可以直接下载游戏安装包，购买游戏后在库里选择下载，避开醒目提示的Galaxy客户端提示，选择下载离线安装文件即可。
+也可以通过BT等手段从其他地方获取安装文件，Windows版本的可以通过数字签名来确认是否来自官网。
+GOG官方还特别良心的提供了安装前校验功能，并将安装包拆分为安装器和多个数据文件。如果官网速度不佳，可以只下载安装器然后校验其他方式得到的数据文件并安装即可。&lt;/p&gt;
+&lt;p&gt;这里的安装包都是无需联网验证和激活的，即免DRM。
+只要在任意满足基本要求的电脑上运行安装包即可游玩儿。
+当然离线游玩是没有成就之类的在线功能的。&lt;/p&gt;
+&lt;p&gt;通常离线安装包会携带必要的依赖库，但自己储备一些常用的以来库对于离线娱乐等也是很必要的，考虑有空另写一篇博文将将离线库文件的收集整理。&lt;/p&gt;
+&lt;h2 id=&#34;游戏推荐&#34;&gt;游戏推荐&lt;/h2&gt;
+&lt;h3 id=&#34;自家作品&#34;&gt;自家作品&lt;/h3&gt;
+&lt;p&gt;创建GOG的公司CDProjekt自身就出品很多高质量游戏，最近对简体中文支持越来越好，即使不玩游戏也建议去视频网站上体验一下普通话配音效果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;巫师系列
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/the_witcher&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Witcher: Enhanced Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/the_witcher_2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Witcher 2: Assassins of Kings Enhanced Edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/the_witcher_3_wild_hunt_game_of_the_year_edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Witcher 3: Wild Hunt - Complete Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;赛博朋克系列
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/cyberpunk_2077_ultimate_edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cyberpunk 2077: Ultimate Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;经典上架&#34;&gt;经典上架&lt;/h3&gt;
+&lt;p&gt;也有很多经典游戏在GOG上架。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上古卷轴系列
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/elder_scrolls_iv_oblivion_game_of_the_year_edition_deluxe_the&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Elder Scrolls IV: Oblivion - Game of the Year Edition Deluxe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/the_elder_scrolls_v_skyrim_anniversary_edition&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;The Elder Scrolls V: Skyrim Anniversary Edition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;骑马与砍杀
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/mount_blade_warband&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mount &amp;amp; Blade: Warband&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;博德之门系列
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/en/game/baldurs_gate_iii&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Baldur&amp;rsquo;s Gate 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;值得期待&#34;&gt;值得期待&lt;/h3&gt;
+&lt;p&gt;也有很多游戏被大众期待，GOG上有个&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/wishlist/games&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;愿望汇总列表&lt;/a&gt;。暗黑破坏神、侠盗猎车手、全面战争等都在榜上。
+吐槽一句，玩儿了赛博朋克，博主已经决定侠盗猎车手不上架GOG绝不买。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>kiwix</title>
         <link>https://reserve2freedom.github.io/p/kiwix/</link>
         <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
@@ -16,7 +88,8 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
 当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
-可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。&lt;/p&gt;
+可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。
+关键kiwix还集成实现了全文检索功能。&lt;/p&gt;
 &lt;p&gt;kiwix&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org/en/applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;支持Windows、MacOS/iOS、GNU/Linux、Android等&lt;/a&gt;，可以说是完全跨平台软件，也有很好的国际化多语言支持。
 软件很小巧值得收藏。

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>RecommendList on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/recommendlist/</link>
-        <description>Recent content in RecommendList on 离线以自由的博客</description>
+        <title>Collect on 离线以自由的博客</title>
+        <link>https://reserve2freedom.github.io/categories/collect/</link>
+        <description>Recent content in Collect on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/recommendlist/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/categories/collect/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GOG 游戏库</title>
         <link>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
@@ -76,56 +76,6 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
 &lt;p&gt;也有很多游戏被大众期待，GOG上有个&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/wishlist/games&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;愿望汇总列表&lt;/a&gt;。暗黑破坏神、侠盗猎车手、全面战争等都在榜上。
 吐槽一句，玩儿了赛博朋克，博主已经决定侠盗猎车手不上架GOG绝不买。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>火狐浏览器离线使用扩展推荐</title>
-        <link>https://reserve2freedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
-        <pubDate>Sat, 18 Nov 2023 10:41:25 +0000</pubDate>
-        
-        <guid>https://reserve2freedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</guid>
-        <description>&lt;p&gt;火狐(Firefox)是著名的浏览器，也是现今最重要最符合自由精神的浏览器。
-浏览器通常是用来浏览上网的，但也具备越来越多的离线功能。
-这里推荐一些可以完全离线使用的火狐浏览器扩展，以在离线环境中使用火狐。
-本文会优先选择Mozilla官方推荐的扩展。&lt;/p&gt;
-&lt;p&gt;这篇博文算是首篇非常符合本博客名号的文章了。
-建议在Firefox中新建一个Profile体验这些扩展。&lt;/p&gt;
-&lt;h2 id=&#34;epubreader&#34;&gt;EPUBReader&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/epubreader/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/epubreader/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;非常不错的EPUB电子书格式阅读器。&lt;/li&gt;
-&lt;li&gt;不用担心服务商统计自己看了哪些书。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;offline-qr-code&#34;&gt;Offline QR code&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;输入文本生成二维码，简单易用。&lt;/li&gt;
-&lt;li&gt;离线环境下避免二维码相关信息泄漏。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;emoji&#34;&gt;Emoji&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/emoji-sav&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/emoji-sav&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;提供大量表情。&lt;/li&gt;
-&lt;li&gt;离线编写带表情的文章时可以通过Emoji快捷查找输入表情符号。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kiwix&#34;&gt;Kiwix&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kiwix提供的用以阅读zim文件的插件。&lt;/li&gt;
-&lt;li&gt;经测试目前不如桌面版kiwix好用，但可以省去安装软件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;joplin-web-clipper&#34;&gt;Joplin Web Clipper&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Joplin提供的网页剪辑插件，用来将网页转换为适合Joplin的markdown格式笔记。&lt;/li&gt;
-&lt;li&gt;可以用于将&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/single-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SingleFile&lt;/a&gt;或各种方式缓存的离线网页转换成Joplin笔记。&lt;/li&gt;
-&lt;/ul&gt;
 </description>
         </item>
         
