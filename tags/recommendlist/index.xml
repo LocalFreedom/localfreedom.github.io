@@ -6,7 +6,96 @@
         <description>Recent content in RecommendList on 离线以自由的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/recommendlist/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 18 Dec 2023 11:53:49 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/recommendlist/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>加密货币</title>
+        <link>https://reserve2freedom.github.io/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+        <pubDate>Mon, 18 Dec 2023 11:53:49 +0000</pubDate>
+        
+        <guid>https://reserve2freedom.github.io/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;一提到加密货币与挖矿，很多中国读者有着很深的误解与偏见，这实际上与中国政府及其控制的媒体、自媒体的宣传导向有关。&lt;/p&gt;
+&lt;p&gt;非常感谢&lt;a class=&#34;link&#34; href=&#34;https://archlinuxstudio.github.io/ArchLinuxTutorial/#/exclusive/mine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;自由之心社区的科普文章&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;定义&#34;&gt;定义&lt;/h3&gt;
+&lt;p&gt;加密货币是一种使用密码学原理来确保交易安全及控制交易单位创造的交易介质。这种维基百科式的描述较难懂。我们尝试用更简单的语言进行描述。加密货币的鼻祖是比特币(BTC)，其始发与 2009 年。在比特币的创世区块中，嵌入了一句话&lt;code&gt;The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.&lt;/code&gt;。这对传统金融行业进行了讽刺，同时表明了创始人中本聪的立场。符合比特币理念的加密货币一般都有如下特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;去中心化，货币的分布和决策不由中心化的组织，如政府，银行等任何集权形式的组织决定。参与挖矿，就能得到属于自己的一份收益。&lt;/li&gt;
+&lt;li&gt;在正确使用的前提下，一般都能很大程度的保护使用者的个人隐私。&lt;/li&gt;
+&lt;li&gt;货币本身&lt;strong&gt;真正&lt;/strong&gt;由其拥有者所持有，真正实现了私有财产不可侵犯。货币的拥有者持有私钥，其他没有私钥的人无法扣押、冻结、没收其加密货币资产。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;离线意义&#34;&gt;离线意义&lt;/h3&gt;
+&lt;p&gt;金融之于社会，犹如血管之于人体。
+金融和货币的最大特点就是流动和在线，经济情况也可以看作金融货币流通速度。
+我们的大额金融资产都被掌控在中心化的银行手中，有效率上的好处，但也失去了对财产和储蓄的掌控。
+银行可以冻结我们的金融财产，还可以滥发货币稀释大家的储蓄。
+以比特币为代表的加密货币，给我们一种新的方式掌控自己的金融资产。
+加密货币通常被设计为总量有限或增速有限，也就不会通货膨胀。
+加密货币通过公钥和私钥将金融账户的&amp;quot;读写&amp;quot;权限分开，私钥能操作和支付，而公钥能查阅和收款。
+只要销毁自己的私钥，任何人或组织都无法再夺走私钥保护的财产。
+这也导致如果有钱人销毁私钥或死亡前没传承私钥，那么通货紧缩就难以避免。
+这里佩服中本聪的伟大设计，比特币随着开采量增加而开采速度下降，既抑制了快速通胀，又避免了终极通缩。&lt;/p&gt;
+&lt;p&gt;加密货币最大的离线意义在于其基于区块链的分布式账本，用户可以完整的获取整个账本，不仅保存自己的财产，还能离线掌握整个系统的交易历史，离线作做各种有趣的事情。
+同样加密货币的离线保存和携带，也因密码学而可靠和便捷。&lt;/p&gt;
+&lt;h3 id=&#34;区别于数字货币&#34;&gt;区别于&amp;quot;数字货币&amp;quot;&lt;/h3&gt;
+&lt;p&gt;有个概念&lt;code&gt;数字货币&lt;/code&gt;和加密货币很像，尤其中国人民银行大肆鼓吹所谓&amp;quot;央行数字货币优于比特币等数字货币&amp;quot;。
+当然这些概念确实还有争议，但中国的央行数字货币完全就是蹭热度的玩意儿。
+数字货币通常局限于采用区块链等密码学技术的银行发行控制的货币，相比于比特币代表的正经加密货币，缺少了区中心化的关键特性，从而损害了用户的掌控能力。
+中国的所谓&amp;quot;数字人民币&amp;quot;，博主认为连数字货币也算不上，充气量就是个用电脑记账的电子货币。
+尤其是数字人民币背道而驰，设计初衷就是为了奴役社会经济。&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;h3 id=&#34;基本概念&#34;&gt;基本概念&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;密语&lt;/strong&gt;即&lt;strong&gt;助记词&lt;/strong&gt;，约等于&lt;strong&gt;私钥&lt;/strong&gt;，可以互相转化。
+密语通过一定方式由私钥编码，一条密语通常由十几个单词组成，可对应多个私钥。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公钥&lt;/strong&gt;和&lt;strong&gt;私钥&lt;/strong&gt;是成对生成的，&lt;strong&gt;地址&lt;/strong&gt;是公钥的散列。
+地址不能反推出公钥。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;收款&lt;/strong&gt;只需要&lt;strong&gt;地址&lt;/strong&gt;，&lt;strong&gt;付款&lt;/strong&gt;才需要公开&lt;strong&gt;公钥&lt;/strong&gt;，一个钱包只要消费一次公钥就公开&lt;/p&gt;
+&lt;h3 id=&#34;存储&#34;&gt;存储&lt;/h3&gt;
+&lt;p&gt;如果要使用加密货币，首先要拥有一个钱包来存钱。
+钱包是存储私钥的介质，分为热钱包(软件)和冷钱包(硬件)。
+各个加密货币的节点软件就是全量热钱包，不仅能生成并记录自己的私钥，还保存账本，能参与挖矿。
+为了方便一般使用可以采用只记录私钥，查看账目的软件，比如目前来说使用最广泛的浏览器钱包是&lt;a class=&#34;link&#34; href=&#34;https://metamask.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Metamask&lt;/a&gt;。
+冷钱包是类似USBkey的硬件，通常可以用U盘写入相应工具软件自行制作。&lt;/p&gt;
+&lt;p&gt;私钥本质上是很长很长的随机数，所以钱包使用必然是无需手机号或邮箱注册的。
+甚至生成账户也是无需联网的。&lt;/p&gt;
+&lt;h3 id=&#34;获取&#34;&gt;获取&lt;/h3&gt;
+&lt;p&gt;可以通过购买、交易、挖矿的方式获取加密货币。&lt;/p&gt;
+&lt;p&gt;购买即通过类似&lt;a class=&#34;link&#34; href=&#34;https://www.binance.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;币安&lt;/a&gt;这样的平台用人民币等传统货币来购买加密货币。
+这一过程会将自己的实名金融账户和加密货币账户关联起来，对于中国用户更是高风险。&lt;/p&gt;
+&lt;p&gt;交易是用已有的加密货币或商品通过市场兑换其他人手中的加密货币。
+暗网中的黑市中加密货币流通规模日益增长，各类加密货币兑换平台也层出不穷，比如&lt;a class=&#34;link&#34; href=&#34;https://changenow.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;changenow&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;挖矿是参与加密货币交易的确认过程，从机制中获得相应的回馈。
+加密货币因为离线的特性，可以同时将一笔钱付给多人，只有优先算出结果的分支交易会被确认。
+为了鼓励用户提供算力完成交易，参与交易确认(挖矿)的用户会获取一些手续费，而且越是小额的交易费率越高。&lt;/p&gt;
+&lt;h3 id=&#34;消费&#34;&gt;消费&lt;/h3&gt;
+&lt;p&gt;加密货币目前主要适合购买数字产品，比如&lt;a class=&#34;link&#34; href=&#34;https://bitcoin-vps.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持加密货币购买的VPS&lt;/a&gt;。
+GOG等游戏平台也支持一些主流加密货币付款。
+当然，还可以将加密货币换回自己的法币，实现类似炒股的效果。&lt;/p&gt;
+&lt;h2 id=&#34;典型加密货币&#34;&gt;典型加密货币&lt;/h2&gt;
+&lt;p&gt;最后介绍三种各具特色的加密货币。&lt;/p&gt;
+&lt;h3 id=&#34;btc&#34;&gt;BTC&lt;/h3&gt;
+&lt;p&gt;Bitcoin &lt;a class=&#34;link&#34; href=&#34;https://bitcoin.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://bitcoin.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;比特币，加密货币的始祖，世界上首个加密货币，也是目前总市值最大的加密货币。&lt;/p&gt;
+&lt;h3 id=&#34;eth&#34;&gt;ETH&lt;/h3&gt;
+&lt;p&gt;Ethereum &lt;a class=&#34;link&#34; href=&#34;https://ethereum.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ethereum.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以太坊，基于加密货币的平台，极大的扩展了加密货币的功能和社区。
+各种智能合约、分布式游戏、数字藏品就来自于以太坊的开创性贡献。&lt;/p&gt;
+&lt;h3 id=&#34;xmr&#34;&gt;XMR&lt;/h3&gt;
+&lt;p&gt;monero &lt;a class=&#34;link&#34; href=&#34;https://www.getmonero.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.getmonero.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;门罗币，主打隐私的货币，通过环等技术混淆转账过程，让监控者难以在公开的账本上追踪账户。
+同时，读取账户金额的过程也需要更大流量，有损便利性。&lt;/p&gt;
+&lt;p&gt;如果你需要匿名购买加密货币的渠道，可以考虑使用&lt;a class=&#34;link&#34; href=&#34;https://localmonero.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;localmonero&lt;/a&gt;提供的购买门罗币的服务。在购买后门罗币地址间的互转是匿名的，对外部不可见的。
+当然也不绝对，追求匿名的用户还是应该尽量避免金融操作。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>GOG 游戏库</title>
         <link>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
@@ -16,7 +105,8 @@
 &lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GOG&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;GOG.com是一家提供电子游戏等数位商品发行平台，它由GOG公司运营，母公司为&lt;code&gt;CD Projekt&lt;/code&gt;(波兰蠢驴)，总部位于波兰华沙。GOG.com通过无数字版权管理（DRM-free）的方式提供适用于Windows、OS X和Linux平台的电子游戏。在早期，GOG只發行年代較久的遊戲，自2012年3月，它开始售卖较为新款的游戏。
+&lt;p&gt;GOG.com是一家提供电子游戏等数位商品发行平台，它由GOG公司运营，母公司为&lt;a class=&#34;link&#34; href=&#34;https://www.cdprojekt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;CD Projekt&lt;/code&gt;(波兰蠢驴)&lt;/a&gt;，总部位于波兰华沙。GOG.com通过无数字版权管理（DRM-free）的方式提供适用于Windows、OS X和Linux平台的电子游戏。在早期，GOG只發行年代較久的遊戲，自2012年3月，它开始售卖较为新款的游戏。
 2017年6月22日，GOG.com加入了简体中文支持以及人民币结算，包括支付宝、银联、微信支付等方式。&lt;/p&gt;
 &lt;p&gt;DRM-free意味着从GOG.com购买的电子游戏可以直接获得离线安装包，没有任何安装次数或设备的限制。当然正规平台也没有版权风险或被捆绑恶意软体的风险。也便于充分实现单机游戏的匿名游玩，你完全可以注册账号购买游戏，用钱行使赞助的权利，然后从任意渠道获得的安装包进行游戏。&lt;/p&gt;
 &lt;h2 id=&#34;离线用法&#34;&gt;离线用法&lt;/h2&gt;
