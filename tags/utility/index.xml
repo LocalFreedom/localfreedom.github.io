@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Utility on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/utility/</link>
-        <description>Recent content in Utility on 离线以自由的博客</description>
+        <title>Utility on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/utility/</link>
+        <description>Recent content in Utility on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 03 Dec 2023 03:58:12 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 03 Dec 2023 03:58:12 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>kiwix</title>
-        <link>https://reserve2freedom.github.io/p/kiwix/</link>
+        <link>https://localfreedom.github.io/p/kiwix/</link>
         <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/kiwix/</guid>
+        <guid>https://localfreedom.github.io/p/kiwix/</guid>
         <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
@@ -55,10 +55,10 @@ kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US
         </item>
         <item>
         <title>RAR 妙用</title>
-        <link>https://reserve2freedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</link>
+        <link>https://localfreedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</link>
         <pubDate>Wed, 15 Nov 2023 12:13:15 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</guid>
+        <guid>https://localfreedom.github.io/p/rar-%E5%A6%99%E7%94%A8/</guid>
         <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;RAR是最知名、使用最为广泛的压缩软件之一。
 官网是 &lt;a class=&#34;link&#34; href=&#34;https://www.rarlab.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

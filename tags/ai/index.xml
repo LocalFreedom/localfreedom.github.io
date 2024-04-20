@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>AI on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/ai/</link>
-        <description>Recent content in AI on 离线以自由的博客</description>
+        <title>AI on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/ai/</link>
+        <description>Recent content in AI on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 21 Nov 2023 10:32:17 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Nov 2023 10:32:17 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GPT4ALL</title>
-        <link>https://reserve2freedom.github.io/p/gpt4all/</link>
+        <link>https://localfreedom.github.io/p/gpt4all/</link>
         <pubDate>Tue, 21 Nov 2023 10:32:17 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/gpt4all/</guid>
+        <guid>https://localfreedom.github.io/p/gpt4all/</guid>
         <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;GPT4All是一个本地软件，用于将大语言模型(LargeLanguageModel)通过浮点优化等方法在本地离线提供服务。&lt;/p&gt;
 &lt;p&gt;在ChatGPT大火之后，很多厂商模仿推出了开源或专有的大语言对话模型，但这些模型要么以web服务方式提供要么过于需要计算资源而难以本地使用。&lt;/p&gt;
@@ -36,7 +36,7 @@ GPT4All项目将相关技术和资源整合制作了QT桌面软件，让用户�
     &gt;官网首页&lt;/a&gt;下来可以看到模型介绍，选择想下载的模型，点击下方卡片的箭头按钮就可以下载。
 下载后放到&lt;code&gt;~/AppData/Local/nomic.ai/GPT4ALL/&lt;/code&gt;里就能被软件自动识别到。&lt;/p&gt;
 &lt;h2 id=&#34;对话&#34;&gt;对话&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://reserve2freedom.github.io/img/gpt4all.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/gpt4all.gif&#34;
 	
 	
 	

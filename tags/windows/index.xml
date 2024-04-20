@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Windows on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/windows/</link>
-        <description>Recent content in Windows on 离线以自由的博客</description>
+        <title>Windows on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/windows/</link>
+        <description>Recent content in Windows on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 Nov 2023 13:59:02 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 14 Nov 2023 13:59:02 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows 驱动备份</title>
-        <link>https://reserve2freedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</link>
+        <link>https://localfreedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</link>
         <pubDate>Tue, 14 Nov 2023 13:59:02 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</guid>
+        <guid>https://localfreedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;如果想重装系统后离线使用，除了系统安装盘，通常还需要准备驱动。
 计算机制造商通常会提供驱动，但这可能不全面或已经过时。
@@ -51,10 +51,10 @@
         </item>
         <item>
         <title>Windows 11 使用技巧</title>
-        <link>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+        <link>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+        <guid>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
         <description>&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网&lt;/h2&gt;
 &lt;p&gt;Windows从11版本开始，强化在线功能。
 家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。

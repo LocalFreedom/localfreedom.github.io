@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>ID on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/id/</link>
-        <description>Recent content in ID on 离线以自由的博客</description>
+        <title>ID on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/id/</link>
+        <description>Recent content in ID on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 24 Nov 2023 03:22:15 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/id/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2023 03:22:15 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/id/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>中国身份证校验</title>
-        <link>https://reserve2freedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</link>
+        <link>https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</link>
         <pubDate>Fri, 24 Nov 2023 03:22:15 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</guid>
+        <guid>https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</guid>
         <description>&lt;h2 id=&#34;号码组合含义&#34;&gt;号码组合含义&lt;/h2&gt;
 &lt;p&gt;目前中国使用的18位身份证号由6位地址码+8位生日+3位顺序码+1位校验码组成。&lt;/p&gt;
 &lt;p&gt;地址码指的是公民出生地所在县（市、镇、区）的行政区划代码，如310110是上海市杨浦区。但港澳臺地區居民的身份號碼只精確到省級。&lt;/p&gt;

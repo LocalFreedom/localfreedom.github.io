@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Offline on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/offline/</link>
-        <description>Recent content in Offline on 离线以自由的博客</description>
+        <title>Offline on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/offline/</link>
+        <description>Recent content in Offline on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 09 Dec 2023 03:02:33 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>GOG 游戏库</title>
-        <link>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
+        <link>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
+        <guid>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
         <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -81,10 +81,10 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
         </item>
         <item>
         <title>kiwix</title>
-        <link>https://reserve2freedom.github.io/p/kiwix/</link>
+        <link>https://localfreedom.github.io/p/kiwix/</link>
         <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/kiwix/</guid>
+        <guid>https://localfreedom.github.io/p/kiwix/</guid>
         <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。

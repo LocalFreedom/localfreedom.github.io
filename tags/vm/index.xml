@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>VM on 离线以自由的博客</title>
-        <link>https://reserve2freedom.github.io/tags/vm/</link>
-        <description>Recent content in VM on 离线以自由的博客</description>
+        <title>VM on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/vm/</link>
+        <description>Recent content in VM on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 12 Nov 2023 13:59:06 +0000</lastBuildDate><atom:link href="https://reserve2freedom.github.io/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Nov 2023 13:59:06 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Windows 11 使用技巧</title>
-        <link>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+        <link>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
         
-        <guid>https://reserve2freedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+        <guid>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
         <description>&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网&lt;/h2&gt;
 &lt;p&gt;Windows从11版本开始，强化在线功能。
 家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。
