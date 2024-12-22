@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Usage on 局域自由博客</title>
-        <link>https://localfreedom.github.io/categories/usage/</link>
-        <description>Recent content in Usage on 局域自由博客</description>
+        <title>Office on 局域自由博客</title>
+        <link>https://localfreedom.github.io/tags/office/</link>
+        <description>Recent content in Office on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/usage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/office/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Office Deployment Tool</title>
         <link>https://localfreedom.github.io/p/office-deployment-tool/</link>
         <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
@@ -159,148 +159,6 @@ PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元�
 &lt;li&gt;setup.exe 是否支持了新版本的Office,比如LTSC2024之前的setup.exe无法下载。&lt;/li&gt;
 &lt;li&gt;setup.exe是否仍保留了对Office2021等老版本的支援。&lt;/li&gt;
 &lt;li&gt;setup.exe能否正常完成所需Office的安装。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>kiwix</title>
-        <link>https://localfreedom.github.io/p/kiwix/</link>
-        <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/p/kiwix/</guid>
-        <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
-当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
-可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。
-关键kiwix还集成实现了全文检索功能。&lt;/p&gt;
-&lt;p&gt;kiwix&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org/en/applications/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;支持Windows、MacOS/iOS、GNU/Linux、Android等&lt;/a&gt;，可以说是完全跨平台软件，也有很好的国际化多语言支持。
-软件很小巧值得收藏。
-kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Firefox插件版本&lt;/a&gt;可以体验。
-博主测试浏览器插件使用效果目前还不太稳定。&lt;/p&gt;
-&lt;h2 id=&#34;离线知识库&#34;&gt;离线知识库&lt;/h2&gt;
-&lt;h3 id=&#34;资源网址&#34;&gt;资源网址&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://library.kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://library.kiwix.org&lt;/a&gt; 列出了官方背书的知识库，可以筛选查找。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://download.kiwix.org/zim/&lt;/a&gt; 这里可以下载官方的资源。&lt;/p&gt;
-&lt;h3 id=&#34;各种版本&#34;&gt;各种版本&lt;/h3&gt;
-&lt;p&gt;维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
-每种语言有完全版本(all)和精选版本(top)。
-网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。&lt;/p&gt;
-&lt;p&gt;比如 &lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&lt;/a&gt; 就是维基百科-中文-完全-无图片版本。&lt;/p&gt;
-&lt;p&gt;其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
-目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。&lt;/p&gt;
-&lt;h3 id=&#34;下载方式&#34;&gt;下载方式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;直接下载，从&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;网页&lt;/a&gt;直接点击下载。&lt;/li&gt;
-&lt;li&gt;BT下载，在zim下载连接后面加上&lt;code&gt;.torrent&lt;/code&gt;即可下载种子文件，然后用喜欢的BT工具下载即可。&lt;/li&gt;
-&lt;li&gt;镜像下载，很多镜像站会镜像整个&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;数据网站&lt;/a&gt;也可以去那里下载。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。&lt;/p&gt;
-&lt;h2 id=&#34;kiwix的意义&#34;&gt;kiwix的意义&lt;/h2&gt;
-&lt;p&gt;kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
-既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
-离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>GPT4ALL</title>
-        <link>https://localfreedom.github.io/p/gpt4all/</link>
-        <pubDate>Tue, 21 Nov 2023 10:32:17 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/p/gpt4all/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;GPT4All是一个本地软件，用于将大语言模型(LargeLanguageModel)通过浮点优化等方法在本地离线提供服务。&lt;/p&gt;
-&lt;p&gt;在ChatGPT大火之后，很多厂商模仿推出了开源或专有的大语言对话模型，但这些模型要么以web服务方式提供要么过于需要计算资源而难以本地使用。&lt;/p&gt;
-&lt;p&gt;随着facebook的llama的泄漏，一个不错的离线替代品出现，同时&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggerganov/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;llama.cpp&lt;/a&gt;项目通过浮点计算优化让笔记本也能勉强运行起大模型来。
-GPT4All项目将相关技术和资源整合制作了QT桌面软件，让用户能方便的本地离线运行公开的大语言模型，当然它也提供OpenAI的接口以同时使用线上服务。&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
-&lt;p&gt;官网会提供&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-win64.exe&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Windows&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-darwin.dmg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;MacOS&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/installers/gpt4all-installer-linux.run&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Linux&lt;/a&gt;的安装包，但每次安装还是会联网检索信息，无法离线安装，只要官网能访问就可以简单的“下一步”安装完成。
-也可以从&lt;a class=&#34;link&#34; href=&#34;https://github.com/nomic-ai/gpt4all&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;源代码&lt;/a&gt;编译。&lt;/p&gt;
-&lt;h2 id=&#34;下载模型&#34;&gt;下载模型&lt;/h2&gt;
-&lt;p&gt;官方会预配置一些模型可供直接使用，由于网络的封锁这一步可以离线进行。&lt;/p&gt;
-&lt;p&gt;模型列表来自官网，下载时会跳转到一个github地址 &lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/models/models.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://gpt4all.io/models/models.json&lt;/a&gt;
-可以手动下载后放到 &lt;code&gt;~/AppData/Roaming/nomic.ai/models.json&lt;/code&gt;
-之后点击界面左侧的 &lt;code&gt;Download&lt;/code&gt; 按钮就可以看到可选模型列表了。&lt;/p&gt;
-&lt;p&gt;由于huggingface被彻底封锁，只能手动科学下载。
-在&lt;a class=&#34;link&#34; href=&#34;https://gpt4all.io/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;官网首页&lt;/a&gt;下来可以看到模型介绍，选择想下载的模型，点击下方卡片的箭头按钮就可以下载。
-下载后放到&lt;code&gt;~/AppData/Local/nomic.ai/GPT4ALL/&lt;/code&gt;里就能被软件自动识别到。&lt;/p&gt;
-&lt;h2 id=&#34;对话&#34;&gt;对话&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/gpt4all.gif&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;UI&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;从上方的菜单选择已经下载好被识别的模型，即可像ChatGPT一样对话。
-这些模型通常要求16G的内存即可。
-对话效果差强人意，而且基本只支持英文输出。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>火狐浏览器离线使用扩展推荐</title>
-        <link>https://localfreedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</link>
-        <pubDate>Sat, 18 Nov 2023 10:41:25 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/</guid>
-        <description>&lt;p&gt;火狐(Firefox)是著名的浏览器，也是现今最重要最符合自由精神的浏览器。
-浏览器通常是用来浏览上网的，但也具备越来越多的离线功能。
-这里推荐一些可以完全离线使用的火狐浏览器扩展，以在离线环境中使用火狐。
-本文会优先选择Mozilla官方推荐的扩展。&lt;/p&gt;
-&lt;p&gt;这篇博文算是首篇非常符合本博客名号的文章了。
-建议在Firefox中新建一个Profile体验这些扩展。&lt;/p&gt;
-&lt;h2 id=&#34;epubreader&#34;&gt;EPUBReader&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/epubreader/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/epubreader/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;非常不错的EPUB电子书格式阅读器。&lt;/li&gt;
-&lt;li&gt;不用担心服务商统计自己看了哪些书。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;offline-qr-code&#34;&gt;Offline QR code&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;输入文本生成二维码，简单易用。&lt;/li&gt;
-&lt;li&gt;离线环境下避免二维码相关信息泄漏。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;emoji&#34;&gt;Emoji&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/emoji-sav&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/emoji-sav&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;提供大量表情。&lt;/li&gt;
-&lt;li&gt;离线编写带表情的文章时可以通过Emoji快捷查找输入表情符号。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;kiwix&#34;&gt;Kiwix&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Kiwix提供的用以阅读zim文件的插件。&lt;/li&gt;
-&lt;li&gt;经测试目前不如桌面版kiwix好用，但可以省去安装软件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;joplin-web-clipper&#34;&gt;Joplin Web Clipper&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Joplin提供的网页剪辑插件，用来将网页转换为适合Joplin的markdown格式笔记。&lt;/li&gt;
-&lt;li&gt;可以用于将&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/single-file&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;SingleFile&lt;/a&gt;或各种方式缓存的离线网页转换成Joplin笔记。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

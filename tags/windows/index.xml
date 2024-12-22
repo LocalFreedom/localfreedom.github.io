@@ -6,7 +6,163 @@
         <description>Recent content in Windows on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 Nov 2023 13:59:02 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Office Deployment Tool</title>
+        <link>https://localfreedom.github.io/p/office-deployment-tool/</link>
+        <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/office-deployment-tool/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;MS Office 是日常工作和生活的重要工具，离线部署激活当然必不可少。
+微软越来越在线化Office业务，甚至从2016版本后不再提供官方ISO了。
+为了实现局域的自由，当然不可随便整点盗版安装包来部署Office，本篇就介绍用官方的方式离线部署MS Office。
+Office Deployment Tool 是微软官方推出的Office套件部署工具。
+微软从Office2016后期开始推出C2R模式,不再维护离线文件替换式补丁，同时向企业系统管理员推广ODT工具用来部署Office。&lt;/p&gt;
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+&lt;h3 id=&#34;获取odt&#34;&gt;获取ODT&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-in/download/details.aspx?id=49117&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网下载页面&lt;/a&gt;
+下载的是一个exe可执行档，记得用管理员权限执行，会解压出 setup.exe 和样例配置文件。&lt;/p&gt;
+&lt;h3 id=&#34;准备配置文件&#34;&gt;准备配置文件&lt;/h3&gt;
+&lt;p&gt;可以根据样例配置来修改自己的配置文件。
+推荐在官方提供的配置创建页面 &lt;code&gt;https://config.office.com&lt;/code&gt; 用视觉化的方式选择你需要的软体和语言。&lt;/p&gt;
+&lt;p&gt;由于配置中不是包含各组件，而是排除各组件，所以生成配置的时候关闭所有组件可以获得最好的模板效果。
+这里以 Office LTSC 2021 为例。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;Configuration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Add&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;OfficeClientEdition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;64&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Channel=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PerpetualVL2021&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Version=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;16.0.14332.20812&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Product&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ProPlus2021Volume&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;PIDKEY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Language&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zh-cn&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Access&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Excel&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Lync&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneDrive&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneNote&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Outlook&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PowerPoint&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Publisher&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Word&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Product&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Product&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;VisioPro2021Volume&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;PIDKEY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;KNH8D-FGHT4-T8RK3-CTDYJ-K2HT4&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Language&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zh-cn&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Access&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Excel&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Lync&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneDrive&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneNote&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Outlook&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PowerPoint&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Publisher&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Word&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Product&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;Product&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ProjectPro2021Volume&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;PIDKEY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FTNWT-C6WBT-8HMGF-K9PRX-QV9H8&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Language&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zh-cn&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Access&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Excel&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Lync&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneDrive&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OneNote&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Outlook&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PowerPoint&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Publisher&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;ExcludeApp&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ID=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Word&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Product&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Add&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Property&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SharedComputerLicensing&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Value=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Property&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FORCEAPPSHUTDOWN&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Value=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FALSE&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Property&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DeviceBasedLicensing&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Value=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Property&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SCLCacheOverride&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Value=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Property&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;AUTOACTIVATE&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Value=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Updates&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Enabled=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;TRUE&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;RemoveMSI&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Configuration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;独立的Visio和Project会沿用主体的排除项，其实没有作用。
+官方页面生成的配置文件开头有个ID,建议去掉以免追踪。&lt;/p&gt;
+&lt;h3 id=&#34;获取office&#34;&gt;获取Office&lt;/h3&gt;
+&lt;p&gt;新建一个用于存放office的资料夹并进入。
+将XML配置文件(如&lt;code&gt;config.xml&lt;/code&gt;)和ODT的&lt;code&gt;setup.exe&lt;/code&gt;放在这个资料夹中。
+打开命令提示字元(cmd or PowerShell)，进去你的资料夹后，执行&lt;code&gt;setup.exe /download config.xml&lt;/code&gt;。
+命令提示字元中无提示，打开任务管理器可以看到流量，文件会下载到当前资料夹的&lt;code&gt;Office\Data&lt;/code&gt;中。
+PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元里按按&lt;code&gt;退格BackSpace&lt;/code&gt;等无影响的键。&lt;/p&gt;
+&lt;h3 id=&#34;可选制作iso光碟映像档&#34;&gt;(可选)制作ISO光碟映像档&lt;/h3&gt;
+&lt;p&gt;你可以用一些脚本程式来自动化安装过程。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-install.bat&#34; data-lang=&#34;install.bat&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;setup.exe /configure config.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;建议将ODT、下载的Office、安装配置文件和其他需要打包的放在同一个资料夹，然后用UltraISO等工具制作ISO光碟映像档。&lt;/p&gt;
+&lt;h3 id=&#34;部署office&#34;&gt;部署Office&lt;/h3&gt;
+&lt;p&gt;将ODT下载完成时的资料夹整体接入目标系统，主要保持 &lt;code&gt;setup.exe&lt;/code&gt;, &lt;code&gt;Office\Data&lt;/code&gt;, &lt;code&gt;config.xml&lt;/code&gt; 在同一资料夹中。
+进入命令提示字元到该资料夹，执行&lt;code&gt;setup.exe /configure config.xml&lt;/code&gt;。
+会显示安装进度和所包含组件，但这一过程不能中断或配置，只能看着。
+等待完成就可以使用所安装的Office了。&lt;/p&gt;
+&lt;h2 id=&#34;评测&#34;&gt;评测&lt;/h2&gt;
+&lt;p&gt;ODT工具是不断更新的，所以存档时的必要测试，以免收录bug版本。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;样例配置文件和前一版是否有变化，增加或减少，内容修改。&lt;/li&gt;
+&lt;li&gt;setup.exe 是否支持了新版本的Office,比如LTSC2024之前的setup.exe无法下载。&lt;/li&gt;
+&lt;li&gt;setup.exe是否仍保留了对Office2021等老版本的支援。&lt;/li&gt;
+&lt;li&gt;setup.exe能否正常完成所需Office的安装。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Windows 驱动备份</title>
         <link>https://localfreedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/</link>
         <pubDate>Tue, 14 Nov 2023 13:59:02 +0000</pubDate>

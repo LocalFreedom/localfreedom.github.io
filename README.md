@@ -1,4 +1,4 @@
-# reserve2freedom.github.io
+# localfreedom.github.io
 Blog
 
 欢迎来到[**局域自由的博客**](localfreedom.github.io)
