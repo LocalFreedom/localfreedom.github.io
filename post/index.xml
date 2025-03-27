@@ -6,7 +6,50 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 27 Mar 2025 10:03:25 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>LM Studio</title>
+        <link>https://localfreedom.github.io/p/lm-studio/</link>
+        <pubDate>Thu, 27 Mar 2025 10:03:25 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/lm-studio/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;LM Studio 是一个桌面应用程序，它允许你轻松下载、管理和运行各种GGUF格式的开源 LLM，无需连接互联网。
+它提供了一个非常友好的配置界面，让你能够探索huggingface，快速体验不同模型的特性，并根据自己的需求进行调整。
+在对各类新型模型的支持中，LM Studio 总是非常迅速完美的。
+不过 LM Studio 是一个免费的&lt;strong&gt;专有软件&lt;/strong&gt;，并不开放源代码。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;官网的&lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/download&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载页面&lt;/a&gt;提供Windows、Linux和MacOS的下载，除了x86还支持arm64架构的CPU。
+安装包是离线的，包含需要的各类运行库，安装过程完全无需联网。
+第一次运行的时候会提示选项级别，默认的 &lt;code&gt;Power User&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;h2 id=&#34;准备模型&#34;&gt;准备模型&lt;/h2&gt;
+&lt;p&gt;LM Studio 支持从&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;huggingface.co&lt;/a&gt;搜索并直接下载运行GGUF格式的 LLM，即量化压缩后的LLM。
+但本文的重点是&lt;strong&gt;完全离线运行&lt;/strong&gt;，当然应避免联网功能。&lt;/p&gt;
+&lt;p&gt;一个理所当然的方法是下载GGUF模型文件放置在 LM Studio 的模型文件夹 &lt;code&gt;~\.lmstudio\models\&lt;/code&gt; 中，不过这样并不能直接被软件识别。
+LM Studio 的解析方式是按照 Hugging Face 模型仓库的 URI 格式来识别模型文件，所以只要按照 &lt;code&gt;~\.lmstudio\models\作者\模型名\参数文件.gguf&lt;/code&gt; 的方式导入 LLM 文件即可。&lt;/p&gt;
+&lt;p&gt;作者和模型名可以自己命名，也可以就按照默认方式来，如从 &lt;code&gt;https://huggingface.co/bartowski/mistralai_Mistral-Small-3.1-24B-Instruct-2503-GGUF/blob/main/mistralai_Mistral-Small-3.1-24B-Instruct-2503-Q4_K_M.gguf&lt;/code&gt; 下载的文件放在 &lt;code&gt;~\.lmstudio\models\bartowski\mistralai_Mistral-Small-3.1-24B-Instruct-2503-GGUF\mistralai_Mistral-Small-3.1-24B-Instruct-2503-Q4_K_M.gguf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将模型文件放置完成后，打开 LM Studio 点击左侧文件夹图表的 &lt;code&gt;Models&lt;/code&gt; 标签页即可看到下载的文件。
+列表中还会列出模型的各项参数和功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/lm-studio.webp&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;chat ui&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;对话&#34;&gt;对话&lt;/h2&gt;
+&lt;p&gt;在打开的初始界面，上方选择模型文件加载，可以配置一些参数，通常默认的就足够好了。
+等待加载完成就可以在下方与 LLM 对话了。
+目前支持上传图片和附件，只要LLM支持相关功能就可以使用。&lt;/p&gt;
+&lt;h2 id=&#34;提供服务&#34;&gt;提供服务&lt;/h2&gt;
+&lt;p&gt;LM Studio 可以提供兼容 OpenAI v1 的API服务，可以作为局域网中便捷的LLM基础服务，与各种客户端应用程序配合使用。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Office Deployment Tool</title>
         <link>https://localfreedom.github.io/p/office-deployment-tool/</link>
         <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
