@@ -6,7 +6,107 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 27 Mar 2025 10:03:25 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Win10/11 不联网强制开启移动热点</title>
+        <link>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
+        <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;话说，现在个人电脑开启移动热点，大家通常是为了分享网路，但更重要的，其实是打造一个属于自己的无线局域网啊！Windows 提供的热点功能，一直以来都只能用来分享网路，没法直接用在局域网里。以前还能在连接 WiFi 或有线网络的时候开启热点并保持，但现在微软越来越严格，一旦上行连接断掉，移动热点就自动关掉，真是让人头大！&lt;/p&gt;
+&lt;p&gt;Windows 电脑通常不当做局域网服务提供者，但现在 AI 这么火，像 LM Studio 这样的软件可以提供局域网服务，仅仅开启移动热点就能满足需求，这需求量可真大啊！&lt;/p&gt;
+&lt;h2 id=&#34;方法-1利用底层命令挑战微软的限制&#34;&gt;方法 1：利用底层命令，挑战微软的限制&lt;/h2&gt;
+&lt;p&gt;这个方法就是利用无线网卡驱动提供的功能，通过命令行开启热点。不过，随着无线网卡更新，尤其是 Intel 网卡配合微软，这个功能经常被阉割掉。如果降级驱动还是不行，那就只能试试方法二了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以管理员权限启动终端(也就是CMD或PowerShell)&lt;/li&gt;
+&lt;li&gt;确认系统支持本地热点功能
+&lt;ul&gt;
+&lt;li&gt;输入 &lt;code&gt;netsh wlan show drivers&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果输出中 &lt;code&gt;Hosted network supported(支持的承载网路)&lt;/code&gt; 的值为 &lt;code&gt;Yes&lt;/code&gt;，就说明可以继续使用这个方法。如果为 &lt;code&gt;No&lt;/code&gt;，那很遗憾，只能换方法了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;配置热点信息
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=%名称% key=%密码% keyUsage=persistent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如 &lt;code&gt;netsh wlan set hostednetwork mode=allow ssid=HotPoint key=Strongest keyUsage=persistent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意：密码至少要8位哦！&lt;/strong&gt; （别想着用 123456 这种弱密码，会被干掉的！）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;启动热点
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netsh wlan start hostednetwork&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;启动成功后，就可以用手机等终端设备连接局域网啦！&lt;/li&gt;
+&lt;li&gt;主机IP通常默认为 &lt;code&gt;192.168.137.1&lt;/code&gt;, 可以用 &lt;code&gt;ipconfig&lt;/code&gt; 命令查看。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关闭热点
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;netsh wlan stop hostednetwork&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://superuser.com/questions/1195436/use-windows-10-wifi-hotspot-with-no-internet-connection&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Use Windows 10 wifi hotspot with no internet connection&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;方法-2用虚拟设备欺骗系统开启离线热点&#34;&gt;方法 2：用虚拟设备“欺骗”系统，开启离线热点&lt;/h2&gt;
+&lt;p&gt;Windows 检测是否有活动的 WiFi 或有线连接，才能开启移动热点。我们可以用虚拟设备来“欺骗”它，让它以为是有网络连接。常规的虚拟机网卡是无法通过检测的，这里我们用一个老旧的虚拟测试设备。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加虚拟测试设备
+&lt;ul&gt;
+&lt;li&gt;打开设备管理器&lt;/li&gt;
+&lt;li&gt;操作-&amp;gt;添加过时硬件(如果菜单中只有&lt;code&gt;帮助&lt;/code&gt;点击一下任一设备或类别就会刷新)&lt;/li&gt;
+&lt;li&gt;安装我手动从列表选择的硬件-&amp;gt;显示所有的硬件&lt;/li&gt;
+&lt;li&gt;左侧厂商选择 &lt;code&gt;Microsoft&lt;/code&gt; 右侧设备选择 &lt;code&gt;Microsoft KM-TEST 回环适配器&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重命名虚拟测试设备
+&lt;ul&gt;
+&lt;li&gt;控制面板-&amp;gt;网络和Internet-&amp;gt;网络和共享中心-&amp;gt;更改适配器设置(左侧)&lt;/li&gt;
+&lt;li&gt;将KM-TEST设备重命名为&lt;code&gt;Loopback&lt;/code&gt;(如果右键重命名无效那么选中按F2键入新名称)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;重启电脑或其他方式传播网路名称。&lt;/li&gt;
+&lt;li&gt;开启热点
+&lt;ul&gt;
+&lt;li&gt;在cmd执行以下命令，或者直接用PowerShell执行引号中的部分。
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;powershell -ExecutionPolicy -ByPass &amp;#34;$profile = [Windows.Networking.Connectivity.NetworkInformation,Windows.Networking.Connectivity,ContentType=WindowsRuntime]::GetConnectionProfiles() | where {$_.profilename -eq &amp;#39;loopback&amp;#39;}; $tether = [Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager,Windows.Networking.NetworkOperators,ContentType=WindowsRuntime]::createFromConnectionProfile($profile); $tether.StartTetheringAsync()&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;WLAN也会同时开启。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;保持热点
+&lt;ul&gt;
+&lt;li&gt;设备管理器-&amp;gt;网络适配器-&amp;gt;你的无线网卡(不是MK-TEST而是实际物理网卡) 【右键属性】&lt;/li&gt;
+&lt;li&gt;电源管理-&amp;gt;允许计算机关闭此设备以节约电源 【解除勾选】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关闭热点
+&lt;ul&gt;
+&lt;li&gt;直接用任务栏上的操作按钮即可。&lt;/li&gt;
+&lt;li&gt;关闭热点是虚开的WLAN也会关闭。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://answers.microsoft.com/zh-hans/windows/forum/all/win11%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%97%A0/9f4f8052-1009-4c1f-9229-3b8a741070e2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;win11如何才能无网络开启移动热点&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;吐槽一下-windows-的离线工作体验&#34;&gt;吐槽一下 Windows 的离线工作体验&lt;/h2&gt;
+&lt;p&gt;说实话，现在 Windows 对离线工作的支持越来越差了。每次想在没有网络的情况下用电脑，都要跟它死磕一下。这让我对 Linux 的兴趣越来越浓厚了。看来，是时候考虑换系统了，体验一下真正的自由了！&lt;/p&gt;
+&lt;p&gt;尤其是Win11即将进一步限制不联网安装，Windows 越来越云化，越来越限制用户，真的让人很无奈啊！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>LM Studio</title>
         <link>https://localfreedom.github.io/p/lm-studio/</link>
         <pubDate>Thu, 27 Mar 2025 10:03:25 +0000</pubDate>
@@ -873,6 +973,8 @@ RAR作者也非常良心，只要忍受每次开起的广告就可以一直试�
 驱动名相同，编译号不同的文件夹即是同一驱动的不同版本。&lt;/p&gt;
 &lt;p&gt;编译号字典序并不表示先后关系，需要进入文件夹对比&lt;code&gt;[驱动名].inf&lt;/code&gt;文件中的日期和版本号。
 也可以借助驱动管理软件来快捷分析，如&lt;code&gt;Sanppy Driver Installer Origin&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;博主编写了一个自动化&lt;a class=&#34;link&#34; href=&#34;https://github.com/LocalFreedom/python-utils/blob/main/archive_win_driver.py&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;python脚本&lt;/a&gt;来抽取所有驱动的最新版本复制到一个新的文件夹，并提示异常如版本号和日期顺序不一致等。&lt;/p&gt;
 &lt;h2 id=&#34;在新系统中重新安装驱动&#34;&gt;在新系统中重新安装驱动&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;有些驱动如果被系统安装过程依赖，要提前并入安装介质，如硬盘驱动！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;安装好新系统后将导出驱动的文件夹拷贝，依次进入每个文件夹&lt;code&gt;[驱动名].inf_amd64_[编译号]&lt;/code&gt;，右键&lt;code&gt;[驱动名].inf&lt;/code&gt;选择&lt;code&gt;安装&lt;/code&gt;即可安装每个驱动，恢复之前的硬件驱动状态。&lt;/p&gt;

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Check Chinese ID'>
-<title>中国身份证校验</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Enable hot-point in Windows 10/11 without Internet connection.'>
+<title>Win10/11 不联网强制开启移动热点</title>
 
-<link rel='canonical' href='https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/'>
+<link rel='canonical' href='https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='中国身份证校验'>
-<meta property='og:description' content='Check Chinese ID'>
-<meta property='og:url' content='https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Win10/11 不联网强制开启移动热点'>
+<meta property='og:description' content='Enable hot-point in Windows 10/11 without Internet connection.'>
+<meta property='og:url' content='https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ID' /><meta property='article:published_time' content='2023-11-24T03:22:15&#43;00:00'/><meta property='article:modified_time' content='2023-11-24T03:22:15&#43;00:00'/>
-<meta name="twitter:title" content="中国身份证校验">
-<meta name="twitter:description" content="Check Chinese ID">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Offline' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2025-04-10T12:02:35&#43;00:00'/><meta property='article:modified_time' content='2025-04-10T12:02:35&#43;00:00'/>
+<meta name="twitter:title" content="Win10/11 不联网强制开启移动热点">
+<meta name="twitter:description" content="Enable hot-point in Windows 10/11 without Internet connection.">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -268,9 +268,10 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#号码组合含义">号码组合含义</a></li>
-    <li><a href="#校验码计算方法">校验码计算方法</a></li>
-    <li><a href="#一些奇怪的用处">一些奇怪的用处</a></li>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#方法-1利用底层命令挑战微软的限制">方法 1：利用底层命令，挑战微软的限制</a></li>
+    <li><a href="#方法-2用虚拟设备欺骗系统开启离线热点">方法 2：用虚拟设备“欺骗”系统，开启离线热点</a></li>
+    <li><a href="#吐槽一下-windows-的离线工作体验">吐槽一下 Windows 的离线工作体验</a></li>
   </ol>
 </nav>
         </div>
@@ -298,12 +299,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/">中国身份证校验</a>
+            <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">Win10/11 不联网强制开启移动热点</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Check Chinese ID
+            Enable hot-point in Windows 10/11 without Internet connection.
         </h3>
         
     </div>
@@ -324,7 +325,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 24, 2023</time>
+                <time class="article-time--published">Apr 10, 2025</time>
             </div>
         
 
@@ -339,7 +340,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -354,95 +355,98 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-content">
     
     
-    <h2 id="号码组合含义">号码组合含义</h2>
-<p>目前中国使用的18位身份证号由6位地址码+8位生日+3位顺序码+1位校验码组成。</p>
-<p>地址码指的是公民出生地所在县（市、镇、区）的行政区划代码，如310110是上海市杨浦区。但港澳臺地區居民的身份號碼只精確到省級。</p>
-<p>出生日期码表示公民出生的公历年（4位）、月（2位）、日（2位）。</p>
-<p>顺序码是给同地址码同出生日期码的人编定的顺序号，其中奇数分配给男性，偶数分配给女性。</p>
-<p>最后一位是校验码，这里采用的是ISO 7064:1983, MOD 11-2校验码系统。校验码为一位数，但如果最后采用校验码系统计算的校验码是“10”，碍于身份证号码为18位的规定，则以“X”代替校验码“10”。</p>
-<h2 id="校验码计算方法">校验码计算方法</h2>
+    <h2 id="背景">背景</h2>
+<p>话说，现在个人电脑开启移动热点，大家通常是为了分享网路，但更重要的，其实是打造一个属于自己的无线局域网啊！Windows 提供的热点功能，一直以来都只能用来分享网路，没法直接用在局域网里。以前还能在连接 WiFi 或有线网络的时候开启热点并保持，但现在微软越来越严格，一旦上行连接断掉，移动热点就自动关掉，真是让人头大！</p>
+<p>Windows 电脑通常不当做局域网服务提供者，但现在 AI 这么火，像 LM Studio 这样的软件可以提供局域网服务，仅仅开启移动热点就能满足需求，这需求量可真大啊！</p>
+<h2 id="方法-1利用底层命令挑战微软的限制">方法 1：利用底层命令，挑战微软的限制</h2>
+<p>这个方法就是利用无线网卡驱动提供的功能，通过命令行开启热点。不过，随着无线网卡更新，尤其是 Intel 网卡配合微软，这个功能经常被阉割掉。如果降级驱动还是不行，那就只能试试方法二了。</p>
 <ol>
-<li>将身份证号码从左至右标记为 a1, a2, ⋯, a18，a_{18}即为校验码；</li>
-<li>计算权重系数 $W_i = 2^{18 − i} \mod 11$</li>
+<li>以管理员权限启动终端(也就是CMD或PowerShell)</li>
+<li>确认系统支持本地热点功能
+<ul>
+<li>输入 <code>netsh wlan show drivers</code></li>
+<li>如果输出中 <code>Hosted network supported(支持的承载网路)</code> 的值为 <code>Yes</code>，就说明可以继续使用这个方法。如果为 <code>No</code>，那很遗憾，只能换方法了。</li>
+</ul>
+</li>
+<li>配置热点信息
+<ul>
+<li><code>netsh wlan set hostednetwork mode=allow ssid=%名称% key=%密码% keyUsage=persistent</code></li>
+<li>如 <code>netsh wlan set hostednetwork mode=allow ssid=HotPoint key=Strongest keyUsage=persistent</code></li>
+<li><strong>注意：密码至少要8位哦！</strong> （别想着用 123456 这种弱密码，会被干掉的！）</li>
+</ul>
+</li>
+<li>启动热点
+<ul>
+<li><code>netsh wlan start hostednetwork</code></li>
+<li>启动成功后，就可以用手机等终端设备连接局域网啦！</li>
+<li>主机IP通常默认为 <code>192.168.137.1</code>, 可以用 <code>ipconfig</code> 命令查看。</li>
+</ul>
+</li>
+<li>关闭热点
+<ul>
+<li><code>netsh wlan stop hostednetwork</code></li>
+</ul>
+</li>
 </ol>
-<div class="table-wrapper"><table>
-<thead>
-<tr>
-<th>i</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-<th>16</th>
-<th>17</th>
-<th>18</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>W</td>
-<td>7</td>
-<td>9</td>
-<td>10</td>
-<td>5</td>
-<td>8</td>
-<td>4</td>
-<td>2</td>
-<td>1</td>
-<td>6</td>
-<td>3</td>
-<td>7</td>
-<td>9</td>
-<td>10</td>
-<td>5</td>
-<td>8</td>
-<td>4</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</tbody>
-</table></div>
-<ol start="3">
-<li>计算 $S = \sum\limits_{i=1}^{17} a_i * W_i$</li>
-<li>$a_{18} = (12 - (S \mod 11)) \mod 11$</li>
-</ol>
+<blockquote>
+<p><a class="link" href="https://superuser.com/questions/1195436/use-windows-10-wifi-hotspot-with-no-internet-connection"  target="_blank" rel="noopener"
+    >Use Windows 10 wifi hotspot with no internet connection</a></p>
+</blockquote>
+<h2 id="方法-2用虚拟设备欺骗系统开启离线热点">方法 2：用虚拟设备“欺骗”系统，开启离线热点</h2>
+<p>Windows 检测是否有活动的 WiFi 或有线连接，才能开启移动热点。我们可以用虚拟设备来“欺骗”它，让它以为是有网络连接。常规的虚拟机网卡是无法通过检测的，这里我们用一个老旧的虚拟测试设备。</p>
+<ul>
+<li>添加虚拟测试设备
+<ul>
+<li>打开设备管理器</li>
+<li>操作-&gt;添加过时硬件(如果菜单中只有<code>帮助</code>点击一下任一设备或类别就会刷新)</li>
+<li>安装我手动从列表选择的硬件-&gt;显示所有的硬件</li>
+<li>左侧厂商选择 <code>Microsoft</code> 右侧设备选择 <code>Microsoft KM-TEST 回环适配器</code></li>
+</ul>
+</li>
+<li>重命名虚拟测试设备
+<ul>
+<li>控制面板-&gt;网络和Internet-&gt;网络和共享中心-&gt;更改适配器设置(左侧)</li>
+<li>将KM-TEST设备重命名为<code>Loopback</code>(如果右键重命名无效那么选中按F2键入新名称)</li>
+</ul>
+</li>
+<li>重启电脑或其他方式传播网路名称。</li>
+<li>开启热点
+<ul>
+<li>在cmd执行以下命令，或者直接用PowerShell执行引号中的部分。
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">check_china_id</span><span class="p">(</span><span class="n">id_num</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">id_num</span><span class="p">)</span> <span class="o">==</span> <span class="mi">18</span>
-</span></span><span class="line"><span class="cl">    <span class="n">S</span> <span class="o">=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">17</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">S</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">id_num</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span><span class="mi">17</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="mi">11</span>
-</span></span><span class="line"><span class="cl">    <span class="n">checksum</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span> <span class="o">-</span> <span class="p">(</span><span class="n">S</span> <span class="o">%</span> <span class="mi">11</span><span class="p">))</span> <span class="o">%</span> <span class="mi">11</span>
-</span></span><span class="line"><span class="cl">    <span class="n">checkchar</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">checksum</span><span class="p">)</span> <span class="k">if</span> <span class="n">checksum</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span> <span class="s1">&#39;X&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">checkchar</span> <span class="o">==</span> <span class="n">id_num</span><span class="p">[</span><span class="mi">17</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">powershell -ExecutionPolicy -ByPass &#34;$profile = [Windows.Networking.Connectivity.NetworkInformation,Windows.Networking.Connectivity,ContentType=WindowsRuntime]::GetConnectionProfiles() | where {$_.profilename -eq &#39;loopback&#39;}; $tether = [Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager,Windows.Networking.NetworkOperators,ContentType=WindowsRuntime]::createFromConnectionProfile($profile); $tether.StartTetheringAsync()&#34;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="一些奇怪的用处">一些奇怪的用处</h2>
-<p>首先当然是基本查验接触到的中国身份证号是否正确。</p>
-<p>中国网络实行普遍的实名制，尤其电子游戏需要绑定身份信息，而游戏公司是不能也不应该实时接入公安数据库的，那么就可以按照这一规则生成一个假的身份证通过验证。
-金融领域也可以这样申请一些账户，但由于金融行业和公安数据对接更紧密，会定期对比身份信息，随机生成的身份证号很快会露出破绽。</p>
+</div><ul>
+<li>WLAN也会同时开启。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>保持热点
+<ul>
+<li>设备管理器-&gt;网络适配器-&gt;你的无线网卡(不是MK-TEST而是实际物理网卡) 【右键属性】</li>
+<li>电源管理-&gt;允许计算机关闭此设备以节约电源 【解除勾选】</li>
+</ul>
+</li>
+<li>关闭热点
+<ul>
+<li>直接用任务栏上的操作按钮即可。</li>
+<li>关闭热点是虚开的WLAN也会关闭。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a class="link" href="https://answers.microsoft.com/zh-hans/windows/forum/all/win11%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%97%A0/9f4f8052-1009-4c1f-9229-3b8a741070e2"  target="_blank" rel="noopener"
+    >win11如何才能无网络开启移动热点</a></p>
+</blockquote>
+<h2 id="吐槽一下-windows-的离线工作体验">吐槽一下 Windows 的离线工作体验</h2>
+<p>说实话，现在 Windows 对离线工作的支持越来越差了。每次想在没有网络的情况下用电脑，都要跟它死磕一下。这让我对 Linux 的兴趣越来越浓厚了。看来，是时候考虑换系统了，体验一下真正的自由了！</p>
+<p>尤其是Win11即将进一步限制不联网安装，Windows 越来越云化，越来越限制用户，真的让人很无奈啊！</p>
 
 </section>
 
@@ -451,7 +455,9 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     
     <section class="article-tags">
         
-            <a href="/tags/id/">ID</a>
+            <a href="/tags/offline/">Offline</a>
+        
+            <a href="/tags/windows/">Windows</a>
         
     </section>
 
@@ -509,32 +515,6 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Win10/11 不联网强制开启移动热点</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/rar-%E5%A6%99%E7%94%A8/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">RAR 妙用</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
     <a href="/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/">
         
         
@@ -554,6 +534,32 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
         <div class="article-details">
             <h2 class="article-title">Windows 11 使用技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">中国身份证校验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/rar-%E5%A6%99%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RAR 妙用</h2>
         </div>
     </a>
 </article>
