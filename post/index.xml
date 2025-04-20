@@ -6,7 +6,253 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Apr 2025 06:03:31 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>操作系统选型</title>
+        <link>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</link>
+        <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;从信息时代来到人工智能时代，掌握自己的信息系统越来越重要。
+将自己的数据握在自己手中，摆脱大公司的监视干预是本站的价值观。
+操作系统可以说是个人信息系统的重要基础，尤其是微软的Windows越来越绑定网络，将用户束缚在微软的服务中，探寻一下非大公司控制，可自己掌握支配的操作系统愈加必要。
+今天咱就来聊聊操作系统选型，希望帮大伙找到适合自己的能够把握的操作系统。&lt;/p&gt;
+&lt;h2 id=&#34;概览&#34;&gt;概览&lt;/h2&gt;
+&lt;p&gt;Windows应该是存在感最强的操作系统，伴随着PC的普及走进千家万户。
+随着移动互联网发展Android和iOS也走进千家万户。
+除了这些大公司运营的操作系统生态，其实还有Linux、BSD等系列操作系统，它们通常开源，将一切权力交给用户，有些用户体验已经打磨的不输商业操作系统，尤其是在服务器领域Linux更是占据霸主地位。
+本文讨论的重点就是Linux操作系统。&lt;/p&gt;
+&lt;h3 id=&#34;各个系列的操作系统&#34;&gt;各个系列的操作系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows
+&lt;ul&gt;
+&lt;li&gt;微软公司开发的商业软件，简单易用普及。&lt;/li&gt;
+&lt;li&gt;Windows 98/XP/7/10/11 等面向PC的操作系统，包括家庭版、商业版等。&lt;/li&gt;
+&lt;li&gt;Windows Server 2008/2016/2019/2022 等面向服务器的操作系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux
+&lt;ul&gt;
+&lt;li&gt;源自芬兰大学生Linus，在GPL许可证约束下开放源代码。&lt;/li&gt;
+&lt;li&gt;debian/arch/gentoo/alpine 等依靠开源社区自发演进的。&lt;/li&gt;
+&lt;li&gt;RedHat/SUSE 等依靠商业公司运营服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BSD
+&lt;ul&gt;
+&lt;li&gt;老Unix操作系统的社区维护版本，源自Berkeley校区。&lt;/li&gt;
+&lt;li&gt;OpenBSD/FreeBSD 等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MacOS
+&lt;ul&gt;
+&lt;li&gt;苹果公司运营的商业操作系统，大公司包办一切。&lt;/li&gt;
+&lt;li&gt;只有主线版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Android
+&lt;ul&gt;
+&lt;li&gt;Google采用Linux内核为移动设备开发的操作系统，在GPL约束下开源。&lt;/li&gt;
+&lt;li&gt;各手机厂商基于开源部分定制自己的专属系统。&lt;/li&gt;
+&lt;li&gt;LineageOS/eOS 等社区开发的操作系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;iOS
+&lt;ul&gt;
+&lt;li&gt;苹果公司移动设备的操作系统，极度封闭。&lt;/li&gt;
+&lt;li&gt;欧盟正在撼动其封闭生态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Other
+&lt;ul&gt;
+&lt;li&gt;操作系统其实并不复杂，好好学习也可以写出自己的操作系统。&lt;/li&gt;
+&lt;li&gt;ChromeOS/FirefoxOS 就是厂商新推出的小众操作系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;如何选择属于自己的操作系统&#34;&gt;如何选择属于自己的操作系统&lt;/h2&gt;
+&lt;p&gt;属于自己的操作系统最重要的是自己想用就可以用，最好想怎么用就怎么用。
+过于依赖网络的操作系统，比如ChromeOS/iOS当然就要排除在外了。
+即使大公司不作恶，也有可能停止服务。&lt;/p&gt;
+&lt;p&gt;属于自己的操作系统应当能够在硬件上自行安装，最好安装好就附带常用功能。
+不得不说这方面Windows还是不错的，就像他们广告中说的，买了Windows同时拥有了计算器、日历、文本编辑器等等一系列软件功能。&lt;/p&gt;
+&lt;p&gt;PC和移动设备面对的情况大相径庭，即使都是Linux也是差异很大的分支。
+针对不同类型的设备还是要用不同的标准来选型。
+尤其是硬件驱动，在移动设备上比较难搞，而PC上Windows驱动必然都有，Linux通常也不缺什么。
+本文主要针对PC设备，其他设备有空再详细介绍。&lt;/p&gt;
+&lt;p&gt;PC的操作系统也通常称为桌面端的操作系统，主要有Windows/Linux/BSD/MacOS四类。
+BSD太过于小众，就暂不多介绍了。
+MacOS几乎没得选，捆绑苹果设备，也没有分支。
+接下来先简单回顾一下Windows，然后着重介绍Linux系列操作系统选型。&lt;/p&gt;
+&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;p&gt;Windows操作系统分为面向PC的版本和面向服务器的Server版本。&lt;/p&gt;
+&lt;p&gt;Server版本继承了很多服务器的功能，且有严格的重启和断电管理，但对于个人使用反而缺少很多功能，激活和安装软件也比较麻烦。&lt;/p&gt;
+&lt;p&gt;面向PC的版本分为家庭版、专业版、旗舰版、企业版、工作站版等，根据地域还有区分，比如中文定制版或欧盟的版本。
+这些版本随着价格增加功能也越多，通常功能上: 家庭版&amp;lt;专业版&amp;lt;旗舰版~=企业版~=工作站版本。
+欧盟的版本由于反垄断通常去掉了媒体播放器等一些自带软件。
+中文定制版就不用理会了，没人会主动选择它的。&lt;/p&gt;
+&lt;p&gt;值得一提的是自Win10开始出现的LTSC——长期支持版。
+这算是官方精简版，去掉了应用商店和各种奇奇怪怪的应用，原始风味的Windows体验，基础功能等同于企业版。
+在Win7时代也有类似的Thin版本。&lt;/p&gt;
+&lt;p&gt;这里推荐&lt;a class=&#34;link&#34; href=&#34;https://msdn.itellyou.cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSDN,Itellyou&lt;/a&gt;，一个提供Windows官方镜像P2P链接的网站。&lt;/p&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;h3 id=&#34;内核发行版&#34;&gt;内核+发行版&lt;/h3&gt;
+&lt;p&gt;所谓的“内核”，通俗地说就是操作系统最核心最关键的部件。
+它负责一些最基本的工作，比如: 管理硬件驱动、管理内存、管理文件系统、管理进程等等。
+这些东西只要少了任何一样，整个操作系统就不能正常运转。&lt;/p&gt;
+&lt;p&gt;Linux系列操作系统的内核一直是由 Linus 领导开发，采用GPLv2开源协议，任何人都可以随意获取、免费获取、参与开发。
+同时所有基于Linux内核开发的操作系统也必须开源，允许大伙获得源代码。
+Windows也有其NT内核，但Windows通常整体打包发布，所以其内核没有存在感。&lt;/p&gt;
+&lt;p&gt;操作系统在除了内核，通常还应当提供命令行、图形界面、运行库等。
+由于Linux内核高质量且开放，有很多爱好者和商业公司基于Linux内核整合配套软件打包发布形成发行版。
+选择Linux操作系统就是选择一个适合自己的发行版。&lt;/p&gt;
+&lt;h3 id=&#34;发行版的选择&#34;&gt;发行版的选择&lt;/h3&gt;
+&lt;p&gt;首先推荐网站 &lt;code&gt;https://distrowatch.com&lt;/code&gt;。
+这是知名的操作系统排名网站，收录并列出各个操作系统的新闻，根据访客点击不同操作系统(发行版)的次数给出一个排名。
+这个网站主要收录Unix/Linux及其衍生品，并不包含Windows和MacOS。&lt;/p&gt;
+&lt;p&gt;DistroWatch的&lt;a class=&#34;link&#34; href=&#34;https://distrowatch.com/search.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;搜索页面&lt;/a&gt;提供了很多选项用于筛选发行版，可以作为我们选择发行版时的首要参考。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OS Type
+&lt;ul&gt;
+&lt;li&gt;操作系统的派系，这里当然选Linux。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Distribution category
+&lt;ul&gt;
+&lt;li&gt;发行版类型或者说面向的需求，比如新手(Beginners)、桌面(Desktop)、瘦客户端(Thin Client)、游戏(Gaming)、移动设备(Mobile)等。&lt;/li&gt;
+&lt;li&gt;个人认为这个分类不够完善，很可能漏掉或冗余。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Country of origin
+&lt;ul&gt;
+&lt;li&gt;源自哪个国家，开源社区无国界开发者有国籍:)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Based on
+&lt;ul&gt;
+&lt;li&gt;基于哪个发行版，发行版的衍生类似树状，如果偏爱哪个基础发行版，可以通过这个选项看看他的变种。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Not based on
+&lt;ul&gt;
+&lt;li&gt;不基于哪个发行版，同上，排除你从根上就不喜欢的发行版。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desktop interface&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;桌面，或者说图形介面更完整。&lt;/li&gt;
+&lt;li&gt;Linux的多样化也体现在桌面环境，可以搭配完全不同的桌面，这可不是换换壁纸或者主题，类似从Windows桌面和MacOS桌面的那种区别。&lt;/li&gt;
+&lt;li&gt;其中的选项也不都是严格意义上的桌面，有些则是窗口管理器(可以简单的理解为没有任务栏的桌面)等桌面组件；因为Linux的自由，桌面不必都是完整的，可以自由搭配窗口管理器、登陆管理器、合成渲染、菜单栏、任务栏等。&lt;/li&gt;
+&lt;li&gt;这里列举三种主流桌面方案：
+&lt;ul&gt;
+&lt;li&gt;KDE 模仿Windows，提供完善的图形化设置，附带很多高质量配套软件。&lt;/li&gt;
+&lt;li&gt;GNOME 越来越像MacOS，模仿Linux的发展方式，专注桌面核心组件，默认精简。&lt;/li&gt;
+&lt;li&gt;Xfce 相对轻量级的桌面环境，有点像WinXP的风格，低资源占用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;主流发行版通常都提供这三种桌面可选，如果从Windows迁移过来，推荐从KDE入手，复刻Windows的体验，默认配置通常也最完善好用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Architecture
+&lt;ul&gt;
+&lt;li&gt;架构，通常都是 &lt;code&gt;x86_64&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Package management&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;包管理方式，发行版的软件包基于哪种模式管理，也算是选择发行版的派系。&lt;/li&gt;
+&lt;li&gt;DEB由Debian发行版社区创建，也被Ubuntu等发行版继承,历史悠久，社区文化，配置文件可读友好。&lt;/li&gt;
+&lt;li&gt;RPM有红帽公司开发用于其RHEL发行版，Fedora/SUSE等也采用，配置方式大量采用二进制文件。&lt;/li&gt;
+&lt;li&gt;Pacman是Arch发行版的包管理方式，衍生至Manjaro等发行版，结构相对扁平简洁。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Release model&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;发行模式，是定期发布版本还是滚动更新，有没有长期支持LTS本&lt;/li&gt;
+&lt;li&gt;滚动更新提供最新版本的软件，但也意味着频繁的更新和更多的漏洞。&lt;/li&gt;
+&lt;li&gt;推荐有 &lt;strong&gt;LTS&lt;/strong&gt; 支持的定期发布版本的发行版，LTS会在新的版本发布后仍然对老版本提供几年的安全补丁，运行也会更稳定。&lt;/li&gt;
+&lt;li&gt;就像Windows，面向企业的Linux发行版RHEL/SUSE等都是LTS模式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Install media size
+&lt;ul&gt;
+&lt;li&gt;安装介质大小，通常都比Windows安装盘小，这个选项本身没什么意义。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Install method&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;安装方式，分为Local(本地安装),Net-Install(网络安装),OEM(出厂自带)。&lt;/li&gt;
+&lt;li&gt;当然选择本地安装喽，也可以看看OEM有哪些硬件厂家提供。&lt;/li&gt;
+&lt;li&gt;本地安装介质通常分为两种Installer和Live。
+&lt;ul&gt;
+&lt;li&gt;Installer安装镜像通常4GB，有一定的定制空间和额外软件包，就像Windows的安装盘。&lt;/li&gt;
+&lt;li&gt;Live安装镜像通常能提供不错的开箱即用的体验，是强化的PE系统。&lt;/li&gt;
+&lt;li&gt;Web安装镜像通常最小但如果没有网络可能无法完成最小化安装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Multi-language support
+&lt;ul&gt;
+&lt;li&gt;多语言支持，主流发行版都支持中文，如果不支持中文可以pass掉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Init software
+&lt;ul&gt;
+&lt;li&gt;初始化软件，这个选项是给资深有追求的用户准备的，暂且不管。&lt;/li&gt;
+&lt;li&gt;当前红帽公司主导的Systemd是最主流的选择。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Status
+&lt;ul&gt;
+&lt;li&gt;状态，当然要是活跃Active的发行版。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;推荐部分发行版&#34;&gt;推荐部分发行版&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian
+&lt;ul&gt;
+&lt;li&gt;DEB包管理框架，大约每2年发布一个版本并提供5年的LTS支持，本地安装以Installer为主，最近也开始提供Live镜像，默认GNOME桌面，在Installer镜像中同时包含选择KDE和Xfce所需文件。&lt;/li&gt;
+&lt;li&gt;完全社区开发的发行版，自由分为浓厚，其软件源也着重区分包是否开源，到12版才官方集成非开源的驱动程序。&lt;/li&gt;
+&lt;li&gt;Debian是通用操作系统，能稳定的运行于服务器上，对PC也有友好的界面。&lt;/li&gt;
+&lt;li&gt;软件源相对保守，版本发布后只提供安全补丁，不引入新功能，安全稳定的同时可能略显陈旧，debian虽然有backports通道提供新版本软件包，但默认是不启用的，当然也可以自己用deb包安装软件或者添加第三方软件源。&lt;/li&gt;
+&lt;li&gt;在Linux内核选择上，使用版本发布当年的LTS内核并随内核社区一起提供长期支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux Mint
+&lt;ul&gt;
+&lt;li&gt;DEB包管理框架，基于Debian/Ubuntu，随UbuntuLTS版本每两年发布，提供Live镜像，暂无Installer镜像，默认Cinnamon桌面从GNOME分支而来保留GNOME2风格。&lt;/li&gt;
+&lt;li&gt;社区为了摆脱Ubuntu背后商业公司的影响而分支的发行版，有着Ubuntu的友好，更加自由，曾登顶DistroWatch榜首；Ubuntu强推snap商店并把软件源中的包搬到商店的行为让我们选择LinuxMint。&lt;/li&gt;
+&lt;li&gt;在Ubuntu软件源基础上，将移动到snap商店的软件包恢复到deb源，还提供额外的驱动管理等用户友好组件。&lt;/li&gt;
+&lt;li&gt;LTS支持跟随Ubuntu，与Debian略有不同，会提供软件包的小版本更新，用于PC可以尝试较新的版本，内核版本与Ubuntu同步并不一定是LTS内核而是有Ubuntu提供内核的长期支持。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OpenSUSE
+&lt;ul&gt;
+&lt;li&gt;RPM包管理框架，来自德国，随企业版SUSE发布，提供滚动更新的Tumbleweed版和定期更新的Leap版，本地安装以Installer为主，同时也提供Live镜像，默认KDE桌面，Installer中多种桌面可选，提供非常全面的开箱即用体验。&lt;/li&gt;
+&lt;li&gt;非常稳定精良的设计，尤其是其Yast可比Windows的控制面板，几乎可以平替Windows。&lt;/li&gt;
+&lt;li&gt;提供很多图形化的服务器管理功能，用于PC可能显得过于完善。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manjaro
+&lt;ul&gt;
+&lt;li&gt;Pacman包管理框架，基于Arch滚动更新，相对保守一些进行更多测试放慢节奏，提供Live镜像，默认KDE桌面，开箱即用。&lt;/li&gt;
+&lt;li&gt;官方号称给Arch的软件包增加额外的测试和缓冲器，只同步安全补丁。&lt;/li&gt;
+&lt;li&gt;在Arch基础上对商业软件更加友好，软件源中有discord等热门商业软件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实现局域自由的关键路径&#34;&gt;实现局域自由的关键路径&lt;/h2&gt;
+&lt;p&gt;操作系统是自由使用计算机设备的基础，也算是实现局域自由的关键一环。
+Linux以其开源自由的特点，广泛活跃的社区，可以作为操作系统的首选，尤其是提供LTS支持的发行版作为主力系统真是非常靠谱。
+Windows虽然是封闭商业软件，但本地自由使用难度并不大，考虑其广泛的生态，尤其是游戏娱乐，值得收录镜像以备用。&lt;/p&gt;
+&lt;p&gt;未来有空再细谈Linux镜像源和Windows激活的话题。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Win10/11 不联网强制开启移动热点</title>
         <link>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
         <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
