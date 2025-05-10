@@ -6,7 +6,152 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 20 Apr 2025 06:03:31 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 May 2025 01:59:15 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>被博通收购后免费的 VMware Workstation Pro 下载方法</title>
+        <link>https://localfreedom.github.io/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Sat, 10 May 2025 01:59:15 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://localfreedom.github.io/img/vmware-logo-grey.svg" alt="Featured image of post 被博通收购后免费的 VMware Workstation Pro 下载方法" /&gt;&lt;p&gt;VMware是著名的个人桌面虚拟机软件，有友好的用户界面，强大的虚拟显卡能力。
+尤其是用虚拟机运行3D游戏，几乎是便捷可行的唯一选择。&lt;/p&gt;
+&lt;p&gt;市面上一直流传着VMware产品的激活码，PC用这些激活码直接可以离线永久激活。
+被收购后，博通索性直接将针对PC的虚拟机产品 VMware Workstation Pro / VMware Fusion Pro 针对个人免费，直接去掉了注册激活步骤。
+然而，之前流传的下载直连链接不可用了，博通网站不仅强制登陆，而且下载位置特别难找，本文就介绍免费时代的VMware桌面虚拟机产品。&lt;/p&gt;
+&lt;h2 id=&#34;官方站点&#34;&gt;官方站点&lt;/h2&gt;
+&lt;p&gt;VMware的&lt;a class=&#34;link&#34; href=&#34;https://www.vmware.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方首页&lt;/a&gt;想点出来VMwareFusion或VMwareWorkstation的产品页面着实不容易。
+还是直接用搜索引擎搜索 VMware+Fusion 或 VMware+Workstation 直接来到&lt;a class=&#34;link&#34; href=&#34;https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;产品页面&lt;/a&gt;。
+点击醒目的 &lt;code&gt;DOWNLOAD FUSION OR WORKSTATION&lt;/code&gt; 就会跳转到博通的&lt;a class=&#34;link&#34; href=&#34;https://access.broadcom.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;登陆页面&lt;/a&gt;
+如果没有博通账号需要注册，右上角的&lt;code&gt;LOGIN&lt;/code&gt;按钮右边箭头可以下拉菜单，点击看似不能点的灰色&lt;code&gt;REGISTER&lt;/code&gt;按钮即可进入注册流程。这配色设计简直&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/vmware-reg.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;注册账号&#34;&gt;注册账号&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;填写邮箱，可以考虑用临时邮箱以保护个人隐私。&lt;/li&gt;
+&lt;li&gt;填写邮箱收到的验证码&lt;/li&gt;
+&lt;li&gt;填写基本信息，包括姓名、国家、职业、密码，建议选择美国；创建账户后菜单会变长问一些附加服务，选择&lt;code&gt;I&#39;ll do it later&lt;/code&gt;即可。
+&lt;img src=&#34;https://localfreedom.github.io/img/vmware-reg-info.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;用刚才填写的邮箱和密码登陆。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;定位下载&#34;&gt;定位下载&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在右上角登陆用户名旁边的按钮下拉菜单选择 &lt;code&gt;VMware Cloud Foundation&lt;/code&gt;
+&lt;img src=&#34;https://localfreedom.github.io/img/vmware-select.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;li&gt;在左侧选择 &lt;code&gt;All Products&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在右侧产品列表上方的搜索框搜索相关产品，在搜索框中输入 &amp;lsquo;Fusion&amp;rsquo; 搜索 MacOS 版本，输入 &amp;lsquo;Workstation&amp;rsquo; 搜索 Windows 或 Linux 版本。&lt;/li&gt;
+&lt;li&gt;Fusion系列就是&lt;code&gt;VMware Fusion&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Workstation系列选择&lt;code&gt;VMware Workstation Pro&lt;/code&gt;功能最全，点击右侧&lt;code&gt;Product Detail&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;在详情页，在Release列选择想下载的版本点击即可进入下载页面&lt;/li&gt;
+&lt;li&gt;终于进入下载页面，下载按钮是灰色的，点击栏目左上方勾选&lt;code&gt;I agree to theTerms and Conditions&lt;/code&gt;即可点击并开始下载。
+&lt;img src=&#34;https://localfreedom.github.io/img/vmware-dl.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;免费产品下载页面&#34;&gt;免费产品下载页面&lt;/h3&gt;
+&lt;p&gt;博通可能会直接提示免费产品的下载连接，还可以看看其他免费产品。
+&lt;a class=&#34;link&#34; href=&#34;https://support.broadcom.com/group/ecx/free-downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.broadcom.com/group/ecx/free-downloads&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;1763版本下载页面链接&#34;&gt;17.6.3版本下载页面链接&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux: &lt;a class=&#34;link&#34; href=&#34;https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Pro&amp;amp;displayGroup=VMware%20Workstation%20Pro%2017.0%20for%20Linux&amp;amp;release=17.6.3&amp;amp;os=&amp;amp;servicePk=&amp;amp;language=EN&amp;amp;freeDownloads=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Pro&amp;displayGroup=VMware%20Workstation%20Pro%2017.0%20for%20Linux&amp;release=17.6.3&amp;os=&amp;servicePk=&amp;language=EN&amp;freeDownloads=true&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;a class=&#34;link&#34; href=&#34;https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Pro&amp;amp;displayGroup=VMware%20Workstation%20Pro%2017.0%20for%20Windows&amp;amp;release=17.6.3&amp;amp;os=&amp;amp;servicePk=&amp;amp;language=EN&amp;amp;freeDownloads=true&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.broadcom.com/group/ecx/productfiles?subFamily=VMware%20Workstation%20Pro&amp;displayGroup=VMware%20Workstation%20Pro%2017.0%20for%20Windows&amp;release=17.6.3&amp;os=&amp;servicePk=&amp;language=EN&amp;freeDownloads=true&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装激活&#34;&gt;安装激活&lt;/h2&gt;
+&lt;p&gt;VMware是非常用户友好的商业产品，安装类似其他软件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MacOS上拖拽&lt;/li&gt;
+&lt;li&gt;Windows双击后根据提示下一步即可&lt;/li&gt;
+&lt;li&gt;Linux用sudo运行后根据提示进行即可，如果有桌面和Windows一样，如果用字符界面，你还能看不懂提示？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;附校验信息&#34;&gt;附：校验信息**&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;VMware Workstation Pro for Linux&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;16.2.5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name:	VMware-Workstation-Full-16.2.5-20904516.x86_64.bundle&lt;/li&gt;
+&lt;li&gt;Release Date: 	2022-12-13&lt;/li&gt;
+&lt;li&gt;Build Number: 	20904516&lt;/li&gt;
+&lt;li&gt;MD5SUM:	0a69f5cff1f7c36d2d80f6393230effa&lt;/li&gt;
+&lt;li&gt;SHA1SUM: 	b010b67e1bf79bd63bad4d2e2047bc89a51266fa&lt;/li&gt;
+&lt;li&gt;SHA256SUM: 	3ee36946b15e3093fd032115f5b6e5dabf4081f54756d5e795b4534473ea53e7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;17.6.3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File Name:	VMware-Workstation-Full-17.6.3-24583834.x86_64.bundle(335.21 MB)&lt;/li&gt;
+&lt;li&gt;Build Number:	24583834&lt;/li&gt;
+&lt;li&gt;Release Date:	Mar 04, 2025&lt;/li&gt;
+&lt;li&gt;Last Updated:	Feb 27, 2025&lt;/li&gt;
+&lt;li&gt;SHA2:	79575917728ded4c6d0b89f4ab6a81be9a773c00eeb68d1d12ac0db125478ee0&lt;/li&gt;
+&lt;li&gt;MD5:	01559c427a4b47547e67026320c77738&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VMware Workstation Pro for Windows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;16.2.5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Name:	VMware-workstation-full-16.2.5-20904516.exe&lt;/li&gt;
+&lt;li&gt;Release Date: 	2022-12-13&lt;/li&gt;
+&lt;li&gt;Build Number: 	20904516&lt;/li&gt;
+&lt;li&gt;MD5SUM:	b72276af0d1f093c146c6623c463218f&lt;/li&gt;
+&lt;li&gt;SHA1SUM: 	01ddbeb179444bb6bf9ee41e070de362c6134ce9&lt;/li&gt;
+&lt;li&gt;SHA256SUM: 	380b0fa8a0f37ade496573cdc2ad922d3985bc83664f94431a9e513444b6c377&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;17.6.3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;File Name:	VMware-workstation-full-17.6.3-24583834.exe(401.43 MB)&lt;/li&gt;
+&lt;li&gt;Build Number:	24583834&lt;/li&gt;
+&lt;li&gt;Release Date:	Mar 04, 2025&lt;/li&gt;
+&lt;li&gt;Last Updated:	Feb 24, 2025&lt;/li&gt;
+&lt;li&gt;SHA2:	d7c04b4dd1e6bf551693897d4805e99c45198a830c6361d9af8267b40906857b&lt;/li&gt;
+&lt;li&gt;MD5:	de592b18a39513e3414f197ec1a4cb1c&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>操作系统选型</title>
         <link>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</link>
         <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
