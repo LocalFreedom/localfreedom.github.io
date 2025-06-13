@@ -3,18 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://localfreedom.github.io/</loc>
-    <lastmod>2025-06-11T12:50:31+00:00</lastmod>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/categories/</loc>
-    <lastmod>2025-06-11T12:50:31+00:00</lastmod>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.github.io/categories/collect/</loc>
-    <lastmod>2025-06-11T12:50:31+00:00</lastmod>
+    <loc>https://localfreedom.github.io/tags/linux/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.github.io/tags/network/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/post/</loc>
-    <lastmod>2025-06-11T12:50:31+00:00</lastmod>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/tags/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.github.io/categories/usage/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.github.io/tags/utility/</loc>
+    <lastmod>2025-06-13T13:04:09+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.github.io/categories/collect/</loc>
     <lastmod>2025-06-11T12:50:31+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/tags/term/</loc>
@@ -56,9 +71,6 @@
     <loc>https://localfreedom.github.io/p/lm-studio/</loc>
     <lastmod>2025-03-27T10:03:25+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.github.io/categories/usage/</loc>
-    <lastmod>2025-03-27T10:03:25+00:00</lastmod>
-  </url><url>
     <loc>https://localfreedom.github.io/tags/office/</loc>
     <lastmod>2024-12-22T03:09:53+00:00</lastmod>
   </url><url>
@@ -81,9 +93,6 @@
     <lastmod>2023-12-09T03:02:33+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/p/kiwix/</loc>
-    <lastmod>2023-12-03T03:58:12+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.github.io/tags/utility/</loc>
     <lastmod>2023-12-03T03:58:12+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.github.io/tags/creative/</loc>

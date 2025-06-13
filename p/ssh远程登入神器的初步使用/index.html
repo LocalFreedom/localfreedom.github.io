@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Recommend firefox extensions in offline mode.'>
-<title>火狐浏览器离线使用扩展推荐</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SSH Usage'>
+<title>SSH远程登入神器的初步使用</title>
 
-<link rel='canonical' href='https://localfreedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/'>
+<link rel='canonical' href='https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='火狐浏览器离线使用扩展推荐'>
-<meta property='og:description' content='Recommend firefox extensions in offline mode.'>
-<meta property='og:url' content='https://localfreedom.github.io/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='SSH远程登入神器的初步使用'>
+<meta property='og:description' content='SSH Usage'>
+<meta property='og:url' content='https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='RecommendList' /><meta property='article:published_time' content='2023-11-18T10:41:25&#43;00:00'/><meta property='article:modified_time' content='2023-11-18T10:41:25&#43;00:00'/>
-<meta name="twitter:title" content="火狐浏览器离线使用扩展推荐">
-<meta name="twitter:description" content="Recommend firefox extensions in offline mode.">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Utility' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Network' /><meta property='article:published_time' content='2025-06-13T13:04:09&#43;00:00'/><meta property='article:modified_time' content='2025-06-13T13:04:09&#43;00:00'/>
+<meta name="twitter:title" content="SSH远程登入神器的初步使用">
+<meta name="twitter:description" content="SSH Usage">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -268,11 +268,15 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#epubreader">EPUBReader</a></li>
-    <li><a href="#offline-qr-code">Offline QR code</a></li>
-    <li><a href="#emoji">Emoji</a></li>
-    <li><a href="#kiwix">Kiwix</a></li>
-    <li><a href="#joplin-web-clipper">Joplin Web Clipper</a></li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#用法">用法</a></li>
+    <li><a href="#配置文件">配置文件</a>
+      <ol>
+        <li><a href="#客户端">客户端</a></li>
+        <li><a href="#服务端">服务端</a></li>
+      </ol>
+    </li>
+    <li><a href="#技巧">技巧</a></li>
   </ol>
 </nav>
         </div>
@@ -300,12 +304,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/">火狐浏览器离线使用扩展推荐</a>
+            <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">SSH远程登入神器的初步使用</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Recommend firefox extensions in offline mode.
+            SSH Usage
         </h3>
         
     </div>
@@ -326,7 +330,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 18, 2023</time>
+                <time class="article-time--published">Jun 13, 2025</time>
             </div>
         
 
@@ -341,7 +345,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -356,47 +360,141 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-content">
     
     
-    <p>火狐(Firefox)是著名的浏览器，也是现今最重要最符合自由精神的浏览器。
-浏览器通常是用来浏览上网的，但也具备越来越多的离线功能。
-这里推荐一些可以完全离线使用的火狐浏览器扩展，以在离线环境中使用火狐。
-本文会优先选择Mozilla官方推荐的扩展。</p>
-<p>这篇博文算是首篇非常符合本博客名号的文章了。
-建议在Firefox中新建一个Profile体验这些扩展。</p>
-<h2 id="epubreader">EPUBReader</h2>
+    <h2 id="简介">简介</h2>
+<p>SSH是安全shell的缩写，提供加密传输访问远程服务器的功能。
+SSH几乎是所有类似UNIX系统远程登入的方式，当前的Windows 10/11 已经集成了SSH客户端可选组件。
+SSH同时支持者scp、git、https、vpn等很多应用。</p>
+<h2 id="用法">用法</h2>
 <ul>
-<li><a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/epubreader/"  target="_blank" rel="noopener"
-    >https://addons.mozilla.org/en-US/firefox/addon/epubreader/</a></li>
-<li>非常不错的EPUB电子书格式阅读器。</li>
-<li>不用担心服务商统计自己看了哪些书。</li>
+<li>
+<p>直接使用</p>
+<ul>
+<li>ssh 用户名@目标主机:端口</li>
+<li>用户名和当前用户名相同可省略</li>
+<li>目标主机可以是ip或域名</li>
+<li>端口默认22可不写</li>
 </ul>
-<h2 id="offline-qr-code">Offline QR code</h2>
+</li>
+<li>
+<p>配置密钥访问</p>
 <ul>
-<li><a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator"  target="_blank" rel="noopener"
-    >https://addons.mozilla.org/en-US/firefox/addon/offline-qr-code-generator</a></li>
-<li>输入文本生成二维码，简单易用。</li>
-<li>离线环境下避免二维码相关信息泄漏。</li>
+<li>生成密钥对 ssh-keygen</li>
+<li>拷贝公钥到目标主机 ssh-copy-id</li>
+<li>配置使用的密钥对</li>
 </ul>
-<h2 id="emoji">Emoji</h2>
+</li>
+<li>
+<p>端口转发</p>
 <ul>
-<li><a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/emoji-sav"  target="_blank" rel="noopener"
-    >https://addons.mozilla.org/en-US/firefox/addon/emoji-sav</a></li>
-<li>提供大量表情。</li>
-<li>离线编写带表情的文章时可以通过Emoji快捷查找输入表情符号。</li>
+<li>本地转发 LocalForward
+<ul>
+<li>-L [本地主机:]本地主机端口:远程网络主机:远程网络主机端口</li>
+<li>例如 <code>ssh -L 0.0.0.0:30000:host2:8000 user@host1</code></li>
+<li>这条命令将host2的8000端口映射到本地的30000端口前提是待登录主机host1上可以正常连接到host2的80端口</li>
 </ul>
-<h2 id="kiwix">Kiwix</h2>
+</li>
+<li>远程转发 RemoteForward
 <ul>
-<li><a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline"  target="_blank" rel="noopener"
-    >https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline</a></li>
-<li>Kiwix提供的用以阅读zim文件的插件。</li>
-<li>经测试目前不如桌面版kiwix好用，但可以省去安装软件。</li>
+<li>-R [登录主机:]登录主机端口:本地网络主机:本地网络主机端口</li>
+<li>例如 <code>ssh -R 0.0.0.0:8080:host2:80 user@host1</code></li>
+<li>这条命令将host2的80端口映射到待登录主机host1的8080端口前提是本地主机可以正常连接host2的80端口</li>
 </ul>
-<h2 id="joplin-web-clipper">Joplin Web Clipper</h2>
+</li>
+<li>动态转发 DynamicForward
 <ul>
-<li><a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper"  target="_blank" rel="noopener"
-    >https://addons.mozilla.org/en-US/firefox/addon/joplin-web-clipper</a></li>
-<li>Joplin提供的网页剪辑插件，用来将网页转换为适合Joplin的markdown格式笔记。</li>
-<li>可以用于将<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/single-file"  target="_blank" rel="noopener"
-    >SingleFile</a>或各种方式缓存的离线网页转换成Joplin笔记。</li>
+<li>-D [本地主机:]本地主机端口</li>
+<li><code>ssh -D 0.0.0.0:50000 user@host1</code></li>
+<li>这条命令创建了一个SOCKS代理(默认127.0.0.1)通过该SOCKS代理发出的数据包将经过host1转发出去</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>专门复制文件</p>
+<ul>
+<li>scp [-4/-6] [-r] [-P 端口号] 源地址 目的地</li>
+<li>范例
+<ul>
+<li><code>scp -r 文件夹 user@1.2.3.4:~</code></li>
+<li><code>scp -6 -P 22 文件 user@[I:P::v:6]:~</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置文件">配置文件</h2>
+<h3 id="客户端">客户端</h3>
+<ul>
+<li>文件位置
+<ul>
+<li>默认在 <code>~/.ssh/config</code></li>
+<li>Windows/Linux/MacOS同样</li>
+</ul>
+</li>
+<li>有一些公共配置
+<ul>
+<li>HashKnownHosts 散列记住的主机信息，默认<code>yes</code>,建议<code>no</code>以便于手工维护<code>known_hosts</code>文件</li>
+</ul>
+</li>
+<li>每个服务器各是一段配置,常用配置项目如下
+<ul>
+<li>Host 服务器简称</li>
+<li>User 登陆用户名，默认当前用户名</li>
+<li>Hostname 服务器地址</li>
+<li>Port 服务器端口，默认22</li>
+<li>IdentityFile 需要使用的密钥，相对路径从执行命令的位置为基准</li>
+<li>LocalForward 端口转发本地</li>
+<li>RemoteForward 端口转发远端</li>
+<li>ProxyCommand 应用代理额外命令</li>
+</ul>
+</li>
+<li>范例</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host my_server
+</span></span><span class="line"><span class="cl">	User root
+</span></span><span class="line"><span class="cl">	Hostname 10.11.12.13
+</span></span><span class="line"><span class="cl">	Port 22
+</span></span><span class="line"><span class="cl">	IdentityFile ~/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">	LocalForward 30000 localhost:30000
+</span></span><span class="line"><span class="cl">	RemoteForward 8000 localhost:8000
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="服务端">服务端</h3>
+<ul>
+<li>文件位置
+<ul>
+<li>类Unix系统通常在<code>/etc/ssh/sshd_config</code></li>
+<li>Windows系统一般不使用SSH，而是RDP远程桌面。</li>
+</ul>
+</li>
+<li>配置项
+<ul>
+<li>文件中有详细的注释和范例</li>
+<li>不建议修改服务端的配置</li>
+</ul>
+</li>
+</ul>
+<h2 id="技巧">技巧</h2>
+<ul>
+<li>查看服务器公钥指纹 <code>ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub</code>
+<ul>
+<li>首次连接一台服务器的时候会询问是否接受公钥，显示的指纹可以通过这条命令查看。</li>
+<li>核对指纹可以避免中间人攻击。</li>
+</ul>
+</li>
+<li>通过socks5代理 <code>ssh -o ProxyCommand='nc -x 127.0.0.1:1080 %h %p' my_server</code></li>
+<li>开启socks5代理并显示连接信息 <code>ssh -v -D 1080 my_server</code></li>
 </ul>
 
 </section>
@@ -406,7 +504,11 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     
     <section class="article-tags">
         
-            <a href="/tags/recommendlist/">RecommendList</a>
+            <a href="/tags/utility/">Utility</a>
+        
+            <a href="/tags/linux/">Linux</a>
+        
+            <a href="/tags/network/">Network</a>
         
     </section>
 
@@ -464,12 +566,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
+    <a href="/p/kiwix/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
+            <h2 class="article-title">kiwix</h2>
         </div>
     </a>
 </article>
@@ -503,12 +605,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/kiwix/">
+    <a href="/p/gpt4all/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">kiwix</h2>
+            <h2 class="article-title">GPT4ALL</h2>
         </div>
     </a>
 </article>
@@ -516,12 +618,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/gpt4all/">
+    <a href="/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">GPT4ALL</h2>
+            <h2 class="article-title">火狐浏览器离线使用扩展推荐</h2>
         </div>
     </a>
 </article>

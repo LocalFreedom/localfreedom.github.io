@@ -6,7 +6,151 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 11 Jun 2025 12:50:31 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Jun 2025 13:04:09 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SSH远程登入神器的初步使用</title>
+        <link>https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/</link>
+        <pubDate>Fri, 13 Jun 2025 13:04:09 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;SSH是安全shell的缩写，提供加密传输访问远程服务器的功能。
+SSH几乎是所有类似UNIX系统远程登入的方式，当前的Windows 10/11 已经集成了SSH客户端可选组件。
+SSH同时支持者scp、git、https、vpn等很多应用。&lt;/p&gt;
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;直接使用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ssh 用户名@目标主机:端口&lt;/li&gt;
+&lt;li&gt;用户名和当前用户名相同可省略&lt;/li&gt;
+&lt;li&gt;目标主机可以是ip或域名&lt;/li&gt;
+&lt;li&gt;端口默认22可不写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;配置密钥访问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生成密钥对 ssh-keygen&lt;/li&gt;
+&lt;li&gt;拷贝公钥到目标主机 ssh-copy-id&lt;/li&gt;
+&lt;li&gt;配置使用的密钥对&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口转发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地转发 LocalForward
+&lt;ul&gt;
+&lt;li&gt;-L [本地主机:]本地主机端口:远程网络主机:远程网络主机端口&lt;/li&gt;
+&lt;li&gt;例如 &lt;code&gt;ssh -L 0.0.0.0:30000:host2:8000 user@host1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;这条命令将host2的8000端口映射到本地的30000端口前提是待登录主机host1上可以正常连接到host2的80端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;远程转发 RemoteForward
+&lt;ul&gt;
+&lt;li&gt;-R [登录主机:]登录主机端口:本地网络主机:本地网络主机端口&lt;/li&gt;
+&lt;li&gt;例如 &lt;code&gt;ssh -R 0.0.0.0:8080:host2:80 user@host1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;这条命令将host2的80端口映射到待登录主机host1的8080端口前提是本地主机可以正常连接host2的80端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;动态转发 DynamicForward
+&lt;ul&gt;
+&lt;li&gt;-D [本地主机:]本地主机端口&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ssh -D 0.0.0.0:50000 user@host1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;这条命令创建了一个SOCKS代理(默认127.0.0.1)通过该SOCKS代理发出的数据包将经过host1转发出去&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;专门复制文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scp [-4/-6] [-r] [-P 端口号] 源地址 目的地&lt;/li&gt;
+&lt;li&gt;范例
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;scp -r 文件夹 user@1.2.3.4:~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;scp -6 -P 22 文件 user@[I:P::v:6]:~&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置文件&#34;&gt;配置文件&lt;/h2&gt;
+&lt;h3 id=&#34;客户端&#34;&gt;客户端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文件位置
+&lt;ul&gt;
+&lt;li&gt;默认在 &lt;code&gt;~/.ssh/config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows/Linux/MacOS同样&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有一些公共配置
+&lt;ul&gt;
+&lt;li&gt;HashKnownHosts 散列记住的主机信息，默认&lt;code&gt;yes&lt;/code&gt;,建议&lt;code&gt;no&lt;/code&gt;以便于手工维护&lt;code&gt;known_hosts&lt;/code&gt;文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;每个服务器各是一段配置,常用配置项目如下
+&lt;ul&gt;
+&lt;li&gt;Host 服务器简称&lt;/li&gt;
+&lt;li&gt;User 登陆用户名，默认当前用户名&lt;/li&gt;
+&lt;li&gt;Hostname 服务器地址&lt;/li&gt;
+&lt;li&gt;Port 服务器端口，默认22&lt;/li&gt;
+&lt;li&gt;IdentityFile 需要使用的密钥，相对路径从执行命令的位置为基准&lt;/li&gt;
+&lt;li&gt;LocalForward 端口转发本地&lt;/li&gt;
+&lt;li&gt;RemoteForward 端口转发远端&lt;/li&gt;
+&lt;li&gt;ProxyCommand 应用代理额外命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;范例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Host my_server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	User root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Hostname 10.11.12.13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	Port 22
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	IdentityFile ~/.ssh/id_rsa
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	LocalForward 30000 localhost:30000
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	RemoteForward 8000 localhost:8000
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;服务端&#34;&gt;服务端&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文件位置
+&lt;ul&gt;
+&lt;li&gt;类Unix系统通常在&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows系统一般不使用SSH，而是RDP远程桌面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;配置项
+&lt;ul&gt;
+&lt;li&gt;文件中有详细的注释和范例&lt;/li&gt;
+&lt;li&gt;不建议修改服务端的配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技巧&#34;&gt;技巧&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;查看服务器公钥指纹 &lt;code&gt;ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;首次连接一台服务器的时候会询问是否接受公钥，显示的指纹可以通过这条命令查看。&lt;/li&gt;
+&lt;li&gt;核对指纹可以避免中间人攻击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通过socks5代理 &lt;code&gt;ssh -o ProxyCommand=&#39;nc -x 127.0.0.1:1080 %h %p&#39; my_server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;开启socks5代理并显示连接信息 &lt;code&gt;ssh -v -D 1080 my_server&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>台湾和大陆IT术语对照表</title>
         <link>https://localfreedom.github.io/p/%E5%8F%B0%E6%B9%BE%E5%92%8C%E5%A4%A7%E9%99%86it%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
         <pubDate>Wed, 11 Jun 2025 12:50:31 +0000</pubDate>
