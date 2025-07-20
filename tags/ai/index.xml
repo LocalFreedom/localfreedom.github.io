@@ -46,7 +46,9 @@ LM Studio 的解析方式是按照 Hugging Face 模型仓库的 URI 格式来识
 等待加载完成就可以在下方与 LLM 对话了。
 目前支持上传图片和附件，只要LLM支持相关功能就可以使用。&lt;/p&gt;
 &lt;h2 id=&#34;提供服务&#34;&gt;提供服务&lt;/h2&gt;
-&lt;p&gt;LM Studio 可以提供兼容 OpenAI v1 的API服务，可以作为局域网中便捷的LLM基础服务，与各种客户端应用程序配合使用。&lt;/p&gt;
+&lt;p&gt;LM Studio 可以提供兼容 OpenAI v1 的API服务，可以作为局域网中便捷的LLM基础服务，与各种客户端应用程序配合使用。
+点击左侧第二个按钮，进入开发者界面即可开启OpenAI兼容API服务。
+默认其监听0.0.0.0的1234端口，图形界面提供复制的IP地址可能不合适。&lt;/p&gt;
 </description>
         </item>
         <item>
