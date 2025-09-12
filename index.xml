@@ -6,7 +6,72 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 30 Aug 2025 11:51:29 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>LibreTranslate</title>
+        <link>https://localfreedom.github.io/p/libretranslate/</link>
+        <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/libretranslate/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://libretranslate.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LibreTranslate&lt;/a&gt; 是一个轻量、开源的机器翻译服务，可以在本地部署或部署到云服务器，实现低延迟、无外部依赖的翻译系统。
+LibreTranslate 自身是 &lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Argos Translate&lt;/a&gt; 官方推荐的 WebUI，而 Argos Translate 则基于 &lt;a class=&#34;link&#34; href=&#34;https://opennmt.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenNMT&lt;/a&gt; 开源架构训练翻译模型。&lt;/p&gt;
+&lt;p&gt;相比于如今火爆的大语言模型LLM提供的翻译，LibreTranslate提供的传统的轻巧的翻译服务更加便捷，无需独立显卡，只占用少量内存，尤其便于在个人终端上配合LLM使用，比如生成图片的LLM通常基于英文提示词，且可能直接耗尽显存无力在笔电上再起其他LLM用于翻译，那么使用LibreTranslate即可方便的将中文想法转换为英文提示词。
+LibreTranslate 官方提供Container部署方式，可以更加轻易的完成本地部署，本文聚焦使用Docker在个人设备部署可离线使用的轻便翻译服务。&lt;/p&gt;
+&lt;h2 id=&#34;docker环境&#34;&gt;Docker环境&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/desktop/release-notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载&lt;/a&gt;并安装Docker可以参见前一篇博文。&lt;/p&gt;
+&lt;h2 id=&#34;libretranslate镜像&#34;&gt;LibreTranslate镜像&lt;/h2&gt;
+&lt;p&gt;从v1.6.3版本开始LibreTranslate镜像的体积异常变大，不知道是打包过程出了什么bug。
+本着轻量级可靠的原则，这里推荐v1.6.2和v1.7.2版本，寻求更新的版本建议先在 &lt;a class=&#34;link&#34; href=&#34;https://hub.docker.com/r/libretranslate/libretranslate/tags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DockerHub&lt;/a&gt; 上看看镜像尺寸。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 联网Pull镜像
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull docker.io/libretranslate/libretranslate:v1.6.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 导出镜像可迁往离线环境
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker save -o LibreTranslate.tar libretranslate:v1.6.2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;下载翻译模型&#34;&gt;下载翻译模型&lt;/h2&gt;
+&lt;p&gt;LibreTranslate只是WebUI，Docker镜像中集成了 Argos Translate 翻译引擎，工作所需的翻译模型需要单独下载。
+Argos官方&lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/argospm/index/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;列出了所有支持的语言翻译模型&lt;/a&gt;。从结构上可以看出此工具是通过英文过渡的方式实现不同语言之间的翻译的，选择自己需要的语言和英语之间的翻译包下载。
+下载的 &lt;code&gt;.argosmodel&lt;/code&gt; 格式翻译模型包存放到一个资料夹中，如 &lt;code&gt;C:\Users\UserName\Downloads\MTpackages&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;启动服务&#34;&gt;启动服务&lt;/h2&gt;
+&lt;p&gt;在个人设备上装好Docker打开命令行，我们需要将下载的翻译模型包通过卷的方式挂载到容器内，由于默认联网检查并下载所有翻译模型，所以需要通过 &amp;ndash;load-only 限制只加载已下载好的翻译语言模型。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 导入镜像(假设放在U盘Z:中)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker load -i Z:\LibreTranslate.tar
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 从镜像启动容器
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -m 2g -p 5000:5000 -v C:\Users\UserName\Downloads\MTpackages:/home/libretranslate/.local/share/argos-translate/packages -w /app --name=&amp;#34;LibreTranslate&amp;#34; libretranslate/libretranslate:v1.6.2 --load-only en,zh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;打开浏览器，在地址栏输入 &lt;code&gt;localhost:5000&lt;/code&gt; 即可访问WebUI，体验LibreTranslate的机器翻译服务。如果5000端口被其他程式占用了，修改 -p 参数的第一个5000为其他空闲端口号即可。&lt;/p&gt;
+&lt;h2 id=&#34;持久运行&#34;&gt;持久运行&lt;/h2&gt;
+&lt;p&gt;首次启动后，LibreTranslate会将翻译包解压到同一个资料夹，之后再 -v 挂载可以加上 :ro 选项限制容器写入存储翻译模型包的资料夹。
+从命令行启动服务后，即可在 DockerDesktop 的图形界面中停止/启动这一服务，之前的启动命令当然也可以在图形界面配置，但似乎图形界面的配置还不是很完善。&lt;/p&gt;
+&lt;h2 id=&#34;效果体验&#34;&gt;效果体验&lt;/h2&gt;
+&lt;p&gt;毕竟轻量级，不是大语言模型，但对于配合其他LLM等重型应用，是非常充足的。
+翻译结果可能有些机器味，结合个人理解润色一下即可，毕竟用LLM画图的你英文不会太差的。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Docker的安装与日常使用技巧</title>
         <link>https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sat, 30 Aug 2025 11:51:29 +0000</pubDate>

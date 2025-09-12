@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Docker Desktop Usage'>
-<title>Docker的安装与日常使用技巧</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Deploy LibreTranslate offline via docker.'>
+<title>LibreTranslate</title>
 
-<link rel='canonical' href='https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel='canonical' href='https://localfreedom.github.io/p/libretranslate/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Docker的安装与日常使用技巧'>
-<meta property='og:description' content='Docker Desktop Usage'>
-<meta property='og:url' content='https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='LibreTranslate'>
+<meta property='og:description' content='Deploy LibreTranslate offline via docker.'>
+<meta property='og:url' content='https://localfreedom.github.io/p/libretranslate/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VM' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2025-08-30T11:51:29&#43;00:00'/><meta property='article:modified_time' content='2025-08-30T11:51:29&#43;00:00'/>
-<meta name="twitter:title" content="Docker的安装与日常使用技巧">
-<meta name="twitter:description" content="Docker Desktop Usage">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='VM' /><meta property='article:published_time' content='2025-09-12T06:03:04&#43;00:00'/><meta property='article:modified_time' content='2025-09-12T06:03:04&#43;00:00'/>
+<meta name="twitter:title" content="LibreTranslate">
+<meta name="twitter:description" content="Deploy LibreTranslate offline via docker.">
     <link rel="shortcut icon" href="/favicon.png" />
 
     </head>
@@ -268,19 +268,13 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#为什么在-windows-上使用-docker">为什么在 Windows 上使用 Docker？</a></li>
-    <li><a href="#前置条件系统准备">前置条件：系统准备</a></li>
-    <li><a href="#下载安装">下载安装</a></li>
-    <li><a href="#基本使用">基本使用</a></li>
-    <li><a href="#离线迁移">离线迁移</a>
-      <ol>
-        <li><a href="#导出save导入load-镜像">导出save/导入load 镜像</a></li>
-        <li><a href="#导出export导入import-容器">导出export/导入import 容器</a></li>
-        <li><a href="#导出导入-卷">导出/导入 卷</a></li>
-      </ol>
-    </li>
-    <li><a href="#镜像推荐">镜像推荐</a></li>
-    <li><a href="#docker">Docker</a></li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#docker环境">Docker环境</a></li>
+    <li><a href="#libretranslate镜像">LibreTranslate镜像</a></li>
+    <li><a href="#下载翻译模型">下载翻译模型</a></li>
+    <li><a href="#启动服务">启动服务</a></li>
+    <li><a href="#持久运行">持久运行</a></li>
+    <li><a href="#效果体验">效果体验</a></li>
   </ol>
 </nav>
         </div>
@@ -308,12 +302,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">Docker的安装与日常使用技巧</a>
+            <a href="/p/libretranslate/">LibreTranslate</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Docker Desktop Usage
+            Deploy LibreTranslate offline via docker.
         </h3>
         
     </div>
@@ -334,7 +328,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Aug 30, 2025</time>
+                <time class="article-time--published">Sep 12, 2025</time>
             </div>
         
 
@@ -364,151 +358,63 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-content">
     
     
-    <h2 id="为什么在-windows-上使用-docker">为什么在 Windows 上使用 Docker？</h2>
-<ul>
-<li>开发环境一致：将应用与依赖打包成容器，无论你在 Windows、Linux 还是 macOS 上都能得到一模一样的运行环境。</li>
-<li>资源隔离：每个容器都是独立进程，避免了传统方式中“软件冲突”的麻烦，也限制了恶意软件的活动范围。</li>
-<li>快速构建：通过 Dockerfile 只需几行指令即可定义完整的运行时，CI/CD 流水线也能一键部署。</li>
-<li>用户友好：Docker Desktop 为 Windows 开发者提供了 GUI、WSL2 集成、图形化的容器管理和镜像管理等一站式体验。</li>
-</ul>
-<h2 id="前置条件系统准备">前置条件：系统准备</h2>
-<ul>
-<li>系统版本
-<ul>
-<li>Windows10的1809版本及以上，或Windows11</li>
-<li>Windows Server 2019 及以上</li>
-</ul>
-</li>
-<li>虚拟化
-<ul>
-<li>BIOS中开启硬件Intel或AMD的CPU虚拟化，新电脑通常默认已开启。</li>
-<li>OS模块
-<ul>
-<li>Windows需要启用WSL2或Hyper-V，在控制面板-添加和删除应用-开启或关闭Windows功能中勾选。</li>
-<li>Linux需要KVM，常见发行版所使用的内核都是带KVM的。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>磁盘应有充足的空间，没有几十GiB空间很多有趣的Docker镜像就玩不成了。</li>
-</ul>
-<h2 id="下载安装">下载安装</h2>
-<ol>
-<li>下载安装包 <a class="link" href="https://docs.docker.com/desktop/release-notes/"  target="_blank" rel="noopener"
-    >https://docs.docker.com/desktop/release-notes/</a></li>
-<li>安装
-<ul>
-<li>Windows <a class="link" href="https://docs.docker.com/desktop/setup/install/windows-install/"  target="_blank" rel="noopener"
-    >https://docs.docker.com/desktop/setup/install/windows-install/</a>
-<ul>
-<li>可选WSL2或Hyper-V后端，推荐WSL2。</li>
-<li>结束时可让DockerInstaller自动开始WSL2的初始化，可能需要重启系统。</li>
-</ul>
-</li>
-<li>Linux <a class="link" href="https://docs.docker.com/desktop/setup/install/linux/"  target="_blank" rel="noopener"
-    >https://docs.docker.com/desktop/setup/install/linux/</a>
-<ul>
-<li>可以按照docker官方建议添加源，使用类似Windows的体验。</li>
-<li>建议直接从发行版软件仓库安装使用命令行版本，通常如ubuntu包名是docker.io。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>初始化
-<ul>
-<li>WSL2首次使用只能联网下载更新。</li>
-</ul>
-</li>
-</ol>
-<h2 id="基本使用">基本使用</h2>
-<p>在Windows双击桌面上的图表即可打开DockerDesktop，可以在界面左侧看到一排按钮。
-镜像管理页面可以从DockerHub上下载镜像。
-容器管理页面可以运行镜像成为容器，运行时可能需要选择映射的端口和档案。</p>
-<p><strong>镜像</strong>是一个基础，有了镜像便可以运行它得到，每次运行可以得到一个容器，就像每次运行软件打开一个窗口。
-<strong>容器</strong>会提供一些服务，通常通过浏览器访问本地相应端口来使用。当结束容器，试用期间产生的数据和变化一并消除，就像浏览器的隐私模式，但比浏览器能提供的功能花样多多了。</p>
-<p>DockerDesktop除了图形界面，也继承Docker的命令行程序，并且命令行有更全面的功能。
-Windows安装的时候记得勾选添加命令到PATH。
-具体命令格式在Windows/Linux/MacOS都是一致的。</p>
-<p>从DockerHub上下载镜像可以用pull命令，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull 镜像名:版本号(默认latest)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>运行则是run命令，如：</p>
+    <h2 id="简介">简介</h2>
+<p><a class="link" href="https://libretranslate.com/"  target="_blank" rel="noopener"
+    >LibreTranslate</a> 是一个轻量、开源的机器翻译服务，可以在本地部署或部署到云服务器，实现低延迟、无外部依赖的翻译系统。
+LibreTranslate 自身是 <a class="link" href="https://www.argosopentech.com/"  target="_blank" rel="noopener"
+    >Argos Translate</a> 官方推荐的 WebUI，而 Argos Translate 则基于 <a class="link" href="https://opennmt.net/"  target="_blank" rel="noopener"
+    >OpenNMT</a> 开源架构训练翻译模型。</p>
+<p>相比于如今火爆的大语言模型LLM提供的翻译，LibreTranslate提供的传统的轻巧的翻译服务更加便捷，无需独立显卡，只占用少量内存，尤其便于在个人终端上配合LLM使用，比如生成图片的LLM通常基于英文提示词，且可能直接耗尽显存无力在笔电上再起其他LLM用于翻译，那么使用LibreTranslate即可方便的将中文想法转换为英文提示词。
+LibreTranslate 官方提供Container部署方式，可以更加轻易的完成本地部署，本文聚焦使用Docker在个人设备部署可离线使用的轻便翻译服务。</p>
+<h2 id="docker环境">Docker环境</h2>
+<p><a class="link" href="https://docs.docker.com/desktop/release-notes/"  target="_blank" rel="noopener"
+    >下载</a>并安装Docker可以参见前一篇博文。</p>
+<h2 id="libretranslate镜像">LibreTranslate镜像</h2>
+<p>从v1.6.3版本开始LibreTranslate镜像的体积异常变大，不知道是打包过程出了什么bug。
+本着轻量级可靠的原则，这里推荐v1.6.2和v1.7.2版本，寻求更新的版本建议先在 <a class="link" href="https://hub.docker.com/r/libretranslate/libretranslate/tags"  target="_blank" rel="noopener"
+    >DockerHub</a> 上看看镜像尺寸。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run 镜像名
-</span></span><span class="line"><span class="cl">docker run [选项如-itd] 镜像名[:版本号默认latest]
-</span></span><span class="line"><span class="cl">docker run [选项如-itd] [-n 容器名默认随即英文单词] 镜像名[:版本号默认latest]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 联网Pull镜像
+</span></span><span class="line"><span class="cl">docker pull docker.io/libretranslate/libretranslate:v1.6.2
+</span></span><span class="line"><span class="cl"># 导出镜像可迁往离线环境
+</span></span><span class="line"><span class="cl">docker save -o LibreTranslate.tar libretranslate:v1.6.2
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>由于Docker是来自Linux生态的技术，所以镜像通常都是Linux内核，即使在Windows也是通过WSL或Hyper-V使用虚拟的Linux内核。
-当然对于运行的容器可以进入其中，使用其Linux命令行界面。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker exec -it 容器名或ID
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="离线迁移">离线迁移</h2>
-<h3 id="导出save导入load-镜像">导出save/导入load 镜像</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker save -o 文件名.tar 镜像名1:版本号1 镜像名2:版本号2 ...
-</span></span><span class="line"><span class="cl">docker load -i 文件名.tar
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="导出export导入import-容器">导出export/导入import 容器</h3>
+</div><h2 id="下载翻译模型">下载翻译模型</h2>
+<p>LibreTranslate只是WebUI，Docker镜像中集成了 Argos Translate 翻译引擎，工作所需的翻译模型需要单独下载。
+Argos官方<a class="link" href="https://www.argosopentech.com/argospm/index/"  target="_blank" rel="noopener"
+    >列出了所有支持的语言翻译模型</a>。从结构上可以看出此工具是通过英文过渡的方式实现不同语言之间的翻译的，选择自己需要的语言和英语之间的翻译包下载。
+下载的 <code>.argosmodel</code> 格式翻译模型包存放到一个资料夹中，如 <code>C:\Users\UserName\Downloads\MTpackages</code></p>
+<h2 id="启动服务">启动服务</h2>
+<p>在个人设备上装好Docker打开命令行，我们需要将下载的翻译模型包通过卷的方式挂载到容器内，由于默认联网检查并下载所有翻译模型，所以需要通过 &ndash;load-only 限制只加载已下载好的翻译语言模型。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker <span class="nb">export</span> -o 文件名.tar 容器名或容器ID
-</span></span><span class="line"><span class="cl">docker import 文件名.tar 参考镜像:版本号
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 导入镜像(假设放在U盘Z:中)
+</span></span><span class="line"><span class="cl">docker load -i Z:\LibreTranslate.tar
+</span></span><span class="line"><span class="cl"># 从镜像启动容器
+</span></span><span class="line"><span class="cl">docker run -d -m 2g -p 5000:5000 -v C:\Users\UserName\Downloads\MTpackages:/home/libretranslate/.local/share/argos-translate/packages -w /app --name=&#34;LibreTranslate&#34; libretranslate/libretranslate:v1.6.2 --load-only en,zh
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="导出导入-卷">导出/导入 卷</h3>
-<p>-v 参数挂载的卷就是一个本地文件夹，直接复制或打包复制即可。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">-v 主机路径:容器路径:权限
-</span></span><span class="line"><span class="cl">-v D:<span class="se">\D</span>ata:/data:ro
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="镜像推荐">镜像推荐</h2>
-<p>官方提供了集中分发镜像的平台 <code>https://hub.docker.com</code> ，其中有趋势排序推荐。</p>
-<p>这里推荐一些博主认为好用有趣的镜像：</p>
-<ul>
-<li>docker.io/continuumio/anaconda3</li>
-<li>ocker.io/library/nextcloud</li>
-<li>docker.io/ollama/ollama</li>
-<li>docker.io/jgraph/drawio</li>
-<li>docker.io/library/alpine</li>
-</ul>
-<p>使用pull命令，或者在图形界面检索，即可拉取体验。</p>
-<h2 id="docker">Docker</h2>
-<p>新世界的大门，快来下载打开它吧！</p>
+</div><p>打开浏览器，在地址栏输入 <code>localhost:5000</code> 即可访问WebUI，体验LibreTranslate的机器翻译服务。如果5000端口被其他程式占用了，修改 -p 参数的第一个5000为其他空闲端口号即可。</p>
+<h2 id="持久运行">持久运行</h2>
+<p>首次启动后，LibreTranslate会将翻译包解压到同一个资料夹，之后再 -v 挂载可以加上 :ro 选项限制容器写入存储翻译模型包的资料夹。
+从命令行启动服务后，即可在 DockerDesktop 的图形界面中停止/启动这一服务，之前的启动命令当然也可以在图形界面配置，但似乎图形界面的配置还不是很完善。</p>
+<h2 id="效果体验">效果体验</h2>
+<p>毕竟轻量级，不是大语言模型，但对于配合其他LLM等重型应用，是非常充足的。
+翻译结果可能有些机器味，结合个人理解润色一下即可，毕竟用LLM画图的你英文不会太差的。</p>
 
 </section>
 
@@ -517,9 +423,9 @@ Windows安装的时候记得勾选添加命令到PATH。
     
     <section class="article-tags">
         
-            <a href="/tags/vm/">VM</a>
+            <a href="/tags/ai/">AI</a>
         
-            <a href="/tags/windows/">Windows</a>
+            <a href="/tags/vm/">VM</a>
         
     </section>
 
@@ -577,38 +483,12 @@ Windows安装的时候记得勾选添加命令到PATH。
             
                 
 <article class="">
-    <a href="/p/libretranslate/">
+    <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">LibreTranslate</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/office-deployment-tool/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Office Deployment Tool</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
+            <h2 class="article-title">Docker的安装与日常使用技巧</h2>
         </div>
     </a>
 </article>
@@ -629,12 +509,38 @@ Windows安装的时候记得勾选添加命令到PATH。
             
                 
 <article class="">
-    <a href="/p/kiwix/">
+    <a href="/p/gpt4all/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">kiwix</h2>
+            <h2 class="article-title">GPT4ALL</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/office-deployment-tool/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Office Deployment Tool</h2>
         </div>
     </a>
 </article>
