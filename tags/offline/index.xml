@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Offline on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/offline/</link>
+        <link>http://localhost:1313/tags/offline/</link>
         <description>Recent content in Offline on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Win10/11 不联网强制开启移动热点</title>
-        <link>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
+        <link>http://localhost:1313/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
         <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</guid>
-        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-&lt;p&gt;话说，现在个人电脑开启移动热点，大家通常是为了分享网路，但更重要的，其实是打造一个属于自己的无线局域网啊！Windows 提供的热点功能，一直以来都只能用来分享网路，没法直接用在局域网里。以前还能在连接 WiFi 或有线网络的时候开启热点并保持，但现在微软越来越严格，一旦上行连接断掉，移动热点就自动关掉，真是让人头大！&lt;/p&gt;
+        <guid>http://localhost:1313/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;话说，现在个人电脑开启移动热点，大家通常是为了分享网路，但更重要的，其实是打造一个属于自己的无线局域网啊！Windows 提供的热点功能，一直以来都只能用来分享网路，没法直接用在局域网里。以前还能在连接 WiFi 或有线网络的时候开启热点并保持，但现在微软越来越严格，一旦上行连接断掉，移动热点就自动关掉，真是让人头大！&lt;/p&gt;
 &lt;p&gt;Windows 电脑通常不当做局域网服务提供者，但现在 AI 这么火，像 LM Studio 这样的软件可以提供局域网服务，仅仅开启移动热点就能满足需求，这需求量可真大啊！&lt;/p&gt;
-&lt;h2 id=&#34;方法-1利用底层命令挑战微软的限制&#34;&gt;方法 1：利用底层命令，挑战微软的限制&lt;/h2&gt;
-&lt;p&gt;这个方法就是利用无线网卡驱动提供的功能，通过命令行开启热点。不过，随着无线网卡更新，尤其是 Intel 网卡配合微软，这个功能经常被阉割掉。如果降级驱动还是不行，那就只能试试方法二了。&lt;/p&gt;
+&lt;h2 id=&#34;方法-1利用底层命令挑战微软的限制&#34;&gt;方法 1：利用底层命令，挑战微软的限制
+&lt;/h2&gt;&lt;p&gt;这个方法就是利用无线网卡驱动提供的功能，通过命令行开启热点。不过，随着无线网卡更新，尤其是 Intel 网卡配合微软，这个功能经常被阉割掉。如果降级驱动还是不行，那就只能试试方法二了。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;以管理员权限启动终端(也就是CMD或PowerShell)&lt;/li&gt;
 &lt;li&gt;确认系统支持本地热点功能
@@ -49,8 +49,8 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://superuser.com/questions/1195436/use-windows-10-wifi-hotspot-with-no-internet-connection&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Use Windows 10 wifi hotspot with no internet connection&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;方法-2用虚拟设备欺骗系统开启离线热点&#34;&gt;方法 2：用虚拟设备“欺骗”系统，开启离线热点&lt;/h2&gt;
-&lt;p&gt;Windows 检测是否有活动的 WiFi 或有线连接，才能开启移动热点。我们可以用虚拟设备来“欺骗”它，让它以为是有网络连接。常规的虚拟机网卡是无法通过检测的，这里我们用一个老旧的虚拟测试设备。&lt;/p&gt;
+&lt;h2 id=&#34;方法-2用虚拟设备欺骗系统开启离线热点&#34;&gt;方法 2：用虚拟设备“欺骗”系统，开启离线热点
+&lt;/h2&gt;&lt;p&gt;Windows 检测是否有活动的 WiFi 或有线连接，才能开启移动热点。我们可以用虚拟设备来“欺骗”它，让它以为是有网络连接。常规的虚拟机网卡是无法通过检测的，这里我们用一个老旧的虚拟测试设备。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;添加虚拟测试设备
 &lt;ul&gt;
@@ -101,36 +101,36 @@
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://answers.microsoft.com/zh-hans/windows/forum/all/win11%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E6%97%A0/9f4f8052-1009-4c1f-9229-3b8a741070e2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;win11如何才能无网络开启移动热点&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;吐槽一下-windows-的离线工作体验&#34;&gt;吐槽一下 Windows 的离线工作体验&lt;/h2&gt;
-&lt;p&gt;说实话，现在 Windows 对离线工作的支持越来越差了。每次想在没有网络的情况下用电脑，都要跟它死磕一下。这让我对 Linux 的兴趣越来越浓厚了。看来，是时候考虑换系统了，体验一下真正的自由了！&lt;/p&gt;
+&lt;h2 id=&#34;吐槽一下-windows-的离线工作体验&#34;&gt;吐槽一下 Windows 的离线工作体验
+&lt;/h2&gt;&lt;p&gt;说实话，现在 Windows 对离线工作的支持越来越差了。每次想在没有网络的情况下用电脑，都要跟它死磕一下。这让我对 Linux 的兴趣越来越浓厚了。看来，是时候考虑换系统了，体验一下真正的自由了！&lt;/p&gt;
 &lt;p&gt;尤其是Win11即将进一步限制不联网安装，Windows 越来越云化，越来越限制用户，真的让人很无奈啊！&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>GOG 游戏库</title>
-        <link>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
+        <link>http://localhost:1313/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
+        <guid>http://localhost:1313/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GOG&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;GOG.com是一家提供电子游戏等数位商品发行平台，它由GOG公司运营，母公司为&lt;a class=&#34;link&#34; href=&#34;https://www.cdprojekt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;CD Projekt&lt;/code&gt;(波兰蠢驴)&lt;/a&gt;，总部位于波兰华沙。GOG.com通过无数字版权管理（DRM-free）的方式提供适用于Windows、OS X和Linux平台的电子游戏。在早期，GOG只發行年代較久的遊戲，自2012年3月，它开始售卖较为新款的游戏。
 2017年6月22日，GOG.com加入了简体中文支持以及人民币结算，包括支付宝、银联、微信支付等方式。&lt;/p&gt;
 &lt;p&gt;DRM-free意味着从GOG.com购买的电子游戏可以直接获得离线安装包，没有任何安装次数或设备的限制。当然正规平台也没有版权风险或被捆绑恶意软体的风险。也便于充分实现单机游戏的匿名游玩，你完全可以注册账号购买游戏，用钱行使赞助的权利，然后从任意渠道获得的安装包进行游戏。&lt;/p&gt;
-&lt;h2 id=&#34;离线用法&#34;&gt;离线用法&lt;/h2&gt;
-&lt;p&gt;从GOG.com的网页就可以直接下载游戏安装包，购买游戏后在库里选择下载，避开醒目提示的Galaxy客户端提示，选择下载离线安装文件即可。
+&lt;h2 id=&#34;离线用法&#34;&gt;离线用法
+&lt;/h2&gt;&lt;p&gt;从GOG.com的网页就可以直接下载游戏安装包，购买游戏后在库里选择下载，避开醒目提示的Galaxy客户端提示，选择下载离线安装文件即可。
 也可以通过BT等手段从其他地方获取安装文件，Windows版本的可以通过数字签名来确认是否来自官网。
 GOG官方还特别良心的提供了安装前校验功能，并将安装包拆分为安装器和多个数据文件。如果官网速度不佳，可以只下载安装器然后校验其他方式得到的数据文件并安装即可。&lt;/p&gt;
 &lt;p&gt;这里的安装包都是无需联网验证和激活的，即免DRM。
 只要在任意满足基本要求的电脑上运行安装包即可游玩儿。
 当然离线游玩是没有成就之类的在线功能的。&lt;/p&gt;
 &lt;p&gt;通常离线安装包会携带必要的依赖库，但自己储备一些常用的以来库对于离线娱乐等也是很必要的，考虑有空另写一篇博文将将离线库文件的收集整理。&lt;/p&gt;
-&lt;h2 id=&#34;游戏推荐&#34;&gt;游戏推荐&lt;/h2&gt;
-&lt;h3 id=&#34;自家作品&#34;&gt;自家作品&lt;/h3&gt;
-&lt;p&gt;创建GOG的公司CDProjekt自身就出品很多高质量游戏，最近对简体中文支持越来越好，即使不玩游戏也建议去视频网站上体验一下普通话配音效果。&lt;/p&gt;
+&lt;h2 id=&#34;游戏推荐&#34;&gt;游戏推荐
+&lt;/h2&gt;&lt;h3 id=&#34;自家作品&#34;&gt;自家作品
+&lt;/h3&gt;&lt;p&gt;创建GOG的公司CDProjekt自身就出品很多高质量游戏，最近对简体中文支持越来越好，即使不玩游戏也建议去视频网站上体验一下普通话配音效果。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;巫师系列
 &lt;ul&gt;
@@ -149,8 +149,8 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;经典上架&#34;&gt;经典上架&lt;/h3&gt;
-&lt;p&gt;也有很多经典游戏在GOG上架。&lt;/p&gt;
+&lt;h3 id=&#34;经典上架&#34;&gt;经典上架
+&lt;/h3&gt;&lt;p&gt;也有很多经典游戏在GOG上架。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;上古卷轴系列
 &lt;ul&gt;
@@ -173,20 +173,20 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;值得期待&#34;&gt;值得期待&lt;/h3&gt;
-&lt;p&gt;也有很多游戏被大众期待，GOG上有个&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/wishlist/games&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h3 id=&#34;值得期待&#34;&gt;值得期待
+&lt;/h3&gt;&lt;p&gt;也有很多游戏被大众期待，GOG上有个&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com/wishlist/games&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;愿望汇总列表&lt;/a&gt;。暗黑破坏神、侠盗猎车手、全面战争等都在榜上。
 吐槽一句，玩儿了赛博朋克，博主已经决定侠盗猎车手不上架GOG绝不买。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>kiwix</title>
-        <link>https://localfreedom.github.io/p/kiwix/</link>
+        <link>http://localhost:1313/p/kiwix/</link>
         <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/kiwix/</guid>
-        <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/kiwix/</guid>
+        <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
 当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
 可以说kiwix是&lt;strong&gt;实现自由的离线生活的重要基础设施&lt;/strong&gt;。
@@ -197,22 +197,22 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
 kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Firefox插件版本&lt;/a&gt;可以体验。
 博主测试浏览器插件使用效果目前还不太稳定。&lt;/p&gt;
-&lt;h2 id=&#34;离线知识库&#34;&gt;离线知识库&lt;/h2&gt;
-&lt;h3 id=&#34;资源网址&#34;&gt;资源网址&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://library.kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;离线知识库&#34;&gt;离线知识库
+&lt;/h2&gt;&lt;h3 id=&#34;资源网址&#34;&gt;资源网址
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://library.kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://library.kiwix.org&lt;/a&gt; 列出了官方背书的知识库，可以筛选查找。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://download.kiwix.org/zim/&lt;/a&gt; 这里可以下载官方的资源。&lt;/p&gt;
-&lt;h3 id=&#34;各种版本&#34;&gt;各种版本&lt;/h3&gt;
-&lt;p&gt;维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
+&lt;h3 id=&#34;各种版本&#34;&gt;各种版本
+&lt;/h3&gt;&lt;p&gt;维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
 每种语言有完全版本(all)和精选版本(top)。
 网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。&lt;/p&gt;
 &lt;p&gt;比如 &lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim&lt;/a&gt; 就是维基百科-中文-完全-无图片版本。&lt;/p&gt;
 &lt;p&gt;其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
 目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。&lt;/p&gt;
-&lt;h3 id=&#34;下载方式&#34;&gt;下载方式&lt;/h3&gt;
-&lt;ul&gt;
+&lt;h3 id=&#34;下载方式&#34;&gt;下载方式
+&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;直接下载，从&lt;a class=&#34;link&#34; href=&#34;https://download.kiwix.org/zim/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;网页&lt;/a&gt;直接点击下载。&lt;/li&gt;
 &lt;li&gt;BT下载，在zim下载连接后面加上&lt;code&gt;.torrent&lt;/code&gt;即可下载种子文件，然后用喜欢的BT工具下载即可。&lt;/li&gt;
@@ -220,8 +220,8 @@ kiwix还有&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/en-US
     &gt;数据网站&lt;/a&gt;也可以去那里下载。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。&lt;/p&gt;
-&lt;h2 id=&#34;kiwix的意义&#34;&gt;kiwix的意义&lt;/h2&gt;
-&lt;p&gt;kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
+&lt;h2 id=&#34;kiwix的意义&#34;&gt;kiwix的意义
+&lt;/h2&gt;&lt;p&gt;kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
 既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
 离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。&lt;/p&gt;
 </description>

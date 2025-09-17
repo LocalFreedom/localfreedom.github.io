@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 局域自由博客</title>
-        <link>https://localfreedom.github.io/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Usage</title>
-        <link>https://localfreedom.github.io/categories/usage/</link>
+        <link>http://localhost:1313/categories/usage/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/usage/</guid>
+        <guid>http://localhost:1313/categories/usage/</guid>
         <description></description>
         </item>
         <item>
         <title>Collect</title>
-        <link>https://localfreedom.github.io/categories/collect/</link>
+        <link>http://localhost:1313/categories/collect/</link>
         <pubDate>Wed, 11 Jun 2025 12:50:31 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/collect/</guid>
+        <guid>http://localhost:1313/categories/collect/</guid>
         <description></description>
         </item>
         <item>
         <title>Tip</title>
-        <link>https://localfreedom.github.io/categories/tip/</link>
+        <link>http://localhost:1313/categories/tip/</link>
         <pubDate>Sat, 10 May 2025 01:59:15 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/tip/</guid>
+        <guid>http://localhost:1313/categories/tip/</guid>
         <description></description>
         </item>
         <item>
         <title>Pipeline</title>
-        <link>https://localfreedom.github.io/categories/pipeline/</link>
+        <link>http://localhost:1313/categories/pipeline/</link>
         <pubDate>Tue, 28 Nov 2023 08:06:45 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/pipeline/</guid>
+        <guid>http://localhost:1313/categories/pipeline/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>https://localfreedom.github.io/categories/about/</link>
+        <link>http://localhost:1313/categories/about/</link>
         <pubDate>Sat, 11 Nov 2023 12:33:08 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/about/</guid>
+        <guid>http://localhost:1313/categories/about/</guid>
         <description></description>
         </item>
         

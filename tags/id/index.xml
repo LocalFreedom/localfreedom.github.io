@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>ID on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/id/</link>
+        <link>http://localhost:1313/tags/id/</link>
         <description>Recent content in ID on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 24 Nov 2023 03:22:15 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/id/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Nov 2023 03:22:15 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/id/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>中国身份证校验</title>
-        <link>https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</link>
+        <link>http://localhost:1313/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</link>
         <pubDate>Fri, 24 Nov 2023 03:22:15 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</guid>
-        <description>&lt;h2 id=&#34;号码组合含义&#34;&gt;号码组合含义&lt;/h2&gt;
-&lt;p&gt;目前中国使用的18位身份证号由6位地址码+8位生日+3位顺序码+1位校验码组成。&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/</guid>
+        <description>&lt;h2 id=&#34;号码组合含义&#34;&gt;号码组合含义
+&lt;/h2&gt;&lt;p&gt;目前中国使用的18位身份证号由6位地址码+8位生日+3位顺序码+1位校验码组成。&lt;/p&gt;
 &lt;p&gt;地址码指的是公民出生地所在县（市、镇、区）的行政区划代码，如310110是上海市杨浦区。但港澳臺地區居民的身份號碼只精確到省級。&lt;/p&gt;
 &lt;p&gt;出生日期码表示公民出生的公历年（4位）、月（2位）、日（2位）。&lt;/p&gt;
 &lt;p&gt;顺序码是给同地址码同出生日期码的人编定的顺序号，其中奇数分配给男性，偶数分配给女性。&lt;/p&gt;
 &lt;p&gt;最后一位是校验码，这里采用的是ISO 7064:1983, MOD 11-2校验码系统。校验码为一位数，但如果最后采用校验码系统计算的校验码是“10”，碍于身份证号码为18位的规定，则以“X”代替校验码“10”。&lt;/p&gt;
-&lt;h2 id=&#34;校验码计算方法&#34;&gt;校验码计算方法&lt;/h2&gt;
-&lt;ol&gt;
+&lt;h2 id=&#34;校验码计算方法&#34;&gt;校验码计算方法
+&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;将身份证号码从左至右标记为 a1, a2, ⋯, a18，a_{18}即为校验码；&lt;/li&gt;
 &lt;li&gt;计算权重系数 $W_i = 2^{18 − i} \mod 11$&lt;/li&gt;
 &lt;/ol&gt;
@@ -97,8 +97,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkchar&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id_num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;一些奇怪的用处&#34;&gt;一些奇怪的用处&lt;/h2&gt;
-&lt;p&gt;首先当然是基本查验接触到的中国身份证号是否正确。&lt;/p&gt;
+&lt;/div&gt;&lt;h2 id=&#34;一些奇怪的用处&#34;&gt;一些奇怪的用处
+&lt;/h2&gt;&lt;p&gt;首先当然是基本查验接触到的中国身份证号是否正确。&lt;/p&gt;
 &lt;p&gt;中国网络实行普遍的实名制，尤其电子游戏需要绑定身份信息，而游戏公司是不能也不应该实时接入公安数据库的，那么就可以按照这一规则生成一个假的身份证通过验证。
 金融领域也可以这样申请一些账户，但由于金融行业和公安数据对接更紧密，会定期对比身份信息，随机生成的身份证号很快会露出破绽。&lt;/p&gt;
 </description>

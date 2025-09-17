@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Docker Desktop Usage'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Docker Desktop Usage">
 <title>Docker的安装与日常使用技巧</title>
 
-<link rel='canonical' href='https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel='canonical' href='http://localhost:1313/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
 
-<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='Docker的安装与日常使用技巧'>
-<meta property='og:description' content='Docker Desktop Usage'>
-<meta property='og:url' content='https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Docker的安装与日常使用技巧">
+<meta property='og:description' content="Docker Desktop Usage">
+<meta property='og:url' content='http://localhost:1313/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/'>
 <meta property='og:site_name' content='局域自由博客'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VM' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2025-08-30T11:51:29&#43;00:00'/><meta property='article:modified_time' content='2025-08-30T11:51:29&#43;00:00'/>
 <meta name="twitter:title" content="Docker的安装与日常使用技巧">
 <meta name="twitter:description" content="Docker Desktop Usage">
     <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
 
     </head>
     <body class="
@@ -58,7 +61,7 @@
                     
                     
                         
-                        <img src="/img/aVatar_huf3a149e69c81dc26edba0b320b987e91_527255_300x0_resize_box_3.png" width="300"
+                        <img src="/img/aVatar_hu15199967034214377255.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -72,7 +75,7 @@
             <h1 class="site-name"><a href="/">局域自由博客</a></h1>
             <h2 class="site-description">梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。</h2>
         </div>
-    </header><ol class="social-menu">
+    </header><ol class="menu-social">
             
                 <li>
                     <a 
@@ -217,13 +220,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             </a>
         </li>
         
-    </ol>
-    <div class="menu-bottom-section">
-        <ol class="menu">
+        <li class="menu-bottom-section">
+            <ol class="menu">
 
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="8" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -231,7 +233,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
 
 
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <circle cx="16" cy="12" r="2" />
   <rect x="2" y="6" width="20" height="12" rx="6" />
@@ -239,11 +241,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
 
 
-                    <span>Dark Mode</span>
-                </li>
-            
-        </ol>
-    </div>
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
 </aside>
 
     <aside class="sidebar right-sidebar sticky">
@@ -364,15 +367,15 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-content">
     
     
-    <h2 id="为什么在-windows-上使用-docker">为什么在 Windows 上使用 Docker？</h2>
-<ul>
+    <h2 id="为什么在-windows-上使用-docker">为什么在 Windows 上使用 Docker？
+</h2><ul>
 <li>开发环境一致：将应用与依赖打包成容器，无论你在 Windows、Linux 还是 macOS 上都能得到一模一样的运行环境。</li>
 <li>资源隔离：每个容器都是独立进程，避免了传统方式中“软件冲突”的麻烦，也限制了恶意软件的活动范围。</li>
 <li>快速构建：通过 Dockerfile 只需几行指令即可定义完整的运行时，CI/CD 流水线也能一键部署。</li>
 <li>用户友好：Docker Desktop 为 Windows 开发者提供了 GUI、WSL2 集成、图形化的容器管理和镜像管理等一站式体验。</li>
 </ul>
-<h2 id="前置条件系统准备">前置条件：系统准备</h2>
-<ul>
+<h2 id="前置条件系统准备">前置条件：系统准备
+</h2><ul>
 <li>系统版本
 <ul>
 <li>Windows10的1809版本及以上，或Windows11</li>
@@ -392,8 +395,8 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 </li>
 <li>磁盘应有充足的空间，没有几十GiB空间很多有趣的Docker镜像就玩不成了。</li>
 </ul>
-<h2 id="下载安装">下载安装</h2>
-<ol>
+<h2 id="下载安装">下载安装
+</h2><ol>
 <li>下载安装包 <a class="link" href="https://docs.docker.com/desktop/release-notes/"  target="_blank" rel="noopener"
     >https://docs.docker.com/desktop/release-notes/</a></li>
 <li>安装
@@ -420,8 +423,8 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 </ul>
 </li>
 </ol>
-<h2 id="基本使用">基本使用</h2>
-<p>在Windows双击桌面上的图表即可打开DockerDesktop，可以在界面左侧看到一排按钮。
+<h2 id="基本使用">基本使用
+</h2><p>在Windows双击桌面上的图表即可打开DockerDesktop，可以在界面左侧看到一排按钮。
 镜像管理页面可以从DockerHub上下载镜像。
 容器管理页面可以运行镜像成为容器，运行时可能需要选择映射的端口和档案。</p>
 <p><strong>镜像</strong>是一个基础，有了镜像便可以运行它得到，每次运行可以得到一个容器，就像每次运行软件打开一个窗口。
@@ -461,9 +464,9 @@ Windows安装的时候记得勾选添加命令到PATH。
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker exec -it 容器名或ID
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="离线迁移">离线迁移</h2>
-<h3 id="导出save导入load-镜像">导出save/导入load 镜像</h3>
-<div class="highlight"><div class="chroma">
+</div><h2 id="离线迁移">离线迁移
+</h2><h3 id="导出save导入load-镜像">导出save/导入load 镜像
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -473,8 +476,8 @@ Windows安装的时候记得勾选添加命令到PATH。
 </span></span><span class="line"><span class="cl">docker load -i 文件名.tar
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="导出export导入import-容器">导出export/导入import 容器</h3>
-<div class="highlight"><div class="chroma">
+</div><h3 id="导出export导入import-容器">导出export/导入import 容器
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -484,8 +487,8 @@ Windows安装的时候记得勾选添加命令到PATH。
 </span></span><span class="line"><span class="cl">docker import 文件名.tar 参考镜像:版本号
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="导出导入-卷">导出/导入 卷</h3>
-<p>-v 参数挂载的卷就是一个本地文件夹，直接复制或打包复制即可。</p>
+</div><h3 id="导出导入-卷">导出/导入 卷
+</h3><p>-v 参数挂载的卷就是一个本地文件夹，直接复制或打包复制即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -496,8 +499,8 @@ Windows安装的时候记得勾选添加命令到PATH。
 </span></span><span class="line"><span class="cl">-v D:<span class="se">\D</span>ata:/data:ro
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="镜像推荐">镜像推荐</h2>
-<p>官方提供了集中分发镜像的平台 <code>https://hub.docker.com</code> ，其中有趋势排序推荐。</p>
+</div><h2 id="镜像推荐">镜像推荐
+</h2><p>官方提供了集中分发镜像的平台 <code>https://hub.docker.com</code> ，其中有趋势排序推荐。</p>
 <p>这里推荐一些博主认为好用有趣的镜像：</p>
 <ul>
 <li>docker.io/continuumio/anaconda3</li>
@@ -507,8 +510,8 @@ Windows安装的时候记得勾选添加命令到PATH。
 <li>docker.io/library/alpine</li>
 </ul>
 <p>使用pull命令，或者在图形界面检索，即可拉取体验。</p>
-<h2 id="docker">Docker</h2>
-<p>新世界的大门，快来下载打开它吧！</p>
+<h2 id="docker">Docker
+</h2><p>新世界的大门，快来下载打开它吧！</p>
 
 </section>
 
@@ -542,18 +545,19 @@ Windows安装的时候记得勾选添加命令到PATH。
     
         <link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
             ><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
                 defer
                 >
             </script><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
                 defer
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.querySelector(`.article-content`), {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -563,6 +567,7 @@ Windows安装的时候记得勾选添加命令到PATH。
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -649,7 +654,7 @@ Windows安装的时候记得勾选添加命令到PATH。
         
     <div class="disqus-container">
     <div id="disqus_thread"></div>
-<script type="application/javascript">
+<script>
     window.disqus_config = function () {
     
     
@@ -702,7 +707,7 @@ Windows安装的时候记得勾选添加命令到PATH。
     
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.23.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
 
@@ -791,7 +796,7 @@ Windows安装的时候记得勾选添加命令到PATH。
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.9c61972090d65ca55b5901418bd66fe861d74147db773e523c53b516b1e1f1f7.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
