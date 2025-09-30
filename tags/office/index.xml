@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Office on 局域自由博客</title>
-        <link>http://localhost:1313/tags/office/</link>
+        <link>https://localfreedom.github.io/tags/office/</link>
         <description>Recent content in Office on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/office/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Dec 2024 03:09:53 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/office/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Office Deployment Tool</title>
-        <link>http://localhost:1313/p/office-deployment-tool/</link>
+        <link>https://localfreedom.github.io/p/office-deployment-tool/</link>
         <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/office-deployment-tool/</guid>
+        <guid>https://localfreedom.github.io/p/office-deployment-tool/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;MS Office 是日常工作和生活的重要工具，离线部署激活当然必不可少。
 微软越来越在线化Office业务，甚至从2016版本后不再提供官方ISO了。

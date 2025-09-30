@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Offline on 局域自由博客</title>
-        <link>http://localhost:1313/tags/offline/</link>
+        <link>https://localfreedom.github.io/tags/offline/</link>
         <description>Recent content in Offline on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Apr 2025 12:02:35 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/offline/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Win10/11 不联网强制开启移动热点</title>
-        <link>http://localhost:1313/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
+        <link>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</link>
         <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</guid>
+        <guid>https://localfreedom.github.io/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;话说，现在个人电脑开启移动热点，大家通常是为了分享网路，但更重要的，其实是打造一个属于自己的无线局域网啊！Windows 提供的热点功能，一直以来都只能用来分享网路，没法直接用在局域网里。以前还能在连接 WiFi 或有线网络的时候开启热点并保持，但现在微软越来越严格，一旦上行连接断掉，移动热点就自动关掉，真是让人头大！&lt;/p&gt;
 &lt;p&gt;Windows 电脑通常不当做局域网服务提供者，但现在 AI 这么火，像 LM Studio 这样的软件可以提供局域网服务，仅仅开启移动热点就能满足需求，这需求量可真大啊！&lt;/p&gt;
@@ -108,10 +108,10 @@
         </item>
         <item>
         <title>GOG 游戏库</title>
-        <link>http://localhost:1313/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
+        <link>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
+        <guid>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
         <description>&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -181,10 +181,10 @@ GOG官方还特别良心的提供了安装前校验功能，并将安装包拆�
         </item>
         <item>
         <title>kiwix</title>
-        <link>http://localhost:1313/p/kiwix/</link>
+        <link>https://localfreedom.github.io/p/kiwix/</link>
         <pubDate>Sun, 03 Dec 2023 03:58:12 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/kiwix/</guid>
+        <guid>https://localfreedom.github.io/p/kiwix/</guid>
         <description>&lt;h2 id=&#34;离线知识库工具&#34;&gt;离线知识库工具
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kiwix.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;kiwix&lt;/a&gt;是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
