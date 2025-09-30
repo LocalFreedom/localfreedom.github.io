@@ -6,7 +6,23 @@
         <description>Recent content in Tags on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Sep 2025 00:36:32 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Office</title>
+        <link>https://localfreedom.github.io/tags/office/</link>
+        <pubDate>Tue, 30 Sep 2025 00:36:32 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/tags/office/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://localfreedom.github.io/tags/windows/</link>
+        <pubDate>Tue, 30 Sep 2025 00:36:32 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/tags/windows/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI</title>
         <link>https://localfreedom.github.io/tags/ai/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
@@ -20,14 +36,6 @@
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/tags/vm/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Windows</title>
-        <link>https://localfreedom.github.io/tags/windows/</link>
-        <pubDate>Sat, 30 Aug 2025 11:51:29 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/tags/windows/</guid>
         <description></description>
         </item>
         <item>
@@ -84,14 +92,6 @@
         <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/tags/offline/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Office</title>
-        <link>https://localfreedom.github.io/tags/office/</link>
-        <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/tags/office/</guid>
         <description></description>
         </item>
         <item>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Backup drivers of the Windows to recover hardware usage offline.">
-<title>Windows 驱动备份</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Microsoft Office clean file metadata.">
+<title>MSOffice 清除文件作者等</title>
 
-<link rel='canonical' href='https://localfreedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/'>
+<link rel='canonical' href='https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Windows 驱动备份">
-<meta property='og:description' content="Backup drivers of the Windows to recover hardware usage offline.">
-<meta property='og:url' content='https://localfreedom.github.io/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="MSOffice 清除文件作者等">
+<meta property='og:description' content="Microsoft Office clean file metadata.">
+<meta property='og:url' content='https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2023-11-14T13:59:02&#43;00:00'/><meta property='article:modified_time' content='2023-11-14T13:59:02&#43;00:00'/>
-<meta name="twitter:title" content="Windows 驱动备份">
-<meta name="twitter:description" content="Backup drivers of the Windows to recover hardware usage offline.">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows' /><meta property='article:tag' content='Office' /><meta property='article:published_time' content='2025-09-30T00:36:32&#43;00:00'/><meta property='article:modified_time' content='2025-09-30T00:36:32&#43;00:00'/>
+<meta name="twitter:title" content="MSOffice 清除文件作者等">
+<meta name="twitter:description" content="Microsoft Office clean file metadata.">
     <link rel="shortcut icon" href="/favicon.png" />
 
   
@@ -271,11 +271,9 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#导出当前驱动">导出当前驱动</a></li>
-    <li><a href="#optional去掉旧版本驱动">[Optional]去掉旧版本驱动</a></li>
-    <li><a href="#在新系统中重新安装驱动">在新系统中重新安装驱动</a></li>
-    <li><a href="#optional备份存储优化">[Optional]备份存储优化</a></li>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#操作">操作</a></li>
+    <li><a href="#推广">推广</a></li>
   </ol>
 </nav>
         </div>
@@ -303,12 +301,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/">Windows 驱动备份</a>
+            <a href="/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/">MSOffice 清除文件作者等</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Backup drivers of the Windows to recover hardware usage offline.
+            Microsoft Office clean file metadata.
         </h3>
         
     </div>
@@ -329,7 +327,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 14, 2023</time>
+                <time class="article-time--published">Sep 30, 2025</time>
             </div>
         
 
@@ -344,7 +342,7 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    1 minute read
                 </time>
             </div>
         
@@ -359,43 +357,27 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-content">
     
     
-    <h2 id="前言">前言
-</h2><p>如果想重装系统后离线使用，除了系统安装盘，通常还需要准备驱动。
-计算机制造商通常会提供驱动，但这可能不全面或已经过时。
-导出当前正常运行状态的驱动，并在重装系统后再次导入，能期望获得最完美的硬件连续使用体验。
-就像制造商网站提供的驱动区分系统版本，这一方法在前后系统大版本不一致时很可能出现兼容性问题。</p>
-<h2 id="导出当前驱动">导出当前驱动
-</h2><p>有很多工具软件可以实现这一功能。
-既然Windows系统自带了这一功能，从信任链和攻击面的角度当然尽可能使用自带功能。
-用管理员权限运行cmd或powershell,执行下列命令即可导出当前系统的驱动。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">dism</span> <span class="p">/</span><span class="n">online</span> <span class="p">/</span><span class="nb">export-driver</span> <span class="p">/</span><span class="n">destination</span><span class="err">:</span><span class="n">E:</span><span class="p">\</span><span class="n">MyDrivers</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>其中<code>E:\MyDrivers</code>是你想导出的位置目录。</p>
-<p>导出的文件原位置在<code>C:\Windows\System32\DriverStore\FileRepository</code>，也可以尝试手动复制。</p>
-<h2 id="optional去掉旧版本驱动">[Optional]去掉旧版本驱动
-</h2><p>如果驱动在计算机使用过程中更新了，那么所有使用过的驱动版本都会被保留一并导出。
-为了节省存储空间，可以考虑删掉旧版本的驱动。</p>
-<p>进入导出驱动的目录，每个驱动会存放在一个名为<code>[驱动名].inf_amd64_[编译号]</code>的文件夹。
-驱动名相同，编译号不同的文件夹即是同一驱动的不同版本。</p>
-<p>编译号字典序并不表示先后关系，需要进入文件夹对比<code>[驱动名].inf</code>文件中的日期和版本号。
-也可以借助驱动管理软件来快捷分析，如<code>Sanppy Driver Installer Origin</code>。</p>
-<p>博主编写了一个自动化<a class="link" href="https://github.com/LocalFreedom/python-utils/blob/main/archive_win_driver.py"  target="_blank" rel="noopener"
-    >python脚本</a>来抽取所有驱动的最新版本复制到一个新的文件夹，并提示异常如版本号和日期顺序不一致等。</p>
-<h2 id="在新系统中重新安装驱动">在新系统中重新安装驱动
-</h2><p><strong>有些驱动如果被系统安装过程依赖，要提前并入安装介质，如硬盘驱动！</strong></p>
-<p>安装好新系统后将导出驱动的文件夹拷贝，依次进入每个文件夹<code>[驱动名].inf_amd64_[编译号]</code>，右键<code>[驱动名].inf</code>选择<code>安装</code>即可安装每个驱动，恢复之前的硬件驱动状态。</p>
-<p>也可以在设备管理器中针对每个未知设备搜索驱动，选择从本地存放导出驱动的文件夹搜索即可。
-这样可以省略一些不那么关键的驱动，同时很多优化更新类的驱动容易被忽略，因为这类设备不会被标记为未知设备。</p>
-<h2 id="optional备份存储优化">[Optional]备份存储优化
-</h2><p>这样导出的驱动是不压缩的，手动压缩可能比例也不高。
-其中占用空间较大的通常是显卡驱动，可以考虑显卡驱动采用Intel或Nvidia等厂商的官方安装包，可节省存储空间。
-而且显卡驱动的厂商安装包通常支持多个大版本的系统，可以在不同驱动备份中复用。</p>
+    <h2 id="背景">背景
+</h2><p>微软Office是最流行最常用的电子办公套件，使用的时候会很自觉的将当前用户信息作为作者或编辑添加到所处理的资料中。
+这是便于留下版权和痕迹追踪的默认操作，然而对于隐私，尤其是匿名编辑带来不必要的麻烦。</p>
+<h2 id="操作">操作
+</h2><p>对于Office2010及以上版本</p>
+<ul>
+<li>打开编辑的Office文档</li>
+<li>左上角点击 <code>文件</code></li>
+<li>左侧选择 <code>信息</code></li>
+<li>点击 <code>检查问题</code> 方块按钮展开下拉菜单</li>
+<li>选择 <code>检查文档</code></li>
+<li>在弹出的 <code>文档检查器</code> 窗口当中把所有项目都勾选上</li>
+<li>点击右下角 <code>检查</code></li>
+<li><code>文档属性和个人信息</code> 一栏会提示附带的作者和编辑信息</li>
+<li>点击栏目旁边的 <code>全部删除</code> 即可删去这些痕迹</li>
+</ul>
+<h2 id="推广">推广
+</h2><p>可见微软是在意隐私和匿名的需求的。
+以后处理Office要注意 <code>信息</code> 中包含的后设数据，更需要通过 <code>文档检查器</code> 了解新兴的痕迹去除事项。
+对于其他的办公软件，比如 <a class="link" href="www.libreoffice.org" >LibreOffice</a> 等也应注意相似问题。
+既然默认是包含作者和编辑信息的，那么去除的太干净也是一种此地无银三百两。</p>
 
 </section>
 
@@ -405,6 +387,8 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
     <section class="article-tags">
         
             <a href="/tags/windows/">Windows</a>
+        
+            <a href="/tags/office/">Office</a>
         
     </section>
 
@@ -464,12 +448,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/">
+    <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">MSOffice 清除文件作者等</h2>
+            <h2 class="article-title">Win10/11 不联网强制开启移动热点</h2>
         </div>
     </a>
 </article>
@@ -477,12 +461,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">
+    <a href="/p/windows-%E9%A9%B1%E5%8A%A8%E5%A4%87%E4%BB%BD/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Win10/11 不联网强制开启移动热点</h2>
+            <h2 class="article-title">Windows 驱动备份</h2>
         </div>
     </a>
 </article>
@@ -522,12 +506,12 @@ rx="15%"/><path d="m409 290c-5 24-43 50-85 56-86 11-137-6-137-6 3 13-4 54 70 52 
             
                 
 <article class="">
-    <a href="/p/%E4%B8%AD%E5%9B%BD%E8%BA%AB%E4%BB%BD%E8%AF%81%E6%A0%A1%E9%AA%8C/">
+    <a href="/p/office-deployment-tool/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">中国身份证校验</h2>
+            <h2 class="article-title">Office Deployment Tool</h2>
         </div>
     </a>
 </article>

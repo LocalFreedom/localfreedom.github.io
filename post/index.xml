@@ -6,7 +6,36 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Sep 2025 00:36:32 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MSOffice 清除文件作者等</title>
+        <link>https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</link>
+        <pubDate>Tue, 30 Sep 2025 00:36:32 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;微软Office是最流行最常用的电子办公套件，使用的时候会很自觉的将当前用户信息作为作者或编辑添加到所处理的资料中。
+这是便于留下版权和痕迹追踪的默认操作，然而对于隐私，尤其是匿名编辑带来不必要的麻烦。&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作
+&lt;/h2&gt;&lt;p&gt;对于Office2010及以上版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开编辑的Office文档&lt;/li&gt;
+&lt;li&gt;左上角点击 &lt;code&gt;文件&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;左侧选择 &lt;code&gt;信息&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;检查问题&lt;/code&gt; 方块按钮展开下拉菜单&lt;/li&gt;
+&lt;li&gt;选择 &lt;code&gt;检查文档&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在弹出的 &lt;code&gt;文档检查器&lt;/code&gt; 窗口当中把所有项目都勾选上&lt;/li&gt;
+&lt;li&gt;点击右下角 &lt;code&gt;检查&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;文档属性和个人信息&lt;/code&gt; 一栏会提示附带的作者和编辑信息&lt;/li&gt;
+&lt;li&gt;点击栏目旁边的 &lt;code&gt;全部删除&lt;/code&gt; 即可删去这些痕迹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;推广&#34;&gt;推广
+&lt;/h2&gt;&lt;p&gt;可见微软是在意隐私和匿名的需求的。
+以后处理Office要注意 &lt;code&gt;信息&lt;/code&gt; 中包含的后设数据，更需要通过 &lt;code&gt;文档检查器&lt;/code&gt; 了解新兴的痕迹去除事项。
+对于其他的办公软件，比如 &lt;a class=&#34;link&#34; href=&#34;www.libreoffice.org&#34; &gt;LibreOffice&lt;/a&gt; 等也应注意相似问题。
+既然默认是包含作者和编辑信息的，那么去除的太干净也是一种此地无银三百两。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>LibreTranslate</title>
         <link>https://localfreedom.github.io/p/libretranslate/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>

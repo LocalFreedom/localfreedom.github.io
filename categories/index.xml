@@ -6,7 +6,15 @@
         <description>Recent content in Categories on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Sep 2025 00:36:32 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tip</title>
+        <link>https://localfreedom.github.io/categories/tip/</link>
+        <pubDate>Tue, 30 Sep 2025 00:36:32 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/categories/tip/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Usage</title>
         <link>https://localfreedom.github.io/categories/usage/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
@@ -20,14 +28,6 @@
         <pubDate>Wed, 11 Jun 2025 12:50:31 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/categories/collect/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Tip</title>
-        <link>https://localfreedom.github.io/categories/tip/</link>
-        <pubDate>Sat, 10 May 2025 01:59:15 +0000</pubDate>
-        
-        <guid>https://localfreedom.github.io/categories/tip/</guid>
         <description></description>
         </item>
         <item>
