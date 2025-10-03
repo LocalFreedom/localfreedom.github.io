@@ -77,7 +77,7 @@ Argos官方&lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/ar
         <pubDate>Thu, 27 Mar 2025 10:03:25 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/lm-studio/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介
+        <description>&lt;img src="https://localfreedom.github.io/img/lmstudio-app-logo.webp" alt="Featured image of post LM Studio" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;LM Studio 是一个桌面应用程序，它允许你轻松下载、管理和运行各种GGUF格式的开源 LLM，无需连接互联网。
 它提供了一个非常友好的配置界面，让你能够探索huggingface，快速体验不同模型的特性，并根据自己的需求进行调整。
 在对各类新型模型的支持中，LM Studio 总是非常迅速完美的。

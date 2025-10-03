@@ -106,7 +106,7 @@ Argos官方&lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/ar
         <pubDate>Sat, 30 Aug 2025 11:51:29 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-        <description>&lt;h2 id=&#34;为什么在-windows-上使用-docker&#34;&gt;为什么在 Windows 上使用 Docker？
+        <description>&lt;img src="https://localfreedom.github.io/img/docker.jpeg" alt="Featured image of post Docker的安装与日常使用技巧" /&gt;&lt;h2 id=&#34;为什么在-windows-上使用-docker&#34;&gt;为什么在 Windows 上使用 Docker？
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;开发环境一致：将应用与依赖打包成容器，无论你在 Windows、Linux 还是 macOS 上都能得到一模一样的运行环境。&lt;/li&gt;
 &lt;li&gt;资源隔离：每个容器都是独立进程，避免了传统方式中“软件冲突”的麻烦，也限制了恶意软件的活动范围。&lt;/li&gt;
@@ -2909,7 +2909,7 @@ SSH同时支持者scp、git、https、vpn等很多应用。&lt;/p&gt;
         <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</guid>
-        <description>&lt;h2 id=&#34;背景&#34;&gt;背景
+        <description>&lt;img src="https://localfreedom.github.io/img/OS-example.jpeg" alt="Featured image of post 操作系统选型" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;从信息时代来到人工智能时代，掌握自己的信息系统越来越重要。
 将自己的数据握在自己手中，摆脱大公司的监视干预是本站的价值观。
 操作系统可以说是个人信息系统的重要基础，尤其是微软的Windows越来越绑定网络，将用户束缚在微软的服务中，探寻一下非大公司控制，可自己掌握支配的操作系统愈加必要。
@@ -3255,7 +3255,7 @@ Windows虽然是封闭商业软件，但本地自由使用难度并不大，考�
         <pubDate>Thu, 27 Mar 2025 10:03:25 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/lm-studio/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介
+        <description>&lt;img src="https://localfreedom.github.io/img/lmstudio-app-logo.webp" alt="Featured image of post LM Studio" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;LM Studio 是一个桌面应用程序，它允许你轻松下载、管理和运行各种GGUF格式的开源 LLM，无需连接互联网。
 它提供了一个非常友好的配置界面，让你能够探索huggingface，快速体验不同模型的特性，并根据自己的需求进行调整。
 在对各类新型模型的支持中，LM Studio 总是非常迅速完美的。
@@ -3456,7 +3456,7 @@ PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元�
         <pubDate>Mon, 18 Dec 2023 11:53:49 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
-        <description>&lt;h2 id=&#34;背景&#34;&gt;背景
+        <description>&lt;img src="https://localfreedom.github.io/img/crypto-example.jpeg" alt="Featured image of post 加密货币" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;一提到加密货币与挖矿，很多中国读者有着很深的误解与偏见，这实际上与中国政府及其控制的媒体、自媒体的宣传导向有关。&lt;/p&gt;
 &lt;p&gt;非常感谢&lt;a class=&#34;link&#34; href=&#34;https://archlinuxstudio.github.io/ArchLinuxTutorial/#/exclusive/mine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;自由之心社区的科普文章&lt;/a&gt;&lt;/p&gt;
@@ -3555,7 +3555,7 @@ GOG等游戏平台也支持一些主流加密货币付款。
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介
+        <description>&lt;img src="https://localfreedom.github.io/img/GOG-galaxy.jpeg" alt="Featured image of post GOG 游戏库" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GOG&lt;/a&gt;。&lt;/p&gt;
