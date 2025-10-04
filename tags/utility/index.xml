@@ -6,7 +6,113 @@
         <description>Recent content in Utility on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 13 Jun 2025 13:04:09 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 Oct 2025 06:11:21 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ollama模型部署</title>
+        <link>https://localfreedom.github.io/p/ollama%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/</link>
+        <pubDate>Sat, 04 Oct 2025 06:11:21 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/ollama%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/</guid>
+        <description>&lt;p&gt;Ollama是一个流行的LLM本地部署推理软件，从其&lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github仓库&lt;/a&gt;可以下载安装程式或直接运行其&lt;a class=&#34;link&#34; href=&#34;https://docker.io/ollama/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker映像&lt;/a&gt;。
+本文介绍将&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;HuggingFace上的模型&lt;/a&gt;导入离线环境中的Ollama部署推理的3种方法。&lt;/p&gt;
+&lt;h2 id=&#34;导入gguf格式&#34;&gt;导入GGUF格式
+&lt;/h2&gt;&lt;p&gt;创建一个modelfile文档，尽量和模型文档在同一个文档夹。
+格式分为三部分:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;模型权重文档路径，以FROM开头，多模态可以有多行。&lt;/li&gt;
+&lt;li&gt;对话模板，以TEMPLATE开头用引号包裹，配置提示词等。&lt;/li&gt;
+&lt;li&gt;参数，以PARAMETER开头每行1个，配置温度、停止词等。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;模板和参数建议使用&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/library&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama官方&lt;/a&gt;同名模型的配置，通常不同尺寸和量化精度的配置是一样的。&lt;/p&gt;
+&lt;p&gt;例如Google的Gemma3模型12b尺寸的配置文档:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM gemma-3-12b-it-q4_0.gguf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM mmproj-google_gemma-3-12b-it-qat-f16.gguf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;TEMPLATE &amp;#34;{{- range $i, $_ := .Messages }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- $last := eq (len (slice $.Messages $i)) 1 }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- if or (eq .Role &amp;#34;user&amp;#34;) (eq .Role &amp;#34;system&amp;#34;) }}&amp;lt;start_of_turn&amp;gt;user
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ .Content }}&amp;lt;end_of_turn&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ if $last }}&amp;lt;start_of_turn&amp;gt;model
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- else if eq .Role &amp;#34;assistant&amp;#34; }}&amp;lt;start_of_turn&amp;gt;model
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ .Content }}{{ if not $last }}&amp;lt;end_of_turn&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{ end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{- end }}
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PARAMETER stop &amp;lt;end_of_turn&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PARAMETER temperature 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PARAMETER top_k 64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;PARAMETER top_p 0.95
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;执行命令 &lt;code&gt;ollama create 模型名 -f 配置文档.modelfile&lt;/code&gt;
+ollama就会将GGUF格式的模型文档导入成内部数据。&lt;/p&gt;
+&lt;h2 id=&#34;迁移已有模型&#34;&gt;迁移已有模型
+&lt;/h2&gt;&lt;p&gt;Ollama存储模型分为配置索引和数据块两部分。
+将已经下载部署好的模型迁移到新安装环境，只需要复制配置文档和数据块即可。
+模型配置文档根据路径可以看出保存在 &lt;code&gt;.ollama/models/manifests/registry.ollama.ai/library/模型名:参数&lt;/code&gt; 中，其中模型名如gemma3，参数如12b-it-qat，也就是run时冒号前后的部分。
+打开配置文档是json格式，找到其中的&lt;code&gt;sha256:xxx...&lt;/code&gt;就是对应的数据块，在 &lt;code&gt;.ollama/models/blobs/&lt;/code&gt; 中找到相应的文档便是该模型的数据块。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;schemaVersion&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;mediaType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;application/vnd.docker.distribution.manifest.v2+json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;mediaType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;application/vnd.docker.container.image.v1+json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;digest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sha256:505f8883abf333a307ed4120ef5f3116f442e6c537e5c4332d9044492e2d637c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;414&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;layers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:[{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;mediaType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;application/vnd.ollama.image.model&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;digest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sha256:1fb99eda86dc48a736567406253769fdc75f01e65cde7c65fa5563e4bdf156e0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8928674496&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;from&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Users/pdevine/.ollama/models/blobs/sha256-1fb99eda86dc48a736567406253769fdc75f01e65cde7c65fa5563e4bdf156e0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;mediaType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;application/vnd.ollama.image.template&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;digest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sha256:5be6630b666f007a127a456fb3958da5fbd7cf547204188bc4690fedc837af0b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;359&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},{&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;mediaType&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;application/vnd.ollama.image.params&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;digest&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sha256:3116c52250752e00dd06b16382e952bd33c34fd79fc4fe3a5d2c77cf7de1b14b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;77&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}]}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将配置文档和数据块复制到新安装环境即可正常使用之前下载好的模型。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据块有大有小，大的就是下载的LLM参数文档，小的可以打开看，通常是模板和参数，所以复制后模板等配置也原封不动。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;离线下载模型文档&#34;&gt;离线下载模型文档
+&lt;/h2&gt;&lt;p&gt;有时候需要下载Ollama的官方模型，但并不便于安装一个Ollama，就需要直接通过URL下载模型配置和权重文档。
+虽然目前官方没有在文档中说明下载链接格式，但是对于run时的 &lt;code&gt;模型名:参数&lt;/code&gt; 可以根据规则推测其直链。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置文档如 &lt;code&gt;https://registry.ollama.ai/v2/library/模型名/manifests/参数&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;权重数据块文档如 &lt;code&gt;https://registry.ollama.ai/v2/library/模型名/blobs/sha256:配置文档中的数据块散列值&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Gholamrezadar/ollama-direct-downloader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gholamreza Dar&lt;/a&gt;制作了&lt;a class=&#34;link&#34; href=&#34;https://ollama-direct-downloader.vercel.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;提取Ollama直链的网页&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载好配置文档和权重数据块后，按照规律放到个人文档夹中 &lt;code&gt;.ollama/models/&lt;/code&gt; 相应位置即可被Ollama运行时调用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置文档如 &lt;code&gt;.ollama/models/manifests/registry.ollama.ai/library/模型名:参数&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;权重数据块文档如 &lt;code&gt;.ollama/models/blobs/sha256:配置文档中的数据块散列值&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>SSH远程登入神器的初步使用</title>
         <link>https://localfreedom.github.io/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/</link>
         <pubDate>Fri, 13 Jun 2025 13:04:09 +0000</pubDate>
