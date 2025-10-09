@@ -12,7 +12,7 @@
         <pubDate>Sat, 04 Oct 2025 06:11:21 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/ollama%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/</guid>
-        <description>&lt;p&gt;Ollama是一个流行的LLM本地部署推理软件，从其&lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://localfreedom.github.io/img/ollama-cloud.png" alt="Featured image of post Ollama模型部署" /&gt;&lt;p&gt;Ollama是一个流行的LLM本地部署推理软件，从其&lt;a class=&#34;link&#34; href=&#34;https://github.com/ollama/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Github仓库&lt;/a&gt;可以下载安装程式或直接运行其&lt;a class=&#34;link&#34; href=&#34;https://docker.io/ollama/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Docker映像&lt;/a&gt;。
 本文介绍将&lt;a class=&#34;link&#34; href=&#34;https://huggingface.co/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -564,7 +564,7 @@ RAR作者也非常良心，只要忍受每次开起的广告就可以一直试�
         <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
         
         <guid>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-        <description>&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网
+        <description>&lt;img src="https://localfreedom.github.io/img/windows11-laptop.avif" alt="Featured image of post Windows 11 使用技巧" /&gt;&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网
 &lt;/h2&gt;&lt;p&gt;Windows从11版本开始，强化在线功能。
 家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。
 家庭版安装时的强制联网目前可以用bug跳过，进入离线账户的步骤。&lt;/p&gt;
