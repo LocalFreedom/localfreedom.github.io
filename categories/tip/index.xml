@@ -6,7 +6,146 @@
         <description>Recent content in Tip on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 04 Oct 2025 06:11:21 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 30 Nov 2025 10:06:30 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>记录一次Github被flag，通过免费SMS接码服务提交申诉成功恢复的经历</title>
+        <link>https://localfreedom.github.io/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+        <pubDate>Sun, 30 Nov 2025 10:06:30 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+        <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
+&lt;/h2&gt;&lt;p&gt;2025年Github账号flagged申诉需要SMS验证，这次是通过网上免费、免注册的SMS接收服务通过一个加拿大手机号成功收到验证码，向Github支持团队提交工单，申诉成功解除flag标记状态。&lt;/p&gt;
+&lt;p&gt;特殊的是，我收到SMS的6位验证码并没有标明来自Github。&lt;/p&gt;
+&lt;p&gt;这次的成功经历说明，Github至少目前还是可以不用自己的手机号，不用付费，就完成SMS验证并提交申诉的；Github的SMS验证主要是根据号码分配相应语言的支持团队，并适当限制申诉总量，对共享手机号是宽容的。&lt;/p&gt;
+&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;博主是一位隐私主义者，Tor重度用户。
+访问Github一般都是通过Tor进行，所以IP会不断发生变化。
+这次被flag的账号就是本博客的 Github 的账号。&lt;/p&gt;
+&lt;p&gt;就像本博客的名字——局域自由，博主追求摆脱对大公司集中服务的依赖，享受匿名网络生活。
+虽然菜鸟，但毕竟是一个黑客，所以想在github等共享平台分享自己开发的小工具和实践经验，一方面帮助有需要的人，另一方面便于自己随时匿名取用。&lt;/p&gt;
+&lt;p&gt;我写静态博客的账号就是通过Tor注册的，很不幸当时滥用Tor的人已经非常多了，所以验证邮箱后第一次登陆就横幅提示被标记flag。
+当时直接前往&lt;a class=&#34;link&#34; href=&#34;https://support.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持页面&lt;/a&gt;提交ticket，写一段话就申诉回来了，当时支持团队的对接员工就提示我是被Tor出口IP连累的，并可能再次被标记。&lt;/p&gt;
+&lt;h2 id=&#34;flag-发生&#34;&gt;Flag 发生
+&lt;/h2&gt;&lt;h3 id=&#34;异常&#34;&gt;异常
+&lt;/h3&gt;&lt;p&gt;有一天在Tor浏览器上取用自己开发的脚本的时候居然返回404页面，就记作第0天吧。&lt;/p&gt;
+&lt;p&gt;接着访问账号主页和博客page的首页都是404,可能记错URL了，抽空回到登陆的浏览器，用书签和cookie登陆github账号查看，一切正常。
+复制URL到Tor浏览器访问仍然是404，开始有不祥的感觉，毕竟有过 flag 经验。
+但是没有横幅提示，我也不确定到底是不是flag。
+在登陆状态进入page仓库，点击进入博客页面也是404,也许是github暂时服务出现问题。&lt;/p&gt;
+&lt;h3 id=&#34;实锤&#34;&gt;实锤
+&lt;/h3&gt;&lt;p&gt;1天后，再次登陆账号仍然正常，但不登陆博客就是404的，账号主页也是404。
+但邮箱没有收到任何github的邮件，账号也没有异常提示。&lt;/p&gt;
+&lt;p&gt;开始在网上搜索类似情况，通过一篇&lt;a class=&#34;link&#34; href=&#34;https://www.reddit.com/r/github/comments/1fv8pgp/need_help_my_github_profile_is_not_accessible/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;reddit帖子&lt;/a&gt;得知不登陆页面不可见大概是被flag限制了，帖子中提到了&lt;a class=&#34;link&#34; href=&#34;https://support.github.com/contact/reinstatement&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;申诉地址&lt;/a&gt;，不过这次没有刚注册那次flag的横幅提示，我还是有些侥幸心理的。
+我没有直接去申诉而是到&lt;a class=&#34;link&#34; href=&#34;https://support.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;支持页面&lt;/a&gt;想着先提交一个ticket问问。
+Open Ticket 时提示需要开启 2FA 想到之前好像github有政策强推2FA也许是我一直没开启2FA给我一点提醒。
+开启 2FA 后，在 Open Ticket 时明确提示 &lt;code&gt;Your account has been flagged and we need some additional information before we are able to direct your support query to the right place. Please supply your mobile number below so that we are able to verify you via text message&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;终于实锤，当时心里想这个匿名github账号估计废了，保持匿名几乎不可能完成SMS验证。&lt;/p&gt;
+&lt;h3 id=&#34;复盘&#34;&gt;复盘
+&lt;/h3&gt;&lt;p&gt;我的github是何时被flag的呢？又是为何被flag？&lt;/p&gt;
+&lt;p&gt;应该不会太久，毕竟我时不时会不登陆直接取用写脚本或经验。
+第-4天更新了本博客，-2天更新了几个实用脚本。
+在网上搜索得知被flag后博客commit的action就不会触发，而我上次更新博客是触发action的。
+所以flag是近3天的事情，很可能是脚本有什么异常。
+而近期github又遭遇大规模网络攻击，被连累也有可能。&lt;/p&gt;
+&lt;p&gt;气愤！github居然对匿名使用如此不友好，第+10天，我移除了本博客对github网站的推荐link，也通过这次更新确认flagged下确实不触发action。&lt;/p&gt;
+&lt;h2 id=&#34;八仙过海各种申诉&#34;&gt;八仙过海各种申诉
+&lt;/h2&gt;&lt;p&gt;由于是匿名账号，所以我不应该用自己的手机号或通过实名的金融网络协助申诉，最好全程不离开tor网络的保护。
+免费的线上SMS接收服务通常支持Tor，但找了几个试试当然是没有收到验证码。&lt;/p&gt;
+&lt;h3 id=&#34;sms验证对匿名不友好首先尝试找其他申诉渠道&#34;&gt;SMS验证对匿名不友好，首先尝试找其他申诉渠道
+&lt;/h3&gt;&lt;p&gt;首先想到的当然是直接邮件联系Github支援团队，回复是这些直接发送的邮件会被自动系统处理，员工不会看见，还强调在社区的发帖也不会加快申诉处理流程。&lt;/p&gt;
+&lt;p&gt;搜索到&lt;a class=&#34;link&#34; href=&#34;https://github.com/orgs/community/discussions/159882&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github社区中有人&lt;/a&gt;给出了其他联系渠道 &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/contact&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/contact&lt;/a&gt;&lt;/strong&gt;
+这个链接可以非注册联系支持团队，但同样因为政策收紧，用注册过的邮箱联系会提示已有账号flagged并要求验证SMS。
+以期望时长一周的响应时间，临时邮箱无法用于此场景。&lt;/p&gt;
+&lt;p&gt;用其他正常Github账号测试申诉流程，&lt;strong&gt;发现申诉账户只能从邮箱绑定的账号中选择&lt;/strong&gt;，想替其他账号申诉而绕过SMS验证只能写在留言中。
+这样很可能不被受理还连累正常账号，新注册小号也有些麻烦，不再继续尝试。&lt;/p&gt;
+&lt;h3 id=&#34;手机号难以匿名且不一定有效&#34;&gt;手机号难以匿名且不一定有效
+&lt;/h3&gt;&lt;p&gt;既然Github全面通过SMS验证限制ticket总量，那么想保持匿名就要从SMS验证所需手机号入手。
+网上有收费的接码服务，号称能保证接码效率，还能通过加密货币付款。
+不过也有评论表示付费的接码服务也不一定能收到Github验证码，顿时心中凉凉，如果这样限制也太严格了。&lt;/p&gt;
+&lt;p&gt;由于本菜鸟实在太菜并没有加密货币储蓄，只好拿着现金购买匿名性高的预付费手机号。
+买好手机号并不是直接去收被flag账号的SMS验证，先用其他Github账号的2FA之类的试试。
+如果这都不成功，就没必要去关联破坏本Github账号匿名性了。
+没想到居然真的没成功，&lt;strong&gt;真实购买的手机号居然没受到Github的SMS验证&lt;/strong&gt;，那就完全不必考虑真手机号了。&lt;/p&gt;
+&lt;p&gt;这里也提醒一下，github的SMS验证页面选国家并不包含所有的国家，比如中国和马来西亚就没有。
+期间我费劲费钱搞来一个匿名的马来西亚手机号，才发现github居然不支持马来西亚。
+由于我自身在欧洲，所以测试的是欧洲的手机号，欧洲都不行，除非北美，其他地区就更不可能了。&lt;/p&gt;
+&lt;h3 id=&#34;接下来只好硬刚sms验证&#34;&gt;接下来只好硬刚SMS验证
+&lt;/h3&gt;&lt;p&gt;首先通过搜索引擎可以找到很多SMS接码服务，点开可以看看其中的号码是否近期仍然活跃，可用的服务应当近几小时也有收到SMS。
+有些服务直接展示号码是否活跃，累计接收，最近收到时间等，就比较友好，不展示的就需要进去查看，挑选几个国家的看看，还可以用其他服务测试一下是真能收到还是伪装的随机样例。&lt;/p&gt;
+&lt;p&gt;找到了几个不错的记录一下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sms-ol.com/en-US/phone/TW/0-928231013/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sms-ol.com/en-US/phone/TW/0-928231013/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://text-verification.net/number/76146182969&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://text-verification.net/number/76146182969&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sms-ol.com/en-US/phone/PL/0-722823101/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sms-ol.com/en-US/phone/PL/0-722823101/&lt;/a&gt;	测试成功收到Discord验证码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;进一步针对Github验证找免费的在线SMS接收服务，还有一些SMS服务会列出成功收到哪些网站SMS的情况，直接找成功收到过Github验证码的号码成功率将大很多。&lt;/p&gt;
+&lt;p&gt;搜索关键词如: &lt;strong&gt;sms receive github free flagged&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;记录一下搜索结果:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.smsonline.cloud/zh/service/github&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.smsonline.cloud/zh/service/github&lt;/a&gt;	华人创办看起来不错,有Google记录,但Github无记录&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://receivesmsfast.com/service/GI/US&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://receivesmsfast.com/service/GI/US&lt;/a&gt; 一共三个号码可接收Github不过目前都离线状态&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tempsmsonline.com/messages/github&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tempsmsonline.com/messages/github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sms24.me/en/messages/GitHub/1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://sms24.me/en/messages/GitHub/1&lt;/a&gt; 有多个号码有成功收到Github验证码的记录，甚至还有绑定2FA的记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在搜到的相关帖子中，得知用美国/加拿大的号码收到SMS成功率高一些。&lt;/p&gt;
+&lt;h3 id=&#34;不断尝试终于free完成sms验证&#34;&gt;不断尝试终于free完成SMS验证
+&lt;/h3&gt;&lt;p&gt;据说Github发送一次验证码后如果不成功24小时内不能再次尝试，经测试tor出口稳定会有24小时的超限提示，如果用VPN出口可能可以连续尝试2-3次。
+期间可以根据账号具体情况把申诉邮件准备一下。&lt;/p&gt;
+&lt;p&gt;我当时对成功收到SMS并不报什么希望，2-3天尝试一下。
+居然碰到几次我发送验证码，共享手机号也受到SMS，但我输入就错误的情况，结合上下多条SMS，可能其他人就抢在同时比我先占用了这个号码的SMS验证机会。&lt;/p&gt;
+&lt;p&gt;同时我也理解为什么&lt;strong&gt;美国/加拿大的号码收到SMS成功率高一些&lt;/strong&gt;。
+原因正如Github页面提示，SMS只是为了把申诉转交到正确地区，而github是美国公司，当然是北美区的支援人员最多，分配的SMS接收机会也更多。
+于是我也开始改用+1的手机号码。&lt;/p&gt;
+&lt;p&gt;既然github说SMS验证是为了分配地区而不是存储记录，那么我联想到也许github只是用SMS限制一下申诉量，可能并不严格封禁共享的手机号，而且可能不像2FA那样标明短信的用途。
+果然最终成功完成验证的那条SMS，就没有标明Github，而且同时间还有来自同一个号码的另一个4位验证码，应该是Github把flag的SMS验证外包了。&lt;/p&gt;
+&lt;h3 id=&#34;提交工单&#34;&gt;提交工单
+&lt;/h3&gt;&lt;p&gt;在第+35天完成SMS验证后，心情格外机动，Github也很友好的在 Open Ticket 后直接提示是否账户问题。
+2025年flag申诉页面都是选择即可，可以附加几句话，也可以不附加，为了增加成功率，我还是解释了一下自己是tor用户。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Does your claim involve content on GitHub or npm.js?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GitHub&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is the username and repository or package name that was impacted?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LocalFreedom&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why are you requesting reinstatement? If you are requesting support for your account not related to moderation limits made on your account by GitHub please raise a support ticket instead.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I can login, but my profile and contributions aren&amp;rsquo;t visible to others&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Have you previously contacted GitHub about this claim?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;No&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Would you like to provide any additional information or context that would be helpful for our review of your reinstatement request?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am writing to seek your help. My GitHub account has been flagged recently. I think it is because of logging in to GitHub using a TOR node. I would appreciate your help if you unlock the hidden profile as soon as possible. Thank you so much!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I have reviewed and understand the GitHub Acceptable Use Policies and Community Guidelines.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;历时36天解除flag&#34;&gt;历时36天解除flag
+&lt;/h2&gt;&lt;p&gt;Open Ticket 次日就受到邮件，支持团队已经解除了账户的flag，我的账户恢复正常。
+Ticket和邮件中，支援团队表示Github的自动防御系统会时不时的标记一批用户由人工审核解封。
+所以我的账户没有违规行为，只是被公用Tor出口的其他恶人连累了。&lt;/p&gt;
+&lt;h2 id=&#34;后续&#34;&gt;后续
+&lt;/h2&gt;&lt;p&gt;看看Google的作为，指望大公司不作恶是不可能的，GDPR也不能很好的保护我们，尤其是对于匿名者。&lt;/p&gt;
+&lt;h3 id=&#34;网络强化&#34;&gt;网络强化
+&lt;/h3&gt;&lt;p&gt;之后考虑使用Proton的VPN服务来代替Tor以实现更持续的匿名网络活动。
+这里非常感谢Proton公司的服务，让我可以方便匿名的获得类似Google的互联网产品服务，邮箱-日历-云盘-VPN等产品都非常棒，最关键的是对匿名用户、Tor用户友好。&lt;/p&gt;
+&lt;h3 id=&#34;站点巩固&#34;&gt;站点巩固
+&lt;/h3&gt;&lt;p&gt;Github账号一旦被标记，自己开发的实用软件无法随时取用，个人创作的影响力直接中断，真的经不起几次flag的折磨。
+号在git设计初衷就是平等的，本地完全数据的，局域自由的。
+代码仓库、实用软件本地都有一份，再在Gitlab/Codeberg等平台上传一份即可。&lt;/p&gt;
+&lt;p&gt;比较麻烦的是博客，好在这个博客是直接生成html的，不依赖Github的部署服务，在其他平台上传一份自用足以。
+但毕竟博客这份艺术作品就像自己的孩子，是自己价值观和影响力的传承，还是要让读者有更连续的体验。
+博客考虑改用Cloudflare的域名和worker，以实现Github不幸被flag博客页面不中断，并能由其他平台接续。&lt;/p&gt;
+&lt;p&gt;不经感叹曾经的互联网乌托邦和黑客文化在渐渐逝去！&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Ollama模型部署</title>
         <link>https://localfreedom.github.io/p/ollama%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Sat, 04 Oct 2025 06:11:21 +0000</pubDate>
