@@ -6,7 +6,184 @@
         <description>Recent content in Online on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 30 Nov 2025 10:06:30 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/online/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/online/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Github Flag Repeal by Online Free SMS Receive Service</title>
+        <link>https://localfreedom.github.io/p/github-flag-repeal-by-online-free-sms-receive-service/</link>
+        <pubDate>Mon, 01 Dec 2025 11:06:21 +0000</pubDate>
+        
+        <guid>https://localfreedom.github.io/p/github-flag-repeal-by-online-free-sms-receive-service/</guid>
+        <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
+&lt;/h2&gt;&lt;p&gt;In 2025 GitHub flagged my account and prompted me to complete SMS verification before I could submit an appeal.
+I managed to receive the code by using a free online SMS receiving service that let me complete the verification with a Canadian share phone number, filed a support ticket, and ultimately had the flag lifted.&lt;/p&gt;
+&lt;p&gt;Notably, the SMS I received did not state it came from GitHub.&lt;/p&gt;
+&lt;p&gt;This whole process proves that GitHub still allows anonymous users to finish SMS verification and file appeals without the need to purchase a phone number or provide a personal device.
+The SMS play a role that simply routes the request to the appropriate regional team and limits the gross appeals.
+So Github permits shared phone numbers.&lt;/p&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background
+&lt;/h2&gt;&lt;p&gt;The blogger is a privacy activist and heavy Tor user.
+Accessing GitHub is almost always via Tor, so the IP address changes constantly.
+The flagged account is the one used for this blog’s GitHub page.&lt;/p&gt;
+&lt;p&gt;Like the blog’s name &lt;strong&gt;Local Freedom&lt;/strong&gt;, I seeks to avoid dependence on large companies and enjoy an anonymous web experience.
+Although a novice, I&amp;rsquo;m a hacker who wants to share custom tools and practical experience on public platforms like GitHub, both to help others and to keep anonymous access at all times.&lt;/p&gt;
+&lt;p&gt;I registered my static‑blog account through Tor.
+Unfortunately, the “many users abusing Tor” situation meant that when the account’s email was verified, the first login was met with a banner that the account was flagged.
+I responded by opening a ticket on the &lt;a class=&#34;link&#34; href=&#34;https://support.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;support page&lt;/a&gt;, wrote a short note, and the appeal succeeded.
+The support staff suggested that the flag was a consequence of a Tor exit IP and that it might happen again.&lt;/p&gt;
+&lt;h2 id=&#34;when-the-flag-appeared&#34;&gt;When the flag appeared
+&lt;/h2&gt;&lt;h3 id=&#34;what-seemed-odd&#34;&gt;What seemed odd
+&lt;/h3&gt;&lt;p&gt;One day, while using a script I had written on the Github account, I was unexpectedly greeted with a 404 page.
+Let’s call that “day 0.&lt;/p&gt;
+&lt;p&gt;I then visited the account’s profile page and the blog’s home page, both rendering 404 (perhaps I mistyped the URL). I returned to the login browser, used bookmarks and cookies to log into GitHub, and everything appeared normal.
+Copying that URL into the Tor browser still yielded 404.
+A foreboding feeling crept in my brain, since my account had being flagged once before.
+However, there was no banner, so I wasn’t sure whether the account was flagged.
+While logged in, I visited a repository page and, when I clicked into the blocg page, it returned 404 again. Maybe GitHub was temporarily down.&lt;/p&gt;
+&lt;h3 id=&#34;acknowledge-flagged&#34;&gt;Acknowledge flagged
+&lt;/h3&gt;&lt;p&gt;The next day, after logging in once more, everything worked normally.
+But when I visited the site without logging in, the blog and the profile still stayed stuck on 404.
+I saw no email from GitHub and my account dashboard appeared untouched.c&lt;/p&gt;
+&lt;p&gt;I searched online and found a &lt;a class=&#34;link&#34; href=&#34;https://www.reddit.com/r/github/comments/1fv8pgp/need_help_my_github_profile_is_not_accessible/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Reddit discussion&lt;/a&gt;.
+It explained that when a page is not visible while logged out but works for a logged‑in view, that usually means the account has been “flagged.” The comment also listed the &lt;a class=&#34;link&#34; href=&#34;https://support.github.com/contact/reinstatement&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;support link&lt;/a&gt; for filing an appeal.
+Because I didn’t see a banner again, I wasn’t 100% sure an appeal was the best next step.
+So I opened a ticket at the [official support page]((&lt;a class=&#34;link&#34; href=&#34;https://support.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.github.com&lt;/a&gt;), hoping to get a clearer explanation.
+GitHub’s ticket system prompted me to enable 2‑factor authentication first.
+After adding 2‑FA, a notice popped up: &lt;code&gt;Your account has been flagged and we need some additional information before we are able to direct your support query to the right place. Please supply your mobile number below so that we are able to verify you via text message&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I acknowledge my account flagged now.
+Completing SMS verification in a way that preserves my anonymity seemed nearly impossible.&lt;/p&gt;
+&lt;h3 id=&#34;retrospective&#34;&gt;Retrospective
+&lt;/h3&gt;&lt;p&gt;When and Why was my Github account flagged?&lt;/p&gt;
+&lt;p&gt;It can’t have been long ago.
+I occasionally access content in the account without logging in.
+I updated the blog on day -4 and two utility scripts on day -2.
+The Internet told me that flagged prevents repository actions from triggering.
+My last blog update had triggered an action, so the flag must have occurred in the past three days, perhaps due to a script anomaly.
+Recent large‑scale network attacking on GitHub could have also contributed.&lt;/p&gt;
+&lt;p&gt;I was furious!
+GitHub seemed unkind to anonymous users.
+Ten days after the flag, I removed the GitHub link from the blog and confirmed that actions were indeed halted by the way.&lt;/p&gt;
+&lt;h2 id=&#34;multiple-appeal-attempts&#34;&gt;Multiple appeal attempts
+&lt;/h2&gt;&lt;p&gt;Because my account is anonymous, I couldn’t give the support team an actual phone number or use a personal device.
+I had to remain within the Tor tunnel.
+Looking online, there were many free online SMS receivers work out of the box when you’re in Tor.
+I tried several but never received a code.&lt;/p&gt;
+&lt;h3 id=&#34;first-try-at-an-alternate-channelfailed&#34;&gt;First try at an alternate channel(Failed)
+&lt;/h3&gt;&lt;p&gt;The first idea that came to mind was to email the support team directly.
+But the support page says those emails are handled by bots and nobody looks at them.
+Community posts confirm that only tickets generated through the official form would get a human response.&lt;/p&gt;
+&lt;p&gt;I found an alternative contact link &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/contact&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/contact&lt;/a&gt;&lt;/strong&gt; in the &lt;a class=&#34;link&#34; href=&#34;https://github.com/orgs/community/discussions/159882&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub community&lt;/a&gt;, that lets you contact support without an account.
+But the tightened policy forces you to verify the flagged email address with SMS.
+As a seven‑day response window, a disposable E-mail simply won’t do it.&lt;/p&gt;
+&lt;p&gt;Testing the appeal process with another account, legitimate GitHub account revealed a neat restriction: the ticket can only be filed from an account that is already linked to the E-mail.
+If you try to appeal from a different account and skip the SMS step, the appeal is usually rejected, and you may even risk hurting your own clean account.
+Creating a fresh “test” account for this is a hassle, I didn’t feel worth the effort.&lt;/p&gt;
+&lt;p&gt;After all, I realized I’d need to go through the normal appeal form, which required a phone number for SMS verification anyway.&lt;/p&gt;
+&lt;h3 id=&#34;phone-numbers-are-hard-to-keep-anonymous-and-theyre-not-always-accepted&#34;&gt;Phone numbers are hard to keep anonymous, and they’re not always accepted
+&lt;/h3&gt;&lt;p&gt;Because GitHub throttles the number of tickets via SMS verification, the key to staying anonymous is the phone number you hand it.
+There are paid “receive‑code” services that claim they’ll reliably get your message and let you pay with cryptocurrency.
+A few comments, however, say even those services can’t guarantee receiving a GitHub code, so that level of restriction felt excessive to me.&lt;/p&gt;
+&lt;p&gt;Being a complete beginner, I didn’t have any crypto on hand.
+My only option was to buy a prepaid number that promised a high level of anonymity.
+After purchasing, I didn’t immediately request the SMS verification. Instead, I first tried using the number to set up two‑factor authentication on another GitHub account, just to see if the code would even come through.
+If that didn’t work, there was no point tying the number to the account, because it would break the anonymity I was trying to preserve.
+Surprisingly, the real number didn&amp;rsquo;t caught the GitHub verification SMS, so I didn’t even need to consider a personal phone number after all.c&lt;/p&gt;
+&lt;p&gt;I also ran into an odd quirk: the country selector on the SMS‑verification page doesn’t show every country, such as China and Malaysia are missing.
+I spent time and money trying to procure a Malaysian number, only to discover GitHub doesn’t support it.
+In my case I was in Europe, so some European numbers were rejected too.
+If you want to buy a number, please try to a +1 number directly.&lt;/p&gt;
+&lt;h3 id=&#34;try-sms-receiving-online-services-continuously&#34;&gt;Try SMS receiving online services continuously
+&lt;/h3&gt;&lt;p&gt;First, a broad search on any search engine will surface dozens of “receive‑sms” services.
+Click on a service and you can check whether the particular number is still active in the last few hours.
+A good service should have a record of receiving messages within the past few hours.
+Some platforms immediately display whether the number is active, the number of messages it has accumulated, the time of the most recent receipt, etc., which is quite user‑friendly.
+If that information isn’t shown, you need to look for it yourself.
+What&amp;rsquo;s more, picking a handful of countries at a time, and optionally cross‑checking with another provider to confirm that the code truly arrives instead of being a fabricated random example.&lt;/p&gt;
+&lt;p&gt;I found a few solid options and logged them here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sms-ol.com/en-US/phone/TW/0-928231013/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sms-ol.com/en-US/phone/TW/0-928231013/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://text-verification.net/number/76146182969&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://text-verification.net/number/76146182969&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sms-ol.com/en-US/phone/PL/0-722823101/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.sms-ol.com/en-US/phone/PL/0-722823101/&lt;/a&gt;  &amp;ndash;successfully received a Discord verification code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Next, I turned to free, online “receive‑sms” services that specifically mention GitHub verification.
+Some services even list which sites’SMS have been successfully received, so you can jump straight to a number that’s already proven to work for GitHub that dramatically increases the odds.&lt;/p&gt;
+&lt;p&gt;Search terms like: &lt;strong&gt;sms receive github free flagged&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Logged some good services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.smsonline.cloud/zh/service/github&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.smsonline.cloud/zh/service/github&lt;/a&gt;	&amp;ndash;with google sms&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://receivesmsfast.com/service/GI/US&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://receivesmsfast.com/service/GI/US&lt;/a&gt; &amp;ndash;with 3 specialized github number&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tempsmsonline.com/messages/github&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://tempsmsonline.com/messages/github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sms24.me/en/messages/GitHub/1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://sms24.me/en/messages/GitHub/1&lt;/a&gt; &amp;ndash;with github 2fa records.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the related threads I read, it’s clear that U.S./Canadian numbers tend to have a higher success rate when receiving GitHub SMS.&lt;/p&gt;
+&lt;h3 id=&#34;repeated-attempts-eventually-completed-sms-verification&#34;&gt;Repeated attempts eventually completed SMS verification
+&lt;/h3&gt;&lt;p&gt;It was said that after GitHub sends a one‑time code, you’re not allowed to try again for 24 hours if it fails.
+In practice, when I logged in via Tor, it was stable trigger that 24‑hour limit.
+By switching to a VPN, I could usually attempts two or three times in succession.
+During that window it was handy to draft the appeal email that I would later write in the ticket.&lt;/p&gt;
+&lt;p&gt;When the SMS code finally arrived, I didn’t have high hopes.
+After all, I was dealing with a shared phone number that would likely be snapped up by someone else. I kept trying for a couple of days. Unexpectedly, as I sent code requests, I occasionally received the text on a shared number, but the code I entered was wrong. The pattern suggested that other people had claimed the same phone’s verification window before I could complete it.&lt;/p&gt;
+&lt;p&gt;That experience also explained why &lt;strong&gt;US/Canada numbers have a higher success rate&lt;/strong&gt;.
+GitHub is a U.S. company, so its support teams are primarily located in North America, meaning those regions receive more SMS‑verification traffic.
+Realizing this, I switched to a +1 mobile number.&lt;/p&gt;
+&lt;p&gt;Because GitHub says the SMS is only for routing the appeal to the appropriate regional team, and not for persistent record.
+It seemed plausible that GitHub simply limits how many appeals can be submitted via SMS, without strictly banning shared numbers, and that the SMS doesn’t even need to label itself as “GitHub” like a 2‑FA code.
+Indeed, the final successful SMS didn’t mention GitHub at all.
+At the same time, the same number sent me a second four‑digit code.
+That strongly indicates GitHub outsourced the flag‑removal SMS verification to a third‑party service.&lt;/p&gt;
+&lt;h3 id=&#34;submitting-the-support-ticket&#34;&gt;Submitting the support ticket
+&lt;/h3&gt;&lt;p&gt;On day +35, I completed SMS verification and open a ticket immediately.
+After “Open Ticket”, it immediately asked if the problem was an account issue.
+The 2025 appeal form asked me to choose options, attach a few sentences if I wished, that explain to improve success.
+I clarified that I was a Tor user.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Does your claim involve content on GitHub or npm.js?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GitHub&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What is the username and repository or package name that was impacted?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LocalFreedom&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why are you requesting reinstatement? If you are requesting support for your account not related to moderation limits made on your account by GitHub please raise a support ticket instead.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I can login, but my profile and contributions aren&amp;rsquo;t visible to others&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Have you previously contacted GitHub about this claim?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;No&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Would you like to provide any additional information or context that would be helpful for our review of your reinstatement request?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am writing to seek your help. My GitHub account has been flagged recently. I think it is because of logging in to GitHub using a TOR node. I would appreciate your help if you unlock the hidden profile as soon as possible. Thank you so much!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I have reviewed and understand the GitHub Acceptable Use Policies and Community Guidelines.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;36-days-later----flag-removed&#34;&gt;36 days later &amp;ndash; Flag removed
+&lt;/h2&gt;&lt;p&gt;The following day, after opening the ticket, I received an email from support team, confirming the flag had been removed and my account was restored.
+Support team explained that GitHub’s automated defense system occasionally flags a batch of accounts for manual review.
+My account had no violations, and it was simply flagged because of a shared Tor exit by other bad actors.&lt;/p&gt;
+&lt;h2 id=&#34;future-work&#34;&gt;Future work
+&lt;/h2&gt;&lt;p&gt;Expecting large companies to act purely for the common good is unrealistic.
+GDPR does not fully protect us, especially for the anonymous.c&lt;/p&gt;
+&lt;h3 id=&#34;network-strengthening&#34;&gt;Network strengthening
+&lt;/h3&gt;&lt;p&gt;I began considering ProtonVPN as an alternative to Tor for sustained anonymity.
+I’m grateful for Proton’s services, which let me access Google‑style internet products anonymously, such as email, calendar, cloud drive, and VPN, which friendly to Tor users and privacy‑savvy individuals.&lt;/p&gt;
+&lt;h3 id=&#34;site-consolidation&#34;&gt;Site consolidation
+&lt;/h3&gt;&lt;p&gt;A flagged GitHub account means my custom tools become inaccessible, and my personal creative influence is abruptly cut.
+I cannot survive multiple flags.
+Git was designed to be egalitarian and fully local.
+Each code repository is kept locally, and copies can be uploaded to platforms such as GitLab or Codeberg.&lt;/p&gt;
+&lt;p&gt;Blogs were the most troublesome.
+Luckily, this blog is a static‑HTML generator that doesn&amp;rsquo;t rely on GitHub’s deployment service.
+I can upload a backup copy to another platform for personal use.
+Even so, the blog is my “child”, embodying my values and influence; it deserves a continuous reader experience.
+I’m contemplating moving the domain to Cloudflare Workers to keep the page online even if GitHub account gets flagged again.&lt;/p&gt;
+&lt;p&gt;It was sadly that the gradual loss of the internet utopia and hacker culture I once knew.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>记录一次Github被flag，通过免费SMS接码服务提交申诉成功恢复的经历</title>
         <link>https://localfreedom.github.io/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
         <pubDate>Sun, 30 Nov 2025 10:06:30 +0000</pubDate>
