@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VM on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/vm/</link>
+        <link>https://localfreedom.pages.dev/tags/vm/</link>
         <description>Recent content in VM on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 Sep 2025 06:03:04 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LibreTranslate</title>
-        <link>https://localfreedom.github.io/p/libretranslate/</link>
+        <link>https://localfreedom.pages.dev/p/libretranslate/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/libretranslate/</guid>
+        <guid>https://localfreedom.pages.dev/p/libretranslate/</guid>
         <description>&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://libretranslate.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;LibreTranslate&lt;/a&gt; 是一个轻量、开源的机器翻译服务，可以在本地部署或部署到云服务器，实现低延迟、无外部依赖的翻译系统。
@@ -73,11 +73,11 @@ Argos官方&lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/ar
         </item>
         <item>
         <title>Docker的安装与日常使用技巧</title>
-        <link>https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+        <link>https://localfreedom.pages.dev/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sat, 30 Aug 2025 11:51:29 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/docker.jpeg" alt="Featured image of post Docker的安装与日常使用技巧" /&gt;&lt;h2 id=&#34;为什么在-windows-上使用-docker&#34;&gt;为什么在 Windows 上使用 Docker？
+        <guid>https://localfreedom.pages.dev/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/docker.jpeg" alt="Featured image of post Docker的安装与日常使用技巧" /&gt;&lt;h2 id=&#34;为什么在-windows-上使用-docker&#34;&gt;为什么在 Windows 上使用 Docker？
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;开发环境一致：将应用与依赖打包成容器，无论你在 Windows、Linux 还是 macOS 上都能得到一模一样的运行环境。&lt;/li&gt;
 &lt;li&gt;资源隔离：每个容器都是独立进程，避免了传统方式中“软件冲突”的麻烦，也限制了恶意软件的活动范围。&lt;/li&gt;
@@ -226,11 +226,11 @@ Windows安装的时候记得勾选添加命令到PATH。
         </item>
         <item>
         <title>被博通收购后免费的 VMware Workstation Pro 下载方法</title>
-        <link>https://localfreedom.github.io/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link>
+        <link>https://localfreedom.pages.dev/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sat, 10 May 2025 01:59:15 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/vmware-logo-grey.svg" alt="Featured image of post 被博通收购后免费的 VMware Workstation Pro 下载方法" /&gt;&lt;p&gt;VMware是著名的个人桌面虚拟机软件，有友好的用户界面，强大的虚拟显卡能力。
+        <guid>https://localfreedom.pages.dev/p/%E8%A2%AB%E5%8D%9A%E9%80%9A%E6%94%B6%E8%B4%AD%E5%90%8E%E5%85%8D%E8%B4%B9%E7%9A%84-vmware-workstation-pro-%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/vmware-logo-grey.svg" alt="Featured image of post 被博通收购后免费的 VMware Workstation Pro 下载方法" /&gt;&lt;p&gt;VMware是著名的个人桌面虚拟机软件，有友好的用户界面，强大的虚拟显卡能力。
 尤其是用虚拟机运行3D游戏，几乎是便捷可行的唯一选择。&lt;/p&gt;
 &lt;p&gt;市面上一直流传着VMware产品的激活码，PC用这些激活码直接可以离线永久激活。
 被收购后，博通索性直接将针对PC的虚拟机产品 VMware Workstation Pro / VMware Fusion Pro 针对个人免费，直接去掉了注册激活步骤。
@@ -243,7 +243,7 @@ Windows安装的时候记得勾选添加命令到PATH。
 点击醒目的 &lt;code&gt;DOWNLOAD FUSION OR WORKSTATION&lt;/code&gt; 就会跳转到博通的&lt;a class=&#34;link&#34; href=&#34;https://access.broadcom.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;登陆页面&lt;/a&gt;
 如果没有博通账号需要注册，右上角的&lt;code&gt;LOGIN&lt;/code&gt;按钮右边箭头可以下拉菜单，点击看似不能点的灰色&lt;code&gt;REGISTER&lt;/code&gt;按钮即可进入注册流程。这配色设计简直&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/vmware-reg.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://localfreedom.pages.dev/img/vmware-reg.png&#34;
 	
 	
 	
@@ -256,7 +256,7 @@ Windows安装的时候记得勾选添加命令到PATH。
 &lt;li&gt;填写邮箱，可以考虑用临时邮箱以保护个人隐私。&lt;/li&gt;
 &lt;li&gt;填写邮箱收到的验证码&lt;/li&gt;
 &lt;li&gt;填写基本信息，包括姓名、国家、职业、密码，建议选择美国；创建账户后菜单会变长问一些附加服务，选择&lt;code&gt;I&#39;ll do it later&lt;/code&gt;即可。
-&lt;img src=&#34;https://localfreedom.github.io/img/vmware-reg-info.png&#34;
+&lt;img src=&#34;https://localfreedom.pages.dev/img/vmware-reg-info.png&#34;
 	
 	
 	
@@ -269,7 +269,7 @@ Windows安装的时候记得勾选添加命令到PATH。
 &lt;h2 id=&#34;定位下载&#34;&gt;定位下载
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;在右上角登陆用户名旁边的按钮下拉菜单选择 &lt;code&gt;VMware Cloud Foundation&lt;/code&gt;
-&lt;img src=&#34;https://localfreedom.github.io/img/vmware-select.png&#34;
+&lt;img src=&#34;https://localfreedom.pages.dev/img/vmware-select.png&#34;
 	
 	
 	
@@ -283,7 +283,7 @@ Windows安装的时候记得勾选添加命令到PATH。
 &lt;li&gt;Workstation系列选择&lt;code&gt;VMware Workstation Pro&lt;/code&gt;功能最全，点击右侧&lt;code&gt;Product Detail&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;在详情页，在Release列选择想下载的版本点击即可进入下载页面&lt;/li&gt;
 &lt;li&gt;终于进入下载页面，下载按钮是灰色的，点击栏目左上方勾选&lt;code&gt;I agree to theTerms and Conditions&lt;/code&gt;即可点击并开始下载。
-&lt;img src=&#34;https://localfreedom.github.io/img/vmware-dl.png&#34;
+&lt;img src=&#34;https://localfreedom.pages.dev/img/vmware-dl.png&#34;
 	
 	
 	
@@ -371,11 +371,11 @@ Windows安装的时候记得勾选添加命令到PATH。
         </item>
         <item>
         <title>Windows 11 使用技巧</title>
-        <link>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+        <link>https://localfreedom.pages.dev/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
         <pubDate>Sun, 12 Nov 2023 13:59:06 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/windows11-laptop.avif" alt="Featured image of post Windows 11 使用技巧" /&gt;&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网
+        <guid>https://localfreedom.pages.dev/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/windows11-laptop.avif" alt="Featured image of post Windows 11 使用技巧" /&gt;&lt;h2 id=&#34;跳过联网&#34;&gt;跳过联网
 &lt;/h2&gt;&lt;p&gt;Windows从11版本开始，强化在线功能。
 家庭版安装时强制建立在线微软账户，专业版才有Win10那样隐蔽离线帐号功能。
 家庭版安装时的强制联网目前可以用bug跳过，进入离线账户的步骤。&lt;/p&gt;

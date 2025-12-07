@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Creative on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/creative/</link>
+        <link>https://localfreedom.pages.dev/tags/creative/</link>
         <description>Recent content in Creative on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 28 Nov 2023 08:06:45 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/creative/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Nov 2023 08:06:45 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/creative/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LaTeX 环境搭建</title>
-        <link>https://localfreedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+        <link>https://localfreedom.pages.dev/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
         <pubDate>Tue, 28 Nov 2023 08:06:45 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/latex-project-logo.svg" alt="Featured image of post LaTeX 环境搭建" /&gt;&lt;h2 id=&#34;latex介绍&#34;&gt;LaTeX介绍
+        <guid>https://localfreedom.pages.dev/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/latex-project-logo.svg" alt="Featured image of post LaTeX 环境搭建" /&gt;&lt;h2 id=&#34;latex介绍&#34;&gt;LaTeX介绍
 &lt;/h2&gt;&lt;p&gt;LaTeX(LATEX，音译“拉泰赫”)是一种基于ΤeΧ的排版系统。区别于MSOfficeWord这类的所见即所得形式的编辑，LaTeX是一种代码式的排版工具，善于用命令精确规范文档的格式。
 可以把LaTeX和TeX的关系比作STL和C++的关系。这里配置的环境当然也是包括TEX的。&lt;/p&gt;
 &lt;p&gt;LaTeX的写作环境就像编程，分为编译引擎和编辑工具。

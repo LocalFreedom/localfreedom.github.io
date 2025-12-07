@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Office on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/office/</link>
+        <link>https://localfreedom.pages.dev/tags/office/</link>
         <description>Recent content in Office on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 30 Sep 2025 00:36:32 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/office/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 30 Sep 2025 00:36:32 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/office/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MSOffice 清除文件作者等</title>
-        <link>https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</link>
+        <link>https://localfreedom.pages.dev/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</link>
         <pubDate>Tue, 30 Sep 2025 00:36:32 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</guid>
+        <guid>https://localfreedom.pages.dev/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;微软Office是最流行最常用的电子办公套件，使用的时候会很自觉的将当前用户信息作为作者或编辑添加到所处理的资料中。
 这是便于留下版权和痕迹追踪的默认操作，然而对于隐私，尤其是匿名编辑带来不必要的麻烦。&lt;/p&gt;
@@ -37,10 +37,10 @@
         </item>
         <item>
         <title>Office Deployment Tool</title>
-        <link>https://localfreedom.github.io/p/office-deployment-tool/</link>
+        <link>https://localfreedom.pages.dev/p/office-deployment-tool/</link>
         <pubDate>Sun, 22 Dec 2024 03:09:53 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/office-deployment-tool/</guid>
+        <guid>https://localfreedom.pages.dev/p/office-deployment-tool/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;MS Office 是日常工作和生活的重要工具，离线部署激活当然必不可少。
 微软越来越在线化Office业务，甚至从2016版本后不再提供官方ISO了。

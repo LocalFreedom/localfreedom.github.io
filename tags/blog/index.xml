@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Blog on 局域自由博客</title>
-        <link>https://localfreedom.github.io/tags/blog/</link>
+        <link>https://localfreedom.pages.dev/tags/blog/</link>
         <description>Recent content in Blog on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/blog/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Github Flag Repeal by Online Free SMS Receive Service</title>
-        <link>https://localfreedom.github.io/p/github-flag-repeal-by-online-free-sms-receive-service/</link>
+        <link>https://localfreedom.pages.dev/p/github-flag-repeal-by-online-free-sms-receive-service/</link>
         <pubDate>Mon, 01 Dec 2025 11:06:21 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/github-flag-repeal-by-online-free-sms-receive-service/</guid>
+        <guid>https://localfreedom.pages.dev/p/github-flag-repeal-by-online-free-sms-receive-service/</guid>
         <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
 &lt;/h2&gt;&lt;p&gt;In 2025 GitHub flagged my account and prompted me to complete SMS verification before I could submit an appeal.
 I managed to receive the code by using a free online SMS receiving service that let me complete the verification with a Canadian share phone number, filed a support ticket, and ultimately had the flag lifted.&lt;/p&gt;
@@ -185,10 +185,10 @@ I’m contemplating moving the domain to Cloudflare Workers to keep the page onl
         </item>
         <item>
         <title>记录一次Github被flag，通过免费SMS接码服务提交申诉成功恢复的经历</title>
-        <link>https://localfreedom.github.io/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+        <link>https://localfreedom.pages.dev/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
         <pubDate>Sun, 30 Nov 2025 10:06:30 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+        <guid>https://localfreedom.pages.dev/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
         <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
 &lt;/h2&gt;&lt;p&gt;2025年Github账号flagged申诉需要SMS验证，这次是通过网上免费、免注册的SMS接收服务通过一个加拿大手机号成功收到验证码，向Github支持团队提交工单，申诉成功解除flag标记状态。&lt;/p&gt;
 &lt;p&gt;特殊的是，我收到SMS的6位验证码并没有标明来自Github。&lt;/p&gt;

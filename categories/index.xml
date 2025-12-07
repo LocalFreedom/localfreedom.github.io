@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 局域自由博客</title>
-        <link>https://localfreedom.github.io/categories/</link>
+        <link>https://localfreedom.pages.dev/categories/</link>
         <description>Recent content in Categories on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Tip</title>
-        <link>https://localfreedom.github.io/categories/tip/</link>
+        <link>https://localfreedom.pages.dev/categories/tip/</link>
         <pubDate>Mon, 01 Dec 2025 11:06:21 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/tip/</guid>
+        <guid>https://localfreedom.pages.dev/categories/tip/</guid>
         <description></description>
         </item>
         <item>
         <title>Usage</title>
-        <link>https://localfreedom.github.io/categories/usage/</link>
+        <link>https://localfreedom.pages.dev/categories/usage/</link>
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/usage/</guid>
+        <guid>https://localfreedom.pages.dev/categories/usage/</guid>
         <description></description>
         </item>
         <item>
         <title>Collect</title>
-        <link>https://localfreedom.github.io/categories/collect/</link>
+        <link>https://localfreedom.pages.dev/categories/collect/</link>
         <pubDate>Wed, 11 Jun 2025 12:50:31 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/collect/</guid>
+        <guid>https://localfreedom.pages.dev/categories/collect/</guid>
         <description></description>
         </item>
         <item>
         <title>Pipeline</title>
-        <link>https://localfreedom.github.io/categories/pipeline/</link>
+        <link>https://localfreedom.pages.dev/categories/pipeline/</link>
         <pubDate>Tue, 28 Nov 2023 08:06:45 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/pipeline/</guid>
+        <guid>https://localfreedom.pages.dev/categories/pipeline/</guid>
         <description></description>
         </item>
         <item>
         <title>About</title>
-        <link>https://localfreedom.github.io/categories/about/</link>
+        <link>https://localfreedom.pages.dev/categories/about/</link>
         <pubDate>Sat, 11 Nov 2023 12:33:08 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/categories/about/</guid>
+        <guid>https://localfreedom.pages.dev/categories/about/</guid>
         <description></description>
         </item>
         

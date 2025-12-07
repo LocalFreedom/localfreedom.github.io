@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Collect on 局域自由博客</title>
-        <link>https://localfreedom.github.io/categories/collect/</link>
+        <link>https://localfreedom.pages.dev/categories/collect/</link>
         <description>Recent content in Collect on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 11 Jun 2025 12:50:31 +0000</lastBuildDate><atom:link href="https://localfreedom.github.io/categories/collect/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 11 Jun 2025 12:50:31 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/collect/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>台湾和大陆IT术语对照表</title>
-        <link>https://localfreedom.github.io/p/%E5%8F%B0%E6%B9%BE%E5%92%8C%E5%A4%A7%E9%99%86it%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
+        <link>https://localfreedom.pages.dev/p/%E5%8F%B0%E6%B9%BE%E5%92%8C%E5%A4%A7%E9%99%86it%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
         <pubDate>Wed, 11 Jun 2025 12:50:31 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E5%8F%B0%E6%B9%BE%E5%92%8C%E5%A4%A7%E9%99%86it%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8/</guid>
+        <guid>https://localfreedom.pages.dev/p/%E5%8F%B0%E6%B9%BE%E5%92%8C%E5%A4%A7%E9%99%86it%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8/</guid>
         <description>&lt;p&gt;虽然简化字和正体中文是一一对应的，但是中国大陆与台湾在翻译英语世界科技上形成了不同的习惯。
 本文收集IT术语方便的差异，便于写作和阅读时避免歧义。&lt;/p&gt;
 &lt;table&gt;
@@ -2369,11 +2369,11 @@
         </item>
         <item>
         <title>操作系统选型</title>
-        <link>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</link>
+        <link>https://localfreedom.pages.dev/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</link>
         <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/OS-example.jpeg" alt="Featured image of post 操作系统选型" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
+        <guid>https://localfreedom.pages.dev/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/OS-example.jpeg" alt="Featured image of post 操作系统选型" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;从信息时代来到人工智能时代，掌握自己的信息系统越来越重要。
 将自己的数据握在自己手中，摆脱大公司的监视干预是本站的价值观。
 操作系统可以说是个人信息系统的重要基础，尤其是微软的Windows越来越绑定网络，将用户束缚在微软的服务中，探寻一下非大公司控制，可自己掌握支配的操作系统愈加必要。
@@ -2615,11 +2615,11 @@ Windows虽然是封闭商业软件，但本地自由使用难度并不大，考�
         </item>
         <item>
         <title>加密货币</title>
-        <link>https://localfreedom.github.io/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+        <link>https://localfreedom.pages.dev/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
         <pubDate>Mon, 18 Dec 2023 11:53:49 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/crypto-example.jpeg" alt="Featured image of post 加密货币" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
+        <guid>https://localfreedom.pages.dev/p/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/crypto-example.jpeg" alt="Featured image of post 加密货币" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
 &lt;/h2&gt;&lt;p&gt;一提到加密货币与挖矿，很多中国读者有着很深的误解与偏见，这实际上与中国政府及其控制的媒体、自媒体的宣传导向有关。&lt;/p&gt;
 &lt;p&gt;非常感谢&lt;a class=&#34;link&#34; href=&#34;https://archlinuxstudio.github.io/ArchLinuxTutorial/#/exclusive/mine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;自由之心社区的科普文章&lt;/a&gt;&lt;/p&gt;
@@ -2695,7 +2695,7 @@ GOG等游戏平台也支持一些主流加密货币付款。
 &lt;h3 id=&#34;xmr&#34;&gt;XMR
 &lt;/h3&gt;&lt;p&gt;monero &lt;a class=&#34;link&#34; href=&#34;https://www.getmonero.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://www.getmonero.org&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://localfreedom.github.io/img/monero-logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://localfreedom.pages.dev/img/monero-logo.png&#34;
 	
 	
 	
@@ -2714,11 +2714,11 @@ GOG等游戏平台也支持一些主流加密货币付款。
         </item>
         <item>
         <title>GOG 游戏库</title>
-        <link>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
+        <link>https://localfreedom.pages.dev/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</link>
         <pubDate>Sat, 09 Dec 2023 03:02:33 +0000</pubDate>
         
-        <guid>https://localfreedom.github.io/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
-        <description>&lt;img src="https://localfreedom.github.io/img/GOG-galaxy.jpeg" alt="Featured image of post GOG 游戏库" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+        <guid>https://localfreedom.pages.dev/p/gog-%E6%B8%B8%E6%88%8F%E5%BA%93/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/GOG-galaxy.jpeg" alt="Featured image of post GOG 游戏库" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;想要离线自由怎么能少了娱乐呢？&lt;/p&gt;
 &lt;p&gt;固然可以收集各种盗版单击游戏，但现在有了正版的提供完全可离线的游戏的平台，在享受离线自由的同时还能用自己的购买为游戏投票和赞助，这就是本文要推荐的&lt;a class=&#34;link&#34; href=&#34;https://www.gog.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GOG&lt;/a&gt;。&lt;/p&gt;
