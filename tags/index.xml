@@ -6,7 +6,23 @@
         <description>Recent content in Tags on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Dec 2025 02:24:49 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Offline</title>
+        <link>https://localfreedom.pages.dev/tags/offline/</link>
+        <pubDate>Thu, 11 Dec 2025 02:24:49 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/offline/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Utility</title>
+        <link>https://localfreedom.pages.dev/tags/utility/</link>
+        <pubDate>Thu, 11 Dec 2025 02:24:49 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/utility/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>About</title>
         <link>https://localfreedom.pages.dev/tags/about/</link>
         <pubDate>Mon, 01 Dec 2025 11:06:21 +0000</pubDate>
@@ -60,14 +76,6 @@
         <pubDate>Sat, 04 Oct 2025 06:11:21 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/tags/ai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Utility</title>
-        <link>https://localfreedom.pages.dev/tags/utility/</link>
-        <pubDate>Sat, 04 Oct 2025 06:11:21 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/utility/</guid>
         <description></description>
         </item>
         <item>
@@ -132,14 +140,6 @@
         <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/tags/recommendlist/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Offline</title>
-        <link>https://localfreedom.pages.dev/tags/offline/</link>
-        <pubDate>Thu, 10 Apr 2025 12:02:35 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/offline/</guid>
         <description></description>
         </item>
         <item>

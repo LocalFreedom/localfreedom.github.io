@@ -6,13 +6,46 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 01 Dec 2025 11:06:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Dec 2025 02:24:49 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VSCode扩展离线安装包直链下载</title>
+        <link>https://localfreedom.pages.dev/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/</link>
+        <pubDate>Thu, 11 Dec 2025 02:24:49 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/vsix.jpeg" alt="Featured image of post VSCode扩展离线安装包直链下载" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://marketplace.visualstudio.com/vscode&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VSCode官方扩展市场&lt;/a&gt;和VS家族是共用的。
+扩展的安装包为vsix格式文件，可以通过VSCode内置的扩展界面搜索安装也可以直接根据版本要求下载vsix包离线导入。
+微软毕竟是商业大公司，当VSCode生态蓬勃发展后，便开始限制扩展市场与VSCodium等开源替代品的联系。
+首先是提供的插件历史版本只限制在不到10个，且不提示扩展的历史版本要求的VSCode版本，这对于离线使用老版本的VSCode/VSCodium的用户已经不友好了。
+接着甚至直接取消了商店网页的下载按钮，为了保障离线本地使用VSCode/VSCodium的自由，本博主研究了一下其下载链接用以获得插件的离线安装包。&lt;/p&gt;
+&lt;p&gt;有&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/37071388/how-can-i-install-visual-studio-code-extensions-offline/38866913&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stackoverflow回答&lt;/a&gt;提供了以下直链模板:
+&lt;code&gt;https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${extension name}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;code&gt;${publisher}&lt;/code&gt;是发布者名称，&lt;code&gt;${extension name}&lt;/code&gt;是扩展名称，&lt;code&gt;${version}&lt;/code&gt;是版本号。
+在早期直接从商店页面下载的离线安装包命名格式通常是&lt;code&gt;${publisher}.${extension name}-${version}.vsix&lt;/code&gt;。
+发布者名称和扩展名称很容易得到，商店页面或者其URL即可看出。
+版本号目前还可以从商店查询最近几个，如果不确定&lt;code&gt;${version}&lt;/code&gt;替换为latest即可。&lt;/p&gt;
+&lt;p&gt;但是这个链接有个问题，无法指定架构信息，即x86或arm之类的。
+对于大多数扩展支持架构为Universal，架构信息可以省略，但有些如C/C++扩展就要指定架构信息，尤其是默认架构居然是&lt;code&gt;win-arm32&lt;/code&gt;。
+有不同架构区别的扩展离线安装包的命名也会多处指示架构的部分，如&lt;code&gt;${publisher}.${extension name}-${version}@${target_platform}.vsix&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;后来有&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/79359919/how-can-i-download-vsix-files-now-that-the-visual-studio-code-marketplace-no-lo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;stackoverflow回答&lt;/a&gt;提供了更好的模板:
+&lt;strong&gt;&lt;code&gt;https://marketplace.visualstudio.com/_apis/public/gallery/publishers/${publisher}/vsextensions/${extension name}/${version}/vspackage?targetPlatform=${target_platform}&lt;/code&gt;&lt;/strong&gt;
+其中${target_platform}可选&lt;code&gt;win-x64&lt;/code&gt;,&lt;code&gt;linux-x64&lt;/code&gt;等，可以参考商店页面的介绍。
+该模板不仅能指定架构信息，而且下载的离线安装包的名称和早期直接从商店页面下载的格式一样，都省的重命名了。&lt;/p&gt;
+&lt;p&gt;为了更好的享受本地优先的离线使用软件的自由，请使用VSCodium版本，结合此方法安装扩展。
+作者在此当然希望&lt;a class=&#34;link&#34; href=&#34;https://open-vsx.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;社区替代市场&lt;/a&gt; (&lt;a class=&#34;link&#34; href=&#34;https://open-vsx.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://open-vsx.org&lt;/a&gt;) 也能蓬勃发展，不过目前扩展的广泛程度和更新的及时性都不太好。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Github Flag Repeal by Online Free SMS Receive Service</title>
         <link>https://localfreedom.pages.dev/p/github-flag-repeal-by-online-free-sms-receive-service/</link>
         <pubDate>Mon, 01 Dec 2025 11:06:21 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/p/github-flag-repeal-by-online-free-sms-receive-service/</guid>
-        <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
+        <description>&lt;img src="https://localfreedom.pages.dev/img/github-flagged.png" alt="Featured image of post Github Flag Repeal by Online Free SMS Receive Service" /&gt;&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
 &lt;/h2&gt;&lt;p&gt;In 2025 GitHub flagged my account and prompted me to complete SMS verification before I could submit an appeal.
 I managed to receive the code by using a free online SMS receiving service that let me complete the verification with a Canadian share phone number, filed a support ticket, and ultimately had the flag lifted.&lt;/p&gt;
 &lt;p&gt;Notably, the SMS I received did not state it came from GitHub.&lt;/p&gt;
@@ -189,7 +222,7 @@ I’m contemplating moving the domain to Cloudflare Workers to keep the page onl
         <pubDate>Sun, 30 Nov 2025 10:06:30 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
-        <description>&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
+        <description>&lt;img src="https://localfreedom.pages.dev/img/github-flagged.png" alt="Featured image of post 记录一次Github被flag，通过免费SMS接码服务提交申诉成功恢复的经历" /&gt;&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
 &lt;/h2&gt;&lt;p&gt;2025年Github账号flagged申诉需要SMS验证，这次是通过网上免费、免注册的SMS接收服务通过一个加拿大手机号成功收到验证码，向Github支持团队提交工单，申诉成功解除flag标记状态。&lt;/p&gt;
 &lt;p&gt;特殊的是，我收到SMS的6位验证码并没有标明来自Github。&lt;/p&gt;
 &lt;p&gt;这次的成功经历说明，Github至少目前还是可以不用自己的手机号，不用付费，就完成SMS验证并提交申诉的；Github的SMS验证主要是根据号码分配相应语言的支持团队，并适当限制申诉总量，对共享手机号是宽容的。&lt;/p&gt;

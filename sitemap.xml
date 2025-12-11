@@ -3,15 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://localfreedom.pages.dev/</loc>
-    <lastmod>2025-12-01T11:06:21+00:00</lastmod>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/categories/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/offline/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/post/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/categories/tip/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/utility/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2025-12-11T02:24:49+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/about/</loc>
     <lastmod>2025-12-01T11:06:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/blog/</loc>
-    <lastmod>2025-12-01T11:06:21+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/categories/</loc>
     <lastmod>2025-12-01T11:06:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/english/</loc>
@@ -26,16 +44,7 @@
     <loc>https://localfreedom.pages.dev/tags/online/</loc>
     <lastmod>2025-12-01T11:06:21+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.pages.dev/post/</loc>
-    <lastmod>2025-12-01T11:06:21+00:00</lastmod>
-  </url><url>
     <loc>https://localfreedom.pages.dev/tags/sms/</loc>
-    <lastmod>2025-12-01T11:06:21+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/</loc>
-    <lastmod>2025-12-01T11:06:21+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/categories/tip/</loc>
     <lastmod>2025-12-01T11:06:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1github%E8%A2%ABflag%E9%80%9A%E8%BF%87%E5%85%8D%E8%B4%B9sms%E6%8E%A5%E7%A0%81%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BA%A4%E7%94%B3%E8%AF%89%E6%88%90%E5%8A%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E7%BB%8F%E5%8E%86/</loc>
@@ -45,9 +54,6 @@
     <lastmod>2025-10-04T06:11:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/ollama%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/</loc>
-    <lastmod>2025-10-04T06:11:21+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/utility/</loc>
     <lastmod>2025-10-04T06:11:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/</loc>
@@ -100,9 +106,6 @@
   </url><url>
     <loc>https://localfreedom.pages.dev/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</loc>
     <lastmod>2025-04-20T06:03:31+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/offline/</loc>
-    <lastmod>2025-04-10T12:02:35+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/</loc>
     <lastmod>2025-04-10T12:02:35+00:00</lastmod>
