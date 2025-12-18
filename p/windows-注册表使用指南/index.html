@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Offline wikipedia and other documents.">
-<title>kiwix</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Guide to windows registry">
+<title>Windows 注册表使用指南</title>
 
-<link rel='canonical' href='https://localfreedom.pages.dev/p/kiwix/'>
+<link rel='canonical' href='https://localfreedom.pages.dev/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="kiwix">
-<meta property='og:description' content="Offline wikipedia and other documents.">
-<meta property='og:url' content='https://localfreedom.pages.dev/p/kiwix/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Windows 注册表使用指南">
+<meta property='og:description' content="Guide to windows registry">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Offline' /><meta property='article:tag' content='Utility' /><meta property='article:published_time' content='2023-12-03T03:58:12&#43;00:00'/><meta property='article:modified_time' content='2023-12-03T03:58:12&#43;00:00'/>
-<meta name="twitter:title" content="kiwix">
-<meta name="twitter:description" content="Offline wikipedia and other documents.">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2025-12-17T18:03:02&#43;00:00'/><meta property='article:modified_time' content='2025-12-17T18:03:02&#43;00:00'/>
+<meta name="twitter:title" content="Windows 注册表使用指南">
+<meta name="twitter:description" content="Guide to windows registry">
     <link rel="shortcut icon" href="/favicon.png" />
 
   
@@ -271,15 +271,21 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#离线知识库工具">离线知识库工具</a></li>
-    <li><a href="#离线知识库">离线知识库</a>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#结构">结构</a>
       <ol>
-        <li><a href="#资源网址">资源网址</a></li>
-        <li><a href="#各种版本">各种版本</a></li>
-        <li><a href="#下载方式">下载方式</a></li>
+        <li><a href="#数据类型">数据类型</a></li>
+        <li><a href="#分支">分支</a></li>
+        <li><a href="#存储">存储</a></li>
       </ol>
     </li>
-    <li><a href="#kiwix的意义">kiwix的意义</a></li>
+    <li><a href="#操作">操作</a>
+      <ol>
+        <li><a href="#reg文件编辑">.reg文件编辑</a></li>
+      </ol>
+    </li>
+    <li><a href="#常用配置reg文件参考">常用配置reg文件参考</a></li>
+    <li><a href="#技巧">技巧</a></li>
   </ol>
 </nav>
         </div>
@@ -307,12 +313,12 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/kiwix/">kiwix</a>
+            <a href="/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">Windows 注册表使用指南</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Offline wikipedia and other documents.
+            Guide to windows registry
         </h3>
         
     </div>
@@ -333,7 +339,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Dec 03, 2023</time>
+                <time class="article-time--published">Dec 17, 2025</time>
             </div>
         
 
@@ -348,7 +354,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -363,45 +369,266 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
     <section class="article-content">
     
     
-    <h2 id="离线知识库工具">离线知识库工具
-</h2><p><a class="link" href="https://kiwix.org"  target="_blank" rel="noopener"
-    >kiwix</a>是一个离线查看维基百科的自由软件，采用zim格式压缩维基百科数据以供离线使用。
-当然，任何网页文档如果压缩成zim格式都可以用kiwix查看，社区也制作了各种软件、服务等的文档。
-可以说kiwix是<strong>实现自由的离线生活的重要基础设施</strong>。
-关键kiwix还集成实现了全文检索功能。</p>
-<p>kiwix<a class="link" href="https://kiwix.org/en/applications/"  target="_blank" rel="noopener"
-    >支持Windows、MacOS/iOS、GNU/Linux、Android等</a>，可以说是完全跨平台软件，也有很好的国际化多语言支持。
-软件很小巧值得收藏。
-kiwix还有<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline"  target="_blank" rel="noopener"
-    >Firefox插件版本</a>可以体验。
-博主测试浏览器插件使用效果目前还不太稳定。</p>
-<h2 id="离线知识库">离线知识库
-</h2><h3 id="资源网址">资源网址
-</h3><p><a class="link" href="https://library.kiwix.org"  target="_blank" rel="noopener"
-    >https://library.kiwix.org</a> 列出了官方背书的知识库，可以筛选查找。</p>
-<p><a class="link" href="https://download.kiwix.org/zim/"  target="_blank" rel="noopener"
-    >https://download.kiwix.org/zim/</a> 这里可以下载官方的资源。</p>
-<h3 id="各种版本">各种版本
-</h3><p>维基百科是分语言的，可以选择只下载自己常用的语言和英语版本。
-每种语言有完全版本(all)和精选版本(top)。
-网站还区分了最大版(maxi)、无图片版本(nopic)和精简版(mini)。</p>
-<p>比如 <a class="link" href="https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim"  target="_blank" rel="noopener"
-    >https://download.kiwix.org/zim/wikipedia/wikipedia_zh_all_nopic_2023-10.zim</a> 就是维基百科-中文-完全-无图片版本。</p>
-<p>其他各种资源基本都有语言的区分，但通常没有维基的那么大，也就不分有无图片了。
-目前官网已经收录了超过1000种百科文档，比如各种Linux发行版的wiki、mooc、问答社区等。</p>
-<h3 id="下载方式">下载方式
-</h3><ul>
-<li>直接下载，从<a class="link" href="https://download.kiwix.org/zim/"  target="_blank" rel="noopener"
-    >网页</a>直接点击下载。</li>
-<li>BT下载，在zim下载连接后面加上<code>.torrent</code>即可下载种子文件，然后用喜欢的BT工具下载即可。</li>
-<li>镜像下载，很多镜像站会镜像整个<a class="link" href="https://download.kiwix.org/"  target="_blank" rel="noopener"
-    >数据网站</a>也可以去那里下载。</li>
+    <h2 id="简介">简介
+</h2><p>注册表是Windows系统的管理机制，集中存储管理系统和应用软件的配置。
+甚至对于Linux的兼容环境Wine的使用而言，甚至有人说用好注册表比懂Linux更有效。</p>
+<h2 id="结构">结构
+</h2><h3 id="数据类型">数据类型
+</h3><p>注册表的数据类型主要有以下五种：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>显示类型</th>
+<th>数据类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REG_SZ</td>
+<td>字符串</td>
+<td>文本字串</td>
+</tr>
+<tr>
+<td>REG_BINARY</td>
+<td>二进制数</td>
+<td>不定长度的二进制值，以十六进制显示</td>
+</tr>
+<tr>
+<td>REG_DWORD</td>
+<td>双字</td>
+<td>一个 32 位的二进制值，显示为 8 位的十六进制值</td>
+</tr>
+<tr>
+<td>REG_MULTI_SZ</td>
+<td>多字符串</td>
+<td>含有多个文本值的字符串，此名来源于字符串间用 nul 分隔、结尾两个 nul</td>
+</tr>
+<tr>
+<td>REG_EXPAND_SZ</td>
+<td>可擴充字符串</td>
+<td>含有环境变量的字符串</td>
+</tr>
+</tbody>
+</table></div>
+<p>注册表还有其他的数据类型，但是均不常用：</p>
+<ul>
+<li>REG_DWORD_BIG_ENDIAN - DWORD 的大头版本</li>
+<li>REG_DWORD_LITTLE_ENDIAN</li>
+<li>REG_FULL_RESOURCE_DESCRIPTOR</li>
+<li>REG_QWORD - DWORD 的四字（64 位）版本</li>
+<li>REG_FILE_NAME</li>
 </ul>
-<p>zim文件不必及时更新，反正就是离线查看。但每次更新一定要检查打开后图片展示、连接跳转等是否正常。如果发现新版本zim体积减小也要留意，毕竟知识库这种东西一般应该是单调递增的，减小了不免怀疑是否有删减。</p>
-<h2 id="kiwix的意义">kiwix的意义
-</h2><p>kiwix可以让我们不依赖网络而高效的查阅知识，实现离线的自由。
-既然离线使用，当然避免了各种广告、追踪等，是ungoogle的隐私主义者的利器。
-离线资源的传播可以让真理走向世界的每一个角落，启蒙缺乏互联网的难民儿童，当然还有天朝的愚民。</p>
+<h3 id="分支">分支
+</h3><p>注册表有五个一级分支:</p>
+<ul>
+<li>HKEY_CLASSES_ROOT 存储Windows可识别的文件类型的详细列表，以及相关联的程序。</li>
+<li>HKEY_CURRENT_USER 存储当前用户设置的信息。</li>
+<li>HKEY_LOCAL_MACHINE 包括安装在计算机上的硬件和软件的信息。</li>
+<li>HKEY_USERS 包含使用计算机的用户的信息。</li>
+<li>HKEY_CURRENT_CONFIG 这个分支包含计算机当前的硬件配置信息。</li>
+</ul>
+<h3 id="存储">存储
+</h3><p>XP及以后注册表配置文件存放在 <code>C:\WINDOWS\SYSTEM32\CONFIG</code></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>注册表分支</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEFAULT</td>
+<td>HKEY_USERS.DEFAULT</td>
+<td>缺省启动用户的信息</td>
+</tr>
+<tr>
+<td>NTUSER.DAT</td>
+<td>HKEY_CURRENT_USER</td>
+<td>存储用户参数选择的信息(此文件放置于用户个人目录，和其他注册表文件是分开的)</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>HKEY_LOCAL_MACHINE\SAM</td>
+<td>用户及密码的数据库</td>
+</tr>
+<tr>
+<td>SECURITY</td>
+<td>HKEY_LOCAL_MACHINE\SECURITY</td>
+<td>安全性设置信息</td>
+</tr>
+<tr>
+<td>SOFTWARE</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE</td>
+<td>安装的软件信息</td>
+</tr>
+<tr>
+<td>SYSTEM</td>
+<td>HKEY_LOCAL_MACHINE\SYSTEM</td>
+<td>存储计算机硬件和系统的信息</td>
+</tr>
+<tr>
+<td>USERDIFF</td>
+<td>HKEY_USERS</td>
+<td>管理员对用户强行进行的设置</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="操作">操作
+</h2><p>通常由系统自带的注册表编辑器操作注册表。</p>
+<h3 id="reg文件编辑">.reg文件编辑
+</h3><p>注册表可以通过<code>.reg</code>的文件来实现批量导入修改。
+<code>.reg</code>文件通常为如下格式，首先声明版本并空一行，其中@可指定默认值，<code>&quot;</code> <code>\</code>需要转义。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-reg" data-lang="reg"><span class="line"><span class="cl">Windows Registry Editor Version 5.00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">[KEY1]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ValueName1&#34;</span><span class="o">=</span><span class="s">{Value Type}:{data}</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ValueName2&#34;</span><span class="o">=</span><span class="s">{Value Type}:{data}</span>
+</span></span><span class="line"><span class="cl"><span class="err">[KEY2]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ValueName1&#34;</span><span class="o">=</span><span class="s">{Value Type}:{data}</span>
+</span></span><span class="line"><span class="cl"><span class="err">[KEY3]</span>
+</span></span><span class="line"><span class="cl"><span class="na">@</span> <span class="o">=</span> <span class="s">&#34;default value name&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\key4\key5]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;slashes\\in\\the\\name&#34;</span> <span class="o">=</span> <span class="s">&#34;slashes\\in\\the\\data&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;quotes\&#34;in\&#34;the\&#34;name&#34;</span> <span class="o">=</span> <span class="s">&#34;quotes\&#34;in\&#34;the\&#34;data&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不同数据类型的书写格式</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Value type</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REG_SZ</td>
+<td>&ldquo;my string&rdquo;</td>
+</tr>
+<tr>
+<td>REG_DWORD</td>
+<td>dword: NNNNN (hex number)</td>
+</tr>
+<tr>
+<td>REG_MULTI_SZ</td>
+<td>multi_sz: &ldquo;my string&rdquo;, &ldquo;my string&rdquo;</td>
+</tr>
+<tr>
+<td>REG_BINARY</td>
+<td>hex: xx,xx,xx,xx &hellip;</td>
+</tr>
+<tr>
+<td>HEX</td>
+<td>hex(xxxxxxxx): xx,xx,xx,xx The hex(xx) types should correspond to the remaining Microsoft® Win32® registry types.</td>
+</tr>
+</tbody>
+</table></div>
+<p>甚至还可以使用条件语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-reg" data-lang="reg"><span class="line"><span class="cl"><span class="c1">;分号后面的是注释</span>
+</span></span><span class="line"><span class="cl"><span class="na">IF environment variable [</span><span class="o">=</span> <span class="s">value] [!]</span>
+</span></span><span class="line"><span class="cl"><span class="err">[KEY1]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ValueName1&#34;</span><span class="o">=</span><span class="s">{Value Type}:{data}</span>
+</span></span><span class="line"><span class="cl"><span class="err">ENDIF</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以用分号<code>;</code>为reg文件做注释，减号<code>-</code>表示删除操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-reg" data-lang="reg"><span class="line"><span class="cl"><span class="err">[-KEY1]</span>	<span class="c1">;删去一个键</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">[KEy2]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ValueName1&#34;</span><span class="o">=-</span>	<span class="err">删去键中的一个值</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="常用配置reg文件参考">常用配置reg文件参考
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-SetupReference.reg" data-lang="SetupReference.reg"><span class="line"><span class="cl">Windows Registry Editor Version 5.00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}\这里根据DriverDesc确定编号\NDI\params\NetworkAddress]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;LimitText&#34;</span><span class="o">=</span><span class="s">&#34;12&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;optional&#34;</span><span class="o">=</span><span class="s">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;ParamDesc&#34;</span><span class="o">=</span><span class="s">&#34;NetworkAddress&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;type&#34;</span><span class="o">=</span><span class="s">&#34;edit&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;UpperCase&#34;</span><span class="o">=</span><span class="s">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;无线网卡可手动指定地址,第二位只能是2,6,A,E之一</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;.bmp&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;.ico&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;.jpeg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;.jpg&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;.png&#34;</span><span class="o">=</span><span class="s">&#34;PhotoViewer.FileAssoc.Tiff&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;LTSC将图片关联到自带的图片查看器打开</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[</span><span class="nb">HKEY_LOCAL_MACHINE</span><span class="k">\SYSTEM\Setup\LabConfig]</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;BypassTPMCheck&#34;</span><span class="o">=</span><span class="nv">dword</span><span class="p">:</span><span class="m">00000001</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;BypassRAMCheck&#34;</span><span class="o">=</span><span class="nv">dword</span><span class="p">:</span><span class="m">00000001</span>
+</span></span><span class="line"><span class="cl"><span class="na">&#34;BypassSecureBootCheck&#34;</span><span class="o">=</span><span class="nv">dword</span><span class="p">:</span><span class="m">00000001</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;win11跳过硬件安装检测</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="技巧">技巧
+</h2><p>在其他系统中直接进入目标系统盘运行注册表编辑器修改的仍然是运行的系统的注册表，应该运行当前系统的注册表编辑器，然后任意选择一项，然后点击文件-加载配置单元-浏览目标盘<code>C:\Windows\System32\Config</code>选择SYSTEM文件用别名挂载然后修改其中的内容。完成后再卸载配置单元。</p>
 
 </section>
 
@@ -410,9 +637,7 @@ kiwix还有<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/
     
     <section class="article-tags">
         
-            <a href="/tags/offline/">Offline</a>
-        
-            <a href="/tags/utility/">Utility</a>
+            <a href="/tags/windows/">Windows</a>
         
     </section>
 
@@ -471,45 +696,32 @@ kiwix还有<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/
         <div class="flex article-list--tile">
             
                 
-<article class="">
-    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Windows 注册表使用指南</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
 <article class="has-image">
-    <a href="/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/">
+    <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
         
         
             <div class="article-image">
                 
-                    <img src="/img/vsix.jpeg" loading="lazy" data-key="" data-hash="/img/vsix.jpeg"/>
+                    <img src="/img/docker.jpeg" loading="lazy" data-key="" data-hash="/img/docker.jpeg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">VSCode扩展离线安装包直链下载</h2>
+            <h2 class="article-title">Docker的安装与日常使用技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/office-deployment-tool/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Office Deployment Tool</h2>
         </div>
     </a>
 </article>
@@ -529,19 +741,32 @@ kiwix还有<a class="link" href="https://addons.mozilla.org/en-US/firefox/addon/
 
             
                 
+<article class="">
+    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
 <article class="has-image">
-    <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+    <a href="/p/lm-studio/">
         
         
             <div class="article-image">
                 
-                    <img src="/img/docker.jpeg" loading="lazy" data-key="" data-hash="/img/docker.jpeg"/>
+                    <img src="/img/lmstudio-app-logo.webp" loading="lazy" data-key="" data-hash="/img/lmstudio-app-logo.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Docker的安装与日常使用技巧</h2>
+            <h2 class="article-title">LM Studio</h2>
         </div>
     </a>
 </article>
