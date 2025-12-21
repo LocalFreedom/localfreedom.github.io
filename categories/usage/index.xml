@@ -12,7 +12,7 @@
         <pubDate>Wed, 17 Dec 2025 18:03:02 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介
+        <description>&lt;img src="https://localfreedom.pages.dev/img/registry.png" alt="Featured image of post Windows 注册表使用指南" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;注册表是Windows系统的管理机制，集中存储管理系统和应用软件的配置。
 甚至对于Linux的兼容环境Wine的使用而言，甚至有人说用好注册表比懂Linux更有效。&lt;/p&gt;
 &lt;h2 id=&#34;结构&#34;&gt;结构

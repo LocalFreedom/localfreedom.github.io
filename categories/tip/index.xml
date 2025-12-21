@@ -6,7 +6,39 @@
         <description>Recent content in Tip on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 11 Dec 2025 02:24:49 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 21 Dec 2025 06:34:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>下载网站 Logo 图标</title>
+        <link>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</link>
+        <pubDate>Sun, 21 Dec 2025 06:34:20 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/logo.svg" alt="Featured image of post 下载网站 Logo 图标" /&gt;&lt;p&gt;最近给博客的文章和Links页面尽可能的配置了图示，以显得更美观一些。
+下面分享给Links页面配网站图标时的经验。&lt;/p&gt;
+&lt;h2 id=&#34;直接下载&#34;&gt;直接下载
+&lt;/h2&gt;&lt;p&gt;网站的logo通常是通过根目录的favicon.ico来实现的。只要访问 https://[域名]/favicon.ico 即可下载。&lt;/p&gt;
+&lt;p&gt;⚠️注意: 有些喜欢追踪的网站每次得到的favicon.ico会变化，实现类似cookie的功能。&lt;/p&gt;
+&lt;h2 id=&#34;专门的下载站&#34;&gt;专门的下载站
+&lt;/h2&gt;&lt;p&gt;如果遇到了不能直接访问下载的网站，或者想要更简单的下载方法，那么一些 favicon下载的网站是非常好的选择，这样的网站有很多，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://favicongrabber.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://favicongrabber.com/&lt;/a&gt; 简洁易用&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://besticon-demo.herokuapp.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://besticon-demo.herokuapp.com/&lt;/a&gt; 可以抓取全尺寸logo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;api服务&#34;&gt;API服务
+&lt;/h2&gt;&lt;p&gt;还有网站提供API服务来得到你目标网站的logo,比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;&lt;code&gt;https://www.google.com/s2/favicons?domain=[域名]&lt;/code&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://besticon-demo.herokuapp.com/icon?url=[域名]&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;高级说明 &lt;a class=&#34;link&#34; href=&#34;https://github.com/mat/besticon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/mat/besticon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>VSCode扩展离线安装包直链下载</title>
         <link>https://localfreedom.pages.dev/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/</link>
         <pubDate>Thu, 11 Dec 2025 02:24:49 +0000</pubDate>
