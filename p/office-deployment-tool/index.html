@@ -496,13 +496,13 @@ PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元�
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-install.bat" data-lang="install.bat"><span class="line"><span class="cl">setup.exe /configure config.xml
+<pre tabindex="0" class="chroma"><code class="language-install.bat" data-lang="install.bat"><span class="line"><span class="cl">powershell Start-Process -Verb RunAs -FilePath setup.exe -ArgumentList <span class="s2">&#34;&#34;&#34;/configure config.xml&#34;&#34;&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>建议将ODT、下载的Office、安装配置文件和其他需要打包的放在同一个资料夹，然后用UltraISO等工具制作ISO光碟映像档。</p>
 <h3 id="部署office">部署Office
 </h3><p>将ODT下载完成时的资料夹整体接入目标系统，主要保持 <code>setup.exe</code>, <code>Office\Data</code>, <code>config.xml</code> 在同一资料夹中。
-进入命令提示字元到该资料夹，执行<code>setup.exe /configure config.xml</code>。
+进入命令提示字元到该资料夹，以管理员权限执行<code>setup.exe /configure config.xml</code>。
 会显示安装进度和所包含组件，但这一过程不能中断或配置，只能看着。
 等待完成就可以使用所安装的Office了。</p>
 <h2 id="评测">评测
@@ -715,7 +715,7 @@ PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元�
         
             2023 - 
         
-        2025 局域自由博客
+        2026 局域自由博客
     </section>
     
     <section class="powerby">

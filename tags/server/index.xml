@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Server on 局域自由博客</title>
+        <link>https://localfreedom.pages.dev/tags/server/</link>
+        <description>Recent content in Server on 局域自由博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 29 Jan 2026 09:38:42 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/server/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>配置数据科学研究环境</title>
+        <link>https://localfreedom.pages.dev/p/%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Thu, 29 Jan 2026 09:38:42 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/data-science-env.jpeg" alt="Featured image of post 配置数据科学研究环境" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;数据科学研究环境主要是基于 conda 搭建便于数据科学和人工智能研究的计算机开发环境。
+数据科学和人工智能主要是用 Python 程式语言,而 OS 的 python 包管理完全不能适应前沿研究的需要。
+尽管 Python 本身就有灵活的包管理和虚拟环境功能，但数据科学研究所依赖的 scipy, cuda 等工具链安装非常容易出错。
+这里主要介绍数据科学所涉及的开发环境配置注意事项。&lt;/p&gt;
+&lt;h3 id=&#34;主要包括&#34;&gt;主要包括
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;包管理工具 conda&lt;/li&gt;
+&lt;li&gt;集成开发环境 jupyter&lt;/li&gt;
+&lt;li&gt;远程终端管理 tmux。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;conda&#34;&gt;conda
+&lt;/h2&gt;&lt;p&gt;conda是一个包管理器，主要为了管理数据科学所需要的 Python 包而设计。
+早先是为了解决 pip 安装 numpy 和 scipy 时复杂的编译问题。
+后来更广泛的支持了基于 Python 的数据科学和人工智能研究。&lt;/p&gt;
+&lt;p&gt;conda 不限于 Python 包管理，其能解决 scipy 等复杂的编译问题，是因为其顺便支持了相关 C\C++ 包的管理。&lt;/p&gt;
+&lt;p&gt;如果把 conda 比作 apt, 那么 anaconda 和 miniconda 就是发行版，pip 可以安装发行版以外的包。
+conda 也有类似 main, contrib, non-free 之类的通道的概念，类似 Ubuntu 的 ppa。&lt;/p&gt;
+&lt;h3 id=&#34;优点&#34;&gt;优点
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;无需管理员权限，无需依赖，直接执行sh安装包即可安装到用户目录&lt;/li&gt;
+&lt;li&gt;多虚拟环境支持，可以创建不同的环境安装不同的包，尤其是不同版本的cuda，甚至是不同版本的Python&lt;/li&gt;
+&lt;li&gt;比较好的解决Python包的依赖问题&lt;/li&gt;
+&lt;li&gt;兼容用 pip 安装额外的包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装
+&lt;/h3&gt;&lt;p&gt;conda 通常选择 Anaconda 或 miniconda 之一进行安装。
+Anaconda 预先包含常用的数据科学相关 Python 包，miniconda 如名字所示只包含精简环境。
+Anaconda 有商业公司支持，miniconda 是衍生出来的发行版，其中的包都是一样的，只是初始内容的不同。
+为了便于离线开箱即用，这里推荐 Anaconda。&lt;/p&gt;
+&lt;p&gt;安装默认位置是主目录，可以修改。
+安装结束的时候问是否添加初始化，如果添加会在Linux服务器当前用户Home的 &lt;code&gt;.bashrc&lt;/code&gt; 或 &lt;code&gt;.zshrc&lt;/code&gt; 添加 conda 的初始化命令。
+目前初始化主要是加载环境变量和激活默认环境，建议添加初始化。&lt;/p&gt;
+&lt;h3 id=&#34;功能&#34;&gt;功能
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;包操作
+&lt;ul&gt;
+&lt;li&gt;list install update remove
+&lt;ul&gt;
+&lt;li&gt;-c 指定通道&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;也可以用pip安装包，包会被安装到当前环境，而不会污染系统或用户空间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;环境操作
+&lt;ul&gt;
+&lt;li&gt;config		# 创建配置文件.condarc&lt;/li&gt;
+&lt;li&gt;create -n 环境名称 包名=版本	# 创建包含所指定包的新环境&lt;/li&gt;
+&lt;li&gt;info	# 显示信息&lt;/li&gt;
+&lt;li&gt;activate 环境名称	# 进入指定环境&lt;/li&gt;
+&lt;li&gt;deactivate	# 退出当前环境&lt;/li&gt;
+&lt;li&gt;remove -n 环境名称 &amp;ndash;all	# 删除环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;配置&#34;&gt;配置
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;参考配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;channels:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  - defaults
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;show_channel_urls: true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;不同环境划分建议
+&lt;ul&gt;
+&lt;li&gt;base 主要安装 jupyter 等默认包和公共包&lt;/li&gt;
+&lt;li&gt;pytorch tensorflow 等包分别装到不同的子环境&lt;/li&gt;
+&lt;li&gt;不同项目考虑使用不同子环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注意&#34;&gt;注意
+&lt;/h3&gt;&lt;p&gt;用pip安装conda里没有的包，尽量用环境中的pip而不是系统的pip。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;pip换源 &lt;code&gt;pip config set global.index-url https://mirror.url.link/simple&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;jupyter&#34;&gt;jupyter
+&lt;/h2&gt;&lt;p&gt;Jupyter Notebook (此前被称为 IPython notebook) 是一个交互式笔记本，支持运行 40 多种编程语言。后来又开发了 &lt;code&gt;Jupyter Lab&lt;/code&gt; 成为更加集成，功能更加服务的交互工作环境。&lt;/p&gt;
+&lt;h3 id=&#34;部署&#34;&gt;部署
+&lt;/h3&gt;&lt;p&gt;直接安装Anaconda就会附带它们。
+miniconda或新环境需要手动安装&lt;code&gt;conda install jupyter-lab&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Jupyter Lab比Jupyter Notebook更加集成和方便，主要是多了文件夹浏览侧边栏。
+Jupyter套件的不同部分共享很多配置，通常设置命令采用notebook。
+比如生成配置文件 &lt;code&gt;jupyter notebook --generate-config&lt;/code&gt;
+通过配置文件可以进行更多配置，所有jupyter系列共用配置文件。
+主要配置端口、密码、监听地址等。&lt;/p&gt;
+&lt;p&gt;进入想启动 jupyter 服务的目录，通过 &lt;code&gt;--ip&lt;/code&gt; 参数即可配置远程。其实不用 &lt;code&gt;--ip&lt;/code&gt; 也是可以的，但是默认配置文件限制只能本地访问。
+如果使用 Jupyter Notebook 输入： &lt;code&gt;jupyter notebook --ip=&#39;*&#39;&lt;/code&gt;
+如果使用 Jupyter Lab 输入： &lt;code&gt;jupyter-lab –ip=&#39;*&#39;’&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--ip&lt;/code&gt; 是指定服务要监听的ip，应当写服务器的某个ip地址(对于多网卡情况)。
+指定*监听所有ip，会警告但自己用没什么事儿。
+使用期间服务不能关，也就是ssh不能断或挂nohup，或者用Tmux来运行。
+推荐使用Tmux，既可以避免意外中断连接没保存，也能查看控制台输出检查问题。&lt;/p&gt;
+&lt;p&gt;如果服务器安装了字符界面浏览器，执行命令后可能会弹出一个字符浏览器界面，按Q退出。
+默认是8888端口，如果被占用了，会自动分配别的端口和地址。
+不用理会这些，反正之后会给出一个web地址（如果是&lt;code&gt;--ip=’*’&lt;/code&gt;要把 localhost 换成服务器IP），把地址复制到个人电脑的浏览器里就可以使用服务器的 Jupyter 了，用服务器的 GPU 和 Disk 就像用本机一样方便。&lt;/p&gt;
+&lt;h3 id=&#34;注意-1&#34;&gt;注意
+&lt;/h3&gt;&lt;p&gt;在浏览器使用jupyter就像本机似的，可以删除东西，所以尽量在项目根目录启动服务，而不直接在系统根目录启动。
+这样虽然是使用服务器的算力，但是浏览器加载还是在个人电脑，而jupyter的加载又很耗内存，所以本机加载不出来的ipynb文档用这个方法以然加载不出来。好处只是便于使用GPU等硬件资源。&lt;/p&gt;
+&lt;h2 id=&#34;tmux&#34;&gt;Tmux
+&lt;/h2&gt;&lt;p&gt;数据科学和人工智能的研究经常需要长时间的在服务器上训练模型，这就需要在断开连接后保持程序继续运行。
+服务器安装的Linux类OS通常自带的nohup可以保持程序运行但是没有交互功能。
+tmux和screen是两个持久终端软件，功能类似，这里推荐tmux。&lt;/p&gt;
+&lt;h3 id=&#34;配置-1&#34;&gt;配置
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set -g mouse on	# 启用鼠标滚动
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;命令参数&#34;&gt;命令参数
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux	&lt;span class=&#34;c1&#34;&gt;# 打开一个默认命名的窗口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux new -s 窗口名称	&lt;span class=&#34;c1&#34;&gt;# 新建一个持久终端窗口,exit即可推出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# attach可以简写为a&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux attach	&lt;span class=&#34;c1&#34;&gt;# 进入上一次的窗口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux attach -t 窗口名称	&lt;span class=&#34;c1&#34;&gt;# 进入指定名称的窗口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tmux ls	&lt;span class=&#34;c1&#34;&gt;# 列出所有窗口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;mouse&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;on&lt;/span&gt; # &lt;span class=&#34;nx&#34;&gt;启用鼠标滚动&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;快捷键&#34;&gt;快捷键
+&lt;/h3&gt;&lt;p&gt;Tmux的快捷键基于Ctrl+B,类似的screen的快捷键基于Ctrl+A。
+用法是按住Ctrl,先按B再按另一个表示所需功能的字母。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;C 窗口中创建新的标签页&lt;/li&gt;
+&lt;li&gt;D 返回外部环境但不结束窗口&lt;/li&gt;
+&lt;li&gt;W 进入窗口和标签页的导航&lt;/li&gt;
+&lt;li&gt;: 进入输入命令模式&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

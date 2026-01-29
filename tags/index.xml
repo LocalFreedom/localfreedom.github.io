@@ -6,7 +6,31 @@
         <description>Recent content in Tags on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 21 Dec 2025 06:34:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 29 Jan 2026 09:38:42 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Env</title>
+        <link>https://localfreedom.pages.dev/tags/env/</link>
+        <pubDate>Thu, 29 Jan 2026 09:38:42 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/env/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://localfreedom.pages.dev/tags/linux/</link>
+        <pubDate>Thu, 29 Jan 2026 09:38:42 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Server</title>
+        <link>https://localfreedom.pages.dev/tags/server/</link>
+        <pubDate>Thu, 29 Jan 2026 09:38:42 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/server/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Blog</title>
         <link>https://localfreedom.pages.dev/tags/blog/</link>
         <pubDate>Sun, 21 Dec 2025 06:34:20 +0000</pubDate>
@@ -108,14 +132,6 @@
         <pubDate>Fri, 12 Sep 2025 06:03:04 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/tags/vm/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Linux</title>
-        <link>https://localfreedom.pages.dev/tags/linux/</link>
-        <pubDate>Fri, 13 Jun 2025 13:04:09 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/linux/</guid>
         <description></description>
         </item>
         <item>
