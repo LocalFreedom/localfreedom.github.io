@@ -3,10 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://localfreedom.pages.dev/</loc>
-    <lastmod>2026-01-29T09:38:42+00:00</lastmod>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/categories/</loc>
-    <lastmod>2026-01-29T09:38:42+00:00</lastmod>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/portable/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/post/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/categories/tip/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/vm/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/windows/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/</loc>
+    <lastmod>2026-02-05T11:10:04+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/env/</loc>
     <lastmod>2026-01-29T09:38:42+00:00</lastmod>
@@ -17,13 +38,7 @@
     <loc>https://localfreedom.pages.dev/categories/pipeline/</loc>
     <lastmod>2026-01-29T09:38:42+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.pages.dev/post/</loc>
-    <lastmod>2026-01-29T09:38:42+00:00</lastmod>
-  </url><url>
     <loc>https://localfreedom.pages.dev/tags/server/</loc>
-    <lastmod>2026-01-29T09:38:42+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/</loc>
     <lastmod>2026-01-29T09:38:42+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83/</loc>
@@ -38,16 +53,10 @@
     <loc>https://localfreedom.pages.dev/tags/online/</loc>
     <lastmod>2025-12-21T06:34:20+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.pages.dev/categories/tip/</loc>
-    <lastmod>2025-12-21T06:34:20+00:00</lastmod>
-  </url><url>
     <loc>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</loc>
     <lastmod>2025-12-21T06:34:20+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/categories/usage/</loc>
-    <lastmod>2025-12-17T18:03:02+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/windows/</loc>
     <lastmod>2025-12-17T18:03:02+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
@@ -93,9 +102,6 @@
     <lastmod>2025-09-30T00:36:32+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/libretranslate/</loc>
-    <lastmod>2025-09-12T06:03:04+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/vm/</loc>
     <lastmod>2025-09-12T06:03:04+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>

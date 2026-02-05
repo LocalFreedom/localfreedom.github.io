@@ -6,7 +6,41 @@
         <description>Recent content in Tip on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 21 Dec 2025 06:34:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 05 Feb 2026 11:10:04 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>将Win10安装到移动硬盘</title>
+        <link>https://localfreedom.pages.dev/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/</link>
+        <pubDate>Thu, 05 Feb 2026 11:10:04 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/win-to-go.jpeg" alt="Featured image of post 将Win10安装到移动硬盘" /&gt;&lt;h2 id=&#34;wintogo&#34;&gt;WinToGo
+&lt;/h2&gt;&lt;p&gt;更换PC的时候将磁盘改装到新PC，如果驱动差异不大便可以无缝使用之前习惯的环境。那如果将系统直接安装到移动磁盘岂不是更容易享受这种方便？
+Windows官方是提供这种功能的，叫做 WinToGo，但仅限企业版。
+Windows系统非企业版默认是不能安装到USB接入的驱动器的，本文介绍一种借助虚拟机将 Windows 10 系统安装到移动磁盘的方法。&lt;/p&gt;
+&lt;h2 id=&#34;可以直接用vmware使用物理硬盘装系统直接将系统装到移动硬盘上&#34;&gt;可以直接用vmware使用物理硬盘装系统直接将系统装到移动硬盘上。
+&lt;/h2&gt;&lt;p&gt;VMware需要以管理员身份运行。&lt;/p&gt;
+&lt;p&gt;在虚拟机界面像正常安装 Windows 10 那样装好系统。
+主机所需驱动可以考虑在虚拟机界面直接装好，以免之后缺少驱动移动硬盘无法在物理机启动。&lt;/p&gt;
+&lt;p&gt;关闭虚拟机。
+重启物理机通过USB直接启动装好的移动磁盘上的Win10即可。&lt;/p&gt;
+&lt;h2 id=&#34;在虚拟机的虚拟磁盘至少20g中安装好再用磁盘克隆软件克隆到移动硬盘&#34;&gt;在虚拟机的虚拟磁盘(至少20G)中安装好，再用磁盘克隆软件克隆到移动硬盘。
+&lt;/h2&gt;&lt;p&gt;这样用VMware或VirtualBox都可以，也无需管理员权限。
+系统及驱动安装过程同上，和一般安装没什么区别。&lt;/p&gt;
+&lt;p&gt;磁盘克隆可以用Linux系统比如Manjaro的Live镜像启动虚拟机，使用其自带的的dd命令将虚拟磁盘拷贝到主机共享文件夹中成为镜像文件。
+&lt;code&gt;dd if=/dev/sda of=/path/to/file.img&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;主机也可以使用&lt;a class=&#34;link&#34; href=&#34;https://reboottools.com/programs/dd-for-windows/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DD软件&lt;/a&gt;将磁盘镜像原样拷贝到移动硬盘中。
+&lt;code&gt;dd if=/path/to/file.img of=\\.\PhysicalDriveX&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;处理引导异常&#34;&gt;处理引导异常
+&lt;/h2&gt;&lt;p&gt;LTSC(仅2019版本)因为 &lt;code&gt;wpprecorder.sys&lt;/code&gt; 的Bug从移动硬盘启动引导会出故障。
+自行安装需要用其他Windows10的同名文件替换,或者在虚拟机装好后再把系统更新装了会修复这个文件的bug。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;流程参考 &lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/59194720&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://zhuanlan.zhihu.com/p/59194720&lt;/a&gt;
+引导修复 &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/NetMicrobe/article/details/109382083&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://blog.csdn.net/NetMicrobe/article/details/109382083&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>下载网站 Logo 图标</title>
         <link>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</link>
         <pubDate>Sun, 21 Dec 2025 06:34:20 +0000</pubDate>
