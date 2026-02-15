@@ -6,7 +6,159 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 05 Feb 2026 11:10:04 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Feb 2026 12:04:30 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>火狐浏览器用户配置手动迁移</title>
+        <link>https://localfreedom.pages.dev/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</link>
+        <pubDate>Sun, 15 Feb 2026 12:04:30 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/firefox-profile.jpeg" alt="Featured image of post 火狐浏览器用户配置手动迁移" /&gt;&lt;p&gt;Firefox数据文件夹通常在 &lt;code&gt;~/.mozilla/firefox/&lt;/code&gt;，其中每个&lt;code&gt;xxxxxxxx.name&lt;/code&gt;文件夹是一套Profile,ESR版本的默认配置是 .default-esr。
+需要离线手动迁移部分配置的时候，了解配置文件夹中文件的含义十分有必要。&lt;/p&gt;
+&lt;h2 id=&#34;书签下载历史记录和浏览历史记录&#34;&gt;书签、下载历史记录和浏览历史记录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;places.sqlite
+&lt;ul&gt;
+&lt;li&gt;该文件包含了您在 Firefox 中所有的书签、下载文件的记录和浏览网页的记录。了解更多信息，请查阅&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/zh-CN/kb/bookmarks-firefox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;创建，管理书签&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;favicons.sqlite
+&lt;ul&gt;
+&lt;li&gt;这个文件夹存储了网站的图标，最好在恢复 places.sqlite 时也包要括这个文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;密码&#34;&gt;密码
+&lt;/h2&gt;&lt;p&gt;密码存放在两个文件中，缺一不可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;key4.db——该文件保存了密码的密钥数据库，请务必把它和下面这个文件一并复制。&lt;/li&gt;
+&lt;li&gt;logins.json——保存的密码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;了解更多信息，请查阅&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/zh-CN/kb/password-manager-remember-delete-change-passwords&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;密码管理器——在 Firefox 中记住、删除和更改已保存的密码&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;站点设置&#34;&gt;站点设置
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;permissions.sqlite
+&lt;ul&gt;
+&lt;li&gt;该文件保存了每个站点在 Firefox 中的相关许可。比如这个文件记录了哪些站点可以储存 Cookie、安装扩展程序或者显示弹出窗口等，哪些则不能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;content-prefs.sqlite
+&lt;ul&gt;
+&lt;li&gt;该文件补充了关于站点缩放的设置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;搜索引擎&#34;&gt;搜索引擎
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;search.json.mozlz4
+&lt;ul&gt;
+&lt;li&gt;此文件保存用户安装的搜索引擎。更多信息，参看&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/zh-CN/kb/add-or-remove-search-engine-firefox&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在 Firefox 中添加、删除搜索引擎&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;个人词典&#34;&gt;个人词典
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;persdict.dat
+&lt;ul&gt;
+&lt;li&gt;该文件保存着您添加到 Firefox 拼写检查词典的个人词汇。如果您从未向词典添加过自定义词汇，这个文件也就不会存在。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;自动完成历史记录&#34;&gt;自动完成历史记录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;formhistory.sqlite
+&lt;ul&gt;
+&lt;li&gt;该文件记录了您在搜索栏和网站表单中曾经输入过的信息。详情参见&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/zh-CN/kb/control-whether-firefox-automatically-fills-forms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;表单自动完成&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cookie&#34;&gt;Cookie
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;cookies.sqlite
+&lt;ul&gt;
+&lt;li&gt;Cookie 在不同站点有不同用处：有的网站使用 Cookie 让您保持登录状态；有的用它记录您在网站上的偏好设置；还有的网站用 Cookie 识别您曾经访问过某个特点的网站。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dom存储&#34;&gt;DOM存储
+&lt;/h2&gt;&lt;p&gt;DOM存储是对Cookie的补充和替代，涉及两个文件:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;webappsstore.sqlite
+&lt;ul&gt;
+&lt;li&gt;每个网站的信息都被存储在此文件中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;chromeappsstore.sqlite
+&lt;ul&gt;
+&lt;li&gt;该文件存储着 about:* 页面的信息。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DOM存储是一种更现代化的方法，在老版本中可能不存在。&lt;/p&gt;
+&lt;h2 id=&#34;安全证书设置&#34;&gt;安全证书设置
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;cert9.db
+&lt;ul&gt;
+&lt;li&gt;该文件保存了您所有的安全证书设置和导入到 Firefox 的 SSL 证书。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安全设备设置&#34;&gt;安全设备设置：
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;pkcs11.txt
+&lt;ul&gt;
+&lt;li&gt;该文件是保存安全模块配置的文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;各类文件的下载动作&#34;&gt;各类文件的下载动作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;handlers.json
+&lt;ul&gt;
+&lt;li&gt;该文件保存的设置可以告诉 Firefox 遇到特定类型文件时该做什么，比如您想保存这种文件还是想用特定程序打开它。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;扩展&#34;&gt;扩展
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;extensions
+&lt;ul&gt;
+&lt;li&gt;该文件夹保存着已安装的&lt;a class=&#34;link&#34; href=&#34;https://addons.mozilla.org/firefox/extensions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;扩展&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;离线翻译语言包&#34;&gt;离线翻译语言包
+&lt;/h2&gt;&lt;p&gt;离线翻译是128版本后加入的新功能，并在140esr中加入了中文支持。
+迁移涉及翻译包数据文件夹和两个索引文件。
+&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/en-US/questions/1487296&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.mozilla.org/en-US/questions/1487296&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;storage/permanent/chrome/idb/3870112724rsegmnoittet-es.files/
+&lt;ul&gt;
+&lt;li&gt;这个文件夹中看起来像翻译包的数据文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+&lt;ul&gt;
+&lt;li&gt;数据库索引已下载的翻译资料&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite-wal
+&lt;ul&gt;
+&lt;li&gt;空文件估计用于运行时&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.mozilla.org/zh-CN/kb/about-your-important-data-and-their-files&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://support.mozilla.org/zh-CN/kb/about-your-important-data-and-their-files&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>将Win10安装到移动硬盘</title>
         <link>https://localfreedom.pages.dev/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/</link>
         <pubDate>Thu, 05 Feb 2026 11:10:04 +0000</pubDate>
