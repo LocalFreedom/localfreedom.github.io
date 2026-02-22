@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SSH Usage">
-<title>SSH远程登入神器的初步使用</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Activate MS Office by Ohook.">
+<title>用 Ohook 激活微软 Office 全套</title>
 
-<link rel='canonical' href='https://localfreedom.pages.dev/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/'>
+<link rel='canonical' href='https://localfreedom.pages.dev/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="SSH远程登入神器的初步使用">
-<meta property='og:description' content="SSH Usage">
-<meta property='og:url' content='https://localfreedom.pages.dev/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="用 Ohook 激活微软 Office 全套">
+<meta property='og:description' content="Activate MS Office by Ohook.">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Utility' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Network' /><meta property='article:published_time' content='2025-06-13T13:04:09&#43;00:00'/><meta property='article:modified_time' content='2025-06-13T13:04:09&#43;00:00'/>
-<meta name="twitter:title" content="SSH远程登入神器的初步使用">
-<meta name="twitter:description" content="SSH Usage">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Crack' /><meta property='article:tag' content='Office' /><meta property='article:tag' content='Offline' /><meta property='article:tag' content='Windows' /><meta property='article:tag' content='Utility' /><meta property='article:published_time' content='2026-02-22T04:47:26&#43;00:00'/><meta property='article:modified_time' content='2026-02-22T04:47:26&#43;00:00'/><meta property='og:image' content='https://localfreedom.pages.dev/img/MAS-Ohook.jpeg' />
+<meta name="twitter:title" content="用 Ohook 激活微软 Office 全套">
+<meta name="twitter:description" content="Activate MS Office by Ohook."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://localfreedom.pages.dev/img/MAS-Ohook.jpeg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
   
@@ -271,15 +272,31 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#简介">简介</a></li>
-    <li><a href="#用法">用法</a></li>
-    <li><a href="#配置文件">配置文件</a>
+    <li><a href="#officehook方法">OfficeHook方法</a>
       <ol>
-        <li><a href="#客户端">客户端</a></li>
-        <li><a href="#服务端">服务端</a></li>
+        <li><a href="#原理">原理</a></li>
+        <li><a href="#支持的产品">支持的产品</a></li>
+        <li><a href="#实现">实现</a></li>
       </ol>
     </li>
-    <li><a href="#技巧">技巧</a></li>
+    <li><a href="#复现">复现</a>
+      <ol>
+        <li><a href="#关键二进制补丁-sppc">关键二进制补丁 SPPC</a></li>
+        <li><a href="#pipeline">Pipeline</a></li>
+      </ol>
+    </li>
+    <li><a href="#使用">使用</a>
+      <ol>
+        <li><a href="#逐步手动激活office">逐步手动激活Office</a>
+          <ol>
+            <li><a href="#一般-c2r-版本激活">一般 C2R 版本激活</a></li>
+            <li><a href="#win7-激活-office2016proplus-的-msi-版本">Win7 激活 Office2016ProPlus 的 MSI 版本</a></li>
+          </ol>
+        </li>
+        <li><a href="#使用mas的aio脚本">使用MAS的AIO脚本</a></li>
+      </ol>
+    </li>
+    <li><a href="#各版本office参考key">各版本Office参考Key</a></li>
   </ol>
 </nav>
         </div>
@@ -291,8 +308,16 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">
+                
+                    <img src="/img/MAS-Ohook.jpeg" loading="lazy" alt="Featured image of post 用 Ohook 激活微软 Office 全套" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -307,12 +332,12 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">SSH远程登入神器的初步使用</a>
+            <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">用 Ohook 激活微软 Office 全套</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            SSH Usage
+            Activate MS Office by Ohook.
         </h3>
         
     </div>
@@ -333,7 +358,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jun 13, 2025</time>
+                <time class="article-time--published">Feb 22, 2026</time>
             </div>
         
 
@@ -348,7 +373,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -363,141 +388,263 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
     <section class="article-content">
     
     
-    <h2 id="简介">简介
-</h2><p>SSH是安全shell的缩写，提供加密传输访问远程服务器的功能。
-SSH几乎是所有类似UNIX系统远程登入的方式，当前的Windows 10/11 已经集成了SSH客户端可选组件。
-SSH同时支持者scp、git、https、vpn等很多应用。</p>
-<h2 id="用法">用法
+    <h2 id="officehook方法">OfficeHook方法
+</h2><h3 id="原理">原理
+</h3><p><a class="link" href="https://massgrave.dev/ohook#how-does-it-work"  target="_blank" rel="noopener"
+    >https://massgrave.dev/ohook#how-does-it-work</a></p>
+<p>有人发现了 MS Office 产品的激活验证统一通过一个函数进行，于是逆向破解了其所在的DLL文件，通过hook该函数让所有Office产品在查询激活状态的时候得到已激活的结果。</p>
+<h3 id="支持的产品">支持的产品
+</h3><p>由于微软并没有修改Office的激活检查方式，在 Windows Vista 或更高 Windows/Server 版本上安装的 Office 都支持。
+UWP也就是应用商店的版本当然不支持。</p>
+<h3 id="实现">实现
+</h3><p>该hook的代码<a class="link" href="https://github.com/asdcorp/ohook"  target="_blank" rel="noopener"
+    >开源</a>且及其简单，只修改了相关几个函数的返回参数。</p>
+<p><strong>经博主审查无任何风险，是激活 MS Office 的绝佳方法。</strong></p>
+<h2 id="复现">复现
+</h2><h3 id="关键二进制补丁-sppc">关键二进制补丁 SPPC
+</h3><p>MAS官方提供了<a class="link" href="https://massgrave.dev/ohook#custom-sppcdll-info"  target="_blank" rel="noopener"
+    >复现其所内嵌的dll的指南</a>。</p>
+<p>其中要求的编译工具看起来不是官方的；具体到<a class="link" href="https://www.mingw-w64.org"  target="_blank" rel="noopener"
+    >MinGW官网</a>可以看到官方在SourceForge(<a class="link" href="https://sourceforge.net/projects/mingw-w64/files"  target="_blank" rel="noopener"
+    >https://sourceforge.net/projects/mingw-w64/files</a>)只提供源代码下载，预编译版本则通过发行版仓库和第三方提供，在官方背书的<a class="link" href="https://www.mingw-w64.org/downloads/#mingw-w64-builds"  target="_blank" rel="noopener"
+    >预编译工具链下载页面</a>可以找到<code>WinLibs.com</code>；进入<a class="link" href="https://winlibs.com/"  target="_blank" rel="noopener"
+    >WinLibs.com</a>可以看到其通过Github分发预编译版，链接和MAS指南中一致。</p>
+<p>控制时间<code>Set-TimeZone -Id 'UTC'; $date=[datetime]'2023/8/7 12:00';while($true){set-date $date; start-sleep -milliseconds 10;}</code>，使用<code>WinLibs.com</code>预编译工具链的相应版本编译ohook的0.5版本成功复现MAS中内嵌DLL。</p>
+<p>可以认为MAS的AIO脚本中内嵌DLL可信如其源代码。
+MAS组织集成的AIO脚本其他部分多是辅助功能，无可疑之处。</p>
+<h3 id="pipeline">Pipeline
+</h3><p>MAS的<a class="link" href="https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/MAS/Separate-Files-Version/Activators/Ohook_Activation_AIO.cmd"  target="_blank" rel="noopener"
+    >一键运行脚本</a>运行时会有提示输出。
+博主根据输出手动复制替换相关文件成功达到激活效果，如果对MAS脚本不放心完全可以手动逐步操作。</p>
+<h2 id="使用">使用
+</h2><h3 id="逐步手动激活office">逐步手动激活Office
+</h3><p><a class="link" href="https://massgrave.dev/manual_ohook_activation"  target="_blank" rel="noopener"
+    >https://massgrave.dev/manual_ohook_activation</a>
+亲自动手更可信，但一些额外步骤可能不够完善。</p>
+<h4 id="一般-c2r-版本激活">一般 C2R 版本激活
+</h4><ul>
+<li>首先完成Office的安装，一般应选择64位版本。</li>
+<li>准备好 <code>sppc64.dll</code> 文件，建议从ohook项目release提取。</li>
+<li>以管理员权限在待激活Office的系统打开命令行。</li>
+<li>将系统自带的 <code>sppc.dll</code> 创建软链接到 Office C2R 系统目录并重命名为 <code>sppcs.dll</code>:
+<ul>
+<li><code>mklink &quot;%ProgramFiles%\Microsoft Office\root\vfs\System\sppcs.dll&quot; &quot;%windir%\System32\sppc.dll&quot;</code></li>
+</ul>
+</li>
+<li>将准备好的 <code>sppc64.dll</code> 复制到 Office C2R 系统目录并重命名为 <code>sppc.dll</code>。
+<ul>
+<li><code>copy /y sppc64.dll &quot;%ProgramFiles%\Microsoft Office\root\vfs\System\sppc.dll&quot;</code></li>
+</ul>
+</li>
+<li><em>(可选)避免Office365联网检查产生冲突添加注册表项</em>
+<ul>
+<li><code>reg add HKCU\Software\Microsoft\Office\16.0\Common\Licensing\Resiliency /v &quot;TimeOfLastHeartbeatFailure&quot; /t REG_SZ /d &quot;2040-01-01T00:00:00Z&quot; /f</code></li>
+</ul>
+</li>
+<li>添加序列号，如果是<a class="link" href="https://config.office.com/"  target="_blank" rel="noopener"
+    >ODT配置</a>的一般自带序列号。</li>
+<li>现在激活已经完成了。
+<ul>
+<li><strong>注意</strong>: 如果所在Windows没有激活也会提示未激活，用TSforge或KMS激活Windows系统即可。</li>
+</ul>
+</li>
+</ul>
+<h4 id="win7-激活-office2016proplus-的-msi-版本">Win7 激活 Office2016ProPlus 的 MSI 版本
+</h4><ul>
+<li>首先完成Office的安装，一般应选择64位版本。</li>
+<li>准备好 <code>sppc64.dll</code> 文件，建议从ohook项目release提取。</li>
+<li>以管理员权限在待激活Office的系统打开命令行。</li>
+<li>进入Office保护平台目录 <code>C:\Program Files\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform</code></li>
+<li>重命名备份关键文件 <code>OSPPC.DLL</code>， 建议重命名为<code>OSPPC.DLL.bak</code>。</li>
+<li>将准备好的 <code>sppc64.dll</code> 复制到Office保护平台目录并重命名为 <code>OSPPC.DLL</code>。
+<ul>
+<li><code>copy /y sppc64.dll &quot;C:\Program Files\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\OSPPC.DLL&quot;</code></li>
+</ul>
+</li>
+<li>将系统原来的 <code>OSPPC.DLL</code> 创建软链接到 Office MSI 安装目录并重命名为 <code>sppcs.dll</code>:
+<ul>
+<li><code>mklink &quot;%ProgramFiles%\Microsoft Office\Office16\sppcs.dll&quot; &quot;%ProgramFiles%\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\OSPPC.DLL.bak&quot;</code></li>
+</ul>
+</li>
+<li>现在激活已经完成了。
+<ul>
+<li><strong>注意</strong>: 如果所在Windows没有激活也会提示未激活，用TSforge或KMS激活Windows系统即可。</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用mas的aio脚本">使用MAS的AIO脚本
+</h3><p>直接运行 <code>Ohook_Activation_AIO.cmd</code> 选择1安装Ohook激活即可自动完成激活。
+脚本会提示文件操作，根据输出也可进行手动激活。</p>
+<h2 id="各版本office参考key">各版本Office参考Key
 </h2><ul>
-<li>
-<p>直接使用</p>
+<li>Office 365
 <ul>
-<li>ssh 用户名@目标主机:端口</li>
-<li>用户名和当前用户名相同可省略</li>
-<li>目标主机可以是ip或域名</li>
-<li>端口默认22可不写</li>
+<li>O365AppsBasicRetail	3HYJN-9KG99-F8VG9-V3DT8-JFMHV</li>
+<li>O365BusinessRetail	Y9NF9-M2QWD-FF6RJ-QJW36-RRF2T</li>
+<li>O365EduCloudRetail	W62NQ-267QR-RTF74-PF2MH-JQMTH</li>
+<li>O365HomePremRetail	3NMDC-G7C3W-68RGP-CB4MH-4CXCH</li>
+<li>O365ProPlusRetail	H8DN8-Y2YP3-CR9JT-DHDR9-C7GP3</li>
+<li>O365SmallBusPremRetail	2QCNB-RMDKJ-GC8PB-7QGQV-7QTQJ</li>
 </ul>
 </li>
-<li>
-<p>配置密钥访问</p>
+<li>Office 2016
 <ul>
-<li>生成密钥对 ssh-keygen</li>
-<li>拷贝公钥到目标主机 ssh-copy-id</li>
-<li>配置使用的密钥对</li>
+<li>AccessRetail	WHK4N-YQGHB-XWXCC-G3HYC-6JF94</li>
+<li>AccessRuntimeRetail	RNB7V-P48F4-3FYY6-2P3R3-63BQV</li>
+<li>AccessVolume	JJ2Y4-N8KM3-Y8KY3-Y22FR-R3KVK</li>
+<li>ExcelRetail	RKJBN-VWTM2-BDKXX-RKQFD-JTYQ2</li>
+<li>ExcelVolume	FVGNR-X82B2-6PRJM-YT4W7-8HV36</li>
+<li>HomeBusinessPipcRetail	2WQNF-GBK4B-XVG6F-BBMX7-M4F2Y</li>
+<li>HomeBusinessRetail	HM6FM-NVF78-KV9PM-F36B8-D9MXD</li>
+<li>HomeStudentARMRetail	PBQPJ-NC22K-69MXD-KWMRF-WFG77</li>
+<li>HomeStudentPlusARMRetail	6F2NY-7RTX4-MD9KM-TJ43H-94TBT</li>
+<li>HomeStudentRetail	PNPRV-F2627-Q8JVC-3DGR9-WTYRK</li>
+<li>HomeStudentVNextRetail	YWD4R-CNKVT-VG8VJ-9333B-RC3B8</li>
+<li>MondoRetail	VNWHF-FKFBW-Q2RGD-HYHWF-R3HH2</li>
+<li>MondoVolume	FMTQQ-84NR8-2744R-MXF4P-PGYR3</li>
+<li>OneNoteFreeRetail	XYNTG-R96FY-369HX-YFPHY-F9CPM</li>
+<li>OneNoteRetail	FXF6F-CNC26-W643C-K6KB7-6XXW3</li>
+<li>OneNoteVolume	9TYVN-D76HK-BVMWT-Y7G88-9TPPV</li>
+<li>OutlookRetail	7N4KG-P2QDH-86V9C-DJFVF-369W9</li>
+<li>OutlookVolume	7QPNR-3HFDG-YP6T9-JQCKQ-KKXXC</li>
+<li>PersonalPipcRetail	9CYB3-NFMRW-YFDG6-XC7TF-BY36J</li>
+<li>PersonalRetail	FT7VF-XBN92-HPDJV-RHMBY-6VKBF</li>
+<li>PowerPointRetail	N7GCB-WQT7K-QRHWG-TTPYD-7T9XF</li>
+<li>PowerPointVolume	X3RT9-NDG64-VMK2M-KQ6XY-DPFGV</li>
+<li>ProPlusRetail	GM43N-F742Q-6JDDK-M622J-J8GDV</li>
+<li>ProPlusVolume	FNVK8-8DVCJ-F7X3J-KGVQB-RC2QY</li>
+<li>ProfessionalPipcRetail	CF9DD-6CNW2-BJWJQ-CVCFX-Y7TXD</li>
+<li>ProfessionalRetail	NXFTK-YD9Y7-X9MMJ-9BWM6-J2QVH</li>
+<li>ProjectProRetail	WPY8N-PDPY4-FC7TF-KMP7P-KWYFY</li>
+<li>ProjectProVolume	PKC3N-8F99H-28MVY-J4RYY-CWGDH</li>
+<li>ProjectProXVolume	JBNPH-YF2F7-Q9Y29-86CTG-C9YGV</li>
+<li>ProjectStdRetail	NTHQT-VKK6W-BRB87-HV346-Y96W8</li>
+<li>ProjectStdVolume	4TGWV-6N9P6-G2H8Y-2HWKB-B4G93</li>
+<li>ProjectStdXVolume	N3W2Q-69MBT-27RD9-BH8V3-JT2C8</li>
+<li>PublisherRetail	WKWND-X6G9G-CDMTV-CPGYJ-6MVBF</li>
+<li>PublisherVolume	9QVN2-PXXRX-8V4W8-Q7926-TJGD8</li>
+<li>SkypeServiceBypassRetail	6MDN4-WF3FV-4WH3Q-W699V-RGCMY</li>
+<li>SkypeforBusinessEntryRetail	4N4D8-3J7Y3-YYW7C-73HD2-V8RHY</li>
+<li>SkypeforBusinessRetail	PBJ79-77NY4-VRGFG-Y8WYC-CKCRC</li>
+<li>SkypeforBusinessVolume	DMTCJ-KNRKR-JV8TQ-V2CR2-VFTFH</li>
+<li>StandardRetail	2FPWN-4H6CM-KD8QQ-8HCHC-P9XYW</li>
+<li>StandardVolume	WHGMQ-JNMGT-MDQVF-WDR69-KQBWC</li>
+<li>VisioProRetail	NVK2G-2MY4G-7JX2P-7D6F2-VFQBR</li>
+<li>VisioProVolume	NRKT9-C8GP2-XDYXQ-YW72K-MG92B</li>
+<li>VisioProXVolume	G98Q2-B6N77-CFH9J-K824G-XQCC4</li>
+<li>VisioStdRetail	NCRB7-VP48F-43FYY-62P3R-367WK</li>
+<li>VisioStdVolume	XNCJB-YY883-JRW64-DPXMX-JXCR6</li>
+<li>VisioStdXVolume	B2HTN-JPH8C-J6Y6V-HCHKB-43MGT</li>
+<li>WordRetail	P8K82-NQ7GG-JKY8T-6VHVY-88GGD</li>
+<li>WordVolume	YHMWC-YN6V9-WJPXD-3WQKP-TMVCV</li>
 </ul>
 </li>
-<li>
-<p>端口转发</p>
+<li>Office 2019
 <ul>
-<li>本地转发 LocalForward
-<ul>
-<li>-L [本地主机:]本地主机端口:远程网络主机:远程网络主机端口</li>
-<li>例如 <code>ssh -L 0.0.0.0:30000:host2:8000 user@host1</code></li>
-<li>这条命令将host2的8000端口映射到本地的30000端口前提是待登录主机host1上可以正常连接到host2的80端口</li>
+<li>Access2019Retail	WRYJ6-G3NP7-7VH94-8X7KP-JB7HC</li>
+<li>Access2019Volume	6FWHX-NKYXK-BW34Q-7XC9F-Q9PX7</li>
+<li>AccessRuntime2019Retail	FGQNJ-JWJCG-7Q8MG-RMRGJ-9TQVF</li>
+<li>Excel2019Retail	KBPNW-64CMM-8KWCB-23F44-8B7HM</li>
+<li>Excel2019Volume	8NT4X-GQMCK-62X4P-TW6QP-YKPYF</li>
+<li>HomeBusiness2019Retail	QBN2Y-9B284-9KW78-K48PB-R62YT</li>
+<li>HomeStudentARM2019Retail	DJTNY-4HDWM-TDWB2-8PWC2-W2RRT</li>
+<li>HomeStudentPlusARM2019Retail	NM8WT-CFHB2-QBGXK-J8W6J-GVK8F</li>
+<li>HomeStudent2019Retail	XNWPM-32XQC-Y7QJC-QGGBV-YY7JK</li>
+<li>Outlook2019Retail	WR43D-NMWQQ-HCQR2-VKXDR-37B7H</li>
+<li>Outlook2019Volume	RN3QB-GT6D7-YB3VH-F3RPB-3GQYB</li>
+<li>Personal2019Retail	NMBY8-V3CV7-BX6K6-2922Y-43M7T</li>
+<li>PowerPoint2019Retail	HN27K-JHJ8R-7T7KK-WJYC3-FM7MM</li>
+<li>PowerPoint2019Volume	29GNM-VM33V-WR23K-HG2DT-KTQYR</li>
+<li>ProPlus2019Retail	BN4XJ-R9DYY-96W48-YK8DM-MY7PY</li>
+<li>ProPlus2019Volume	T8YBN-4YV3X-KK24Q-QXBD7-T3C63</li>
+<li>Professional2019Retail	9NXDK-MRY98-2VJV8-GF73J-TQ9FK</li>
+<li>ProjectPro2019Retail	JDTNC-PP77T-T9H2W-G4J2J-VH8JK</li>
+<li>ProjectPro2019Volume	TBXBD-FNWKJ-WRHBD-KBPHH-XD9F2</li>
+<li>ProjectStd2019Retail	R3JNT-8PBDP-MTWCK-VD2V8-HMKF9</li>
+<li>ProjectStd2019Volume	RBRFX-MQNDJ-4XFHF-7QVDR-JHXGC</li>
+<li>Publisher2019Retail	4QC36-NW3YH-D2Y9D-RJPC7-VVB9D</li>
+<li>Publisher2019Volume	K8F2D-NBM32-BF26V-YCKFJ-29Y9W</li>
+<li>SkypeforBusiness2019Retail	JBDKF-6NCD6-49K3G-2TV79-BKP73</li>
+<li>SkypeforBusiness2019Volume	9MNQ7-YPQ3B-6WJXM-G83T3-CBBDK</li>
+<li>SkypeforBusinessEntry2019Retail	N9722-BV9H6-WTJTT-FPB93-978MK</li>
+<li>Standard2019Retail	NDGVM-MD27H-2XHVC-KDDX2-YKP74</li>
+<li>Standard2019Volume	NT3V6-XMBK7-Q66MF-VMKR4-FC33M</li>
+<li>VisioPro2019Retail	2NWVW-QGF4T-9CPMB-WYDQ9-7XP79</li>
+<li>VisioPro2019Volume	33YF4-GNCQ3-J6GDM-J67P3-FM7QP</li>
+<li>VisioStd2019Retail	263WK-3N797-7R437-28BKG-3V8M8</li>
+<li>VisioStd2019Volume	BGNHX-QTPRJ-F9C9G-R8QQG-8T27F</li>
+<li>Word2019Retail	JXR8H-NJ3MK-X66W8-78CWD-QRVR2</li>
+<li>Word2019Volume	9F36R-PNVHH-3DXGQ-7CD2H-R9D3V</li>
 </ul>
 </li>
-<li>远程转发 RemoteForward
+<li>Office 2021
 <ul>
-<li>-R [登录主机:]登录主机端口:本地网络主机:本地网络主机端口</li>
-<li>例如 <code>ssh -R 0.0.0.0:8080:host2:80 user@host1</code></li>
-<li>这条命令将host2的80端口映射到待登录主机host1的8080端口前提是本地主机可以正常连接host2的80端口</li>
+<li>Access2021Retail	P286B-N3XYP-36QRQ-29CMP-RVX9M</li>
+<li>AccessRuntime2021Retail	MNX9D-PB834-VCGY2-K2RW2-2DP3D</li>
+<li>Access2021Volume	JBH3N-P97FP-FRTJD-MGK2C-VFWG6</li>
+<li>Excel2021Retail	V6QFB-7N7G9-PF7W9-M8FQM-MY8G9</li>
+<li>Excel2021Volume	WNYR4-KMR9H-KVC8W-7HJ8B-K79DQ</li>
+<li>HomeBusiness2021Retail	JM99N-4MMD8-DQCGJ-VMYFY-R63YK</li>
+<li>HomeStudent2021Retail	N3CWD-38XVH-KRX2Y-YRP74-6RBB2</li>
+<li>OneNoteFree2021Retail	CNM3W-V94GB-QJQHH-BDQ3J-33Y8H</li>
+<li>OneNote2021Retail	NB2TQ-3Y79C-77C6M-QMY7H-7QY8P</li>
+<li>OneNote2021Volume	THNKC-KFR6C-Y86Q9-W8CB3-GF7PD</li>
+<li>Outlook2021Retail	4NCWR-9V92Y-34VB2-RPTHR-YTGR7</li>
+<li>Outlook2021Volume	JQ9MJ-QYN6B-67PX9-GYFVY-QJ6TB</li>
+<li>Personal2021Retail	RRRYB-DN749-GCPW4-9H6VK-HCHPT</li>
+<li>PowerPoint2021Retail	3KXXQ-PVN2C-8P7YY-HCV88-GVM96</li>
+<li>PowerPoint2021Volume	39G2N-3BD9C-C4XCM-BD4QG-FVYDY</li>
+<li>ProPlus2021Retail	8WXTP-MN628-KY44G-VJWCK-C7PCF</li>
+<li>ProPlus2021Volume	RNHJY-DTFXW-HW9F8-4982D-MD2CW</li>
+<li>ProPlusSPLA2021Volume	JRJNJ-33M7C-R73X3-P9XF7-R9F6M</li>
+<li>Professional2021Retail	DJPHV-NCJV6-GWPT6-K26JX-C7PBG</li>
+<li>ProjectPro2021Retail	QKHNX-M9GGH-T3QMW-YPK4Q-QRWMV</li>
+<li>ProjectPro2021Volume	HVC34-CVNPG-RVCMT-X2JRF-CR7RK</li>
+<li>ProjectStd2021Retail	2B96V-X9NJY-WFBRC-Q8MP2-7CHRR</li>
+<li>ProjectStd2021Volume	3CNQX-T34TY-99RH4-C4YD2-KW6WH</li>
+<li>Publisher2021Retail	CDNFG-77T8D-VKQJX-B7KT3-KK28V</li>
+<li>Publisher2021Volume	2KXJH-3NHTW-RDBPX-QFRXJ-MTGXF</li>
+<li>SkypeforBusiness2021Retail	DVBXN-HFT43-CVPRQ-J89TF-VMMHG</li>
+<li>SkypeforBusiness2021Volume	R3FCY-NHGC7-CBPVP-8Q934-YTGXG</li>
+<li>Standard2021Retail	HXNXB-J4JGM-TCF44-2X2CV-FJVVH</li>
+<li>Standard2021Volume	2CJN4-C9XK2-HFPQ6-YH498-82TXH</li>
+<li>StandardSPLA2021Volume	BQWDW-NJ9YF-P7Y79-H6DCT-MKQ9C</li>
+<li>VisioPro2021Retail	T6P26-NJVBR-76BK8-WBCDY-TX3BC</li>
+<li>VisioPro2021Volume	JNKBX-MH9P4-K8YYV-8CG2Y-VQ2C8</li>
+<li>VisioStd2021Retail	89NYY-KB93R-7X22F-93QDF-DJ6YM</li>
+<li>VisioStd2021Volume	BW43B-4PNFP-V637F-23TR2-J47TX</li>
+<li>Word2021Retail	VNCC4-CJQVK-BKX34-77Y8H-CYXMR</li>
+<li>Word2021Volume	BJG97-NW3GM-8QQQ7-FH76G-686XM</li>
 </ul>
 </li>
-<li>动态转发 DynamicForward
+<li>Office 2024
 <ul>
-<li>-D [本地主机:]本地主机端口</li>
-<li><code>ssh -D 0.0.0.0:50000 user@host1</code></li>
-<li>这条命令创建了一个SOCKS代理(默认127.0.0.1)通过该SOCKS代理发出的数据包将经过host1转发出去</li>
+<li>Access2024Retail	P6NMW-JMTRC-R6MQ6-HH3F2-BTHKB</li>
+<li>Access2024Volume	CXNJT-98HPP-92HX7-MX6GY-2PVFR</li>
+<li>Excel2024Retail	82CNJ-W82TW-BY23W-BVJ6W-W48GP</li>
+<li>Excel2024Volume	7Y287-9N2KC-8MRR3-BKY82-2DQRV</li>
+<li>Home2024Retail	N69X7-73KPT-899FD-P8HQ4-QGTP4</li>
+<li>HomeBusiness2024Retail	PRKQM-YNPQR-77QT6-328D7-BD223</li>
+<li>Outlook2024Retail	2CFK4-N44KG-7XG89-CWDG6-P7P27</li>
+<li>Outlook2024Volume	NQPXP-WVB87-H3MMB-FYBW2-9QFPB</li>
+<li>PowerPoint2024Retail	CT2KT-GTNWH-9HFGW-J2PWJ-XW7KJ</li>
+<li>PowerPoint2024Volume	RRXFN-JJ26R-RVWD2-V7WMP-27PWQ</li>
+<li>ProjectPro2024Retail	GNJ6P-Y4RBM-C32WW-2VJKJ-MTHKK</li>
+<li>ProjectPro2024Volume	WNFMR-HK4R7-7FJVM-VQ3JC-76HF6</li>
+<li>ProjectStd2024Retail	C2PNM-2GQFC-CY3XR-WXCP4-GX3XM</li>
+<li>ProjectStd2024Volume	F2VNW-MW8TT-K622Q-4D96H-PWJ8X</li>
+<li>ProPlus2024Retail	VWCNX-7FKBD-FHJYG-XBR4B-88KC6</li>
+<li>ProPlus2024Volume	4YV2J-VNG7W-YGTP3-443TK-TF8CP</li>
+<li>SkypeforBusiness2024Volume	XKRBW-KN2FF-G8CKY-HXVG6-FVY2V</li>
+<li>Standard2024Volume	GVG6N-6WCHH-K2MVP-RQ78V-3J7GJ</li>
+<li>VisioPro2024Retail	HGRBX-N68QF-6DY8J-CGX4W-XW7KP</li>
+<li>VisioPro2024Volume	GBNHB-B2G3Q-G42YB-3MFC2-7CJCX</li>
+<li>VisioStd2024Retail	VBXPJ-38NR3-C4DKF-C8RT7-RGHKQ</li>
+<li>VisioStd2024Volume	YNFTY-63K7P-FKHXK-28YYT-D32XB</li>
+<li>Word2024Retail	XN33R-RP676-GMY2F-T3MH7-GCVKR</li>
+<li>Word2024Volume	WD8CQ-6KNQM-8W2CX-2RT63-KK3TP</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>
-<p>专门复制文件</p>
-<ul>
-<li>scp [-4/-6] [-r] [-P 端口号] 源地址 目的地</li>
-<li>范例
-<ul>
-<li><code>scp -r 文件夹 user@1.2.3.4:~</code></li>
-<li><code>scp -6 -P 22 文件 user@[I:P::v:6]:~</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="配置文件">配置文件
-</h2><h3 id="客户端">客户端
-</h3><ul>
-<li>文件位置
-<ul>
-<li>默认在 <code>~/.ssh/config</code></li>
-<li>Windows/Linux/MacOS同样</li>
-</ul>
-</li>
-<li>有一些公共配置
-<ul>
-<li>HashKnownHosts 散列记住的主机信息，默认<code>yes</code>,建议<code>no</code>以便于手工维护<code>known_hosts</code>文件</li>
-</ul>
-</li>
-<li>每个服务器各是一段配置,常用配置项目如下
-<ul>
-<li>Host 服务器简称</li>
-<li>User 登陆用户名，默认当前用户名</li>
-<li>Hostname 服务器地址</li>
-<li>Port 服务器端口，默认22</li>
-<li>IdentityFile 需要使用的密钥，相对路径从执行命令的位置为基准</li>
-<li>LocalForward 端口转发本地</li>
-<li>RemoteForward 端口转发远端</li>
-<li>ProxyCommand 应用代理额外命令</li>
-</ul>
-</li>
-<li>范例</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host my_server
-</span></span><span class="line"><span class="cl">	User root
-</span></span><span class="line"><span class="cl">	Hostname 10.11.12.13
-</span></span><span class="line"><span class="cl">	Port 22
-</span></span><span class="line"><span class="cl">	IdentityFile ~/.ssh/id_rsa
-</span></span><span class="line"><span class="cl">	LocalForward 30000 localhost:30000
-</span></span><span class="line"><span class="cl">	RemoteForward 8000 localhost:8000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="服务端">服务端
-</h3><ul>
-<li>文件位置
-<ul>
-<li>类Unix系统通常在<code>/etc/ssh/sshd_config</code></li>
-<li>Windows系统一般不使用SSH，而是RDP远程桌面。</li>
-</ul>
-</li>
-<li>配置项
-<ul>
-<li>文件中有详细的注释和范例</li>
-<li>不建议修改服务端的配置</li>
-</ul>
-</li>
-</ul>
-<h2 id="技巧">技巧
-</h2><ul>
-<li>查看服务器公钥指纹 <code>ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub</code>
-<ul>
-<li>首次连接一台服务器的时候会询问是否接受公钥，显示的指纹可以通过这条命令查看。</li>
-<li>核对指纹可以避免中间人攻击。</li>
-</ul>
-</li>
-<li>通过socks5代理 <code>ssh -o ProxyCommand='nc -x 127.0.0.1:1080 %h %p' my_server</code></li>
-<li>开启socks5代理并显示连接信息 <code>ssh -v -D 1080 my_server</code></li>
 </ul>
 
 </section>
@@ -507,11 +654,15 @@ SSH同时支持者scp、git、https、vpn等很多应用。</p>
     
     <section class="article-tags">
         
+            <a href="/tags/crack/">Crack</a>
+        
+            <a href="/tags/office/">Office</a>
+        
+            <a href="/tags/offline/">Offline</a>
+        
+            <a href="/tags/windows/">Windows</a>
+        
             <a href="/tags/utility/">Utility</a>
-        
-            <a href="/tags/linux/">Linux</a>
-        
-            <a href="/tags/network/">Network</a>
         
     </section>
 
@@ -570,19 +721,13 @@ SSH同时支持者scp、git、https、vpn等很多应用。</p>
         <div class="flex article-list--tile">
             
                 
-<article class="has-image">
-    <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">
+<article class="">
+    <a href="/p/office-deployment-tool/">
         
-        
-            <div class="article-image">
-                
-                    <img src="/img/MAS-Ohook.jpeg" loading="lazy" data-key="" data-hash="/img/MAS-Ohook.jpeg"/>
-                
-            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">用 Ohook 激活微软 Office 全套</h2>
+            <h2 class="article-title">Office Deployment Tool</h2>
         </div>
     </a>
 </article>
@@ -621,19 +766,6 @@ SSH同时支持者scp、git、https、vpn等很多应用。</p>
 
             
                 
-<article class="">
-    <a href="/p/libretranslate/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LibreTranslate</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
 <article class="has-image">
     <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
         
@@ -647,6 +779,19 @@ SSH同时支持者scp、git、https、vpn等很多应用。</p>
 
         <div class="article-details">
             <h2 class="article-title">Docker的安装与日常使用技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH远程登入神器的初步使用</h2>
         </div>
     </a>
 </article>

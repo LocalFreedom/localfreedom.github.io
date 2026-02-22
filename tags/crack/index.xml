@@ -6,7 +6,273 @@
         <description>Recent content in Crack on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 21 Dec 2025 06:34:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/crack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 22 Feb 2026 04:47:26 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/crack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用 Ohook 激活微软 Office 全套</title>
+        <link>https://localfreedom.pages.dev/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/</link>
+        <pubDate>Sun, 22 Feb 2026 04:47:26 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/MAS-Ohook.jpeg" alt="Featured image of post 用 Ohook 激活微软 Office 全套" /&gt;&lt;h2 id=&#34;officehook方法&#34;&gt;OfficeHook方法
+&lt;/h2&gt;&lt;h3 id=&#34;原理&#34;&gt;原理
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/ohook#how-does-it-work&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://massgrave.dev/ohook#how-does-it-work&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有人发现了 MS Office 产品的激活验证统一通过一个函数进行，于是逆向破解了其所在的DLL文件，通过hook该函数让所有Office产品在查询激活状态的时候得到已激活的结果。&lt;/p&gt;
+&lt;h3 id=&#34;支持的产品&#34;&gt;支持的产品
+&lt;/h3&gt;&lt;p&gt;由于微软并没有修改Office的激活检查方式，在 Windows Vista 或更高 Windows/Server 版本上安装的 Office 都支持。
+UWP也就是应用商店的版本当然不支持。&lt;/p&gt;
+&lt;h3 id=&#34;实现&#34;&gt;实现
+&lt;/h3&gt;&lt;p&gt;该hook的代码&lt;a class=&#34;link&#34; href=&#34;https://github.com/asdcorp/ohook&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;开源&lt;/a&gt;且及其简单，只修改了相关几个函数的返回参数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;经博主审查无任何风险，是激活 MS Office 的绝佳方法。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;复现&#34;&gt;复现
+&lt;/h2&gt;&lt;h3 id=&#34;关键二进制补丁-sppc&#34;&gt;关键二进制补丁 SPPC
+&lt;/h3&gt;&lt;p&gt;MAS官方提供了&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/ohook#custom-sppcdll-info&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;复现其所内嵌的dll的指南&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;其中要求的编译工具看起来不是官方的；具体到&lt;a class=&#34;link&#34; href=&#34;https://www.mingw-w64.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MinGW官网&lt;/a&gt;可以看到官方在SourceForge(&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/mingw-w64/files&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://sourceforge.net/projects/mingw-w64/files&lt;/a&gt;)只提供源代码下载，预编译版本则通过发行版仓库和第三方提供，在官方背书的&lt;a class=&#34;link&#34; href=&#34;https://www.mingw-w64.org/downloads/#mingw-w64-builds&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;预编译工具链下载页面&lt;/a&gt;可以找到&lt;code&gt;WinLibs.com&lt;/code&gt;；进入&lt;a class=&#34;link&#34; href=&#34;https://winlibs.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;WinLibs.com&lt;/a&gt;可以看到其通过Github分发预编译版，链接和MAS指南中一致。&lt;/p&gt;
+&lt;p&gt;控制时间&lt;code&gt;Set-TimeZone -Id &#39;UTC&#39;; $date=[datetime]&#39;2023/8/7 12:00&#39;;while($true){set-date $date; start-sleep -milliseconds 10;}&lt;/code&gt;，使用&lt;code&gt;WinLibs.com&lt;/code&gt;预编译工具链的相应版本编译ohook的0.5版本成功复现MAS中内嵌DLL。&lt;/p&gt;
+&lt;p&gt;可以认为MAS的AIO脚本中内嵌DLL可信如其源代码。
+MAS组织集成的AIO脚本其他部分多是辅助功能，无可疑之处。&lt;/p&gt;
+&lt;h3 id=&#34;pipeline&#34;&gt;Pipeline
+&lt;/h3&gt;&lt;p&gt;MAS的&lt;a class=&#34;link&#34; href=&#34;https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/MAS/Separate-Files-Version/Activators/Ohook_Activation_AIO.cmd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;一键运行脚本&lt;/a&gt;运行时会有提示输出。
+博主根据输出手动复制替换相关文件成功达到激活效果，如果对MAS脚本不放心完全可以手动逐步操作。&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用
+&lt;/h2&gt;&lt;h3 id=&#34;逐步手动激活office&#34;&gt;逐步手动激活Office
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/manual_ohook_activation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://massgrave.dev/manual_ohook_activation&lt;/a&gt;
+亲自动手更可信，但一些额外步骤可能不够完善。&lt;/p&gt;
+&lt;h4 id=&#34;一般-c2r-版本激活&#34;&gt;一般 C2R 版本激活
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;首先完成Office的安装，一般应选择64位版本。&lt;/li&gt;
+&lt;li&gt;准备好 &lt;code&gt;sppc64.dll&lt;/code&gt; 文件，建议从ohook项目release提取。&lt;/li&gt;
+&lt;li&gt;以管理员权限在待激活Office的系统打开命令行。&lt;/li&gt;
+&lt;li&gt;将系统自带的 &lt;code&gt;sppc.dll&lt;/code&gt; 创建软链接到 Office C2R 系统目录并重命名为 &lt;code&gt;sppcs.dll&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mklink &amp;quot;%ProgramFiles%\Microsoft Office\root\vfs\System\sppcs.dll&amp;quot; &amp;quot;%windir%\System32\sppc.dll&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将准备好的 &lt;code&gt;sppc64.dll&lt;/code&gt; 复制到 Office C2R 系统目录并重命名为 &lt;code&gt;sppc.dll&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;copy /y sppc64.dll &amp;quot;%ProgramFiles%\Microsoft Office\root\vfs\System\sppc.dll&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(可选)避免Office365联网检查产生冲突添加注册表项&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;reg add HKCU\Software\Microsoft\Office\16.0\Common\Licensing\Resiliency /v &amp;quot;TimeOfLastHeartbeatFailure&amp;quot; /t REG_SZ /d &amp;quot;2040-01-01T00:00:00Z&amp;quot; /f&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;添加序列号，如果是&lt;a class=&#34;link&#34; href=&#34;https://config.office.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ODT配置&lt;/a&gt;的一般自带序列号。&lt;/li&gt;
+&lt;li&gt;现在激活已经完成了。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;注意&lt;/strong&gt;: 如果所在Windows没有激活也会提示未激活，用TSforge或KMS激活Windows系统即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;win7-激活-office2016proplus-的-msi-版本&#34;&gt;Win7 激活 Office2016ProPlus 的 MSI 版本
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;首先完成Office的安装，一般应选择64位版本。&lt;/li&gt;
+&lt;li&gt;准备好 &lt;code&gt;sppc64.dll&lt;/code&gt; 文件，建议从ohook项目release提取。&lt;/li&gt;
+&lt;li&gt;以管理员权限在待激活Office的系统打开命令行。&lt;/li&gt;
+&lt;li&gt;进入Office保护平台目录 &lt;code&gt;C:\Program Files\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;重命名备份关键文件 &lt;code&gt;OSPPC.DLL&lt;/code&gt;， 建议重命名为&lt;code&gt;OSPPC.DLL.bak&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;将准备好的 &lt;code&gt;sppc64.dll&lt;/code&gt; 复制到Office保护平台目录并重命名为 &lt;code&gt;OSPPC.DLL&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;copy /y sppc64.dll &amp;quot;C:\Program Files\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\OSPPC.DLL&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将系统原来的 &lt;code&gt;OSPPC.DLL&lt;/code&gt; 创建软链接到 Office MSI 安装目录并重命名为 &lt;code&gt;sppcs.dll&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mklink &amp;quot;%ProgramFiles%\Microsoft Office\Office16\sppcs.dll&amp;quot; &amp;quot;%ProgramFiles%\Common Files\Microsoft Shared\OfficeSoftwareProtectionPlatform\OSPPC.DLL.bak&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;现在激活已经完成了。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;注意&lt;/strong&gt;: 如果所在Windows没有激活也会提示未激活，用TSforge或KMS激活Windows系统即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用mas的aio脚本&#34;&gt;使用MAS的AIO脚本
+&lt;/h3&gt;&lt;p&gt;直接运行 &lt;code&gt;Ohook_Activation_AIO.cmd&lt;/code&gt; 选择1安装Ohook激活即可自动完成激活。
+脚本会提示文件操作，根据输出也可进行手动激活。&lt;/p&gt;
+&lt;h2 id=&#34;各版本office参考key&#34;&gt;各版本Office参考Key
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Office 365
+&lt;ul&gt;
+&lt;li&gt;O365AppsBasicRetail	3HYJN-9KG99-F8VG9-V3DT8-JFMHV&lt;/li&gt;
+&lt;li&gt;O365BusinessRetail	Y9NF9-M2QWD-FF6RJ-QJW36-RRF2T&lt;/li&gt;
+&lt;li&gt;O365EduCloudRetail	W62NQ-267QR-RTF74-PF2MH-JQMTH&lt;/li&gt;
+&lt;li&gt;O365HomePremRetail	3NMDC-G7C3W-68RGP-CB4MH-4CXCH&lt;/li&gt;
+&lt;li&gt;O365ProPlusRetail	H8DN8-Y2YP3-CR9JT-DHDR9-C7GP3&lt;/li&gt;
+&lt;li&gt;O365SmallBusPremRetail	2QCNB-RMDKJ-GC8PB-7QGQV-7QTQJ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Office 2016
+&lt;ul&gt;
+&lt;li&gt;AccessRetail	WHK4N-YQGHB-XWXCC-G3HYC-6JF94&lt;/li&gt;
+&lt;li&gt;AccessRuntimeRetail	RNB7V-P48F4-3FYY6-2P3R3-63BQV&lt;/li&gt;
+&lt;li&gt;AccessVolume	JJ2Y4-N8KM3-Y8KY3-Y22FR-R3KVK&lt;/li&gt;
+&lt;li&gt;ExcelRetail	RKJBN-VWTM2-BDKXX-RKQFD-JTYQ2&lt;/li&gt;
+&lt;li&gt;ExcelVolume	FVGNR-X82B2-6PRJM-YT4W7-8HV36&lt;/li&gt;
+&lt;li&gt;HomeBusinessPipcRetail	2WQNF-GBK4B-XVG6F-BBMX7-M4F2Y&lt;/li&gt;
+&lt;li&gt;HomeBusinessRetail	HM6FM-NVF78-KV9PM-F36B8-D9MXD&lt;/li&gt;
+&lt;li&gt;HomeStudentARMRetail	PBQPJ-NC22K-69MXD-KWMRF-WFG77&lt;/li&gt;
+&lt;li&gt;HomeStudentPlusARMRetail	6F2NY-7RTX4-MD9KM-TJ43H-94TBT&lt;/li&gt;
+&lt;li&gt;HomeStudentRetail	PNPRV-F2627-Q8JVC-3DGR9-WTYRK&lt;/li&gt;
+&lt;li&gt;HomeStudentVNextRetail	YWD4R-CNKVT-VG8VJ-9333B-RC3B8&lt;/li&gt;
+&lt;li&gt;MondoRetail	VNWHF-FKFBW-Q2RGD-HYHWF-R3HH2&lt;/li&gt;
+&lt;li&gt;MondoVolume	FMTQQ-84NR8-2744R-MXF4P-PGYR3&lt;/li&gt;
+&lt;li&gt;OneNoteFreeRetail	XYNTG-R96FY-369HX-YFPHY-F9CPM&lt;/li&gt;
+&lt;li&gt;OneNoteRetail	FXF6F-CNC26-W643C-K6KB7-6XXW3&lt;/li&gt;
+&lt;li&gt;OneNoteVolume	9TYVN-D76HK-BVMWT-Y7G88-9TPPV&lt;/li&gt;
+&lt;li&gt;OutlookRetail	7N4KG-P2QDH-86V9C-DJFVF-369W9&lt;/li&gt;
+&lt;li&gt;OutlookVolume	7QPNR-3HFDG-YP6T9-JQCKQ-KKXXC&lt;/li&gt;
+&lt;li&gt;PersonalPipcRetail	9CYB3-NFMRW-YFDG6-XC7TF-BY36J&lt;/li&gt;
+&lt;li&gt;PersonalRetail	FT7VF-XBN92-HPDJV-RHMBY-6VKBF&lt;/li&gt;
+&lt;li&gt;PowerPointRetail	N7GCB-WQT7K-QRHWG-TTPYD-7T9XF&lt;/li&gt;
+&lt;li&gt;PowerPointVolume	X3RT9-NDG64-VMK2M-KQ6XY-DPFGV&lt;/li&gt;
+&lt;li&gt;ProPlusRetail	GM43N-F742Q-6JDDK-M622J-J8GDV&lt;/li&gt;
+&lt;li&gt;ProPlusVolume	FNVK8-8DVCJ-F7X3J-KGVQB-RC2QY&lt;/li&gt;
+&lt;li&gt;ProfessionalPipcRetail	CF9DD-6CNW2-BJWJQ-CVCFX-Y7TXD&lt;/li&gt;
+&lt;li&gt;ProfessionalRetail	NXFTK-YD9Y7-X9MMJ-9BWM6-J2QVH&lt;/li&gt;
+&lt;li&gt;ProjectProRetail	WPY8N-PDPY4-FC7TF-KMP7P-KWYFY&lt;/li&gt;
+&lt;li&gt;ProjectProVolume	PKC3N-8F99H-28MVY-J4RYY-CWGDH&lt;/li&gt;
+&lt;li&gt;ProjectProXVolume	JBNPH-YF2F7-Q9Y29-86CTG-C9YGV&lt;/li&gt;
+&lt;li&gt;ProjectStdRetail	NTHQT-VKK6W-BRB87-HV346-Y96W8&lt;/li&gt;
+&lt;li&gt;ProjectStdVolume	4TGWV-6N9P6-G2H8Y-2HWKB-B4G93&lt;/li&gt;
+&lt;li&gt;ProjectStdXVolume	N3W2Q-69MBT-27RD9-BH8V3-JT2C8&lt;/li&gt;
+&lt;li&gt;PublisherRetail	WKWND-X6G9G-CDMTV-CPGYJ-6MVBF&lt;/li&gt;
+&lt;li&gt;PublisherVolume	9QVN2-PXXRX-8V4W8-Q7926-TJGD8&lt;/li&gt;
+&lt;li&gt;SkypeServiceBypassRetail	6MDN4-WF3FV-4WH3Q-W699V-RGCMY&lt;/li&gt;
+&lt;li&gt;SkypeforBusinessEntryRetail	4N4D8-3J7Y3-YYW7C-73HD2-V8RHY&lt;/li&gt;
+&lt;li&gt;SkypeforBusinessRetail	PBJ79-77NY4-VRGFG-Y8WYC-CKCRC&lt;/li&gt;
+&lt;li&gt;SkypeforBusinessVolume	DMTCJ-KNRKR-JV8TQ-V2CR2-VFTFH&lt;/li&gt;
+&lt;li&gt;StandardRetail	2FPWN-4H6CM-KD8QQ-8HCHC-P9XYW&lt;/li&gt;
+&lt;li&gt;StandardVolume	WHGMQ-JNMGT-MDQVF-WDR69-KQBWC&lt;/li&gt;
+&lt;li&gt;VisioProRetail	NVK2G-2MY4G-7JX2P-7D6F2-VFQBR&lt;/li&gt;
+&lt;li&gt;VisioProVolume	NRKT9-C8GP2-XDYXQ-YW72K-MG92B&lt;/li&gt;
+&lt;li&gt;VisioProXVolume	G98Q2-B6N77-CFH9J-K824G-XQCC4&lt;/li&gt;
+&lt;li&gt;VisioStdRetail	NCRB7-VP48F-43FYY-62P3R-367WK&lt;/li&gt;
+&lt;li&gt;VisioStdVolume	XNCJB-YY883-JRW64-DPXMX-JXCR6&lt;/li&gt;
+&lt;li&gt;VisioStdXVolume	B2HTN-JPH8C-J6Y6V-HCHKB-43MGT&lt;/li&gt;
+&lt;li&gt;WordRetail	P8K82-NQ7GG-JKY8T-6VHVY-88GGD&lt;/li&gt;
+&lt;li&gt;WordVolume	YHMWC-YN6V9-WJPXD-3WQKP-TMVCV&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Office 2019
+&lt;ul&gt;
+&lt;li&gt;Access2019Retail	WRYJ6-G3NP7-7VH94-8X7KP-JB7HC&lt;/li&gt;
+&lt;li&gt;Access2019Volume	6FWHX-NKYXK-BW34Q-7XC9F-Q9PX7&lt;/li&gt;
+&lt;li&gt;AccessRuntime2019Retail	FGQNJ-JWJCG-7Q8MG-RMRGJ-9TQVF&lt;/li&gt;
+&lt;li&gt;Excel2019Retail	KBPNW-64CMM-8KWCB-23F44-8B7HM&lt;/li&gt;
+&lt;li&gt;Excel2019Volume	8NT4X-GQMCK-62X4P-TW6QP-YKPYF&lt;/li&gt;
+&lt;li&gt;HomeBusiness2019Retail	QBN2Y-9B284-9KW78-K48PB-R62YT&lt;/li&gt;
+&lt;li&gt;HomeStudentARM2019Retail	DJTNY-4HDWM-TDWB2-8PWC2-W2RRT&lt;/li&gt;
+&lt;li&gt;HomeStudentPlusARM2019Retail	NM8WT-CFHB2-QBGXK-J8W6J-GVK8F&lt;/li&gt;
+&lt;li&gt;HomeStudent2019Retail	XNWPM-32XQC-Y7QJC-QGGBV-YY7JK&lt;/li&gt;
+&lt;li&gt;Outlook2019Retail	WR43D-NMWQQ-HCQR2-VKXDR-37B7H&lt;/li&gt;
+&lt;li&gt;Outlook2019Volume	RN3QB-GT6D7-YB3VH-F3RPB-3GQYB&lt;/li&gt;
+&lt;li&gt;Personal2019Retail	NMBY8-V3CV7-BX6K6-2922Y-43M7T&lt;/li&gt;
+&lt;li&gt;PowerPoint2019Retail	HN27K-JHJ8R-7T7KK-WJYC3-FM7MM&lt;/li&gt;
+&lt;li&gt;PowerPoint2019Volume	29GNM-VM33V-WR23K-HG2DT-KTQYR&lt;/li&gt;
+&lt;li&gt;ProPlus2019Retail	BN4XJ-R9DYY-96W48-YK8DM-MY7PY&lt;/li&gt;
+&lt;li&gt;ProPlus2019Volume	T8YBN-4YV3X-KK24Q-QXBD7-T3C63&lt;/li&gt;
+&lt;li&gt;Professional2019Retail	9NXDK-MRY98-2VJV8-GF73J-TQ9FK&lt;/li&gt;
+&lt;li&gt;ProjectPro2019Retail	JDTNC-PP77T-T9H2W-G4J2J-VH8JK&lt;/li&gt;
+&lt;li&gt;ProjectPro2019Volume	TBXBD-FNWKJ-WRHBD-KBPHH-XD9F2&lt;/li&gt;
+&lt;li&gt;ProjectStd2019Retail	R3JNT-8PBDP-MTWCK-VD2V8-HMKF9&lt;/li&gt;
+&lt;li&gt;ProjectStd2019Volume	RBRFX-MQNDJ-4XFHF-7QVDR-JHXGC&lt;/li&gt;
+&lt;li&gt;Publisher2019Retail	4QC36-NW3YH-D2Y9D-RJPC7-VVB9D&lt;/li&gt;
+&lt;li&gt;Publisher2019Volume	K8F2D-NBM32-BF26V-YCKFJ-29Y9W&lt;/li&gt;
+&lt;li&gt;SkypeforBusiness2019Retail	JBDKF-6NCD6-49K3G-2TV79-BKP73&lt;/li&gt;
+&lt;li&gt;SkypeforBusiness2019Volume	9MNQ7-YPQ3B-6WJXM-G83T3-CBBDK&lt;/li&gt;
+&lt;li&gt;SkypeforBusinessEntry2019Retail	N9722-BV9H6-WTJTT-FPB93-978MK&lt;/li&gt;
+&lt;li&gt;Standard2019Retail	NDGVM-MD27H-2XHVC-KDDX2-YKP74&lt;/li&gt;
+&lt;li&gt;Standard2019Volume	NT3V6-XMBK7-Q66MF-VMKR4-FC33M&lt;/li&gt;
+&lt;li&gt;VisioPro2019Retail	2NWVW-QGF4T-9CPMB-WYDQ9-7XP79&lt;/li&gt;
+&lt;li&gt;VisioPro2019Volume	33YF4-GNCQ3-J6GDM-J67P3-FM7QP&lt;/li&gt;
+&lt;li&gt;VisioStd2019Retail	263WK-3N797-7R437-28BKG-3V8M8&lt;/li&gt;
+&lt;li&gt;VisioStd2019Volume	BGNHX-QTPRJ-F9C9G-R8QQG-8T27F&lt;/li&gt;
+&lt;li&gt;Word2019Retail	JXR8H-NJ3MK-X66W8-78CWD-QRVR2&lt;/li&gt;
+&lt;li&gt;Word2019Volume	9F36R-PNVHH-3DXGQ-7CD2H-R9D3V&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Office 2021
+&lt;ul&gt;
+&lt;li&gt;Access2021Retail	P286B-N3XYP-36QRQ-29CMP-RVX9M&lt;/li&gt;
+&lt;li&gt;AccessRuntime2021Retail	MNX9D-PB834-VCGY2-K2RW2-2DP3D&lt;/li&gt;
+&lt;li&gt;Access2021Volume	JBH3N-P97FP-FRTJD-MGK2C-VFWG6&lt;/li&gt;
+&lt;li&gt;Excel2021Retail	V6QFB-7N7G9-PF7W9-M8FQM-MY8G9&lt;/li&gt;
+&lt;li&gt;Excel2021Volume	WNYR4-KMR9H-KVC8W-7HJ8B-K79DQ&lt;/li&gt;
+&lt;li&gt;HomeBusiness2021Retail	JM99N-4MMD8-DQCGJ-VMYFY-R63YK&lt;/li&gt;
+&lt;li&gt;HomeStudent2021Retail	N3CWD-38XVH-KRX2Y-YRP74-6RBB2&lt;/li&gt;
+&lt;li&gt;OneNoteFree2021Retail	CNM3W-V94GB-QJQHH-BDQ3J-33Y8H&lt;/li&gt;
+&lt;li&gt;OneNote2021Retail	NB2TQ-3Y79C-77C6M-QMY7H-7QY8P&lt;/li&gt;
+&lt;li&gt;OneNote2021Volume	THNKC-KFR6C-Y86Q9-W8CB3-GF7PD&lt;/li&gt;
+&lt;li&gt;Outlook2021Retail	4NCWR-9V92Y-34VB2-RPTHR-YTGR7&lt;/li&gt;
+&lt;li&gt;Outlook2021Volume	JQ9MJ-QYN6B-67PX9-GYFVY-QJ6TB&lt;/li&gt;
+&lt;li&gt;Personal2021Retail	RRRYB-DN749-GCPW4-9H6VK-HCHPT&lt;/li&gt;
+&lt;li&gt;PowerPoint2021Retail	3KXXQ-PVN2C-8P7YY-HCV88-GVM96&lt;/li&gt;
+&lt;li&gt;PowerPoint2021Volume	39G2N-3BD9C-C4XCM-BD4QG-FVYDY&lt;/li&gt;
+&lt;li&gt;ProPlus2021Retail	8WXTP-MN628-KY44G-VJWCK-C7PCF&lt;/li&gt;
+&lt;li&gt;ProPlus2021Volume	RNHJY-DTFXW-HW9F8-4982D-MD2CW&lt;/li&gt;
+&lt;li&gt;ProPlusSPLA2021Volume	JRJNJ-33M7C-R73X3-P9XF7-R9F6M&lt;/li&gt;
+&lt;li&gt;Professional2021Retail	DJPHV-NCJV6-GWPT6-K26JX-C7PBG&lt;/li&gt;
+&lt;li&gt;ProjectPro2021Retail	QKHNX-M9GGH-T3QMW-YPK4Q-QRWMV&lt;/li&gt;
+&lt;li&gt;ProjectPro2021Volume	HVC34-CVNPG-RVCMT-X2JRF-CR7RK&lt;/li&gt;
+&lt;li&gt;ProjectStd2021Retail	2B96V-X9NJY-WFBRC-Q8MP2-7CHRR&lt;/li&gt;
+&lt;li&gt;ProjectStd2021Volume	3CNQX-T34TY-99RH4-C4YD2-KW6WH&lt;/li&gt;
+&lt;li&gt;Publisher2021Retail	CDNFG-77T8D-VKQJX-B7KT3-KK28V&lt;/li&gt;
+&lt;li&gt;Publisher2021Volume	2KXJH-3NHTW-RDBPX-QFRXJ-MTGXF&lt;/li&gt;
+&lt;li&gt;SkypeforBusiness2021Retail	DVBXN-HFT43-CVPRQ-J89TF-VMMHG&lt;/li&gt;
+&lt;li&gt;SkypeforBusiness2021Volume	R3FCY-NHGC7-CBPVP-8Q934-YTGXG&lt;/li&gt;
+&lt;li&gt;Standard2021Retail	HXNXB-J4JGM-TCF44-2X2CV-FJVVH&lt;/li&gt;
+&lt;li&gt;Standard2021Volume	2CJN4-C9XK2-HFPQ6-YH498-82TXH&lt;/li&gt;
+&lt;li&gt;StandardSPLA2021Volume	BQWDW-NJ9YF-P7Y79-H6DCT-MKQ9C&lt;/li&gt;
+&lt;li&gt;VisioPro2021Retail	T6P26-NJVBR-76BK8-WBCDY-TX3BC&lt;/li&gt;
+&lt;li&gt;VisioPro2021Volume	JNKBX-MH9P4-K8YYV-8CG2Y-VQ2C8&lt;/li&gt;
+&lt;li&gt;VisioStd2021Retail	89NYY-KB93R-7X22F-93QDF-DJ6YM&lt;/li&gt;
+&lt;li&gt;VisioStd2021Volume	BW43B-4PNFP-V637F-23TR2-J47TX&lt;/li&gt;
+&lt;li&gt;Word2021Retail	VNCC4-CJQVK-BKX34-77Y8H-CYXMR&lt;/li&gt;
+&lt;li&gt;Word2021Volume	BJG97-NW3GM-8QQQ7-FH76G-686XM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Office 2024
+&lt;ul&gt;
+&lt;li&gt;Access2024Retail	P6NMW-JMTRC-R6MQ6-HH3F2-BTHKB&lt;/li&gt;
+&lt;li&gt;Access2024Volume	CXNJT-98HPP-92HX7-MX6GY-2PVFR&lt;/li&gt;
+&lt;li&gt;Excel2024Retail	82CNJ-W82TW-BY23W-BVJ6W-W48GP&lt;/li&gt;
+&lt;li&gt;Excel2024Volume	7Y287-9N2KC-8MRR3-BKY82-2DQRV&lt;/li&gt;
+&lt;li&gt;Home2024Retail	N69X7-73KPT-899FD-P8HQ4-QGTP4&lt;/li&gt;
+&lt;li&gt;HomeBusiness2024Retail	PRKQM-YNPQR-77QT6-328D7-BD223&lt;/li&gt;
+&lt;li&gt;Outlook2024Retail	2CFK4-N44KG-7XG89-CWDG6-P7P27&lt;/li&gt;
+&lt;li&gt;Outlook2024Volume	NQPXP-WVB87-H3MMB-FYBW2-9QFPB&lt;/li&gt;
+&lt;li&gt;PowerPoint2024Retail	CT2KT-GTNWH-9HFGW-J2PWJ-XW7KJ&lt;/li&gt;
+&lt;li&gt;PowerPoint2024Volume	RRXFN-JJ26R-RVWD2-V7WMP-27PWQ&lt;/li&gt;
+&lt;li&gt;ProjectPro2024Retail	GNJ6P-Y4RBM-C32WW-2VJKJ-MTHKK&lt;/li&gt;
+&lt;li&gt;ProjectPro2024Volume	WNFMR-HK4R7-7FJVM-VQ3JC-76HF6&lt;/li&gt;
+&lt;li&gt;ProjectStd2024Retail	C2PNM-2GQFC-CY3XR-WXCP4-GX3XM&lt;/li&gt;
+&lt;li&gt;ProjectStd2024Volume	F2VNW-MW8TT-K622Q-4D96H-PWJ8X&lt;/li&gt;
+&lt;li&gt;ProPlus2024Retail	VWCNX-7FKBD-FHJYG-XBR4B-88KC6&lt;/li&gt;
+&lt;li&gt;ProPlus2024Volume	4YV2J-VNG7W-YGTP3-443TK-TF8CP&lt;/li&gt;
+&lt;li&gt;SkypeforBusiness2024Volume	XKRBW-KN2FF-G8CKY-HXVG6-FVY2V&lt;/li&gt;
+&lt;li&gt;Standard2024Volume	GVG6N-6WCHH-K2MVP-RQ78V-3J7GJ&lt;/li&gt;
+&lt;li&gt;VisioPro2024Retail	HGRBX-N68QF-6DY8J-CGX4W-XW7KP&lt;/li&gt;
+&lt;li&gt;VisioPro2024Volume	GBNHB-B2G3Q-G42YB-3MFC2-7CJCX&lt;/li&gt;
+&lt;li&gt;VisioStd2024Retail	VBXPJ-38NR3-C4DKF-C8RT7-RGHKQ&lt;/li&gt;
+&lt;li&gt;VisioStd2024Volume	YNFTY-63K7P-FKHXK-28YYT-D32XB&lt;/li&gt;
+&lt;li&gt;Word2024Retail	XN33R-RP676-GMY2F-T3MH7-GCVKR&lt;/li&gt;
+&lt;li&gt;Word2024Volume	WD8CQ-6KNQM-8W2CX-2RT63-KK3TP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>下载网站 Logo 图标</title>
         <link>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</link>
         <pubDate>Sun, 21 Dec 2025 06:34:20 +0000</pubDate>
