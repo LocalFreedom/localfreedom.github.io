@@ -6,7 +6,165 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 22 Feb 2026 04:47:26 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 01 Mar 2026 07:42:16 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>搭建 KMS 服务器激活微软软件</title>
+        <link>https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/</link>
+        <pubDate>Sun, 01 Mar 2026 07:42:16 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/kms.jpeg" alt="Featured image of post 搭建 KMS 服务器激活微软软件" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction
+&lt;/h2&gt;&lt;p&gt;KMS(Key Management Service)是微软密钥管理服务，是在Windows Vista之后的产品中的一种新型产品激活机制。
+诞生之后微软批量版软件不再能用序列号永久激活，而是需要定期连接 KMS 服务器，通常是180天。&lt;/p&gt;
+&lt;p&gt;搭建自己的KMS服务器可以提供免费甚至自主可控的激活，而避免激活工具可能包含病毒，享受原版系统。
+XP可以直接序列号激活，Win7可以用OEM-SLIC2.1激活，Win10及Office则不能用以上方式完美激活，在TSforge但生前，伪造KMS成为最佳选项。&lt;/p&gt;
+&lt;h2 id=&#34;dependence&#34;&gt;Dependence
+&lt;/h2&gt;&lt;h3 id=&#34;微软官方原版镜像&#34;&gt;微软官方原版镜像
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Windows 10/11 在官网提供镜像下载,且有&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/genuine-installation-media&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MAS镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MSDN,我告诉你 &lt;a class=&#34;link&#34; href=&#34;https://msdn.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://msdn.itellyou.cn/&lt;/a&gt; 长期免费分享所有者自订的MSDN，需要P2P下载&lt;/li&gt;
+&lt;li&gt;利用学生身份可以尝试参与微软学生计划以更可靠的获得原版镜像的校验码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;kms工具包&#34;&gt;KMS工具包
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;forums.mydigitallife.net&#34; &gt;My Digital Life&lt;/a&gt; 论坛发起了伪造KMS的项目&lt;/li&gt;
+&lt;li&gt;这里推荐博主审计过的几个可靠实现:
+&lt;ul&gt;
+&lt;li&gt;C版本 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Wind4/vlmcsd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Wind4/vlmcsd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;python版本 &lt;a class=&#34;link&#34; href=&#34;https://github.com/SystemRage/py-kms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/SystemRage/py-kms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;python版本fork继承(将GUI改为WebUI) &lt;a class=&#34;link&#34; href=&#34;https://github.com/Py-KMS-Organization/py-kms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Py-KMS-Organization/py-kms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;密钥&#34;&gt;密钥
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;如果安装文件就是批量版一般自带一个VLK&lt;/li&gt;
+&lt;li&gt;如果是官网下的普通版本则需要搜一个VLK，任意皆可,这里给出参考
+&lt;ul&gt;
+&lt;li&gt;Win7: FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4&lt;/li&gt;
+&lt;li&gt;Win10: W269N-WFGWX-YVC9B-4J6C9-T83GX&lt;/li&gt;
+&lt;li&gt;Office2016: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99&lt;/li&gt;
+&lt;li&gt;Office2019: NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;process&#34;&gt;Process
+&lt;/h2&gt;&lt;h3 id=&#34;准备kms服务器&#34;&gt;准备KMS服务器
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;服务器可以是一台正经服务器，也可以是路由器或虚拟机，只要有待激活机器可到达的IP和端口即可&lt;/li&gt;
+&lt;li&gt;推荐使用 VirtualBox 或 VMware 安装 Ubuntu 虚拟机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;部署kms服务&#34;&gt;部署KMS服务
+&lt;/h3&gt;&lt;h4 id=&#34;下载kms工具包任选一个&#34;&gt;下载KMS工具包(任选一个)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;C版本 &lt;a class=&#34;link&#34; href=&#34;https://github.com/Wind4/vlmcsd/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/Wind4/vlmcsd/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;python版本 &lt;a class=&#34;link&#34; href=&#34;https://github.com/SystemRage/py-kms&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/SystemRage/py-kms&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;将kms工具包复制到kms服务器&#34;&gt;将KMS工具包复制到KMS服务器
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;真实服务器可用 RDP 或 Fileilla&lt;/li&gt;
+&lt;li&gt;虚拟机可用共享文件夹甚至直接拖拽&lt;/li&gt;
+&lt;li&gt;如果只复制需要的文件别忘了附属的DLL文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;启动kms服务&#34;&gt;启动KMS服务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;C版本根据操作系统和CPU选择相应可执行文件
+&lt;ul&gt;
+&lt;li&gt;如 binaries/Linux/intel/static/vlmcsd-x64-musl-static 不需要root权限&lt;/li&gt;
+&lt;li&gt;不报错即成功，否则请检查端口占用&lt;/li&gt;
+&lt;li&gt;服务会后台运行，注销可解除，但结束进程好像难以停止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;python版本的执行 &lt;code&gt;python3 pykms_Server.py&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu18.04 开始自带默认 Python3, 也有 Python2 需要用 &lt;code&gt;whereis&lt;/code&gt; 查找&lt;/li&gt;
+&lt;li&gt;logging 可能不能正确打印日志，不报错可认为正常&lt;/li&gt;
+&lt;li&gt;服务会随进程运行，结束进程即停止服务并解除端口占用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装原版系统并激活&#34;&gt;安装原版系统并激活
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;先正确安装Windows，可不输入密钥或输入任意VLK&lt;/li&gt;
+&lt;li&gt;连接网络&lt;/li&gt;
+&lt;li&gt;用管理员权限运行cmd或powershell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ipk 批量版密钥(如果已经自带或输入过则不用,可在计算机属性中查看,如W269N-WFGWX-YVC9B-4J6C9-T83GX)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /skms KMS服务器IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /ato
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;slmgr /xpr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;/ato可能需要几分种，成功激活会提示，py-kms也会打印提示&lt;/li&gt;
+&lt;li&gt;/xpr显示激活状态，剩余多少天&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;安装批量版office并激活&#34;&gt;安装批量版Office并激活
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;首先正常安装Office的批量版&lt;/li&gt;
+&lt;li&gt;Office2016 VLK: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99&lt;/li&gt;
+&lt;li&gt;用管理员权限运行 cmd 或 powershell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cscript ospp.vbs /inpkey:批量版密钥(如果已经自带或输入过则不用)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cscript ospp.vbs /sethst:KMS的IP或域名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cscript ospp.vbs /act
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cscript ospp.vbs /dstatus
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;其中 csript.exe 在 &lt;code&gt;C:\Windows\system32&lt;/code&gt; , ospp.vbs 在MS Office 安装目录(例如C:\Program Files\Microsoft Office\Office16)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hint&#34;&gt;Hint
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;vlmcsd-x64-musl-static中vlmcsd的字母d&lt;/li&gt;
+&lt;li&gt;win7本机激活Office2016，IP应避开 127.0.0.1 和 localhost ,可选 127.0.0.2 等&lt;/li&gt;
+&lt;li&gt;Anaconda 的 python 如果出问题，试试操作系统的 python3&lt;/li&gt;
+&lt;li&gt;Win10 目前不能本机激活&lt;/li&gt;
+&lt;li&gt;Win7 旗舰版尚未发现KMS激活方法&lt;/li&gt;
+&lt;li&gt;py-kms 对于 21H2 和 Office2021 及以后需要自行补丁,在pykms_Base.py的164添加。
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-pykms_Base.py&#34; data-lang=&#34;pykms_Base.py&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;c1&#34;&gt;# Get a name for SkuId, AppId.        &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;kmsdb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kmsDB2Dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;164&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;	&lt;span class=&#34;n&#34;&gt;appName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;skuName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;applicationId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;skuId&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;n&#34;&gt;appitems&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kmsdb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;appitem&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;appitems&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>用 Ohook 激活微软 Office 全套</title>
         <link>https://localfreedom.pages.dev/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/</link>
         <pubDate>Sun, 22 Feb 2026 04:47:26 +0000</pubDate>
@@ -4795,7 +4953,7 @@ Office Deployment Tool 是微软官方推出的Office套件部署工具。
 &lt;/h3&gt;&lt;p&gt;新建一个用于存放office的资料夹并进入。
 将XML配置文件(如&lt;code&gt;config.xml&lt;/code&gt;)和ODT的&lt;code&gt;setup.exe&lt;/code&gt;放在这个资料夹中。
 打开命令提示字元(cmd or PowerShell)，进去你的资料夹后，执行&lt;code&gt;setup.exe /download config.xml&lt;/code&gt;。
-命令提示字元中无提示，打开任务管理器可以看到流量，文件会下载到当前资料夹的&lt;code&gt;Office\Data&lt;/code&gt;中。
+命令提示字元中无提示，打开任务管理器可以看到流量，文件会下载到当前资料夹的&lt;code&gt;Office\Data&lt;/code&gt;中，此路径不能重命名。
 PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元里按按&lt;code&gt;退格BackSpace&lt;/code&gt;等无影响的键。&lt;/p&gt;
 &lt;h3 id=&#34;可选制作iso光碟映像档&#34;&gt;(可选)制作ISO光碟映像档
 &lt;/h3&gt;&lt;p&gt;你可以用一些脚本程式来自动化安装过程。&lt;/p&gt;

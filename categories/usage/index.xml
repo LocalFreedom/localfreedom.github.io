@@ -1075,7 +1075,7 @@ Office Deployment Tool 是微软官方推出的Office套件部署工具。
 &lt;/h3&gt;&lt;p&gt;新建一个用于存放office的资料夹并进入。
 将XML配置文件(如&lt;code&gt;config.xml&lt;/code&gt;)和ODT的&lt;code&gt;setup.exe&lt;/code&gt;放在这个资料夹中。
 打开命令提示字元(cmd or PowerShell)，进去你的资料夹后，执行&lt;code&gt;setup.exe /download config.xml&lt;/code&gt;。
-命令提示字元中无提示，打开任务管理器可以看到流量，文件会下载到当前资料夹的&lt;code&gt;Office\Data&lt;/code&gt;中。
+命令提示字元中无提示，打开任务管理器可以看到流量，文件会下载到当前资料夹的&lt;code&gt;Office\Data&lt;/code&gt;中，此路径不能重命名。
 PowerShell有时候会莫名卡住，所以下载中可以在命令提示字元里按按&lt;code&gt;退格BackSpace&lt;/code&gt;等无影响的键。&lt;/p&gt;
 &lt;h3 id=&#34;可选制作iso光碟映像档&#34;&gt;(可选)制作ISO光碟映像档
 &lt;/h3&gt;&lt;p&gt;你可以用一些脚本程式来自动化安装过程。&lt;/p&gt;

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Create LaTeX environment.">
-<title>LaTeX 环境搭建</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Deploy KMS to activate Microsoft software.">
+<title>搭建 KMS 服务器激活微软软件</title>
 
-<link rel='canonical' href='https://localfreedom.pages.dev/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/'>
+<link rel='canonical' href='https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="LaTeX 环境搭建">
-<meta property='og:description' content="Create LaTeX environment.">
-<meta property='og:url' content='https://localfreedom.pages.dev/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="搭建 KMS 服务器激活微软软件">
+<meta property='og:description' content="Deploy KMS to activate Microsoft software.">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Creative' /><meta property='article:published_time' content='2023-11-28T08:06:45&#43;00:00'/><meta property='article:modified_time' content='2023-11-28T08:06:45&#43;00:00'/><meta property='og:image' content='https://localfreedom.pages.dev/img/latex-project-logo.svg' />
-<meta name="twitter:title" content="LaTeX 环境搭建">
-<meta name="twitter:description" content="Create LaTeX environment."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://localfreedom.pages.dev/img/latex-project-logo.svg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Crack' /><meta property='article:tag' content='Office' /><meta property='article:tag' content='Offline' /><meta property='article:tag' content='Windows' /><meta property='article:tag' content='Utility' /><meta property='article:published_time' content='2026-03-01T07:42:16&#43;00:00'/><meta property='article:modified_time' content='2026-03-01T07:42:16&#43;00:00'/><meta property='og:image' content='https://localfreedom.pages.dev/img/kms.jpeg' />
+<meta name="twitter:title" content="搭建 KMS 服务器激活微软软件">
+<meta name="twitter:description" content="Deploy KMS to activate Microsoft software."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://localfreedom.pages.dev/img/kms.jpeg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
   
@@ -272,22 +272,29 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#latex介绍">LaTeX介绍</a></li>
-    <li><a href="#安装latextexlive">安装LaTeX(TexLive)</a>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#dependence">Dependence</a>
       <ol>
-        <li><a href="#下载">下载</a></li>
-        <li><a href="#安装">安装</a></li>
-        <li><a href="#注意">注意</a></li>
+        <li><a href="#微软官方原版镜像">微软官方原版镜像</a></li>
+        <li><a href="#kms工具包">KMS工具包</a></li>
+        <li><a href="#密钥">密钥</a></li>
       </ol>
     </li>
-    <li><a href="#编辑器vscode">编辑器VSCode</a>
+    <li><a href="#process">Process</a>
       <ol>
-        <li><a href="#选择理由">选择理由</a></li>
-        <li><a href="#安装-1">安装</a></li>
-        <li><a href="#配置">配置</a></li>
+        <li><a href="#准备kms服务器">准备KMS服务器</a></li>
+        <li><a href="#部署kms服务">部署KMS服务</a>
+          <ol>
+            <li><a href="#下载kms工具包任选一个">下载KMS工具包(任选一个)</a></li>
+            <li><a href="#将kms工具包复制到kms服务器">将KMS工具包复制到KMS服务器</a></li>
+            <li><a href="#启动kms服务">启动KMS服务</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装原版系统并激活">安装原版系统并激活</a></li>
+        <li><a href="#安装批量版office并激活">安装批量版Office并激活</a></li>
       </ol>
     </li>
-    <li><a href="#后记">后记</a></li>
+    <li><a href="#hint">Hint</a></li>
   </ol>
 </nav>
         </div>
@@ -302,9 +309,9 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+            <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">
                 
-                    <img src="/img/latex-project-logo.svg" loading="lazy" alt="Featured image of post LaTeX 环境搭建" />
+                    <img src="/img/kms.jpeg" loading="lazy" alt="Featured image of post 搭建 KMS 服务器激活微软软件" />
                 
             </a>
         </div>
@@ -323,12 +330,12 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/latex-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">LaTeX 环境搭建</a>
+            <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">搭建 KMS 服务器激活微软软件</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Create LaTeX environment.
+            Deploy KMS to activate Microsoft software.
         </h3>
         
     </div>
@@ -349,7 +356,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Nov 28, 2023</time>
+                <time class="article-time--published">Mar 01, 2026</time>
             </div>
         
 
@@ -364,7 +371,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -379,144 +386,138 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
     <section class="article-content">
     
     
-    <h2 id="latex介绍">LaTeX介绍
-</h2><p>LaTeX(LATEX，音译“拉泰赫”)是一种基于ΤeΧ的排版系统。区别于MSOfficeWord这类的所见即所得形式的编辑，LaTeX是一种代码式的排版工具，善于用命令精确规范文档的格式。
-可以把LaTeX和TeX的关系比作STL和C++的关系。这里配置的环境当然也是包括TEX的。</p>
-<p>LaTeX的写作环境就像编程，分为编译引擎和编辑工具。
-编译引擎现在通常选择TexLive发行版。
-编辑工具可以使用任意文本编辑器，如notepad,vim,emacs,gedit,vscode等。
-有一些专门用于LaTeX的编辑软件，按<a class="link" href="https://alternativeto.net"  target="_blank" rel="noopener"
-    >alternativeto</a>的排序如LyX,TexMaker,TeXstudio,MiKTeX,Kile,Gummi,TeXworks,Latexila等。</p>
-<h2 id="安装latextexlive">安装LaTeX(TexLive)
-</h2><h3 id="下载">下载
-</h3><p><a class="link" href="https://www.latex-project.org"  target="_blank" rel="noopener"
-    >LaTeX官网</a> 并不直接提供下载，而是像Linux一样<a class="link" href="https://www.tug.org/interest.html#free"  target="_blank" rel="noopener"
-    >选择发行版</a>。
-这里推荐最跨平台的<a class="link" href="https://www.tug.org/texlive/"  target="_blank" rel="noopener"
-    >TexLive</a>版本，网页很朴素可以看到如下获取选项：</p>
-<ul>
-<li><strong>Ways to acquire TeX Live:</strong>
-<ul>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-netinstall.html"  target="_blank" rel="noopener"
-    >download</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-dvd.html"  target="_blank" rel="noopener"
-    >on DVD</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire-iso.html"  target="_blank" rel="noopener"
-    >an ISO image or via torrent</a>,</li>
-<li><a class="link" href="https://www.tug.org/texlive/acquire.html"  target="_blank" rel="noopener"
-    >other methods</a>.</li>
-</ul>
-</li>
-</ul>
-<p>完全安装大约有7G，联网安装很慢容易断，所以不要直接点download，而是选择<code>an ISO image or via torrent</code>。</p>
-<p>接下来随便怎么下载，下好后用页面上提供的sha256或其他checksum检验一下就好。
-如此伟大的软件当然应该把其签名<a class="link" href="https://www.tug.org/texlive/files/texlive.asc"  target="_blank" rel="noopener"
-    >公钥</a>纳入自己的GPG。这里就不详谈密码学和公钥信任体系了。</p>
-<p>下载好ISO文件并用sha256检验完整后，用虚拟光驱打开光盘。现在Ubuntu和Win10等系统应该都是自带虚拟光驱功能的。</p>
-<h3 id="安装">安装
-</h3><p>进入光盘根目录。</p>
-<p>Linux/MacOS上执行<code>install-tl</code>，Windows执行<code>install-tl-windows.bat</code>。
-Linux如果安装了<code>perl-tk</code>包的话可以加上<code>-gui</code>参数开启图形界面，不过字符界面安装已经足够好用了。</p>
-<pre><code>Installing TeX Live 2023 from: ... 
-Platform: x86_64-linux =&gt; ’GNU/Linux on x86_64’ 
-Distribution: inst (compressed) 
-Directory for temporary files: /tmp 
-... 
- Detected platform: GNU/Linux on Intel x86_64 
- 
- &lt;B&gt; binary platforms: 1 out of 16 
- 
- &lt;S&gt; set installation scheme: scheme-full 
- 
- &lt;C&gt; customizing installation collections 
-     40 collections out of 41, disk space required: 7620 MB (free: 138718 MB) 
- 
- &lt;D&gt; directories: 
-   TEXDIR (the main TeX directory): 
-     /usr/local/texlive/2023 
-   ... 
- 
- &lt;O&gt; options: 
-   [ ] use letter size instead of A4 by default 
-   ... 
- 
- &lt;V&gt; set up for portable installation 
- 
-Actions: 
- &lt;I&gt; start installation to hard disk 
- &lt;P&gt; save installation profile to ’texlive.profile’ and exit 
- &lt;H&gt; help 
- &lt;Q&gt; quit
-</code></pre>
-<p>看说明可选择V进行可移动安装，这个看个人习惯，后续步骤一样。</p>
-<p>大写字母D设置安装路径。</p>
-<p>然后再输入大写字母I就可以安装到磁盘。</p>
-<p>注意P选项，暂存配置但下次打开运行安装程序并不会自动读取，最好一气呵成，反正也没几个设置的。</p>
-<p>这一套装完几乎会用到的宏包(依赖)就都齐全了，而且包括<a class="link" href="https://ctex.org"  target="_blank" rel="noopener"
-    >CTEX</a>中文套件。</p>
-<h3 id="注意">注意
+    <h2 id="introduction">Introduction
+</h2><p>KMS(Key Management Service)是微软密钥管理服务，是在Windows Vista之后的产品中的一种新型产品激活机制。
+诞生之后微软批量版软件不再能用序列号永久激活，而是需要定期连接 KMS 服务器，通常是180天。</p>
+<p>搭建自己的KMS服务器可以提供免费甚至自主可控的激活，而避免激活工具可能包含病毒，享受原版系统。
+XP可以直接序列号激活，Win7可以用OEM-SLIC2.1激活，Win10及Office则不能用以上方式完美激活，在TSforge但生前，伪造KMS成为最佳选项。</p>
+<h2 id="dependence">Dependence
+</h2><h3 id="微软官方原版镜像">微软官方原版镜像
 </h3><ul>
-<li>安装结束的时候会有提示将路径加入环境变量<code>$PATH</code>。</li>
-<li>Linux也可以考虑从发行版仓库里安装texlive-full。</li>
-<li>建议不要精简安装，中文涉及的依赖很复杂。</li>
+<li>Windows 10/11 在官网提供镜像下载,且有<a class="link" href="https://massgrave.dev/genuine-installation-media"  target="_blank" rel="noopener"
+    >MAS镜像</a></li>
+<li>MSDN,我告诉你 <a class="link" href="https://msdn.itellyou.cn/"  target="_blank" rel="noopener"
+    >https://msdn.itellyou.cn/</a> 长期免费分享所有者自订的MSDN，需要P2P下载</li>
+<li>利用学生身份可以尝试参与微软学生计划以更可靠的获得原版镜像的校验码</li>
 </ul>
-<h2 id="编辑器vscode">编辑器VSCode
-</h2><h3 id="选择理由">选择理由
+<h3 id="kms工具包">KMS工具包
 </h3><ul>
-<li>轻量，占用资源少。</li>
-<li>用户多，文档和资料多，便于调试。</li>
-<li>免费，微软开源软件，官方有移动版，还有更自由的替代品<a class="link" href="https://vscodium.com/"  target="_blank" rel="noopener"
-    >VSCodium</a>。</li>
-<li>有很好的插件<a class="link" href="https://github.com/James-Yu/LaTeX-Workshop"  target="_blank" rel="noopener"
-    >latex-workshop</a>，便于对中文特殊情况做灵活的配置，而且在VSCodium也默认可用。</li>
+<li><a class="link" href="forums.mydigitallife.net" >My Digital Life</a> 论坛发起了伪造KMS的项目</li>
+<li>这里推荐博主审计过的几个可靠实现:
+<ul>
+<li>C版本 <a class="link" href="https://github.com/Wind4/vlmcsd"  target="_blank" rel="noopener"
+    >https://github.com/Wind4/vlmcsd</a></li>
+<li>python版本 <a class="link" href="https://github.com/SystemRage/py-kms"  target="_blank" rel="noopener"
+    >https://github.com/SystemRage/py-kms</a></li>
+<li>python版本fork继承(将GUI改为WebUI) <a class="link" href="https://github.com/Py-KMS-Organization/py-kms"  target="_blank" rel="noopener"
+    >https://github.com/Py-KMS-Organization/py-kms</a></li>
 </ul>
-<h3 id="安装-1">安装
+</li>
+</ul>
+<h3 id="密钥">密钥
 </h3><ul>
-<li><a class="link" href="https://code.visualstudio.com/"  target="_blank" rel="noopener"
-    >VSCode</a>或<a class="link" href="https://vscodium.com/"  target="_blank" rel="noopener"
-    >VSCodium</a>
+<li>如果安装文件就是批量版一般自带一个VLK</li>
+<li>如果是官网下的普通版本则需要搜一个VLK，任意皆可,这里给出参考
 <ul>
-<li>官网下载</li>
-<li>推荐非管理员权限的安装方式。</li>
-<li>官方Linux<a class="link" href="https://github.com/microsoft/vscode/blob/main/resources/linux/code.desktop"  target="_blank" rel="noopener"
-    >desktop文件</a></li>
-</ul>
-</li>
-<li>latex插件
-<ul>
-<li>点开左侧的EXTENSION按钮</li>
-<li>搜索<code>latex</code>，选择<code>latex-workshop</code>安装。</li>
-</ul>
-</li>
-<li>fonts字体
-<ul>
-<li>通常作品的编译需要adobe字体，Linux下可能需要Windows字体</li>
-<li>Linux下建议用字体管理器安装到用户目录</li>
-<li>Linux下可能出现字体文件名大小写的问题</li>
-<li>adobe的opentype字体可以考虑复制到<code>C:\texlive\2023\texmf-dist\fonts\opentype\adobe</code></li>
+<li>Win7: FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</li>
+<li>Win10: W269N-WFGWX-YVC9B-4J6C9-T83GX</li>
+<li>Office2016: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</li>
+<li>Office2019: NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</li>
 </ul>
 </li>
 </ul>
-<h3 id="配置">配置
+<h2 id="process">Process
+</h2><h3 id="准备kms服务器">准备KMS服务器
 </h3><ul>
-<li>vscode
+<li>服务器可以是一台正经服务器，也可以是路由器或虚拟机，只要有待激活机器可到达的IP和端口即可</li>
+<li>推荐使用 VirtualBox 或 VMware 安装 Ubuntu 虚拟机</li>
+</ul>
+<h3 id="部署kms服务">部署KMS服务
+</h3><h4 id="下载kms工具包任选一个">下载KMS工具包(任选一个)
+</h4><ul>
+<li>C版本 <a class="link" href="https://github.com/Wind4/vlmcsd/releases"  target="_blank" rel="noopener"
+    >https://github.com/Wind4/vlmcsd/releases</a></li>
+<li>python版本 <a class="link" href="https://github.com/SystemRage/py-kms"  target="_blank" rel="noopener"
+    >https://github.com/SystemRage/py-kms</a></li>
+</ul>
+<h4 id="将kms工具包复制到kms服务器">将KMS工具包复制到KMS服务器
+</h4><ul>
+<li>真实服务器可用 RDP 或 Fileilla</li>
+<li>虚拟机可用共享文件夹甚至直接拖拽</li>
+<li>如果只复制需要的文件别忘了附属的DLL文件</li>
+</ul>
+<h4 id="启动kms服务">启动KMS服务
+</h4><ul>
+<li>C版本根据操作系统和CPU选择相应可执行文件
 <ul>
-<li>File-&gt;Preferences-&gt;Settings</li>
-<li>搜索tele，禁用远程遥测</li>
-<li>搜索auto，禁用自动更新</li>
+<li>如 binaries/Linux/intel/static/vlmcsd-x64-musl-static 不需要root权限</li>
+<li>不报错即成功，否则请检查端口占用</li>
+<li>服务会后台运行，注销可解除，但结束进程好像难以停止</li>
 </ul>
 </li>
-<li>latex-workshop
+<li>python版本的执行 <code>python3 pykms_Server.py</code>
 <ul>
-<li>左侧插件菜单点击设置，搜索<code>recipes</code>，或在全局设置搜索<code>latex-workshop.latex.recipes</code></li>
-<li>点击<code>Edit in settings.json</code></li>
-<li>设置包含recipes和tools两部分，如果没看见tools再搜索结果里找一下点击。</li>
-<li>recipes对应左侧扩展操作面板里的BUILD方法</li>
-<li>recipes里每一项的内容为依次调用tools里的定义
-<ul>
-<li>name 面板中显示的名称</li>
-<li>tools 依次调用的项目(tools定义)数组</li>
-<li>如
+<li>Ubuntu18.04 开始自带默认 Python3, 也有 Python2 需要用 <code>whereis</code> 查找</li>
+<li>logging 可能不能正确打印日志，不报错可认为正常</li>
+<li>服务会随进程运行，结束进程即停止服务并解除端口占用</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装原版系统并激活">安装原版系统并激活
+</h3><ul>
+<li>先正确安装Windows，可不输入密钥或输入任意VLK</li>
+<li>连接网络</li>
+<li>用管理员权限运行cmd或powershell</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">slmgr /ipk 批量版密钥(如果已经自带或输入过则不用,可在计算机属性中查看,如W269N-WFGWX-YVC9B-4J6C9-T83GX)
+</span></span><span class="line"><span class="cl">slmgr /skms KMS服务器IP
+</span></span><span class="line"><span class="cl">slmgr /ato
+</span></span><span class="line"><span class="cl">slmgr /xpr
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>/ato可能需要几分种，成功激活会提示，py-kms也会打印提示</li>
+<li>/xpr显示激活状态，剩余多少天</li>
+</ul>
+<h3 id="安装批量版office并激活">安装批量版Office并激活
+</h3><ul>
+<li>首先正常安装Office的批量版</li>
+<li>Office2016 VLK: XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</li>
+<li>用管理员权限运行 cmd 或 powershell</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cscript ospp.vbs /inpkey:批量版密钥(如果已经自带或输入过则不用)
+</span></span><span class="line"><span class="cl">cscript ospp.vbs /sethst:KMS的IP或域名
+</span></span><span class="line"><span class="cl">cscript ospp.vbs /act
+</span></span><span class="line"><span class="cl">cscript ospp.vbs /dstatus
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>其中 csript.exe 在 <code>C:\Windows\system32</code> , ospp.vbs 在MS Office 安装目录(例如C:\Program Files\Microsoft Office\Office16)</li>
+</ul>
+<h2 id="hint">Hint
+</h2><ul>
+<li>vlmcsd-x64-musl-static中vlmcsd的字母d</li>
+<li>win7本机激活Office2016，IP应避开 127.0.0.1 和 localhost ,可选 127.0.0.2 等</li>
+<li>Anaconda 的 python 如果出问题，试试操作系统的 python3</li>
+<li>Win10 目前不能本机激活</li>
+<li>Win7 旗舰版尚未发现KMS激活方法</li>
+<li>py-kms 对于 21H2 和 Office2021 及以后需要自行补丁,在pykms_Base.py的164添加。
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -524,48 +525,17 @@ Actions:
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;tools&#34;</span><span class="err">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;xelatex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-jrnl.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-conf.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;bibtex-patent.aux&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;makeindex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;xelatex&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-pykms_Base.py" data-lang="pykms_Base.py"><span class="line"><span class="cl">		<span class="c1"># Get a name for SkuId, AppId.        </span>
+</span></span><span class="line"><span class="cl">		<span class="n">kmsdb</span> <span class="o">=</span> <span class="n">kmsDB2Dict</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="mi">164</span><span class="o">+</span>	<span class="n">appName</span><span class="p">,</span> <span class="n">skuName</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">applicationId</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">skuId</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">appitems</span> <span class="o">=</span> <span class="n">kmsdb</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="n">appitem</span> <span class="ow">in</span> <span class="n">appitems</span><span class="p">:</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div></li>
 </ul>
-</li>
-<li>tools
-<ul>
-<li>name 项目名称</li>
-<li>command 命令名称，即一个tools项目是一条命令行，这里填命令名</li>
-<li>args 参数数组，命令行中的空格都改成逗号分隔</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>部分编译组件的用途
-<ul>
-<li>xelatex 编译包含中文的正文</li>
-<li>bibtex 编译参考文献</li>
-<li>makeindex 生成图表索引及目录</li>
-</ul>
-</li>
-</ul>
-<h2 id="后记">后记
-</h2><p>装好编译引擎(TexLive)和编辑工具(VSCode)后就可以尝试LaTeX写作了，也许<a class="link" href="https://latex-tutorial.com/"  target="_blank" rel="noopener"
-    >教程</a>学习曲线比较陡峭，但相信各位读者尤其是程序员读者会逐渐感受到这一工具的魅力。
-记笔记写博客常用的<code>markdown </code>可以看作LaTeX的简化版，其中包括嵌入LaTeX数学公式，可见其表达能力是非常强的。
-LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资源与使用。</p>
 
 </section>
 
@@ -574,7 +544,15 @@ LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资
     
     <section class="article-tags">
         
-            <a href="/tags/creative/">Creative</a>
+            <a href="/tags/crack/">Crack</a>
+        
+            <a href="/tags/office/">Office</a>
+        
+            <a href="/tags/offline/">Offline</a>
+        
+            <a href="/tags/windows/">Windows</a>
+        
+            <a href="/tags/utility/">Utility</a>
         
     </section>
 
@@ -634,18 +612,18 @@ LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资
             
                 
 <article class="has-image">
-    <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">
+    <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">
         
         
             <div class="article-image">
                 
-                    <img src="/img/kms.jpeg" loading="lazy" data-key="" data-hash="/img/kms.jpeg"/>
+                    <img src="/img/MAS-Ohook.jpeg" loading="lazy" data-key="" data-hash="/img/MAS-Ohook.jpeg"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">搭建 KMS 服务器激活微软软件</h2>
+            <h2 class="article-title">用 Ohook 激活微软 Office 全套</h2>
         </div>
     </a>
 </article>
@@ -665,6 +643,51 @@ LaTeX有各种各样的宏包，有机会再写博文深入介绍各类宏包资
 
         <div class="article-details">
             <h2 class="article-title">配置数据科学研究环境</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/vsix.jpeg" loading="lazy" data-key="" data-hash="/img/vsix.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VSCode扩展离线安装包直链下载</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MSOffice 清除文件作者等</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Win10/11 不联网强制开启移动热点</h2>
         </div>
     </a>
 </article>
