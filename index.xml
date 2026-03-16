@@ -6,7 +6,199 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 01 Mar 2026 07:42:16 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Mar 2026 11:35:51 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Github GitHub 个人资料徽章和成就一览</title>
+        <link>https://localfreedom.pages.dev/p/github-github-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%BE%BD%E7%AB%A0%E5%92%8C%E6%88%90%E5%B0%B1%E4%B8%80%E8%A7%88/</link>
+        <pubDate>Mon, 16 Mar 2026 11:35:51 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/github-github-%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99%E5%BE%BD%E7%AB%A0%E5%92%8C%E6%88%90%E5%B0%B1%E4%B8%80%E8%A7%88/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/github-achievements.jpg" alt="Featured image of post Github GitHub 个人资料徽章和成就一览" /&gt;&lt;p&gt;浏览 Github 时，会见到有些用户 Profile 左侧头像下有一些徽章，或者自己的 Profile 也会出现徽章。
+这是 Github 的成就系统，算是商业产品一种激发用户兴趣的策略，本文简要罗列一些，有兴趣的可以玩玩。&lt;/p&gt;
+&lt;h2 id=&#34;官方介绍&#34;&gt;官方介绍
+&lt;/h2&gt;&lt;p&gt;博客: &lt;a class=&#34;link&#34; href=&#34;https://github.blog/news-insights/product-news/introducing-achievements-recognizing-the-many-stages-of-a-developers-coding-journey/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.blog/news-insights/product-news/introducing-achievements-recognizing-the-many-stages-of-a-developers-coding-journey/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;论坛: &lt;a class=&#34;link&#34; href=&#34;https://github.com/community/community/discussions/categories/profile&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/community/community/discussions/categories/profile&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;简短列表&#34;&gt;简短列表
+&lt;/h2&gt;&lt;p&gt;生动形象参考 &lt;a class=&#34;link&#34; href=&#34;https://github.com/gomzyakov/github-achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/gomzyakov/github-achievements&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;所有-github-个人资料徽章和成就的完整列表&#34;&gt;所有 GitHub 个人资料徽章和成就的完整列表
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;获取方式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Heart On Your Sleeve&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;使用 ❤️ 表情符号对 GitHub 上的内容做出反应 &lt;strong&gt;(正在测试中)&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Open Sourcerer&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;用户已将 PR 合并到多个公共存储库中 &lt;strong&gt;(正在测试中)&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Starstruck&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;创建一个有 &lt;strong&gt;16 颗星&lt;/strong&gt; 或&lt;a class=&#34;link&#34; href=&#34;#%e6%88%90%e5%b0%b1%e5%be%bd%e7%ab%a0%e7%ad%89%e7%ba%a7&#34; &gt;更多星&lt;/a&gt; 的仓库.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Quickdraw&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;在打开后 5 分钟内关闭问题或拉取请求.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pair Extraordinaire&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;在 &lt;strong&gt;一个&lt;/strong&gt; 或 &lt;a class=&#34;link&#34; href=&#34;#%e6%88%90%e5%b0%b1%e5%be%bd%e7%ab%a0%e7%ad%89%e7%ba%a7&#34; &gt;更多&lt;/a&gt; 合并拉取请求中共同创作。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pull Shark&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;2 个PR&lt;/strong&gt; 或&lt;a class=&#34;link&#34; href=&#34;#%e6%88%90%e5%b0%b1%e5%be%bd%e7%ab%a0%e7%ad%89%e7%ba%a7&#34; &gt;以上&lt;/a&gt;被合并.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Galaxy Brain&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;两个或&lt;a class=&#34;link&#34; href=&#34;#%e6%88%90%e5%b0%b1%e5%be%bd%e7%ab%a0%e7%ad%89%e7%ba%a7&#34; &gt;两个以上&lt;/a&gt;的回答被标记为“答案”.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;YOLO&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;在不进行代码审查的情况下合并 &lt;strong&gt;至少一个&lt;/strong&gt; PR.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Public Sponsor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;通过 &lt;a class=&#34;link&#34; href=&#34;https://github.com/sponsors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Sponsors&lt;/a&gt; 打赏开源项目.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Mars 2020 Contributor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;向用于 &lt;a class=&#34;link&#34; href=&#34;https://github.com/readme/featured/nasa-ingenuity-helicopter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mars 2020 Helicopter Mission&lt;/a&gt; 的存储库贡献了代码 &lt;em&gt;已无法再获取。&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Arctic Code Vault Contributor&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;向用于 &lt;a class=&#34;link&#34; href=&#34;https://archiveprogram.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2020 GitHub Archive Program&lt;/a&gt; 的存储库贡献了代码. &lt;em&gt;已无法再获取。&lt;/em&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;成就徽章等级&#34;&gt;成就徽章等级
+&lt;/h3&gt;&lt;p&gt;一些徽章不仅具有基础版，还可以继续升级。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;成就等级&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;默认&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;黄铜&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;白银&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;黄金&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Starstruck&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16 星&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;128 星&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;512 星&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4096 星 &lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/torvalds?achievement=starstruck&amp;amp;tab=achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@torvalds&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pair Extraordinaire&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1 个拉取请求 &lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/gomzyakov?achievement=pair-extraordinaire&amp;amp;tab=achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@gomzyakov&lt;/a&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10 个拉取请求&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;24 个拉取请求&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;48 个拉取请求 &lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Rongronggg9?achievement=pair-extraordinaire&amp;amp;tab=achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@Rongronggg9&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pull Shark&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 个拉取请求&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16 个拉取请求&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;128 个拉取请求&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1024 个拉取请求 &lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ljharb?achievement=pull-shark&amp;amp;tab=achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@ljharb&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Galaxy Brain&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2 个答案&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8 个答案&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;16 个答案&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;32 个答案 &lt;br&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ljharb?achievement=galaxy-brain&amp;amp;tab=achievements&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;@ljharb&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Heart On Your Sleeve&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Open Sourcerer&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;???&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;高亮成就&#34;&gt;高亮成就
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;是否可以获取&lt;/th&gt;
+&lt;th&gt;如何获得&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Pro&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;使用 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/get-started/learning-about-github/githubs-products#github-pro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Pro&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Developer Program Member&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;成为 &lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/en/developers/overview/github-developer-program&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Developer Program&lt;/a&gt; 的注册会员&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Security Bug Bounty Hunter&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;在 &lt;a class=&#34;link&#34; href=&#34;https://bounty.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Security&lt;/a&gt; 中寻找安全漏洞&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GitHub Campus Expert&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;参与 &lt;a class=&#34;link&#34; href=&#34;https://education.github.com/experts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Campus Program&lt;/a&gt;（开放于&lt;a class=&#34;link&#34; href=&#34;https://education.github.com/campus_experts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2024年8月&lt;/a&gt;）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Security Advisory Credit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;提交给 &lt;a class=&#34;link&#34; href=&#34;https://github.com/advisories&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Advisory Database&lt;/a&gt; 的安全性建议被接受&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GitHub Star&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;成为 &lt;a class=&#34;link&#34; href=&#34;https://stars.github.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Star&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Discussion answered&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;在讨论中的回复被标记为答案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
         <title>搭建 KMS 服务器激活微软软件</title>
         <link>https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/</link>
         <pubDate>Sun, 01 Mar 2026 07:42:16 +0000</pubDate>
