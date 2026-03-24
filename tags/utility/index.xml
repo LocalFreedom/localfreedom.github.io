@@ -6,7 +6,103 @@
         <description>Recent content in Utility on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 01 Mar 2026 07:42:16 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Mar 2026 11:38:39 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/utility/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Chinese character 简繁转换</title>
+        <link>https://localfreedom.pages.dev/p/chinese-character-%E7%AE%80%E7%B9%81%E8%BD%AC%E6%8D%A2/</link>
+        <pubDate>Tue, 24 Mar 2026 11:38:39 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/chinese-character-%E7%AE%80%E7%B9%81%E8%BD%AC%E6%8D%A2/</guid>
+        <description>&lt;p&gt;简体是中文字的简化写法，大陆为了普及文化而推广了简化字，简化版的汉字与正规写法之间是字字对应的，转换很直接，也确实有很多办公软件集成了此功能，这里做收录总结。&lt;/p&gt;
+&lt;p&gt;同时由于简体用于大陆、新加坡，繁体或者说正体中文用于台湾和港澳，所以一些表述上有习惯性差异的，这里也列举一些常用表述差异的转换措施。&lt;/p&gt;
+&lt;h2 id=&#34;opencc&#34;&gt;OpenCC
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;下载安装
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/BYVoid/OpenCC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/BYVoid/OpenCC&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用
+&lt;ul&gt;
+&lt;li&gt;opencc -c 配置文件 -i 输入文件 -o 输出文件&lt;/li&gt;
+&lt;li&gt;不指定配置文件则根据输入逐字转换成另一种&lt;/li&gt;
+&lt;li&gt;如果不指定输入输出文件则流式处理每输入一行输出一行结果&lt;/li&gt;
+&lt;li&gt;预设配置文件
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;s2t.json&lt;/code&gt; Simplified Chinese to Traditional Chinese 简体到繁体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t2s.json&lt;/code&gt; Traditional Chinese to Simplified Chinese 繁体到简体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s2tw.json&lt;/code&gt; Simplified Chinese to Traditional Chinese (Taiwan Standard) 简体到台湾正体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tw2s.json&lt;/code&gt; Traditional Chinese (Taiwan Standard) to Simplified Chinese 台湾正体到简体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s2hk.json&lt;/code&gt; Simplified Chinese to Traditional Chinese (Hong Kong variant) 简体到香港繁体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hk2s.json&lt;/code&gt; Traditional Chinese (Hong Kong variant) to Simplified Chinese 香港繁体到简体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s2twp.json&lt;/code&gt; Simplified Chinese to Traditional Chinese (Taiwan Standard) with Taiwanese idiom 简体到繁体（台湾正体标准）并转换为台湾常用词汇&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tw2sp.json&lt;/code&gt; Traditional Chinese (Taiwan Standard) to Simplified Chinese with Mainland Chinese idiom 繁体（台湾正体标准）到简体并转换为中国大陆常用词汇&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t2tw.json&lt;/code&gt; Traditional Chinese (OpenCC Standard) to Taiwan Standard 繁体（OpenCC 标准）到台湾正体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hk2t.json&lt;/code&gt; Traditional Chinese (Hong Kong variant) to Traditional Chinese 香港繁体到繁体（OpenCC 标准）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t2hk.json&lt;/code&gt; Traditional Chinese (OpenCC Standard) to Hong Kong variant 繁体（OpenCC 标准）到香港繁体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;t2jp.json&lt;/code&gt; Traditional Chinese Characters (Kyūjitai) to New Japanese Kanji (Shinjitai) 繁体（OpenCC 标准，旧字体）到日文新字体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jp2t.json&lt;/code&gt; New Japanese Kanji (Shinjitai) to Traditional Chinese Characters (Kyūjitai) 日文新字体到繁体（OpenCC 标准，旧字体）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tw2t.json&lt;/code&gt; Traditional Chinese (Taiwan standard) to Traditional Chinese 台湾正体到繁体（OpenCC 标准）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;评价
+&lt;ul&gt;
+&lt;li&gt;精巧专业预置转换词典&lt;/li&gt;
+&lt;li&gt;全系统支持&lt;/li&gt;
+&lt;li&gt;命令行为主&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;libreoffice&#34;&gt;LibreOffice
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;启用亚洲语言支持
+&lt;ul&gt;
+&lt;li&gt;Tools -&amp;gt; Options -&amp;gt; Languages and Locales -&amp;gt; General&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用
+&lt;ul&gt;
+&lt;li&gt;选中带转换文本&lt;/li&gt;
+&lt;li&gt;工具 -&amp;gt; 语言 -&amp;gt; 中文简繁转换&lt;/li&gt;
+&lt;li&gt;[可选]勾选翻译常用词汇并编辑词典&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;评价
+&lt;ul&gt;
+&lt;li&gt;多系统支持 Linux/Windows/MacOS 免费开源可靠&lt;/li&gt;
+&lt;li&gt;无预制词典且无法导入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;microsoft-office&#34;&gt;Microsoft Office
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;365等部分版本需要额外启用
+&lt;ul&gt;
+&lt;li&gt;文件 -&amp;gt; 选项 -&amp;gt; 加载项 -&amp;gt; 中文繁简转换增益集&lt;/li&gt;
+&lt;li&gt;管理 -&amp;gt; COM加载项 -&amp;gt; 转到&lt;/li&gt;
+&lt;li&gt;勾选 中文繁简转换增益集&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用
+&lt;ul&gt;
+&lt;li&gt;选中要转换的文本、单元格、区域&lt;/li&gt;
+&lt;li&gt;审阅 -&amp;gt; 中文简繁转换&lt;/li&gt;
+&lt;li&gt;[可选]勾选转换常用词汇&lt;/li&gt;
+&lt;li&gt;[可选]自定义词典&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;评价
+&lt;ul&gt;
+&lt;li&gt;仅限于Windows&lt;/li&gt;
+&lt;li&gt;用户友好自带转换常用词汇词典&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>搭建 KMS 服务器激活微软软件</title>
         <link>https://localfreedom.pages.dev/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/</link>
         <pubDate>Sun, 01 Mar 2026 07:42:16 +0000</pubDate>

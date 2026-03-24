@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sun, 15 Feb 2026 12:04:30 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/transfer/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>火狐浏览器用户配置手动迁移</title>
-        <link>https://localfreedom.pages.dev/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</link>
+        <title>Firefox浏览器用户配置手动迁移</title>
+        <link>https://localfreedom.pages.dev/p/firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</link>
         <pubDate>Sun, 15 Feb 2026 12:04:30 +0000</pubDate>
         
-        <guid>https://localfreedom.pages.dev/p/%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</guid>
-        <description>&lt;img src="https://localfreedom.pages.dev/img/firefox-profile.jpeg" alt="Featured image of post 火狐浏览器用户配置手动迁移" /&gt;&lt;p&gt;Firefox数据文件夹通常在 &lt;code&gt;~/.mozilla/firefox/&lt;/code&gt;，其中每个&lt;code&gt;xxxxxxxx.name&lt;/code&gt;文件夹是一套Profile,ESR版本的默认配置是 .default-esr。
+        <guid>https://localfreedom.pages.dev/p/firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/firefox-profile.jpeg" alt="Featured image of post Firefox浏览器用户配置手动迁移" /&gt;&lt;p&gt;Firefox数据文件夹通常在 &lt;code&gt;~/.mozilla/firefox/&lt;/code&gt;，其中每个&lt;code&gt;xxxxxxxx.name&lt;/code&gt;文件夹是一套Profile,ESR版本的默认配置是 .default-esr。
 需要离线手动迁移部分配置的时候，了解配置文件夹中文件的含义十分有必要。&lt;/p&gt;
 &lt;h2 id=&#34;书签下载历史记录和浏览历史记录&#34;&gt;书签、下载历史记录和浏览历史记录
 &lt;/h2&gt;&lt;ul&gt;
