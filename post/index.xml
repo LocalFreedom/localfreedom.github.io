@@ -6,7 +6,247 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 24 Mar 2026 11:38:39 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 02 Apr 2026 09:47:05 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git 代码及一切文本档案的管理神器</title>
+        <link>https://localfreedom.pages.dev/p/git-%E4%BB%A3%E7%A0%81%E5%8F%8A%E4%B8%80%E5%88%87%E6%96%87%E6%9C%AC%E6%A1%A3%E6%A1%88%E7%9A%84%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8/</link>
+        <pubDate>Thu, 02 Apr 2026 09:47:05 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/git-%E4%BB%A3%E7%A0%81%E5%8F%8A%E4%B8%80%E5%88%87%E6%96%87%E6%9C%AC%E6%A1%A3%E6%A1%88%E7%9A%84%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/git.png" alt="Featured image of post Git 代码及一切文本档案的管理神器" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git&lt;/a&gt; 是 Linux 之父设计的分布式版本控制软件，最出色的代码管理利器。
+Git不只能用于代码的管理，一切配置文件、文本档案，甚至多媒体大文件，都很适合用Git来追踪变化，异步写作开发。
+本文介绍 Git 的基本操作，并记录一些复杂需求的操作流程。&lt;/p&gt;
+&lt;h3 id=&#34;discern&#34;&gt;Discern
+&lt;/h3&gt;&lt;p&gt;Github 是一个使用Git机制提供集中代码和文档追踪服务的平台，和Git没有官方联系。&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Windows
+&lt;ul&gt;
+&lt;li&gt;Windows版本在&lt;a class=&#34;link&#34; href=&#34;https://github.com/git-for-windows/git/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github分发&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;2.46.2是最后支持Windows7的版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;使用setup安装时建议换行符方式选择 &lt;code&gt;Checkout as is, commit as is&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux发行版仓库中一般带有 git
+&lt;ul&gt;
+&lt;li&gt;建议&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/install/linux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;从发行版仓库安装&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;相关配套工具和插件&#34;&gt;相关配套工具和插件
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-lfs.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;git-lfs&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;集成在Windows版本中，Linux需额外从发行版仓库安装。&lt;/li&gt;
+&lt;li&gt;用于追踪大文件减少空间消耗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置&#34;&gt;配置
+&lt;/h2&gt;&lt;h3 id=&#34;配置文件位置&#34;&gt;配置文件位置
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;当前用户的配置在 &lt;code&gt;.gitconfig&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;每个仓库的配置文件在 &lt;code&gt;.git/config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;每个文件夹中的配置文件
+&lt;ul&gt;
+&lt;li&gt;.gitignore 设置追踪变更时忽视的路径&lt;/li&gt;
+&lt;li&gt;.gitattribution 设置每个文件追踪属性如不记录差异&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;配置命令&#34;&gt;配置命令
+&lt;/h3&gt;&lt;p&gt;git config [级别] [选项] 变量 值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;级别有 &amp;ndash;system &amp;ndash;global &amp;ndash;local &amp;ndash;worktree &amp;ndash;file 等&lt;/li&gt;
+&lt;li&gt;选项有 &amp;ndash;list &amp;ndash;unset 等&lt;/li&gt;
+&lt;li&gt;全局快速合并 git config &amp;ndash;global pull.ff=only&lt;/li&gt;
+&lt;li&gt;设置基本信息
+&lt;ul&gt;
+&lt;li&gt;git config user.name [用户名]&lt;/li&gt;
+&lt;li&gt;git config user.email [电子邮件]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;设置http/https协议的代理 git config http.[网址.]proxy &amp;ldquo;协议://IP地址:端口&amp;rdquo;
+&lt;ul&gt;
+&lt;li&gt;git config http.proxy &amp;ldquo;socks5h://127.0.0.1:1080&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;git config http.https://github.com.proxy  &amp;ldquo;socks5h://127.0.0.1:1080&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;git config &amp;ndash;local remote.&amp;lt;远端名称&amp;gt;.proxy &amp;quot;&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;设置SSH(代理用ssh方式设置)
+&lt;ul&gt;
+&lt;li&gt;git config &amp;ndash;local core.sshCommand &amp;ldquo;ssh -F path/to/config&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/ssh%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%85%A5%E7%A5%9E%E5%99%A8%E7%9A%84%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8/&#34; &gt;SSH远程登入神器的初步使用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本使用&#34;&gt;基本使用
+&lt;/h2&gt;&lt;h3 id=&#34;创建本地仓库&#34;&gt;创建本地仓库
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --local --add user.name &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;意向使用的用户名如user&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --local --add user.email &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;意向使用的邮箱如user@example.com&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -M &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;主分支名,如main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;远端名称,默认origin&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;远端URL&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;克隆和拉取&#34;&gt;克隆和拉取
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;子模块
+&lt;ul&gt;
+&lt;li&gt;直接一起克隆 git clone &amp;ndash;recurse-submodules&lt;/li&gt;
+&lt;li&gt;克隆后在拉取
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git clone 链接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git submodule init&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git submodule update&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--remote&lt;/code&gt; 选项可以解决 &lt;code&gt;did not contain xxxxxxxxx&lt;/code&gt; 类的问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;精简克隆
+&lt;ul&gt;
+&lt;li&gt;设置不包含文件变更暂不检出(仅概况)深度为1 &lt;code&gt;git clone --filter=blob:none --no-checkout --depth=1 --sparse 链接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd 仓库名&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git sparse-checkout set 想克隆的路径&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git sparse-checkout add 想克隆的路径&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;手动维护想克隆的路径 &lt;code&gt;.git/info/sparse-checkout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/4114887/is-it-possible-to-do-a-sparse-checkout-without-checking-out-the-whole-repository&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://stackoverflow.com/questions/4114887/is-it-possible-to-do-a-sparse-checkout-without-checking-out-the-whole-repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;提交&#34;&gt;提交
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add 文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit &lt;span class=&#34;s2&#34;&gt;&amp;#34;说明&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --soft HEAD^	&lt;span class=&#34;c1&#34;&gt;# 本地撤销commit&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;远端名称,默认origin&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;本地分支,如main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;分支&#34;&gt;分支
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout -b &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;分支名&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 列出标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;-l &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; --list&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 创建标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -a 标签名 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;-m 信息 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; -F 信息文件&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 删除标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git tag -d 标签名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 切换分支&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;分支名&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 切换到标签&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git checkout &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;标签名 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tags/标签名&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;流程参考&#34;&gt;流程参考
+&lt;/h2&gt;&lt;h3 id=&#34;pullrequest&#34;&gt;PullRequest
+&lt;/h3&gt;&lt;p&gt;通常实在网络平台上使用git用此操作进行贡献&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fork别人的仓库&lt;/li&gt;
+&lt;li&gt;做修改并提交&lt;/li&gt;
+&lt;li&gt;在自己fork的仓库新建PullRequest&lt;/li&gt;
+&lt;li&gt;[可选]跟进上游进展 git remote add upstream https://[上游仓库地址].git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/firstcontributions/first-contributions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/firstcontributions/first-contributions&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;gitlfs&#34;&gt;GitLFS
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;追踪	&lt;code&gt;git lfs track 文件在仓库路径如Patch/test.bin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加配置	&lt;code&gt;git add .gitattributes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;正常添加	&lt;code&gt;it add 文件在仓库路径如Patch/test.bin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;正常提交 &lt;code&gt;git commit -m &amp;quot;说明备注&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;不小心提交敏感信息&#34;&gt;不小心提交敏感信息
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;本地撤销commit	&lt;code&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;创建新分支 &lt;code&gt;git branch -b master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;重新提交 &lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在github中Settings切换默认分支&lt;/li&gt;
+&lt;li&gt;在github中Code的分支菜单中&lt;code&gt;View all branches&lt;/code&gt;删除原分支&lt;/li&gt;
+&lt;li&gt;可以考虑再把新分支master重命名回去
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -m master 原分支名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch github
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -u github/原分支名 原分支名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-head github -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;其他
+&lt;/h2&gt;&lt;p&gt;Git相关的 GUI、WebUI、Server 等另开一篇博文介绍。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Chinese character 简繁转换</title>
         <link>https://localfreedom.pages.dev/p/chinese-character-%E7%AE%80%E7%B9%81%E8%BD%AC%E6%8D%A2/</link>
         <pubDate>Tue, 24 Mar 2026 11:38:39 +0000</pubDate>
