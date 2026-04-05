@@ -6,7 +6,220 @@
         <description>Recent content in Usage on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 02 Apr 2026 09:47:05 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/usage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Apr 2026 12:17:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/usage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>llama.cpp LLM时代核心引擎指南</title>
+        <link>https://localfreedom.pages.dev/p/llama.cpp-llm%E6%97%B6%E4%BB%A3%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Sun, 05 Apr 2026 12:17:21 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/llama.cpp-llm%E6%97%B6%E4%BB%A3%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/llamacpp.png" alt="Featured image of post llama.cpp LLM时代核心引擎指南" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;llama.cpp 是ChatGPT火爆后最早也是最核心的LLM推理引擎。
+配套的还有 ggml/gguf 等适用于个人电脑的量化LLM模型档案格式。
+用C++实现，小巧高校，社区活跃，对新模型有很及时的支持，是很多LLM本地运行工具的上游引擎。&lt;/p&gt;
+&lt;h3 id=&#34;优势&#34;&gt;优势
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;体积小，占用磁盘空间少。&lt;/li&gt;
+&lt;li&gt;可控性强，基础引擎可以定义所有参数。&lt;/li&gt;
+&lt;li&gt;直接使用 gguf 格式模型档案，便于模型收录档案管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;劣势&#34;&gt;劣势
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;用户不够友好，毕竟是核心引擎，虽然出了WebUI但远没有其他集成软件用户友好。&lt;/li&gt;
+&lt;li&gt;配置门槛高，运行模型本身就是命令行执行，配套的 Agent/SCP/RAG 等都需要自行组装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;版本&#34;&gt;版本
+&lt;/h2&gt;&lt;p&gt;项目的&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;开发&lt;/a&gt;和&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;分发&lt;/a&gt;都在Github进行。&lt;/p&gt;
+&lt;p&gt;引擎本身支持不同的硬件加速:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cpu 最精简状态，纯CPU推理。&lt;/li&gt;
+&lt;li&gt;cuda 支持 Nvidia GPU 加速。&lt;/li&gt;
+&lt;li&gt;rocm 支持 AMD GPU 加速。&lt;/li&gt;
+&lt;li&gt;vulkan 支持开源GPU驱动加速。&lt;/li&gt;
+&lt;li&gt;opencl 支持开源GPU驱动加速。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;docker镜像发行分三类方式:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;light 轻量级，仅仅核心推理引擎，&lt;code&gt;llama-cli&lt;/code&gt;命令行交互对话。&lt;/li&gt;
+&lt;li&gt;server 服务端，运行引擎搭配Web服务器，提供API接口，新推出的WebUI也是server的一部分。&lt;/li&gt;
+&lt;li&gt;full 全功能，包含以上内容，以及量化转换等各种辅助工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;衍生&#34;&gt;衍生
+&lt;/h3&gt;&lt;p&gt;日常用到的各种LLM本地运行的应用程序，几乎都是基于 &lt;strong&gt;llama.cpp&lt;/strong&gt; 封装开发的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jan.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jan&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;曾经自研引擎，现在自研引擎项目 &lt;a class=&#34;link&#34; href=&#34;https://github.com/janhq/cortex.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cortex&lt;/a&gt; 已停滞，就直接打包llama.cpp。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ollama&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;重写了llama.cpp,提供了更集成的封装和配置，如今引擎越来越向llama.cpp靠拢。&lt;/li&gt;
+&lt;li&gt;模型采用自己的存储格式，有官方&lt;a class=&#34;link&#34; href=&#34;https://ollama.com/library&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;模型库&lt;/a&gt;，可以从GGUF导入，但会有效果差异。&lt;/li&gt;
+&lt;li&gt;更新不如llama.cpp及时，比如qwen的多模态暂无法支持gguf导入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LM Studio&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;商业软件，就是对llama.cpp的封装，提供用户友好的操作界面和API服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GPT4ALL
+&lt;ul&gt;
+&lt;li&gt;早期基于llama.cpp的GUI,现在&lt;a class=&#34;link&#34; href=&#34;https://github.com/nomic-ai/gpt4all&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;开源版本&lt;/a&gt;似乎停止更新了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Docker/Podman&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;pull镜像即可，镜像在&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/pkgs/container/llama.cpp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github的托管&lt;/a&gt;发布，官方没有在DockerHub上发布，不便于查询版本和体积，这里列出来。
+&lt;ul&gt;
+&lt;li&gt;目前项目更新非常频繁，没有大版本号，所以直接用 light/server/full 最新版即可。&lt;/li&gt;
+&lt;li&gt;light 不到100M,-cuda 需要额外约2GiB, full-cuda 最大约5GiB。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;官方的参考命令有些问题，比如交互后无限回车，运行容器时加上 &lt;code&gt;-it&lt;/code&gt; 参数即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Linux
+&lt;ul&gt;
+&lt;li&gt;目前llama.cpp并没有收录进各发行版的仓库。&lt;/li&gt;
+&lt;li&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github发布页&lt;/a&gt;根据自己硬件的情况下载最新的二进制包解压运行即可，没有额外依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MacOS
+&lt;ul&gt;
+&lt;li&gt;可以借助包管理工具安装
+&lt;ul&gt;
+&lt;li&gt;brew install llama.cpp&lt;/li&gt;
+&lt;li&gt;sudo port install llama.cpp&lt;/li&gt;
+&lt;li&gt;nix profile install nixpkgs#llama-cpp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows
+&lt;ul&gt;
+&lt;li&gt;从&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Github发布页&lt;/a&gt;根据自己硬件的情况下载最新的二进制包解压运行即可。&lt;/li&gt;
+&lt;li&gt;也可以选择 &lt;a class=&#34;link&#34; href=&#34;https://www.jan.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Jan&lt;/a&gt; 或 &lt;a class=&#34;link&#34; href=&#34;https://lmstudio.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LM Studio&lt;/a&gt; 等集成应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自行编译/Android
+&lt;ul&gt;
+&lt;li&gt;llama.cpp 由C++编写，依赖几乎只有显卡加速驱动库，按照&lt;a class=&#34;link&#34; href=&#34;https://github.com/ggml-org/llama.cpp/blob/master/docs/build.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;说明&lt;/a&gt;编译不难。&lt;/li&gt;
+&lt;li&gt;Android 可借助 Termux 类应用编译运行，这里不做详细介绍。&lt;/li&gt;
+&lt;li&gt;Android也有很多应用封装了 llama.cpp 如 Maid/PocketPal 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用
+&lt;/h2&gt;&lt;h3 id=&#34;参数&#34;&gt;参数
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;通用参数
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-ngl auto&lt;/code&gt; 多少层加载到GPU,默认auto即可，目前引擎自动分配已足够智能。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-c 0&lt;/code&gt; 上下文长度，默认0采用GGUF档案中自带的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-fa auto&lt;/code&gt; 是否启用 fast attention 加速，默认auto即可能启用就用。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--jinja&lt;/code&gt; 指定使用GGUF中包含的对话模板，省得自己拼装prompt。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-m path/to/gguf&lt;/code&gt; 指定模型权重档案位置。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-mm path/to/mmproj/file&lt;/code&gt; 指定配套的多模态权重档案位置。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--host 0.0.0.0&lt;/code&gt; server/full版本指定服务监听的IP,目前有BUG仅监听 localhost/127.0.0.1 本机无法访问&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--port 8033&lt;/code&gt; server/full版本指定服务监听的端口，早期默认8080官方WebUI推荐8033,可任选一个空闲的自己喜欢的端口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;模型超参数参考官方建议或保持默认
+&lt;ul&gt;
+&lt;li&gt;unsloth 提供的&lt;a class=&#34;link&#34; href=&#34;https://unsloth.ai/docs/models&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用指南&lt;/a&gt;中通常都包含 llama.cpp 的参数设置,通常和官方推荐一致，而且gguf档案目前也是这家的版本最受欢迎。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;temp 温度，控制模型的生成发散性，越高越发散。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;top-p 候选概率阈值，越低约发散。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;top-k 候选数量阈值，越高越发散。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;min-p 候选词最小概率。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;presence-penalty 存在惩罚，降低已生成的token再次出现的概率，越低越可能重复。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;repeat-penalty 重复惩罚，已生成的越多惩罚越强，越低越可能重复。&lt;/li&gt;
+&lt;li&gt;&amp;ndash;chat-template-kwargs 为聊天模板设定参数，通常控制是否思考，传入json字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;参考命令&#34;&gt;参考命令
+&lt;/h3&gt;&lt;p&gt;这里给出通过 docker 运行 server-cuda 镜像的示例命令行，直接运行把 docker 的部分去掉即可。
+容器也可以查看帮助 &lt;code&gt;docker run --rm llama.cpp:server-cuda -h&lt;/code&gt;
+运行命令启动容器后，访问 http://localhost:8033 即可看到 llama.cpp 的官方WebUI。&lt;/p&gt;
+&lt;h4 id=&#34;qwen35-9b-unsloth&#34;&gt;Qwen3.5-9B-unsloth
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -p 8033:8033 -v /path/to/gguf/folder:/models:ro --gpus=all --name=LlamaCpp --rm &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; llama.cpp:server-cuda &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -c 0 -fa auto --jinja --host 0.0.0.0 --port 8033 &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -m /models/Qwen3.5-9B-Q4_K_M.gguf -mm /models/mmproj-BF16.gguf &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ARGS+=&amp;#39; --temp 1.0 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 1.5 --repeat-penalty 1.0 &amp;#39;	# 思考通用任务|非思考推理任务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ARGS+=&amp;#39; --temp 0.6 --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0.0 --repeat-penalty 1.0 &amp;#39;	# 思考精确编码任务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; --temp 0.7 --top-p 0.8 --top-k 20 --min-p 0.0 --presence-penalty 1.5 --repeat-penalty 1.0 &amp;#39;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;# 非思考通用任务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#ARGS+=&amp;#39; --chat-template-kwargs &amp;#39;&amp;#39;{&amp;#34;enable_thinking&amp;#34;:true}&amp;#39;	# 思考&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; --chat-template-kwargs &amp;#39;&amp;#39;{&amp;#34;enable_thinking&amp;#34;:false}&amp;#39;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;# 不思考&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run &lt;span class=&#34;nv&#34;&gt;$ARGS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;gemma-4-26b-a4b-it-unsloth&#34;&gt;gemma-4-26B-A4B-it-unsloth
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -p 8033:8033 -v /path/to/gguf/folder:/models:ro --gpus=all --name=LlamaCpp --rm &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; llama.cpp:server-cuda &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -c 0 -fa auto --jinja --host 0.0.0.0 --port 8033 &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; -m /models/gemma-4-26B-A4B-it-UD-Q4_K_XL.gguf -mm /models/mmproj-BF16.gguf &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; --temp 1.0 --top-p 0.95 --top-k 64 &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;ARGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; --chat-template-kwargs &amp;#39;&amp;#39;{&amp;#34;enable_thinking&amp;#34;:false}&amp;#39;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;# 是否思考&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run &lt;span class=&#34;nv&#34;&gt;$ARGS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;配套&#34;&gt;配套
+&lt;/h3&gt;&lt;p&gt;llama.cpp 项目本身并没有集成方便的配套工具。
+如果集成多了软件和镜像的体积也就大了，所以还是自行组装更好。
+之后在新开博文介绍如何基于 llama.cpp 搭建智能体。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Git 代码及一切文本档案的管理神器</title>
         <link>https://localfreedom.pages.dev/p/git-%E4%BB%A3%E7%A0%81%E5%8F%8A%E4%B8%80%E5%88%87%E6%96%87%E6%9C%AC%E6%A1%A3%E6%A1%88%E7%9A%84%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8/</link>
         <pubDate>Thu, 02 Apr 2026 09:47:05 +0000</pubDate>
