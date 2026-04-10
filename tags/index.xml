@@ -6,7 +6,31 @@
         <description>Recent content in Tags on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 05 Apr 2026 12:17:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 10 Apr 2026 08:51:07 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>OS</title>
+        <link>https://localfreedom.pages.dev/tags/os/</link>
+        <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/os/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>RecommendList</title>
+        <link>https://localfreedom.pages.dev/tags/recommendlist/</link>
+        <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/recommendlist/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://localfreedom.pages.dev/tags/windows/</link>
+        <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/tags/windows/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI</title>
         <link>https://localfreedom.pages.dev/tags/ai/</link>
         <pubDate>Sun, 05 Apr 2026 12:17:21 +0000</pubDate>
@@ -84,14 +108,6 @@
         <pubDate>Sun, 01 Mar 2026 07:42:16 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/tags/offline/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Windows</title>
-        <link>https://localfreedom.pages.dev/tags/windows/</link>
-        <pubDate>Sun, 01 Mar 2026 07:42:16 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/windows/</guid>
         <description></description>
         </item>
         <item>
@@ -180,22 +196,6 @@
         <pubDate>Fri, 13 Jun 2025 13:04:09 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/tags/network/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>OS</title>
-        <link>https://localfreedom.pages.dev/tags/os/</link>
-        <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/os/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>RecommendList</title>
-        <link>https://localfreedom.pages.dev/tags/recommendlist/</link>
-        <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/tags/recommendlist/</guid>
         <description></description>
         </item>
         <item>

@@ -6,7 +6,199 @@
         <description>Recent content in OS on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 20 Apr 2025 06:03:31 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 10 Apr 2026 08:51:07 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows 10 LTSC 安装和基本配置要点</title>
+        <link>https://localfreedom.pages.dev/p/windows-10-ltsc-%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E8%A6%81%E7%82%B9/</link>
+        <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/windows-10-ltsc-%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E8%A6%81%E7%82%B9/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/windows_10_desktop.png" alt="Featured image of post Windows 10 LTSC 安装和基本配置要点" /&gt;&lt;blockquote&gt;
+&lt;p&gt;Windows 10 的各个版本走向了生命的尽头。
+本文主要备忘 Windows 10 安装时的注意事项，以作纪念。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;download--bootable&#34;&gt;Download &amp;amp; Bootable
+&lt;/h2&gt;&lt;p&gt;有一个网站 &lt;a class=&#34;link&#34; href=&#34;https://msdn.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSDN, I tell you!&lt;/a&gt; 提供各种版本多语言的Windows安装镜像下载。
+知名破解工具网站提供的&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/windows_ltsc_links&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LTSC下载&lt;/a&gt;，经对比验证也是可靠的。&lt;/p&gt;
+&lt;p&gt;MSDN消费者版本可看作官网下载的延续，但是商业版不能 HWID 激活。&lt;/p&gt;
+&lt;p&gt;LTSC 启动U盘直接格式化成&lt;code&gt;fat32&lt;/code&gt;格式，然后将iso安装镜像内的文件复制进去即可。
+Win10新版中有大于4GiB的档案，需要&lt;code&gt;NTFS&lt;/code&gt;格式，并将&lt;code&gt;EFI&lt;/code&gt;文件夹单独放在&lt;code&gt;fat32&lt;/code&gt;分区。
+建议直接使用 &lt;a class=&#34;link&#34; href=&#34;https://rufus.ie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Rufus&lt;/a&gt; 制作。&lt;/p&gt;
+&lt;h3 id=&#34;其他安装辅助资料&#34;&gt;其他安装辅助资料
+&lt;/h3&gt;&lt;p&gt;为了顺利的执行整个安装和初始化过程应准备好一些资料。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;更新(LCS+.Net+Defender)&lt;/li&gt;
+&lt;li&gt;驱动(显卡、声卡、网卡等)&lt;/li&gt;
+&lt;li&gt;注册表脚本(时间UTC、图片打开等)
+&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/windows-%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&#34; &gt;注册表脚本教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;激活工具&lt;/li&gt;
+&lt;li&gt;基础软件安装包 RAR+Firefox+Office+Rufus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;system-setting&#34;&gt;System Setting
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;When installing, shutdown all the privacy items.&lt;/li&gt;
+&lt;li&gt;开启飞行模式&lt;/li&gt;
+&lt;li&gt;在控制面板电源管理中检查并[如果有]关闭睡眠和快速启动&lt;/li&gt;
+&lt;li&gt;关闭休眠以腾出C盘中内存一般体积的 &lt;code&gt;hiberfil.sys&lt;/code&gt; 内存缓存文件: &lt;code&gt;powercfg -h off&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enable random hardware address(WLAN) &lt;em&gt;可能需要现安装无线网卡驱动才出现此选项&lt;/em&gt;.
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;在保存的网络中配置每日变化随机MAC地址。&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;使用UTC时间和Linux一致&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;新建 Registry Item &lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal&lt;/code&gt; 设置为十六进制1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Settings
+&lt;ul&gt;
+&lt;li&gt;System 电源选项忽略合盖从不睡眠&lt;/li&gt;
+&lt;li&gt;Privacy 检查所有项目尽可能关闭&lt;/li&gt;
+&lt;li&gt;Search 最小化&lt;/li&gt;
+&lt;li&gt;Devices 关闭蓝牙和自动播放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;资源管理器上方选项
+&lt;ul&gt;
+&lt;li&gt;显示隐藏文件&lt;/li&gt;
+&lt;li&gt;显示已知的文件扩展名&lt;/li&gt;
+&lt;li&gt;打开此电脑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;右键个性化: 桌面显示图标+启动菜单档案夹&lt;/li&gt;
+&lt;li&gt;任务管理器显示GPU&lt;/li&gt;
+&lt;li&gt;任务栏: 不显示人脉，搜索只显示图标，关闭资讯&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;微软拼音输入法设置-&amp;gt;按键-&amp;gt;中英文切换 取消&lt;code&gt;Shift&lt;/code&gt;便于游戏&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;IE11浏览器选项每次删除浏览记录&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;应用商店关闭自动更新&lt;/li&gt;
+&lt;li&gt;Edge
+&lt;ul&gt;
+&lt;li&gt;Homepage&lt;/li&gt;
+&lt;li&gt;Download&lt;/li&gt;
+&lt;li&gt;Privacy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;LTSC解锁图片查看器&lt;/em&gt;
+&lt;ul&gt;
+&lt;li&gt;Registry &lt;code&gt;HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations&lt;/code&gt; 新建Key为图片后缀名如 &lt;code&gt;.jpg&lt;/code&gt; 的字符串值 &lt;code&gt;PhotoViewer.FileAssoc.Tiff&lt;/code&gt; 即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-reg&#34; data-lang=&#34;reg&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;RealTimeIsUniversal&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;dword&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000001&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;设置硬件时钟为UTC&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.bmp&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.ico&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.jpeg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.jpg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;LTSC将图片关联到自带的图片查看器打开&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;updates&#34;&gt;Updates
+&lt;/h2&gt;&lt;p&gt;1809和LTSC共用更新，但1809安装更新会在重启时失败，应该是普通版限制安装延长更新。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;删除Flash更新KB4577586，2025年已并入LCU不需要单独安装。&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;最新的服务堆栈更新(SSU),普通1809最后是KB5003243,最终是kb5005112,之后SSU并入LCU。&lt;/li&gt;
+&lt;li&gt;Intel微码更新,目前是KB4589208&lt;/li&gt;
+&lt;li&gt;最新的积累更新(LCU),普通1809最后是KB5003171。
+&lt;ul&gt;
+&lt;li&gt;22H2安装2025年10月后的积累更新需激活ESU&lt;/li&gt;
+&lt;li&gt;其他非LTSC版本需升级至22H2的2025年10月版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;最新的.Net积累更新
+&lt;ul&gt;
+&lt;li&gt;1809LTSC版本2025年10月是KB5066143至2026年3月没再更新&lt;/li&gt;
+&lt;li&gt;1809和LTSC建议首先安装.Net4.8再安装4.8系列2025年10月更新KB5066137&lt;/li&gt;
+&lt;li&gt;21H2/22H2/LTSC2021版本2025年10月是KB5066135至2026年3月没再更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;SecureBootDBX更新KB5012170已并入LCU不需要单独安装&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/wdsi/defenderupdates&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Defender病毒库更新&lt;/a&gt;KB2267602(mpam-fe.exe),执行后查看defender更新日期确认&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Defender反恶意软件KB4052623&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ltsc-引导文件bug&#34;&gt;LTSC 引导文件Bug
+&lt;/h3&gt;&lt;p&gt;LTSC(2019)引导文件Bug可通过LCU解决。&lt;/p&gt;
+&lt;h3 id=&#34;ltsc2021-中-wsappx-占用过高问题&#34;&gt;LTSC2021 中 wsappx 占用过高问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;LTSC2021因为默认少装运行库导致高占用，需要额外安装&lt;/del&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;管理员身份运行Powershell &lt;code&gt;Add-AppxPackage -Path 文件路径&lt;/code&gt;&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Microsoft.VCLibs.x86.14.00.Desktop.appx&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;Microsoft.VCLibs.x64.14.00.Desktop.appx&lt;/del&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;将 &lt;code&gt;HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AppXSvc Start&lt;/code&gt; 的值从3改到4可以解决wsappx,但资源管理器又占用高了。&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;2022年9月13日的21H2更新 KB5017308 成功解决了 wsappx 占用高的问题，直接安装即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;drivers&#34;&gt;Drivers
+&lt;/h2&gt;&lt;p&gt;由于引导和高占用等Bug需要安装积累更新解决，所以完成更新补丁安装后在安装驱动。
+驱动安装完成后，建议再检查 &lt;code&gt;System Settings&lt;/code&gt; 的部分。&lt;/p&gt;
+&lt;h2 id=&#34;software-configure&#34;&gt;Software Configure
+&lt;/h2&gt;&lt;p&gt;软件配置因人而异，这里罗列一些博主认为有必要考虑的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.Net3.5(2.0+3.0)
+&lt;ul&gt;
+&lt;li&gt;挂载安装镜像可离线启用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;建议随系统安装启用以免后期需要找不到安装镜像&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;dism.exe /online /enable-feature /featurename:netfx3 /Source:&lt;a class=&#34;link&#34; href=&#34;ISO%e7%9b%98%e7%ac%a6%e5%a6%82&#34; &gt;E&lt;/a&gt;:\sources\sxs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MSOffice(LibreOffice/OnlyOffice)
+&lt;ul&gt;
+&lt;li&gt;using &lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/office-deployment-tool/&#34; &gt;Office Deployment Tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Firefox(Edge)
+&lt;ul&gt;
+&lt;li&gt;Profile is in the ~/AppData/Roaming/Mozilla/Firefox/Profiles/&lt;em&gt;&amp;lt;profile names like *.default&amp;gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Bookmarks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;7Zip(WinRAR)&lt;/li&gt;
+&lt;li&gt;VLC(WindowsMediaPlayer)&lt;/li&gt;
+&lt;li&gt;Rufus&lt;/li&gt;
+&lt;li&gt;git&lt;/li&gt;
+&lt;li&gt;Thunderbird
+&lt;ul&gt;
+&lt;li&gt;Offline Calendar / Task / Book&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GOGGalaxy(Steam)&lt;/li&gt;
+&lt;li&gt;Hyper-V(VMware/VirtualBox)&lt;/li&gt;
+&lt;li&gt;VScode&lt;/li&gt;
+&lt;li&gt;VisualStudio&lt;/li&gt;
+&lt;li&gt;Anaconda&lt;/li&gt;
+&lt;li&gt;Sumatra PDF&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>操作系统选型</title>
         <link>https://localfreedom.pages.dev/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B/</link>
         <pubDate>Sun, 20 Apr 2025 06:03:31 +0000</pubDate>
