@@ -1252,7 +1252,7 @@ SSH同时支持者scp、git、https、vpn等很多应用。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;-L [本地主机:]本地主机端口:远程网络主机:远程网络主机端口&lt;/li&gt;
 &lt;li&gt;例如 &lt;code&gt;ssh -L 0.0.0.0:30000:host2:8000 user@host1&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;这条命令将host2的8000端口映射到本地的30000端口前提是待登录主机host1上可以正常连接到host2的80端口&lt;/li&gt;
+&lt;li&gt;这条命令将host2的8000端口映射到本地的30000端口前提是待登录主机host1上可以正常连接到host2的8000端口&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;远程转发 RemoteForward
