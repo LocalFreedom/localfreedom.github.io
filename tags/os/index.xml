@@ -6,7 +6,46 @@
         <description>Recent content in OS on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 10 Apr 2026 08:51:07 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 25 Apr 2026 12:32:30 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Docker 推荐后端 WSL2 完全离线安装</title>
+        <link>https://localfreedom.pages.dev/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+        <pubDate>Sat, 25 Apr 2026 12:32:30 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/wsl2.jpeg" alt="Featured image of post Docker 推荐后端 WSL2 完全离线安装" /&gt;&lt;p&gt;这里介绍的适用于Linux的Windows子系统的离线安装使用方法，适用于 Windows 10 2004 及以上版本，含 LTSC 2021。
+安装完成后可以直接作为Docker引擎的后端。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从 &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/wsl/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 发行页面&lt;/a&gt;下载 WSL 的 MSI 套件&lt;/li&gt;
+&lt;li&gt;从 &lt;a class=&#34;link&#34; href=&#34;https://github.com/microsoft/WSL/blob/master/distributions/DistributionInfo.json&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DistributionInfo.json&lt;/a&gt; 中找到下载发行版的 .wsl 文件URL并下载所选发行版&lt;/li&gt;
+&lt;li&gt;在控制面板 -&amp;gt; 程序和功能 -&amp;gt; 启用或关闭Windows功能
+&lt;ul&gt;
+&lt;li&gt;启用 虚拟机平台VirtualMachinePlatform&lt;/li&gt;
+&lt;li&gt;启用 适用于Linux的Windows子系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;双击运行MSI包安装WSL
+&lt;ul&gt;
+&lt;li&gt;开始菜单会多出WSL的图标，可进入GUI进行一些设置。&lt;/li&gt;
+&lt;li&gt;打开 cmd 或 powershell 可以执行命令查看帮助 &lt;code&gt;wsl --help&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装发行版
+&lt;ul&gt;
+&lt;li&gt;用管理员权限运行 &lt;code&gt;wsl --install --from-file &amp;lt;location of wsl File&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如 &lt;code&gt;wsl --install --from-file C:\Users\John\Downloads\ubuntu-24.04.4-wsl-amd64.wsl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;会提示创建Linux发行版的用户名并设置密码&lt;/li&gt;
+&lt;li&gt;不同发行版不共享账号和存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;启动WSL的发行版 &lt;code&gt;wsl -d &amp;lt;DistroName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;关闭WSL的发行版 &lt;code&gt;wsl -t &amp;lt;DistroName&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;关闭所有在运行的发行版 &lt;code&gt;wsl --shudown&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>Windows 10 LTSC 安装和基本配置要点</title>
         <link>https://localfreedom.pages.dev/p/windows-10-ltsc-%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E8%A6%81%E7%82%B9/</link>
         <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>

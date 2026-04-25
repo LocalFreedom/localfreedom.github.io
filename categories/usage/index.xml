@@ -1121,7 +1121,8 @@ Argos官方&lt;a class=&#34;link&#34; href=&#34;https://www.argosopentech.com/ar
 &lt;/li&gt;
 &lt;li&gt;初始化
 &lt;ul&gt;
-&lt;li&gt;WSL2首次使用只能联网下载更新。&lt;/li&gt;
+&lt;li&gt;WSL2首次使用默认需联网下载更新。&lt;/li&gt;
+&lt;li&gt;本博客当然建议&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/&#34; &gt;离线安装WLS2后端&lt;/a&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
