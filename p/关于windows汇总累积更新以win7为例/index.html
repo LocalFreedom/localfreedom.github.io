@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 【转】 这是积累的一篇老文，可能大量参考了他人的文章，但都经过博主实践检验。 可以作为在虚拟机里回味Win7准备补丁的参考。 认识误区 及时打补">
+<title>关于Windows汇总累积更新以Win7为例</title>
+
+<link rel='canonical' href='https://localfreedom.pages.dev/p/%E5%85%B3%E4%BA%8Ewindows%E6%B1%87%E6%80%BB%E7%B4%AF%E7%A7%AF%E6%9B%B4%E6%96%B0%E4%BB%A5win7%E4%B8%BA%E4%BE%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="关于Windows汇总累积更新以Win7为例">
+<meta property='og:description' content="前言 【转】 这是积累的一篇老文，可能大量参考了他人的文章，但都经过博主实践检验。 可以作为在虚拟机里回味Win7准备补丁的参考。 认识误区 及时打补">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/%E5%85%B3%E4%BA%8Ewindows%E6%B1%87%E6%80%BB%E7%B4%AF%E7%A7%AF%E6%9B%B4%E6%96%B0%E4%BB%A5win7%E4%B8%BA%E4%BE%8B/'>
+<meta property='og:site_name' content='局域自由博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Windows' /><meta property='article:tag' content='Offline' /><meta property='article:published_time' content='2026-05-07T11:09:54&#43;00:00'/><meta property='article:modified_time' content='2026-05-07T11:09:54&#43;00:00'/>
+<meta name="twitter:title" content="关于Windows汇总累积更新以Win7为例">
+<meta name="twitter:description" content="前言 【转】 这是积累的一篇老文，可能大量参考了他人的文章，但都经过博主实践检验。 可以作为在虚拟机里回味Win7准备补丁的参考。 认识误区 及时打补">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/aVatar_hu15199967034214377255.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">局域自由博客</a></h1>
+            <h2 class="site-description">梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://bsky.app/profile/localfreedom.bsky.social'
+                        target="_blank"
+                        title="Bluesky"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m123.97 25.42c-.32-11.8-10.13-15.93-15.43-15.82s-17.58 3.81-29.59 14.96-17.1 25.97-17.1 25.97-.76 0-1.41-.32-4.93-8.46-10.23-16.47-15.69-19.26-23.05-23.27c-7.36-4-18.29-2.6-20.99 2.71-2.71 5.3-2.16 14.07-2.06 24.13.11 10.06.11 14.39 2.81 25.75 2.71 11.36 14.93 14.07 14.93 14.07s-5.63 4.44-8.55 8.12-3.14 12.55 3.25 21.21c6.38 8.66 18.68 16.8 30.04 11.93s16.99-15.91 16.99-15.91c11.25 16.88 22.18 17.86 32.9 12.12 10.71-5.74 15.15-16.12 14.5-24.67s-9.04-14.09-9.04-14.09c4-1.08 14.67-4.09 17.27-12.31s5.09-26.3 4.76-38.09zm-5.58 1.82c-.65 8.33-1.62 25.75-6.6 33.65s-12.01 11.58-16.67 12.12c-4.65.54-7.47-.32-8.44.54s-.76 2.38 3.9 3.35c4.65.97 15.15 2.81 14.72 10.6s-6.71 18.94-19.05 21.75-21.75-14.18-22.18-16.67.11-5.41-2.16-5.41-1.73 5.52-6.17 11.8-11.25 11.9-20.78 12.77c-9.52.87-19.37-12.34-19.8-16.88s1.73-10.5 6.71-13.53 14.07-6.71 16.12-7.79c2.06-1.08 1.08-4.55-1.41-3.46-2.49 1.08-16.23 3.57-22.29-5.3-4.32-6.32-6.82-14.5-7.03-26.51-.22-12.01-.22-22.72 3.03-24.89 3.25-2.16 13.2-1.62 20.78 4.76 7.57 6.38 16.77 18.4 21.53 28.78 4.76 10.39 6.17 12.99 8.66 13.09 2.49.11 2.71-2.81 4.98-8.33s9.41-17.96 20.02-26.51c10.6-8.55 17.64-12.12 24.02-11.36s8.77 5.09 8.12 13.42zm-101.07-11.15c-4.98-.43-6.49 1.3-7.03 3.68s-.76 13.2.11 14.28 3.03 1.3 3.68-.11-.32-8.77.22-12.12 3.9-2.38 4.33-3.25.12-2.37-1.3-2.49zm8.55 67.2c-1.84.22-6.17 5.09-5.84 11.25s6.28 7.14 6.82 5.52-2.27-2.38-2.49-6.28 3.03-6.38 3.68-7.9c.65-1.51-.76-2.76-2.16-2.6zm76.18-60.71c.65-1.08.65-3.14-.87-3.25s-3.14.97-9.85 6.28c-6.71 5.3-12.29 11.65-13.09 13.53-.65 1.51 1.95 3.25 2.92 2.38s3.35-4.54 9.2-10.6c5.84-6.06 11.04-7.25 11.69-8.33zm-22.32 75.73c-1.14-.49-3.12 1.99-2.6 2.68.81 1.06 6.66 5.84 7.14 6.01.49.16 2.44-.73 2.44-1.54s-5.84-6.66-6.98-7.14zm2.19-1.54c.81 1.05 8.93 8.12 9.41 8.28.49.16 2.43-.73 2.43-1.54s-8.12-8.93-9.25-9.41c-1.14-.49-3.12 1.99-2.6 2.68zm13.15 3.24c.49.16 2.43-.73 2.43-1.54s-5.68-6.66-6.82-7.14c-1.14-.49-3.12 1.99-2.6 2.68.81 1.06 6.49 5.84 6.98 6.01zm3.73-4.62c.49.16 1.87-1.22 1.87-2.03s-3.81-4.79-4.95-5.28-3.12 1.99-2.6 2.68c.81 1.06 5.19 4.46 5.68 4.63zm.9-6.82c.49.08.97-.81 1.05-1.7s-1.79-3-2.68-3-2.34 1.65-1.79 2.27c.73.81 2.92 2.35 3.41 2.43zm-8.36-27.03c-.81-.24-3.35 1.73-2.92 2.44.49.81 6.25 6.01 6.9 6.41.65.41 2.11-.73 2.27-1.46s-5.44-7.14-6.25-7.39zm3.73-2.51c-.89.08-2.6 1.38-2.19 1.79 1.06 1.05 6.66 7.63 6.98 7.71s2.03-.49 2.27-1.46-6.17-8.12-7.06-8.03zm5.03-3.25c-.81 0-3.6.94-2.92 1.79.97 1.22 7.87 7.22 8.36 7.14s1.7-.73 1.38-1.46-6.01-7.47-6.82-7.47zm5.03-3.9c-.49-.08-2.87 1.48-2.52 2.03.57.89 5.76 6.41 6.57 6.66.81.24 1.62-1.14 1.7-2.03s-5.28-6.57-5.76-6.66zm3.33-5.43c-.97-.08-2.84 1.43-2.27 2.19.49.65 5.28 4.95 5.6 5.03s1.3-.81 1.38-2.11-3.73-5.03-4.71-5.11zm1.22-7.06c-.73-.16-2.25 1.86-1.95 2.35.65 1.05 4.3 3.98 4.79 3.98s1.54-.81 1.62-1.62-3.73-4.55-4.46-4.71zm1.54-5.85c-.97-.16-1.82 1.95-1.46 2.68.41.81 2.68 2.35 3.33 2.35s1.14-.81 1.22-2.11-2.11-2.76-3.08-2.92zm.41-6.17c-1.22-.08-2.1 2.37-1.46 3.33.32.49 1.54 1.46 2.35 1.79.81.32 1.95-.08 2.19-1.06.24-.97-1.87-3.98-3.08-4.06zm2.11-2.92c1.14-1.79-1.21-3.45-2.43-1.87-1.38 1.79 1.3 3.65 2.43 1.87z" fill="#1d1d1b"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://codeberg.org/LocalFreedom'
+                        target="_blank"
+                        title="Codeberg"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg xmlns="http://www.w3.org/2000/svg"
+aria-label="Codeberg" role="img"
+viewBox="0 0 512 512"><rect
+width="512" height="512"
+rx="15%"
+fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4" y2="407.835" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#71c2ff"/><stop offset="1" stop-color="#39aaff"/></linearGradient></defs><path fill="url(#A)" d="M259.804 161.4c-.44 0-1.1 0-1.32.44l-.44 1.1L332.04 440.21a192.039 192.039 0 0 0 86.77-74.437L261.125 162.06a1.762 1.762 0 0 0-1.321-.661z" opacity=".5" paint-order="stroke markers fill"/><path fill="#2185d0" d="M255.3 71.8a192 192 0 0 0-162 294l160.1-207c.5-.6 1.5-1 2.6-1s2 .4 2.6 1l160 207a192 192 0 0 0 29.4-102c0-106-86-192-192-192a192 192 0 0 0-.7 0z" paint-order="stroke markers fill"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/LocalFreedom'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#认识误区">认识误区</a></li>
+    <li><a href="#汇总累积更新早期使用经历">汇总累积更新早期使用经历</a></li>
+    <li><a href="#剖析汇总累积更新">剖析汇总累积更新</a>
+      <ol>
+        <li><a href="#汇总累积更新与原有单体更新">汇总累积更新与原有单体更新</a></li>
+        <li><a href="#更新的更新">更新的更新</a></li>
+        <li><a href="#汇总累积更新也是一个补丁">汇总累积更新也是一个补丁</a></li>
+      </ol>
+    </li>
+    <li><a href="#汇总累积更新的正确使用方式">汇总累积更新的正确使用方式</a></li>
+    <li><a href="#以-win7-为例">以 Win7 为例</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tip/" >
+                Tip
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%85%B3%E4%BA%8Ewindows%E6%B1%87%E6%80%BB%E7%B4%AF%E7%A7%AF%E6%9B%B4%E6%96%B0%E4%BB%A5win7%E4%B8%BA%E4%BE%8B/">关于Windows汇总累积更新以Win7为例</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 07, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    14 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>【转】
+这是积累的一篇老文，可能大量参考了他人的文章，但都经过博主实践检验。
+可以作为在虚拟机里回味Win7准备补丁的参考。</p>
+<h2 id="认识误区">认识误区
+</h2><p>及时打补丁特别是操作系统的安全补丁是很有很有必要的。所以，我一直都开启着Windows的自动更新检查，也很少遇到因为打补丁引起其他问题。
+然而，一旦重装系统，打补丁就非常头疼，因为太慢了。但是又不放心第三方的打补丁软件，必竟该打哪些补丁还是开发方才最具权威性。
+所以，2016年5月微软发布Windows 7 SP1 和 Windows Server 2008 R2 SP1 的方便使用汇总更新(KB3125574)时，赶紧制作了一张整合这个补丁的镜像，以为像是发布了SP2一样，安装之后自动更新会一个补丁都没有。然而，用这个镜像装出来的系统当时自动更新大约找到了四十几个补丁。
+仔细想一下，也好理解，发布SP版本就相当于发布一个新产品，就会有针对该产品的维护周期，那么发布时应该暂时不会有补丁。但是汇总补丁表明产品并没有变，那么找到没有汇总进去的补丁就很正常。
+汇总补丁不大可能把所有的补丁都汇总，必竟一个挺复杂的软件由多个可选择的部分组成，如果一个用户根本没有安装某个部分，那么针对这一部分的补丁自然就打不上去，即便忽略这个问题，强制打了补丁，那用户以后再安装这一部分怎么算？从补丁上看是已经打过补丁了，但实际显然是没有打的，就乱套了。
+所以，汇总更新很显然只能包含系统核心部分或者说所有人都必须安装的部分的补丁。
+总之，汇总更新不能也不可能汇总所有的补丁，以前认为汇总应该是所有补丁的汇总明显是一个认识误区。</p>
+<h2 id="汇总累积更新早期使用经历">汇总累积更新早期使用经历
+</h2><p>随着时间的推移，使用集成了方便汇总更新(KB3125574)的安装盘安装的系统，自动更新检查出来的补丁数量越来越多，记得有一次看到检查出二百多个补丁。</p>
+<p>特别是2016年10月微软采用月度累积汇总方式发布更新后还检查出这么多补丁就非常不理解了。因为无论是从字面上理解还是网上的介绍，每个月的累积汇总更新都包含了上一个月的累积汇总更新，那么最新的累积汇总更新应该就包含了所有补丁至少是从采用累积更新方式以来的所有补丁，即便汇总更新只能包含核心的补丁，但外围的补丁应该也不会太多，而且也没有启用很多功能，就不应该检查出太多补丁啊。所以曾经认为，所谓的累积更新方式是骗人的。
+直到由于 Windows 7 和 Windows Server 2008 R2 技术支持已到期，准备自己汇总一下默认情况下系统会自动打多少补丁，这些补丁应该就是最基本的，集成到安装盘里面的话，基本就不用纠结补丁问题了，因为不会再有补丁了。</p>
+<p>结果才惊奇地发现，虽然安装完系统后检查出一百七十几个补丁，但是更新完之后实际只安装了几十个而已，后面陆陆续续又检查到一些补丁，但是这些补丁打了之后，总的已安装更新数量并没有增加，仍然是很稳定的几十个(60个左右)，这就说明后面的补丁的确是替代了前面的补丁，并且连已安装补丁列表都被替代了。也就是说累积补丁是真的。</p>
+<h2 id="剖析汇总累积更新">剖析汇总累积更新
+</h2><h3 id="汇总累积更新与原有单体更新">汇总累积更新与原有单体更新
+</h3><p>那么问题来了，既然累积补丁是真的，那为什么还要检查出一两百个补丁来而不是直接就安装最新的累积补丁呢？
+仔细琢磨了半天才想明白，直接装最新的累积补丁手工安装可以但是自动安装不行或者说行不通。为什么呢？</p>
+<p>首先，补丁是针对存在的问题进行修补，那么问题是否存在总要判断一下，至少没理由用旧的版本去替换新的版本吧。也就是补丁是要有先决条件的，不满足先决条件就不执行修补，这样虽然有问题至少还可以用，如果随便修改反而可能造成混乱而不可用。
+其次，补丁可能针对同一个地方进行多次修补，这样的话，每个补丁只能把上一个版本作为先决条件，否则，如果把更早的版本作为先决条件，那么相对较新的版本反而得不到更新了。所以，自动更新只能依次更新，而人工更新的话，就可以跳过中间的更新而直接用最新的版本来更新。
+当然，这里用文件版本号作为先决条件来判断只是举个例子，实际的判断肯定更复杂更严谨，除了文件版本号可能还有其他条件，仅就版本号来说有可能是小于x.x.x或者等于x.x.x等等，并且打补丁也不一定就是替换文件，有可能是修改某个配置参数而已。</p>
+<p>总之，对于自动更新，如果随意跳过某个中间补丁，有可能这个补丁能成功打上，但是由于可能由于漏掉了中间的补丁，造成后续无法继续更新。
+所以要确保自动更新能持续正常工作，必须很严格的依次更新，而人工更新的话，出了问题再人工撤回呗。</p>
+<p>这就是安装系统后检查出很多补丁，但是补丁打完之后已安装的补丁数量少得多的原因，也是我们在 Windows 7 时代感受不到累积补丁好处的原因，因为系统并不原生采用积累更新方式，汇总积累更新只是为离线自由补丁提供方便，并不能取代单个补丁。</p>
+<h3 id="更新的更新">更新的更新
+</h3><p>顺便补充一下服务堆栈更新(SSU)的概念，服务堆栈更新往往是新补丁的先决条件之一。
+服务堆栈更新本身也有先决条件，就是上一次的服务堆栈更新。也就是服务堆栈更新把更新的范围分成了一段一段的，只有把前面的补丁打了，才能打后面的。
+这样就防止自动更新一次更新太多，老是更新不完。当然，更新程序本身也需要升级也是服务堆栈更新存在的原因。
+由于它是新补丁的先决条件，所以不会包含在累积更新里，是单独发布的。
+SSU有可能代替以前的SSU，有时候又不会，所以哪些需要哪些不需要还得手工安装或集成进行测试。
+在原始安装盘上集成较新的SSU或者在用原始安装盘新装的系统上直接安装了较新的SSU之后，由于更新堆栈变长了，前几次检查更新往往会失败，需要多检查几次才行。而逐步更新上来的话，虽然更新堆栈仍然变长，但是以前的补丁已经打过了，补丁信息也已经下载过了，所以也不太会出现检查更新失败的情况。</p>
+<h3 id="汇总累积更新也是一个补丁">汇总累积更新也是一个补丁
+</h3><p>实际上，累积更新虽然包含了很多更新并且有自己的补丁号，但并不是说被汇总的补丁就不存在了，每一个具体的补丁都依然单独存在，汇总补丁作为一种方便的打补丁方式，只是把多个补丁集中在一起打而已，其先决条件必然也是所有补汇总补丁的先决条件，只要其中一个条件不满足，汇总补丁就不可能执行，这时候仍然可能分散的打其中一部分补丁的。</p>
+<p>根据前面的分析，使用自动更新的话，实际上是一个一个的小补丁打完，再打汇总补丁的。
+如果汇总补丁的先决条件满足，那么其中的每个补丁实际上都已经打上了，汇总补丁可能也就是更新一下已安装补丁的信息而已，而如果汇总补丁的先决条件不满足，那也没关系，反正所有能补的都补上了。只不过如果出现这种情况，恐怕后续的汇总补丁都没办法打了，这可能也是某些电脑上仍然有几百个补丁的原因吧。</p>
+<p>另外，服务堆栈更新可以就看成是更新程序的升级，新的服务堆栈总是包含旧的服务，所以前面虽然说更新的范围是一段一段的，像一个栈，但是如果服务堆栈更新后不能使用老的补丁，那就相当于更新之后就不允许启用以前没有启用的功能了，因为这些已经无法更新了。
+所以，直接把服务堆栈更新到最新是不应该有问题的。
+当然，作为某一个补丁先决条件的即便较旧的SSU也需要打。</p>
+<h2 id="汇总累积更新的正确使用方式">汇总累积更新的正确使用方式
+</h2><p>正确的打补丁的方式是：安装完系统之后先手工安装最新的累积补丁（当然还得先打这个累积补丁的先决条件需要的补丁）。这样才能节约打补丁的时间。当然，这样做并不会影响累积补丁中未包含的补丁的，因为系统自动更新仍然会从当前产品第一个补丁开始检查是否需要更新的。
+原理前面已经说过了，为了保证自动更新的可持续和系统稳定，Windows 7 自动更新只能依次一个一个地检查，然后一个一个的安装，检查花的时间只会越来越长的，但关键的重要的补丁已经打好，其他的就让它后台慢慢地检查慢慢地安装吧，无所谓了。</p>
+<h2 id="以-win7-为例">以 Win7 为例
+</h2><p>以 Windows 7 SP1 为基础，打补丁或者集成补丁的正确顺序应该是下面这样：</p>
+<ol>
+<li>安装KB3020369、KB3125574。（2015 年 4 月 Windows 7 和 Windows Server 2008 R2 的服务堆栈更新、Windows 7 SP1 和 Windows Server 2008 R2 SP1 的方便使用汇总更新）。</li>
+<li>安装KB4490628、KB4474419。（2019 年 3 月 12 日服务堆栈更新、2019 年 9 月 10 日最新 SHA-2 更新）这两个是最后的月度汇总更新的先决条件。</li>
+<li>安装KB4534310、KB4534314。（2020 年 1 月 14 日月度汇总和仅安全更新，<a class="link" href="https://support.microsoft.com/en-us/topic/windows-7-sp1-and-windows-server-2008-r2-sp1-update-history-720c2590-fd58-26ba-16cc-6d8f3b547599"  target="_blank" rel="noopener"
+    >累积汇总更新的历史</a>，但是，2020年1月14日是 Windows 7 和 Windows Server 2008 R2 的支持中止日期，之后的补丁只有购买了扩展安全更新 (ESU)的才能安装成功。</li>
+</ol>
+<p>其他的补丁就视需要而定，下面是用按上述顺序安装补丁后又自动检查安装的补丁列表。其中一些不适用于Windows 7一些不适用于Windows Server 2008 R2。其中包含了 <strong>NVMe</strong> 支持补丁KB2990941、KB3087873。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>KID</th>
+<th>描述</th>
+<th>Windows 7 SP1</th>
+<th>Windows Server 2008 R2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KB977238</td>
+<td>用于Windows Server 2008R2 x64 Edition的HYPER-V最佳实践分析工具更新程序(KB977238)</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB981390</td>
+<td>用于Windows Server 2008R2 x64 Edition的Windows Server Update Services最佳实践分析工具更新程序(KB981390)</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB981391</td>
+<td>用于Windows Server 2008R2 x64 Edition的Active Directory Rights Management Services最佳实践分析工具更新程序(KB981391)</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB981392</td>
+<td>用于Windows Server 2008R2 x64 Edition的应用程序服务器最佳实践分析工具更新程序(KB981392)</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB2386667</td>
+<td>用于Windows Server 2008R2 x64 Edition的应用程序服务器最佳实践分析工具更新程序(KB2386667)</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB2533552</td>
+<td>尝试安装Windows 7 SP1、Windows Server 2008 R2 SP1或Windows Embedded Standard 7 SP1时可阻止“0xC0000034”错误消息的更新已发布</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB2534111</td>
+<td>“当您使用Windows 7 SP1安装Windows 7的”“计算机名不能包含数字”“错误信息集成安装介质”</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB2545698</td>
+<td>运行Windows Vista、Windows Server 2008、Windows 7或Windows Server 2008 R2的计算机的Internet Explorer 9中以某些核心字体显示的文本模糊</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2547666</td>
+<td>在运行Windows 7或Windows Server 2008 R2的计算机上无法从Internet Explorer浏览历史记录中删除长URL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2574819</td>
+<td>针对Windows 7 SP1和Windows Server 2008 R2 SP1中的DTLS添加支持的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2592687</td>
+<td>Remote Desktop Protocol 8.0更新程序</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2603229</td>
+<td>32位版本的两个注册表项的值在64位版本的Windows 7或Windows Server 2008 R2中错误</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2667402</td>
+<td>MS12-020：终端服务器拒绝服务漏洞的安全更新说明：2012年3月13日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2670838</td>
+<td>Windows 7 SP1和Windows Server 2008 R2 SP1的平台更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2676562</td>
+<td>MS12-034：Microsoft Office、Windows、.NETFramework和Silverlight的组合安全更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2685811</td>
+<td>适用于Windows Vista、Windows Server2008、Windows 7和Windows Server 2008 R2的1.11版内核模式驱动程序框架更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2685813</td>
+<td>适用于Windows Vista、Windows Server2008、Windows 7和Windows Server 2008 R2的1.11版用户模式驱动程序框架更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2698365</td>
+<td>MS12-045：Microsoft数据访问组件中的漏洞可能允许远程执行代码：2012年7月10日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2706045</td>
+<td>MS12-056：JScript和VBScript引擎中的漏洞可能允许远程执行代码：2012年8月14日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2729094</td>
+<td>现提供对Windows 7和Windows Server 2008 R2中SegoeUI符号字体的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2732059</td>
+<td>You cannot openan.oxps file in Windows 7 or in Windows Server 2008 R2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2750841</td>
+<td>已推出用于Windows 7和Windows Server 2008 R2的IPv6准备就绪更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2761217</td>
+<td>已推出可向Windows 7和Windows Server 2008 R2添加Calibri Light和Calibri LightItalic字体的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2773072</td>
+<td>更新更改在Windows 7 中的游戏分级系统</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB2813347</td>
+<td>MS13-029：远程桌面连接7.0客户端的安全更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2830477</td>
+<td>Remote Desktop Protocol 8.1更新程序</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB2834140</td>
+<td>在运行Windows 7 SP1或Windows Server 2008 R2 SP1的计算机上安装更新2670838后出现“0x00000050”停止错误</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2841134</td>
+<td>Internet Explorer11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2841134</td>
+<td>Internet Explorer11zh_cn语言包</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2862330</td>
+<td>MS13-081：USB驱动程序安全更新说明：2013年10月8日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2894844</td>
+<td>Windows 7 Service Pack1和Windows Server 2008 R2 Service Pack1上.NET Framework3.5.1的安全更新说明：2013年12月10日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2900986</td>
+<td>MS13-090：ActiveX KillBits累积安全更新：2013年11月12日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2912390</td>
+<td>MS14-007：Direct2D中的漏洞可能允许远程代码执行：2014年2月11日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2919469</td>
+<td>Canada country code is incorrectin Windows 7 SP1 or Windows Server 2008 R2 SP1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2923545</td>
+<td>RDP8.1更新补丁</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB2970228</td>
+<td>用以在Windows中支持俄罗斯卢布新货币符号的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2984972</td>
+<td>用于支持Windows 7和Windows Server 2008 R2上的受限管理登录的RDC7.1更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2990941</td>
+<td>更新以在 NVM 速成版 Windows 7 和 Windows Server 2008 R2 中添加本地驱动程序支持</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2993651</td>
+<td>MS14-045：内核模式驱动程序的安全更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB2999226</td>
+<td>Windows中的Universal C Runtime更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3004375</td>
+<td>Microsoft安全公告：用于改善Windows命令行审核的更新：2015年2月10日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3006137</td>
+<td>在Windows中，此更新将立陶宛的货币符号从立陶宛litas（Lt）更改为欧元(€)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3018238</td>
+<td>MS14-066：Schannel中的漏洞可能允许远程执行代码</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB3020369</td>
+<td>2015年4月Windows 7和Windows Server2008 R2的服务堆栈更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3020388</td>
+<td>MS15-004：安装了远程桌面连接8.1客户端更新时Windows 7和Windows Server 2008 R2的安全更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3021917</td>
+<td>更新到Windows7SP1的性能改进</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB3035126</td>
+<td>“MS15-029:Vulnerabilityin Windows Photo Decoder component could allowinformationdisclosure:March10 2015”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3046269</td>
+<td>MS15-037：Windows任务计划程序中的漏洞可能允许特权提升：2015年4月14日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3054205</td>
+<td>WinVerifyTrust函数的SIP的更新</td>
+<td>×</td>
+<td></td>
+</tr>
+<tr>
+<td>KB3059317</td>
+<td>MS15-060：Microsoft常用控件中的漏洞可能允许远程执行代码：2015年6月9日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3068708</td>
+<td>更新的客户体验和诊断遥测</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3075226</td>
+<td>MS15-082：WindowsRDP安全更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3080149</td>
+<td>更新的客户体验和诊断遥测</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3087873</td>
+<td>&ldquo;0x0000007E&quot;stop 错误之后在 Windows 7 SP1 或 Windows Server 2008 R2 SP1 安装修补程序 2990941</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3102429</td>
+<td>在Windows中支持阿塞拜疆马纳特和格鲁吉亚语拉里货币符号的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3110329</td>
+<td>MS16-007：适用于Windows的安全更新程序说明：2016年1月12日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3118401</td>
+<td>Windows中的Universal C Runtime更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3123479</td>
+<td>对Microsoft根证书程序弃用SHA-1哈希算法</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3124275</td>
+<td>MS16-001：Internet Explorer安全更新程序：2016年1月12日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3125574</td>
+<td>Windows7SP1和Windows Server 2008 R2 SP1的方便使用汇总更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3138612</td>
+<td>Windows7和Windows Server 2008 R2的Windows更新客户端：2016年3月</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3140245</td>
+<td>启用TLS1.1和TLS1.2作为默认WinHTTP在Windows中的安全协议</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3150513</td>
+<td>Windows的最新兼容性定义更新</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB3155178</td>
+<td>MS16-056：Windows日记本的安全更新程序说明：2016年5月10日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3156016</td>
+<td>MS16-055：Microsoft图形组件的安全更新程序说明：2016年5月10日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3159398</td>
+<td>“MS16-072:DescriptionofthesecurityupdateforGroupPolicy:June142016”</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3161102</td>
+<td>Windows日记本中删除组件的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3161949</td>
+<td>MS16-077：WPAD安全更新程序说明：2016年6月14日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3170735</td>
+<td>Windows日记本的2016年7月更新</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB3172605</td>
+<td>2016年7月Windows 7 SP1和Windows Server 2008 R2 SP1更新汇总</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3179573</td>
+<td>8月2016年的Windows 7 SP1和Windows Server 2008 R2 SP1更新汇总</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB3184143</td>
+<td>删除与Windows 10免费升级优惠活动相关的软件</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB3185319</td>
+<td>MS16-104：Internet Explorer安全更新程序：2016年9月13日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4019990</td>
+<td>在Windows Server 2012、Windows Server 7和Windows Server 2008 R2上的d3dcompiler_47.dll组件的更新</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4040980</td>
+<td>适用于Windows 7 SP1和Windows Server 2008 R2 SP1的.NET Framework3.5.1的安全与质量汇总(KB4040980)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4474419</td>
+<td>针对Windows Server 2008 R2、Windows 7和Windows Server 2008的SHA-2代码签名支持更新：2019年9月23日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4490628</td>
+<td>Windows 7 SP1和Windows Server 2008 R2 SP1的服务堆栈更新：2019年3月12日</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4493132</td>
+<td>Windows 7 SP1支持通知</td>
+<td></td>
+<td>×</td>
+</tr>
+<tr>
+<td>KB4532945</td>
+<td>Windows 7 SP1和Windows Server 2008 R2 SP1的.NET Framework 3.5.1的安全与质量汇总(KB4532945)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4534310</td>
+<td>2020年1月14日-KB4534310（月度汇总）</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4534314</td>
+<td>2020年1月14日-KB4534314（仅安全更新）</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KB4536952</td>
+<td>Windows7SP1和Server2008R2SP1的服务堆栈更新：2020年1月14日</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/windows/">Windows</a>
+        
+            <a href="/tags/offline/">Offline</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/wsl2.jpeg" loading="lazy" data-key="" data-hash="/img/wsl2.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 推荐后端 WSL2 完全离线安装</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Win10/11 不联网强制开启移动热点</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/win-to-go.jpeg" loading="lazy" data-key="" data-hash="/img/win-to-go.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">将Win10安装到移动硬盘</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/vscode%E6%89%A9%E5%B1%95%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/vsix.jpeg" loading="lazy" data-key="" data-hash="/img/vsix.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VSCode扩展离线安装包直链下载</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/msoffice-%E6%B8%85%E9%99%A4%E6%96%87%E4%BB%B6%E4%BD%9C%E8%80%85%E7%AD%89/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">MSOffice 清除文件作者等</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2026 局域自由博客
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
