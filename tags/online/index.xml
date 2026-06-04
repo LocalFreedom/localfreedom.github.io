@@ -6,7 +6,109 @@
         <description>Recent content in Online on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 21 Dec 2025 06:34:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/online/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Jun 2026 12:12:56 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/online/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>E-book 资源站分享</title>
+        <link>https://localfreedom.pages.dev/p/e-book-%E8%B5%84%E6%BA%90%E7%AB%99%E5%88%86%E4%BA%AB/</link>
+        <pubDate>Thu, 04 Jun 2026 12:12:56 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/e-book-%E8%B5%84%E6%BA%90%E7%AB%99%E5%88%86%E4%BA%AB/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/Ebook.jpg" alt="Featured image of post E-book 资源站分享" /&gt;&lt;p&gt;离线生活不能缺少阅读，电子书的出现让我们可以相对廉价且方便的购置并存储所需要的书籍。
+为了能持续获得自己喜欢的、所需的书目资料的电子版，需要电子出版市场蓬勃发展，我们要购买可离线阅读的正版书目，让把作品提供电子版的作者和出版商获得应有的回报。
+但还是有很多资源没有正式的电子版或采用租赁方式提供电子版，或者是已经购买过纸质书但难以保存。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这里分享一些电子资料搜索下载站点，便于读者收纳自己喜爱的电子书和其他资料，建立个人化的离线图书馆，享受不受在线服务约束监视的自由阅读。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive
+&lt;/h2&gt;&lt;p&gt;目前域名 &lt;a class=&#34;link&#34; href=&#34;https://annas-archive.gl/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://annas-archive.gl/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;安娜的档案(Anna&amp;rsquo;s Archive)是一家自由、非营利的影子图书馆元搜索引擎，由假名Anna的人在得知美国当局查封 Z-Library 后所创建。
+该网站汇集了Z-library、Sci-Hub、LibGen等影子图书馆的资源索引，自称为&amp;quot;人类历史上最大的真正开放的图书馆&amp;quot;，是如今最广泛、最好用的电子书下载平台。
+尽管该平台不直接存储盗版资源，但因其索引广泛规模庞大仍然被各国执法机构打击，&lt;a class=&#34;link&#34; href=&#34;https://annas-archive.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原始域名&lt;/a&gt;也遭到查封。&lt;/p&gt;
+&lt;h2 id=&#34;library-genesis&#34;&gt;Library Genesis
+&lt;/h2&gt;&lt;p&gt;由于遭到各国打击，目前没有稳定可用的域名，博主认为完全被 Anna&amp;rsquo;s Archive 取代。&lt;/p&gt;
+&lt;p&gt;用默认的LibGen搜索找各专业教科书几乎百发百中。支持诸如Author, ISBN, MD5等等高级搜索方法供你花式搜书。
+LibGen 早期都是一群开源自由主义者自发架设私服做镜像来支撑存储池的（致敬在背后默默付出的每一位志士仁人），后来LibGen的存储池升级到了IPFS的分布式网络上，稳定性大增。&lt;/p&gt;
+&lt;p&gt;在其下载镜像列表中有一个 &lt;strong&gt;Z-Library&lt;/strong&gt; 本身也是一个著名的电子书分发网站，不过 Z-lib 和 LibGen 的重合度很高而且是个商业网站所以博主并不推荐，感兴趣的朋友可以看下 reddit 社区对Z-lib的评价。&lt;/p&gt;
+&lt;h2 id=&#34;sci-hub&#34;&gt;Sci-Hub
+&lt;/h2&gt;&lt;p&gt;由于遭到各国打击，目前没有稳定可用的域名。&lt;/p&gt;
+&lt;p&gt;专注学术刊物和文章的免费分发，由一位来自哈萨克斯坦的女生创办。
+与Libgen其实是二位一体的存在。很多后台接口和数据都是放在一起的，因为创办和维护这两个网站的都是同一群人。&lt;/p&gt;
+&lt;h2 id=&#34;pdfdrive&#34;&gt;&lt;del&gt;PDFDRIVE&lt;/del&gt;
+&lt;/h2&gt;&lt;p&gt;这个网站的存书量很大，和LibGen重合度比较低，所以主要是能够互补使用。日文书的命中率要略高于LibGen。
+2021年关停后已彻底无法访问。&lt;/p&gt;
+&lt;h2 id=&#34;welib&#34;&gt;WeLib
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://welib.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://welib.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;疑似 PDFDRIVE 的继承，提供上亿的图书文章下载，以PDF格式为主，有一些整理合并。&lt;/p&gt;
+&lt;h2 id=&#34;project-gutenberg&#34;&gt;Project Gutenberg
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.gutenberg.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.gutenberg.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;专注版权失效（公有领域）的经典著作，几乎所有旧书都能找到高质量的版本，是一个稳定高质量的电子书获取平台。
+当然盗版书籍这里是没有的。&lt;/p&gt;
+&lt;h2 id=&#34;internet-archive&#34;&gt;Internet Archive
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://archive.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://archive.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个网站相信大家都不会太陌生，有人叫它网络档案馆。
+最出名的功能应该是时光机，可以回溯查看网页曾经的样子。
+我觉得它是互联网精神初始之火在当今最后的延存，是信仰者仅存的圣城。
+这里有各种资源的收录，包罗万象，合规方面也比较稳妥，没有太激进的盗版分发。
+在电子书方面，这里难得的集成了一些评论功能。&lt;/p&gt;
+&lt;p&gt;IA的搜书可以直接使用高级搜索功能，也可以用下面这些入口简化操作难度：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;eBooks and Texts of Internet Archive: &lt;a class=&#34;link&#34; href=&#34;https://archive.org/details/texts&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://archive.org/details/texts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Internet Archive Books collection: &lt;a class=&#34;link&#34; href=&#34;https://archive.org/details/books&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://archive.org/details/books&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Openlibrary by Internet Archive: &lt;a class=&#34;link&#34; href=&#34;https://openlibrary.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://openlibrary.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很多大型机构组织的过期内部文档、专业技术手册都能在IA找到各种格式下载并可以在线预览。&lt;/p&gt;
+&lt;h2 id=&#34;其他特殊的获取渠道&#34;&gt;其他特殊的获取渠道
+&lt;/h2&gt;&lt;h3 id=&#34;the-eye&#34;&gt;The Eye
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://the-eye.eu/public/Books/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://the-eye.eu/public/Books/&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方介绍：The-Eye is a non-profit, community driven platform dedicated to the archiving and long-term preservation of any and all data including but by no means limited to&amp;hellip; websites, books, games, software, video, audio, other digital-obscura and ideas.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原本是 Retro Gamer 囤积分享 ROM 的档案库，后来逐渐扩展到各种方面的资料。
+图书存档分类下保存了很多出于各种原因被关停封禁的档案库网站的整站资源备份，基本上就是个在跑在网际网络上的暗网资料库。
+比如神秘学、阴谋论、无政府主义、军政相关的美国禁书，该看的不该看的各种内容什么都有。
+但这索引对找书就不友好了，建议搭配第三方搜索引擎。
+此外，The Eye的维护团队也参与到了Sci-Hub拯救行动当中，因为两个社区的核心理念都非常的相近。&lt;/p&gt;
+&lt;h3 id=&#34;higher-intellect&#34;&gt;Higher Intellect
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://preterhuman.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://preterhuman.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这是一例还没被取缔的档案网站，自带搜索和目录索引，由于是现存状态所以比在 The Eye 里翻找全站备份要易用得多。
+各种专业技术文档，能随便学的和不能随便学的技术都有。&lt;/p&gt;
+&lt;h3 id=&#34;global-security&#34;&gt;Global Security
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.globalsecurity.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.globalsecurity.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;专注军事和安全领域，有各种军事手册和情报资料。
+军事爱好者应该会很感兴趣。&lt;/p&gt;
+&lt;h3 id=&#34;archive-of-our-own&#34;&gt;Archive of Our Own
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://archiveofourown.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://archiveofourown.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;一个亚文化档案库，曾经只闻名于同人圈的AO3。
+其实每个开放社区建立的档案库都是非常伟大的，都有着各自的曲折故事，AO3只是其中之一。&lt;/p&gt;
+&lt;h3 id=&#34;the-trove&#34;&gt;&lt;del&gt;The Trove&lt;/del&gt;
+&lt;/h3&gt;&lt;p&gt;Archive桌游相关的文档、手册、地图等等资料。&lt;/p&gt;
+&lt;p&gt;原网站已停止运营可从互联网档案馆了解并下载部分内容
+&lt;a class=&#34;link&#34; href=&#34;https://web.archive.org/web/20210506160042/https://thetrove.is/Books/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://web.archive.org/web/20210506160042/https://thetrove.is/Books/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;海盗湾&#34;&gt;海盗湾
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://thepiratebay.org/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://thepiratebay.org/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全世界最知名、最经典的 P2P 资源站，汇集了海量资源，尤其是各种影视剧、游戏等。
+不是专门的电子书网站，不那么好搜索到电子书资源，还可能没有人做种上传。&lt;/p&gt;
+&lt;h3 id=&#34;rutracker&#34;&gt;RuTracker
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rutracker.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://rutracker.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;北极熊的盗版资源索引站。
+不要一想bt下载就觉得只能下影视音乐资源，也不要一想下书就到网站上找。
+很多书都能在p2p网络上找到资源，只是不保证一定能有人做种，所以只是放最后提一下。
+如果是老练的电驴用户或者PT社区用户的话资源获取渠道会更宽的。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>下载网站 Logo 图标</title>
         <link>https://localfreedom.pages.dev/p/%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-logo-%E5%9B%BE%E6%A0%87/</link>
         <pubDate>Sun, 21 Dec 2025 06:34:20 +0000</pubDate>
