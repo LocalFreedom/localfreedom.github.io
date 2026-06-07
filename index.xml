@@ -6,7 +6,212 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 04 Jun 2026 12:12:56 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 Jun 2026 03:02:30 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Firefox 基本设定参考</title>
+        <link>https://localfreedom.pages.dev/p/firefox-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</link>
+        <pubDate>Sun, 07 Jun 2026 03:02:30 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/firefox-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/mozilla-firefox-logo-evolution.png" alt="Featured image of post Firefox 基本设定参考" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;Firefox 是当前最知名、最重要的自由开源浏览器，由 Mozilla 基金会开发维护。
+Firefox 使用独立的 Gecko 渲染引擎，而非常见的 Chromium 或 WebKit，这也使得 Firefox 是主流浏览器中唯一不依赖大公司核心引擎的浏览器，也成为大多数提倡自由的开源OS的默认浏览器。&lt;/p&gt;
+&lt;p&gt;这里主要记录Firefox的基本配置作为日常使用参考。&lt;/p&gt;
+&lt;h3 id=&#34;更新周期&#34;&gt;更新周期
+&lt;/h3&gt;&lt;p&gt;&lt;del&gt;wiki.mozilla.org/Release_Management/Calendar&lt;/del&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://whattrainisitnow.com/calendar/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://whattrainisitnow.com/calendar/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Firefox 大版本周期更新并在周期中提供补丁。
+还有特色的长期支持版 Extended Support Release，ESR则在同版本号大版本更新结束后，一般继续提供安全补丁直至下一个ESR到来满3个周期。
+Android版本68及之前跟随ESR走，之后滚动更新暂无长期支持版。&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载
+&lt;/h2&gt;&lt;p&gt;官方FTP,GIthub,开源镜像站等都可下载。
+这里当然推荐ESR长期支持版，只做安全更新不加功能引入Bug，适合局域自由。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;桌面端各版本离线安装包
+&lt;ul&gt;
+&lt;li&gt;推荐&lt;a class=&#34;link&#34; href=&#34;https://ftp.mozilla.org/pub/firefox/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方FTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;支持XP最终版本52.9.0-esr&lt;/li&gt;
+&lt;li&gt;支持Win7最终版本115.x.x-esr并不断延长支持周期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;移动端Android版
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ftp.mozilla.org/pub/fenix/releases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方FTP安卓版&lt;/a&gt;父目录不同。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sunsite.icm.edu.pl/pub/www/firefox-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;波兰学校镜像&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;profile&#34;&gt;Profile
+&lt;/h2&gt;&lt;p&gt;可以将不同用途的网络浏览分配不同的 Profile 进行隔离避免广告追踪，强化隐私防护。
+比如生活和工作在不同的 Profile 配置不同的按钮、策略等。&lt;/p&gt;
+&lt;p&gt;新版Firefox已经在启动时有了 Profile 管理介面，但ESR还是直接进入预设Profile。
+ESR或老版本启动 Profile 管理介面需要通过命令行执行并添加参数 &lt;code&gt;-ProfileManager&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;介面定义&#34;&gt;介面定义
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;顶部右侧三个横线下拉设定菜单-&amp;gt;&lt;code&gt;More tools&lt;/code&gt;-&amp;gt;&lt;code&gt;Customize toolbar&lt;/code&gt;，考虑重要性、固定性、常用程度，从右到左参考
+&lt;ul&gt;
+&lt;li&gt;Extensions、New private window、Sidebars、Screenshot、Downloads&lt;/li&gt;
+&lt;li&gt;为了 Local Freedom 不要 Pocket 和 Account。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;添加搜索引擎
+&lt;ul&gt;
+&lt;li&gt;打开搜索引擎首页，如 &lt;code&gt;www.startpage.com&lt;/code&gt;, &lt;code&gt;www.youtube.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;搜索框或地址栏会出现绿色小加号点击即可添加搜索引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本设定&#34;&gt;基本设定
+&lt;/h2&gt;&lt;p&gt;about:preferences&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General
+&lt;ul&gt;
+&lt;li&gt;Downloads
+&lt;ul&gt;
+&lt;li&gt;Always ask you where to save files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Updates
+&lt;ul&gt;
+&lt;li&gt;手动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network Settings
+&lt;ul&gt;
+&lt;li&gt;Proxy DNS when using SOCKS v5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Search
+&lt;ul&gt;
+&lt;li&gt;Add search bar in toolbar&lt;/li&gt;
+&lt;li&gt;Default Search Engine
+&lt;ul&gt;
+&lt;li&gt;Startpage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Privacy &amp;amp; Security
+&lt;ul&gt;
+&lt;li&gt;Enhanced Tracking Protection
+&lt;ul&gt;
+&lt;li&gt;Strict&lt;/li&gt;
+&lt;li&gt;Always &amp;ldquo;Do Not Track&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cookies and Site Data
+&lt;ul&gt;
+&lt;li&gt;Delete cookies and site data when Firefox is closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;History
+&lt;ul&gt;
+&lt;li&gt;Use custom settings for history
+&lt;ul&gt;
+&lt;li&gt;Remember browsing and download history&lt;/li&gt;
+&lt;li&gt;Remember search and form history&lt;/li&gt;
+&lt;li&gt;Clear history when Firefox closes
+&lt;ul&gt;
+&lt;li&gt;History
+&lt;ul&gt;
+&lt;li&gt;102esr-115esr Cookie与之前设定不关联变为关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data
+&lt;ul&gt;
+&lt;li&gt;默认即可，115esr开始站点设定与之前设定关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Firefox Data Collection and Use
+&lt;ul&gt;
+&lt;li&gt;常用和涉及帐号的时候都不选&lt;/li&gt;
+&lt;li&gt;偏测试和仅浏览环境都选做贡献&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;HTTPS-Only Mode
+&lt;ul&gt;
+&lt;li&gt;Enable HTTPS-Only Mode in all windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enable secure DNS using
+&lt;ul&gt;
+&lt;li&gt;Increased Protection 优先使用DoH&lt;/li&gt;
+&lt;li&gt;provider 之前版本预设的Cloudflare如今需要联网从Mozilla官方获取
+&lt;ul&gt;
+&lt;li&gt;预设 &lt;a class=&#34;link&#34; href=&#34;https://mozilla.cloudflare-dns.com/dns-query&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mozilla.cloudflare-dns.com/dns-query&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://firefox.dns.nextdns.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://firefox.dns.nextdns.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;谷歌 https://8.8.8.8/dns-query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;扩展&#34;&gt;扩展
+&lt;/h2&gt;&lt;p&gt;Firefox有Mozilla自家扩展，还有Mozilla主动审计后推荐的扩展，一般主要安装这两类扩展，且通常不启用。
+其他扩展主要可分为商店中不被推荐的扩展和桌面应用需要的扩展，如安装其他扩展，建议新建Profile。
+离线扩展建议安装在离线使用的 Profile 中，&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95%E6%8E%A8%E8%8D%90/&#34; &gt;本博客之前做过推荐&lt;/a&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mozilla自家扩展&lt;/li&gt;
+&lt;li&gt;Mozilla主动审计后推荐扩展
+&lt;ul&gt;
+&lt;li&gt;SingleFile, Feedpro, Flagfox, EPUBReader, Emoji&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;三方应用配合扩展
+&lt;ul&gt;
+&lt;li&gt;JoplinWebClipper, Zotero, Kiwix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;商店中普通扩展
+&lt;ul&gt;
+&lt;li&gt;Tampermonkey&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;离线扩展
+&lt;ul&gt;
+&lt;li&gt;OfflineQRCodeGenerator, EPUBReader, Emoji, Kiwix, PageAssist&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;高级设定&#34;&gt;高级设定
+&lt;/h2&gt;&lt;p&gt;about:config&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改 User Agent
+&lt;ul&gt;
+&lt;li&gt;general.useragent.override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;解除安装扩展的认证要求(可以安装下载的zip包)
+&lt;ul&gt;
+&lt;li&gt;xpinstall.signatures.required=false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;加固&#34;&gt;加固
+&lt;/h2&gt;&lt;p&gt;user.js玩法太高级，之后单写一篇介绍。&lt;/p&gt;
+&lt;h2 id=&#34;移动端&#34;&gt;移动端
+&lt;/h2&gt;&lt;p&gt;官方Android的稳定版已无法打开 &lt;code&gt;about:config&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;开发板和隔夜版能使用 &lt;code&gt;about:config&lt;/code&gt; 设定 DoH，从147版本开始稳定版UI介面设定支持DoH。&lt;/p&gt;
+&lt;p&gt;推荐使用完全开源社区版本 &lt;a class=&#34;link&#34; href=&#34;https://f-droid.org/packages/org.mozilla.fennec_fdroid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Fennec F-droid&lt;/a&gt; 去除了数据收集还可以打开 &lt;code&gt;about:config&lt;/code&gt;。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>E-book 资源站分享</title>
         <link>https://localfreedom.pages.dev/p/e-book-%E8%B5%84%E6%BA%90%E7%AB%99%E5%88%86%E4%BA%AB/</link>
         <pubDate>Thu, 04 Jun 2026 12:12:56 +0000</pubDate>
