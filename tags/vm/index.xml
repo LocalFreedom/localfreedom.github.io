@@ -6,7 +6,332 @@
         <description>Recent content in VM on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 25 Apr 2026 12:32:30 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 23:11:28 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/vm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VirtualBox 设定和使用指南</title>
+        <link>https://localfreedom.pages.dev/p/virtualbox-%E8%AE%BE%E5%AE%9A%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Sat, 20 Jun 2026 23:11:28 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/virtualbox-%E8%AE%BE%E5%AE%9A%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/virtualbox.png" alt="Featured image of post VirtualBox 设定和使用指南" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;VirtualBox是由德国InnoTek公司出品的自由开源的虚拟机软件，现在被甲骨文Orcale公司收购发行。
+VirtualBox是易用性、开源可信的最佳平衡，支援Windows/Linux/MacOS/Solaris等各种桌面操作系统，性能足够，迁移配置方便友好。&lt;/p&gt;
+&lt;p&gt;作为系统级软件，开源是非常重要的，一般应用可以丢到容器或虚拟机中，但虚拟机软件本身必然是获取最高许可的。&lt;/p&gt;
+&lt;h3 id=&#34;增强工具&#34;&gt;增强工具
+&lt;/h3&gt;&lt;p&gt;虚拟机软件通常会配套增强工具，用以提供虚拟机和物理机的互动功能，通常共享剪贴板、拖拽等需要增强工具支援。
+增强工具还通常包含虚拟硬件特定的驱动。
+一般增强工具随虚拟机软件包以ISO格式提供。&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载&amp;amp;安装
+&lt;/h2&gt;&lt;h3 id=&#34;下载&#34;&gt;下载
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.virtualbox.org/wiki/Downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网直接提供&lt;/a&gt;针对各OS的安装包，还有适配各种小众Linux的通用安装包。&lt;/p&gt;
+&lt;h3 id=&#34;硬件设定&#34;&gt;硬件设定
+&lt;/h3&gt;&lt;p&gt;通常虚拟化软件需要打开CPU的虚拟化功能，尽管VirtualBox支援完全软件虚拟化，没有硬件支援也能运行x86虚拟机，但性能会非常糟糕。&lt;/p&gt;
+&lt;p&gt;CPU虚拟化功能在Intel系列叫 &lt;code&gt;VT-x&lt;/code&gt; 在 AMD 系列叫 &lt;code&gt;AMD-V&lt;/code&gt;，通常在BIOS中预设启用。&lt;/p&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装
+&lt;/h3&gt;&lt;p&gt;Windows/Linux/MacOS 都可以直接用安装包简易安装。&lt;/p&gt;
+&lt;p&gt;对于Linux发行版，如果仓库中有VirtualBox,建议安装发行版官方仓库维护的版本。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arch
+&lt;ul&gt;
+&lt;li&gt;从发行版仓库安装 &lt;code&gt;sudo pacman -S virtualbox&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ubuntu
+&lt;ul&gt;
+&lt;li&gt;确认启用multiverse通道 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;从发行版仓库安装 &lt;code&gt;sudo apt install virtualbox&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;扩展&#34;&gt;扩展
+&lt;/h3&gt;&lt;p&gt;Orcale将部分高阶功能以专有许可发布，通过扩充套件的方式强化VirtualBox功能，主要包括USB3.0的支援等。
+扩展包可以从&lt;a class=&#34;link&#34; href=&#34;https://www.virtualbox.org/wiki/Downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官网下载页面&lt;/a&gt;免费下载，需要接受专有协议。&lt;/p&gt;
+&lt;p&gt;最新版本USB3.0也转移到自由开源部分了，所以扩充套件已经没什么安装必要了。&lt;/p&gt;
+&lt;h2 id=&#34;全局设定&#34;&gt;全局设定
+&lt;/h2&gt;&lt;p&gt;打开软件介面，左上角 File-&amp;gt;Preferences 进入全局设定。
+这里简介常用设定项,不同版本名称和分级略有区别,这里以7.2.8版本为参考。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General
+&lt;ul&gt;
+&lt;li&gt;Default Machine Folder
+&lt;ul&gt;
+&lt;li&gt;预设虚拟机存放位置，每个虚拟机会在里面的一个子档案夹中存放虚拟磁盘、设定档案等&lt;/li&gt;
+&lt;li&gt;建议改到空间充裕的分区，虚拟机档案体积通常很大。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VRDP Authentication Library
+&lt;ul&gt;
+&lt;li&gt;虚拟机软件自带远程桌面的认证库选择&lt;/li&gt;
+&lt;li&gt;预设就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Input
+&lt;ul&gt;
+&lt;li&gt;快捷键设定&lt;/li&gt;
+&lt;li&gt;只有 Virtual Machine 的 Host Key Combo 常用，预设右侧Ctrl,不习惯可以改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Update
+&lt;ul&gt;
+&lt;li&gt;更新策略和周期&lt;/li&gt;
+&lt;li&gt;当然不自动检查更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Language
+&lt;ul&gt;
+&lt;li&gt;介面语言&lt;/li&gt;
+&lt;li&gt;这里可以改成中文，但不是每个OS都有效，翻译也不全面，所以本文以英文为准。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Display
+&lt;ul&gt;
+&lt;li&gt;虚拟显示器的设定&lt;/li&gt;
+&lt;li&gt;预设就好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Proxy
+&lt;ul&gt;
+&lt;li&gt;虚拟机软件本身的代理设定，和虚拟机无关。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vm设定详解&#34;&gt;VM设定详解
+&lt;/h2&gt;&lt;p&gt;每个VM都有一套单独的设定档案，在对应档案夹中的 &lt;code&gt;VMname.vdi&lt;/code&gt;。
+虚拟机条目右键或上方点击 Settings 进入设定。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General
+&lt;ul&gt;
+&lt;li&gt;Identity
+&lt;ul&gt;
+&lt;li&gt;设定名称和OS类型&lt;/li&gt;
+&lt;li&gt;OS类型会自动调整之后设定的兼容性提示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;截图档案夹、剪贴板、拖拽&lt;/li&gt;
+&lt;li&gt;启用与否可以运行时修改&lt;/li&gt;
+&lt;li&gt;启用后需要增强工具才能实际有效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Description
+&lt;ul&gt;
+&lt;li&gt;给虚拟机写一些说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disk Encryption
+&lt;ul&gt;
+&lt;li&gt;虚拟磁盘加密&lt;/li&gt;
+&lt;li&gt;预设不启用适合绝大多数用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;System
+&lt;ul&gt;
+&lt;li&gt;Motherboard
+&lt;ul&gt;
+&lt;li&gt;Base Memory
+&lt;ul&gt;
+&lt;li&gt;内存&lt;/li&gt;
+&lt;li&gt;可以设定超越物理机真实内存，当然不能真用超。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Boot Device order
+&lt;ul&gt;
+&lt;li&gt;启动顺序，可以把Floppy去掉了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Chipset
+&lt;ul&gt;
+&lt;li&gt;晶片组，预设即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;TPM Version
+&lt;ul&gt;
+&lt;li&gt;加密模组，Win11需要2.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Point Device
+&lt;ul&gt;
+&lt;li&gt;鼠标，预设即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;选好OS类型这里会自动设置好&lt;/li&gt;
+&lt;li&gt;Linux需要UTC&lt;/li&gt;
+&lt;li&gt;Win11需要UEFI和SecureBoot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Processor
+&lt;ul&gt;
+&lt;li&gt;CPU核心数&lt;/li&gt;
+&lt;li&gt;可设置超越物理真实规模，当然实际使用超不了，可以骗骗测试的OS&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ested VT-x/AMD-v&lt;/code&gt; 如果启用则虚拟机中可以再装虚拟机并加速。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Acceleration
+&lt;ul&gt;
+&lt;li&gt;CPU加速方式，虚拟机跑的跟物理机差不多快就靠这个。&lt;/li&gt;
+&lt;li&gt;预设即可，Linux通常会是KVM,Windows则为Hyper-V。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Display
+&lt;ul&gt;
+&lt;li&gt;Screen
+&lt;ul&gt;
+&lt;li&gt;Video Memory 显存建议直接拉到最大。&lt;/li&gt;
+&lt;li&gt;Number of Virtual Monitors 虚拟显示器数目，预设1即可。&lt;/li&gt;
+&lt;li&gt;Scale Factor 放缩&lt;/li&gt;
+&lt;li&gt;Graphics Controller 虚拟显卡，根据OS类型预设的即可。&lt;/li&gt;
+&lt;li&gt;3D Acceleration 运行3D游戏需要，但VirtualBox这方面很弱，几乎不可用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Remote Display
+&lt;ul&gt;
+&lt;li&gt;虚拟机软件直接提供的远端桌面没什么用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Recording
+&lt;ul&gt;
+&lt;li&gt;录屏一般用不到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Storage
+&lt;ul&gt;
+&lt;li&gt;Controller控制器类型按照OS类型预设的即可&lt;/li&gt;
+&lt;li&gt;硬盘可以虚拟成HDD或SSD&lt;/li&gt;
+&lt;li&gt;光驱通常只用来安装系统和增强工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Audio
+&lt;ul&gt;
+&lt;li&gt;Host Audio Driver
+&lt;ul&gt;
+&lt;li&gt;主机驱动，预设即可，选错了主机放不出VM的声音。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Audio Controller
+&lt;ul&gt;
+&lt;li&gt;虚拟声卡&lt;/li&gt;
+&lt;li&gt;按OS类型的预设即可，错了VM内OS不识别&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Features
+&lt;ul&gt;
+&lt;li&gt;通常仅输出比较隐私友好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Network
+&lt;ul&gt;
+&lt;li&gt;共可配置4块网卡&lt;/li&gt;
+&lt;li&gt;Attached to 网络模式
+&lt;ul&gt;
+&lt;li&gt;NAT 预设通过主机上网，虚拟机可以通过网关地址访问主机，主机不能访问虚拟机。&lt;/li&gt;
+&lt;li&gt;Bridged Adapter 桥接，将虚拟机直接和所桥接的物理网卡平级暴露给外部，其他网络设备可以直接访问VM。&lt;/li&gt;
+&lt;li&gt;Internal Network 内部网络，只能虚拟机共用互联，和主机或外部都不通。&lt;/li&gt;
+&lt;li&gt;Host-only Adapter 主机网络，虚拟机和主机上的一块虚拟网卡组网互联，不直接外联。&lt;/li&gt;
+&lt;li&gt;Generic Driver 通用驱动，扩展用法一般用不到。&lt;/li&gt;
+&lt;li&gt;NAT Network 更高级的NAT模式设定，提供主机访问虚拟机等方法。&lt;/li&gt;
+&lt;li&gt;Not attached 只虚拟接口不插入网卡。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Name 网卡名称
+&lt;ul&gt;
+&lt;li&gt;选择同样名称虚拟网卡的虚拟机可以互联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Adapter Type
+&lt;ul&gt;
+&lt;li&gt;虚拟网卡型号&lt;/li&gt;
+&lt;li&gt;预设 &lt;code&gt;Intel PRO/1000 MTDesktop (82540EM)&lt;/code&gt; 兼容性最好&lt;/li&gt;
+&lt;li&gt;Linux Guest 选 virtio-net 可能性能更好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Promiscuous Mode 黑客功能预设即可&lt;/li&gt;
+&lt;li&gt;MAC Address
+&lt;ul&gt;
+&lt;li&gt;MAC地址可以随意设定，建议预设的080027开头的即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Serial Ports
+&lt;ul&gt;
+&lt;li&gt;古老的序列埠，通常用不到。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;USB
+&lt;ul&gt;
+&lt;li&gt;不想启用USB功能，需要把鼠标改成PS/2。&lt;/li&gt;
+&lt;li&gt;USB2.0/3.0支援需要安装专有扩展包，免费但不完全开源。&lt;/li&gt;
+&lt;li&gt;这里还可以将一些主机的USB附件直接绑定到VM。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shared Folders
+&lt;ul&gt;
+&lt;li&gt;共享档案夹，有只读模式，需VM安装增强工具起效。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;User Interface
+&lt;ul&gt;
+&lt;li&gt;一些窗口排版、按钮之类的设置，可以运行时修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;vm装机&#34;&gt;VM装机
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;New一个新的VM&lt;/li&gt;
+&lt;li&gt;初始设定
+&lt;ul&gt;
+&lt;li&gt;首先起名字并设定OS类型，会决定之后的预设和兼容性提示。&lt;/li&gt;
+&lt;li&gt;对于支援的系统可以设定自动安装，建议都手动，略过此项。&lt;/li&gt;
+&lt;li&gt;硬件设定内存和CPU核心数，后期都好改。&lt;/li&gt;
+&lt;li&gt;虚拟磁盘设定很重要，尤其是档案类型和容量后期修改很麻烦。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;参考上一节设定VM并指定系统ISO&lt;/li&gt;
+&lt;li&gt;像在物理机上一样用虚拟光盘安装系统&lt;/li&gt;
+&lt;li&gt;[可选]安装增强工具
+&lt;ul&gt;
+&lt;li&gt;LinuxVM 依赖内核头档案可不提供，剪切板/拖拽等常用功能仍然可用。&lt;/li&gt;
+&lt;li&gt;为了便捷使用共享档案夹等功能Linux客户机需要将user添加到vboxsf组。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo usermod -aG vboxsf $USER&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows7 可能遇到驱动签名问题，7.x版本强行确认安装即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;隔离指南&#34;&gt;隔离指南
+&lt;/h2&gt;&lt;p&gt;虚拟机的主要用途就是模拟测试OS,或者隔离不可信的程序。&lt;/p&gt;
+&lt;p&gt;很多发行版借助虚拟机技术来实现隐私强化和匿名访问，如果自行配置虚拟机隔离环境可以参考这些发行版。
+其中比较知名的推荐参考是 &lt;a class=&#34;link&#34; href=&#34;https://www.qubes-os.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Qubes OS&lt;/a&gt; 和 &lt;a class=&#34;link&#34; href=&#34;https://www.whonix.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Whonix&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;实用技巧&#34;&gt;实用技巧
+&lt;/h2&gt;&lt;h3 id=&#34;压缩虚拟磁盘占用空间&#34;&gt;压缩虚拟磁盘占用空间
+&lt;/h3&gt;&lt;p&gt;虚拟磁盘通常几十GiB大小，预设的vdi格式会只存储用过的(非全0)的部分而减小真实硬盘占用。
+但随着使用体积会越来越大，但VirtualBox的图形界面没有VMware那样的虚拟磁盘压缩功能。
+这就需要用命令行来进行 &lt;code&gt;vboxmanage modifyhd --compact 虚拟磁盘路径.vdi&lt;/code&gt;
+在压缩前可以打开虚拟机用 &lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SDelete(Windows)&lt;/a&gt; 或 dd(Linux/MacOS) 将闲置空间写入全0.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Docker 推荐后端 WSL2 完全离线安装</title>
         <link>https://localfreedom.pages.dev/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
         <pubDate>Sat, 25 Apr 2026 12:32:30 +0000</pubDate>

@@ -3,16 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://localfreedom.pages.dev/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/categories/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/post/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/categories/usage/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/p/virtualbox-%E8%AE%BE%E5%AE%9A%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/vm/</loc>
+    <lastmod>2026-06-20T23:11:28+00:00</lastmod>
+  </url><url>
+    <loc>https://localfreedom.pages.dev/tags/browser/</loc>
     <lastmod>2026-06-07T03:02:30+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/firefox-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</loc>
     <lastmod>2026-06-07T03:02:30+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/post/</loc>
-    <lastmod>2026-06-07T03:02:30+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/categories/</loc>
-    <lastmod>2026-06-04T12:12:56+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/categories/collect/</loc>
     <lastmod>2026-06-04T12:12:56+00:00</lastmod>
@@ -28,12 +43,6 @@
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/recommendlist/</loc>
     <lastmod>2026-06-04T12:12:56+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/</loc>
-    <lastmod>2026-06-04T12:12:56+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/tags/browser/</loc>
-    <lastmod>2026-05-24T06:21:48+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/tags/codec/</loc>
     <lastmod>2026-05-24T06:21:48+00:00</lastmod>
@@ -74,9 +83,6 @@
     <loc>https://localfreedom.pages.dev/tags/os/</loc>
     <lastmod>2026-04-25T12:32:30+00:00</lastmod>
   </url><url>
-    <loc>https://localfreedom.pages.dev/tags/vm/</loc>
-    <lastmod>2026-04-25T12:32:30+00:00</lastmod>
-  </url><url>
     <loc>https://localfreedom.pages.dev/tags/bt/</loc>
     <lastmod>2026-04-16T07:39:33+00:00</lastmod>
   </url><url>
@@ -93,9 +99,6 @@
     <lastmod>2026-04-05T12:17:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/llama.cpp-llm%E6%97%B6%E4%BB%A3%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2026-04-05T12:17:21+00:00</lastmod>
-  </url><url>
-    <loc>https://localfreedom.pages.dev/categories/usage/</loc>
     <lastmod>2026-04-05T12:17:21+00:00</lastmod>
   </url><url>
     <loc>https://localfreedom.pages.dev/p/git-%E4%BB%A3%E7%A0%81%E5%8F%8A%E4%B8%80%E5%88%87%E6%96%87%E6%9C%AC%E6%A1%A3%E6%A1%88%E7%9A%84%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8/</loc>

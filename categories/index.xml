@@ -6,7 +6,15 @@
         <description>Recent content in Categories on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 04 Jun 2026 12:12:56 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 23:11:28 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Usage</title>
+        <link>https://localfreedom.pages.dev/categories/usage/</link>
+        <pubDate>Sat, 20 Jun 2026 23:11:28 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/categories/usage/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Collect</title>
         <link>https://localfreedom.pages.dev/categories/collect/</link>
         <pubDate>Thu, 04 Jun 2026 12:12:56 +0000</pubDate>
@@ -28,14 +36,6 @@
         <pubDate>Fri, 10 Apr 2026 08:51:07 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/categories/pipeline/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Usage</title>
-        <link>https://localfreedom.pages.dev/categories/usage/</link>
-        <pubDate>Sun, 05 Apr 2026 12:17:21 +0000</pubDate>
-        
-        <guid>https://localfreedom.pages.dev/categories/usage/</guid>
         <description></description>
         </item>
         <item>
