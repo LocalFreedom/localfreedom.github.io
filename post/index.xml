@@ -6,7 +6,114 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 20 Jun 2026 23:11:28 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 02 Jul 2026 10:32:39 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Win7 虚拟机装配</title>
+        <link>https://localfreedom.pages.dev/p/win7-%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A3%85%E9%85%8D/</link>
+        <pubDate>Thu, 02 Jul 2026 10:32:39 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/win7-%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A3%85%E9%85%8D/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/Windows7SP1.png" alt="Featured image of post Win7 虚拟机装配" /&gt;&lt;p&gt;Windows 7 是 Microsoft 推出的一款非常经典的作业系统。
+随着 Intel 8代以后的 CPU 不再支持安装 Win7, 现在想重温这款作业系统或者运行只兼容 Windows 7 的程式，那么就主要依靠虚拟机软件来实现了。&lt;/p&gt;
+&lt;p&gt;这里介绍在桌面虚拟机软件中安装并配置 Windows 7 的参考流程，对于物理机安装也同样适用。&lt;/p&gt;
+&lt;h2 id=&#34;虚拟机软件设定&#34;&gt;虚拟机软件设定
+&lt;/h2&gt;&lt;h3 id=&#34;virtualbox&#34;&gt;Virtualbox
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;General -&amp;gt; Advanced-&amp;gt; SharedClipboard共享剪贴簿&lt;/li&gt;
+&lt;li&gt;System -&amp;gt; MotherBoard: BaseMemory大于4096M, 禁用Floppy, 启用I/O APIC, 不要EFI&lt;/li&gt;
+&lt;li&gt;System -&amp;gt; Processer: 数量2, 峰值100%, 启用PAE/NX&lt;/li&gt;
+&lt;li&gt;System -&amp;gt; Acceleration: 启用NestedPaging&lt;/li&gt;
+&lt;li&gt;Display -&amp;gt; Screen: 启用3D加速, 显存最大&lt;/li&gt;
+&lt;li&gt;Storage: 预设40GiB即可，建议至少32GiB。&lt;/li&gt;
+&lt;li&gt;Network: Host-Only&lt;/li&gt;
+&lt;li&gt;UserInterface: 顶部显示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vmware-workstation&#34;&gt;VMWare Workstation
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Processors: 数量1, 核心2, 开启三项虚拟化&lt;/li&gt;
+&lt;li&gt;Floppy: Remove&lt;/li&gt;
+&lt;li&gt;Network Adapter: Host-only&lt;/li&gt;
+&lt;li&gt;Printer: Remove&lt;/li&gt;
+&lt;li&gt;USB Controller: 不要启动连接新USB设备&lt;/li&gt;
+&lt;li&gt;Display: 3D Graphics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows-7-system&#34;&gt;Windows 7 System
+&lt;/h2&gt;&lt;p&gt;正常安装Windows7并激活。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组织 -&amp;gt; 资料夹和搜索选项: 显示隐藏档案、显示副档名&lt;/li&gt;
+&lt;li&gt;控制面板 -&amp;gt; 系统和安全 -&amp;gt; 不允许远程协助、电源选项从不睡眠&lt;/li&gt;
+&lt;li&gt;(可选)服务: 禁用SuperFetch&lt;/li&gt;
+&lt;li&gt;操作中心: 关闭消息(已不再支援无需理会更新等提醒)&lt;/li&gt;
+&lt;li&gt;InternetOptions -&amp;gt; General -&amp;gt; DeleteHistory&lt;/li&gt;
+&lt;li&gt;安装硬件驱动&lt;/li&gt;
+&lt;li&gt;安装SHA2更新kb4474419&lt;/li&gt;
+&lt;li&gt;安装服务堆栈更新kb4490628(SSU)更新数字证书&lt;/li&gt;
+&lt;li&gt;安装便捷补丁合集包kb3125574(包括2011SP1发布到2016年4月的几乎所有补丁,2019版已集成)&lt;/li&gt;
+&lt;li&gt;安装最终月度汇总kb4534310包含几乎所有之前月度汇总&lt;/li&gt;
+&lt;li&gt;安装IE11(2019版已全面集成)
+&lt;ul&gt;
+&lt;li&gt;(如果没安装以上补丁)安装kb2533623(必须第一个装),kb2731771,kb2786081&lt;/li&gt;
+&lt;li&gt;安装kb2670838,kb2729094-v2,kb2834140-v2&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/download/details.aspx?id=41628&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;IE11&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(可选)安装语言包&lt;/li&gt;
+&lt;li&gt;(可选)安装最后的SSU更新kb4536952&lt;/li&gt;
+&lt;li&gt;(可选)安装&lt;a class=&#34;link&#34; href=&#34;https://support.microsoft.com/en-us/topic/microsoft-net-framework-4-8-offline-installer-for-windows-9d23f658-3b97-68ab-d013-aa3c3e7495e0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;.Net4.8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;application-software&#34;&gt;Application Software
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SDelete&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;Start -&amp;gt; cmd -&amp;gt; &lt;code&gt;sdelete64.exe -z c:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;关机并压缩虚拟磁盘占用空间
+&lt;ul&gt;
+&lt;li&gt;VirtualBox: &lt;code&gt;VBoxManage modifyhd [VM名称].vdi --compact&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;VMware: 介面中可直接选择点击。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议在此做快照(清理浏览器历史、磁盘清理、磁盘碎片整理)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟机增强工具
+&lt;ul&gt;
+&lt;li&gt;VirtualBox: 6.1.28-6.1.36因签名问题无法在Win7安装，之后及7.x版本需要确认签名告警。&lt;/li&gt;
+&lt;li&gt;VMware: 15版本的增强工具&lt;code&gt;11.0.6-15940789&lt;/code&gt;直接可用，之后因签名问题需要安装SHA2更新kb4474419。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/zh-cn/download/details.aspx?id=30390&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;微软输入法2010&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;如果之后要安装Office64位,需要安装同为64位版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;浏览器 Edge109(FirefoxESR115)
+&lt;ul&gt;
+&lt;li&gt;设置下载询问位置&lt;/li&gt;
+&lt;li&gt;隐私相关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WinRAR(7Zip)&lt;/li&gt;
+&lt;li&gt;MSOffice2016
+&lt;ul&gt;
+&lt;li&gt;以Word,Excel,PowerPoint,OneNote为主&lt;/li&gt;
+&lt;li&gt;本机KMS激活可设置IP为127.0.0.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;装好常用软件后建议在此做快照&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之后就可以随意安装想要运行的程式了，有问题随时回退快照。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>VirtualBox 设定和使用指南</title>
         <link>https://localfreedom.pages.dev/p/virtualbox-%E8%AE%BE%E5%AE%9A%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
         <pubDate>Sat, 20 Jun 2026 23:11:28 +0000</pubDate>
