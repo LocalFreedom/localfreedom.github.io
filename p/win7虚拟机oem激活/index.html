@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head>
-	<meta name="generator" content="Hugo 0.131.0"><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。">
-<title>Pager 4 - 局域自由博客</title>
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A guide to OEM activating Windows 7 in virtual machines (VMware, VirtualBox & QEMU)">
+<title>Win7虚拟机OEM激活</title>
 
-<link rel='canonical' href='https://localfreedom.pages.dev/'>
+<link rel='canonical' href='https://localfreedom.pages.dev/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="局域自由博客">
-<meta property='og:description' content="梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。">
-<meta property='og:url' content='https://localfreedom.pages.dev/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Win7虚拟机OEM激活">
+<meta property='og:description' content="A guide to OEM activating Windows 7 in virtual machines (VMware, VirtualBox & QEMU)">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/'>
 <meta property='og:site_name' content='局域自由博客'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-07-16T11:35:21&#43;00:00 '/>
-<meta name="twitter:title" content="局域自由博客">
-<meta name="twitter:description" content="梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。"><link rel="alternate" type="application/rss&#43;xml" href="https://localfreedom.pages.dev/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Crack' /><meta property='article:tag' content='VM' /><meta property='article:tag' content='Windows' /><meta property='article:published_time' content='2026-07-16T11:35:21&#43;00:00'/><meta property='article:modified_time' content='2026-07-16T11:35:21&#43;00:00'/><meta property='og:image' content='https://localfreedom.pages.dev/img/oem.jpg' />
+<meta name="twitter:title" content="Win7虚拟机OEM激活">
+<meta name="twitter:description" content="A guide to OEM activating Windows 7 in virtual machines (VMware, VirtualBox & QEMU)"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://localfreedom.pages.dev/img/oem.jpg' />
     <link rel="shortcut icon" href="/favicon.png" />
 
   
 
 
     </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -196,7 +198,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
         
         
         
-        <li  class='current' >
+        <li >
             <a href='/' >
                 
                 
@@ -305,85 +307,10 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
     <aside class="sidebar right-sidebar sticky">
         
             
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label>Search</label>
-            <input name="keyword" required placeholder="Type something..." />
-        
-            <button title="Search">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
+                
+    <section class="widget archives">
         <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Archives</h2>
-
-        
-        
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2026">
-                        
-                            <span class="year">2026</span>
-                            <span class="count">20</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2025">
-                        
-                            <span class="year">2025</span>
-                            <span class="count">15</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2024">
-                        
-                            <span class="year">2024</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#2023">
-                        
-                            <span class="year">2023</span>
-                            <span class="count">11</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <line x1="5" y1="9" x2="19" y2="9" />
   <line x1="5" y1="15" x2="19" y2="15" />
@@ -393,154 +320,34 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
 
 
-    </div>
-    <h2 class="widget-title section-title">Categories</h2>
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#原理">原理</a></li>
+    <li><a href="#提前准备">提前准备</a></li>
+    <li><a href="#在vmware虚拟机安装oemwin7">在VMware虚拟机安装OEMwin7</a></li>
+    <li><a href="#在virtualbox中安装oemwin7">在VirtualBox中安装OEMwin7</a></li>
+    <li><a href="#在qemu中">在QEMU中</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
 
-    <div class="tagCloud-tags">
-        
-            <a href="/categories/tip/" class="font_size_20">
-                Tip
-            </a>
-        
-            <a href="/categories/usage/" class="font_size_14">
-                Usage
-            </a>
-        
-            <a href="/categories/collect/" class="font_size_6">
-                Collect
-            </a>
-        
-            <a href="/categories/pipeline/" class="font_size_6">
-                Pipeline
-            </a>
-        
-            <a href="/categories/about/" class="font_size_1">
-                About
-            </a>
-        
-    </div>
-</section>
-
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title">Tags</h2>
-
-    <div class="tagCloud-tags">
-        
-            <a href="/tags/windows/" class="font_size_15">
-                Windows
-            </a>
-        
-            <a href="/tags/utility/" class="font_size_11">
-                Utility
-            </a>
-        
-            <a href="/tags/vm/" class="font_size_10">
-                VM
-            </a>
-        
-            <a href="/tags/offline/" class="font_size_8">
-                Offline
-            </a>
-        
-            <a href="/tags/crack/" class="font_size_6">
-                Crack
-            </a>
-        
-            <a href="/tags/linux/" class="font_size_6">
-                Linux
-            </a>
-        
-            <a href="/tags/recommendlist/" class="font_size_6">
-                RecommendList
-            </a>
-        
-            <a href="/tags/ai/" class="font_size_5">
-                AI
-            </a>
-        
-            <a href="/tags/office/" class="font_size_5">
-                Office
-            </a>
-        
-            <a href="/tags/github/" class="font_size_4">
-                Github
-            </a>
-        
-            <a href="/tags/online/" class="font_size_4">
-                Online
-            </a>
-        
-            <a href="/tags/os/" class="font_size_4">
-                OS
-            </a>
-        
-            <a href="/tags/about/" class="font_size_3">
-                About
-            </a>
-        
-            <a href="/tags/blog/" class="font_size_3">
-                Blog
-            </a>
-        
-            <a href="/tags/browser/" class="font_size_3">
-                Browser
-            </a>
-        
-            <a href="/tags/chinese/" class="font_size_2">
-                Chinese
-            </a>
-        
-            <a href="/tags/sms/" class="font_size_2">
-                SMS
-            </a>
-        
-            <a href="/tags/term/" class="font_size_2">
-                Term
-            </a>
-        
-            <a href="/tags/bt/" class="font_size_1">
-                BT
-            </a>
-        
-            <a href="/tags/codec/" class="font_size_1">
-                Codec
-            </a>
-        
-    </div>
-</section>
             
         
     </aside>
 
 
             <main class="main full-width">
-    
-    
-    
-    
-
-    <section class="article-list">
-        
-            
-<article class="has-image">
+    <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">
+            <a href="/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/">
                 
-                    <img src="/img/kms.jpeg" loading="lazy" alt="Featured image of post 搭建 KMS 服务器激活微软软件" />
+                    <img src="/img/oem.jpg" loading="lazy" alt="Featured image of post Win7虚拟机OEM激活" />
                 
             </a>
         </div>
@@ -559,12 +366,12 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">搭建 KMS 服务器激活微软软件</a>
+            <a href="/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/">Win7虚拟机OEM激活</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Deploy KMS to activate Microsoft software.
+            A guide to OEM activating Windows 7 in virtual machines (VMware, VirtualBox &amp; QEMU)
         </h3>
         
     </div>
@@ -585,7 +392,7 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 01, 2026</time>
+                <time class="article-time--published">Jul 16, 2026</time>
             </div>
         
 
@@ -611,379 +418,301 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
 </div>
 
 </header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">
-                
-                    <img src="/img/MAS-Ohook.jpeg" loading="lazy" alt="Featured image of post 用 Ohook 激活微软 Office 全套" />
-                
-            </a>
-        </div>
-    
 
-    <div class="article-details">
+    <section class="article-content">
     
-    <header class="article-category">
-        
-            <a href="/categories/usage/" >
-                Usage
-            </a>
-        
-    </header>
     
+    <p>随计算机购买的 OEM 版 Windows7 会在安装完成后自动激活，无需联网且永久有效。
+在虚拟机中回顾 Windows7 使用当年购买计算机时的OEM信息完成激活无疑是最完美的选择。</p>
+<p>但是当年的计算机也许已遗弃，或者导出OEM信息操作难度较高。
+本文介绍用共享的OEM信息完成虚拟机中 Windows7 激活的流程。</p>
+<h2 id="原理">原理
+</h2><p>在预装 Windows7 的计算机中有一个SLIC晶片，其中存储OEM许可信息。
+OEM版本的 Windows7 通过内置的证书检查计算机硬件是否许可此版本的Windows7。</p>
+<p>证书和SLIC每个厂商的产品基本是通用的。
+OEM版本的 Windows7 和通用版本的区别只在证书。</p>
+<p>OEM激活 Windows7 虚拟机就是用通用映像安装好Windows7后，导入厂商证书，并虚拟化SLIC硬件信息。
+Windows 7 会自动用证书验证SLIC中存储的信息离线完成激活。</p>
+<h2 id="提前准备">提前准备
+</h2><ul>
+<li>虚拟机软件
+<ul>
+<li>本文以VMware、VirtualBox、Qemu为例。</li>
+</ul>
+</li>
+<li>Windows 7 安装映像
+<ul>
+<li><a class="link" href="https://msdn.itellyou.cn/"  target="_blank" rel="noopener"
+    >MSDN,我告诉你</a>提供Microsoft原版映像的校验信息和ed2k链接。</li>
+<li>推荐旗舰版，专业版、家庭版皆可。</li>
+</ul>
+</li>
+<li>Certificate
+<ul>
+<li><a class="link" href="https://forums.mydigitallife.net/threads/oa-2-x-slic-oemcert-collection.5952/page-53#post-514521"  target="_blank" rel="noopener"
+    >MyDigitalLife论坛</a>有人收集了泄漏的各个厂商的OEM证书。</li>
+</ul>
+</li>
+<li>SLIC ROM
+<ul>
+<li><a class="link" href="https://forums.mydigitallife.net/threads/oa-2-x-slic-oemcert-collection.5952/page-53#post-514521"  target="_blank" rel="noopener"
+    >MyDigitalLife论坛</a>有人收集了泄漏的各个厂商的SLIC，可直接用于VirtualBox和Qemu。</li>
+<li><a class="link" href="https://archive.org/download/oemcert-and-slic/VMBIOS_FOR_SLIC2.1.zip"  target="_blank" rel="noopener"
+    >局域自由分享了</a>可以直接用于 VMware 的 SLIC ROM 文件。</li>
+</ul>
+</li>
+</ul>
+<h2 id="在vmware虚拟机安装oemwin7">在VMware虚拟机安装OEMwin7
+</h2><ol>
+<li>在 VMware Player 或 WorkStation 新建一个用原版Win7映像安装的虚拟机，配置密钥的时候可略过。</li>
+<li>等待安装完成(可以顺便装好增强工具)，将虚拟机关闭。</li>
+<li>将准备好的各个厂商的SLIC的ROM解压选择喜欢的品牌(如<code>VM7.0-DELL.ROM</code>)的ROM文件拷贝到虚拟机的目录(如<code>X:\Virtual Machines\Win7</code>,最好和vmx文件同一个路径)</li>
+<li>用记事本或其他文本编辑器打开.vmx文件
+<ul>
+<li>在最后添加一行 <code>bios440.filename = &quot;VM7.0-DELL.ROM&quot;</code></li>
+<li>引号中是相应品牌的ROM文件名</li>
+</ul>
+</li>
+<li>开启虚拟机，将相应品牌的 XRM-MS 文件(如<code>DELL.XRM-MS</code>)复制到虚拟机中一个好找的位置(如C盘根目录)。</li>
+<li>在win7虚拟机中用管理员权限运行cmd(预设路径应该在system32),导入证书文件，如 <code>slmgr.vbs -ilc DELL.XRM-MS</code>。
+之后计算机属性中应该就显示激活了。</li>
+</ol>
+<h2 id="在virtualbox中安装oemwin7">在VirtualBox中安装OEMwin7
+</h2><ol>
+<li>在VirtualBox中新建虚拟机，配置好先不启动。</li>
+<li>将准备好的各个厂商的SLIC和证书资料解压，并从中随意挑选一个同一个子文件夹下的某个BIN文件(如<code>DELL.BIN</code>)和XRM-MS文件(如<code>DELL-DD981F15.XRM-MS</code>)，其中BIN文件需要拷贝到一个尽量没有特殊符号的路径(推荐虚拟机所在路径)，且自身名称也不应有特殊符号(如[])。</li>
+<li>导入BIN到虚拟机
+<ul>
+<li><code>VBoxManage setextradata &quot;Win7&quot; &quot;VBoxInternal/Devices/acpi/0/Config/CustomTable&quot; &quot;/home/user/VirtualBox VMs/Win7/DELL.BIN&quot;</code></li>
+<li>其中&quot;Win7&quot;是虚拟机名称，&quot;/home/user/VirtualBox VMs/Win7/DELL.BIN&quot;是BIN文件绝对路径,其他不变,注意路径中的空格没有转义字符。</li>
+<li>这条指令每次执行会覆盖之前的结果,BIN路径留空等于重置。</li>
+</ul>
+</li>
+<li>开启虚拟机安装Win7及增强工具(便于拖拽复制)，可以不输入密钥。</li>
+<li>将之前挑选的XRM-MS证书文件(如<code>DELL.XRM-MS</code>)复制到虚拟机中一个好找的位置(如C盘根目录)。</li>
+<li>在win7虚拟机中用管理员权限运行cmd(预设路径应该在system32),导入证书文件，如<code>slmgr -ilc DELL.XRM-MS</code>。
+之后计算机属性中应该就显示激活了。</li>
+</ol>
+<h2 id="在qemu中">在QEMU中
+</h2><p>步骤类似VirtualBox，在启动命令添加BIN文件即可。
+<code>-acpitable file=DELL.BIN</code></p>
 
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/%E7%94%A8-ohook-%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF-office-%E5%85%A8%E5%A5%97/">用 Ohook 激活微软 Office 全套</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Activate MS Office by Ohook.
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Feb 22, 2026</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    4 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/">
-                
-                    <img src="/img/firefox-profile.jpeg" loading="lazy" alt="Featured image of post Firefox浏览器用户配置手动迁移" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/tip/" >
-                Tip
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/firefox%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E8%BF%81%E7%A7%BB/">Firefox浏览器用户配置手动迁移</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            About Firefox user important data and their files.
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Feb 15, 2026</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
+</section>
 
 
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
+    <footer class="article-footer">
+    
+    <section class="article-tags">
         
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
+            <a href="/tags/crack/">Crack</a>
         
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/">
-                
-                    <img src="/img/win-to-go.jpeg" loading="lazy" alt="Featured image of post 将Win10安装到移动硬盘" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
+            <a href="/tags/vm/">VM</a>
         
-            <a href="/categories/tip/" >
-                Tip
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/%E5%B0%86win10%E5%AE%89%E8%A3%85%E5%88%B0%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98/">将Win10安装到移动硬盘</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Install windows 10 on removable disk.
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Feb 05, 2026</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    2 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
-        
-            
-<article class="has-image">
-    <header class="article-header">
-        <div class="article-image">
-            <a href="/p/%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83/">
-                
-                    <img src="/img/data-science-env.jpeg" loading="lazy" alt="Featured image of post 配置数据科学研究环境" />
-                
-            </a>
-        </div>
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/pipeline/" >
-                Pipeline
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/p/%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83/">配置数据科学研究环境</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            Build research environment of data science
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jan 29, 2026</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    5 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-</header>
-</article>
+            <a href="/tags/windows/">Windows</a>
         
     </section>
-    <nav class='pagination'>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/win7-%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A3%85%E9%85%8D/">
         
+        
+            <div class="article-image">
+                
+                    <img src="/img/Windows7SP1.png" loading="lazy" data-key="" data-hash="/img/Windows7SP1.png"/>
+                
+            </div>
         
 
-        
-            
-                    <a class='page-link' href='/'>1</a>
-                
-            
-            
-                    
-                        
-                        <span class='page-link dots'>&hellip;</span>
-                    
-                
-            
-            
-                    <a class='page-link' href='/page/3/'>3</a>
-                
-            
-            
-                <span class='page-link current'>4</span>
-                
-            
-            
-                    <a class='page-link' href='/page/5/'>5</a>
-                
-            
-            
-                    
-                        
-                        <span class='page-link dots'>&hellip;</span>
-                    
-                
-            
-            
-                    
-                
-            
-            
-                    
-                
-            
-            
-                    
-                
-            
-            
-                    <a class='page-link' href='/page/10/'>10</a>
-                
-            
-    </nav>
+        <div class="article-details">
+            <h2 class="article-title">Win7 虚拟机装配</h2>
+        </div>
+    </a>
+</article>
 
-<footer class="site-footer">
+            
+                
+<article class="has-image">
+    <a href="/p/%E6%90%AD%E5%BB%BA-kms-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%BF%80%E6%B4%BB%E5%BE%AE%E8%BD%AF%E8%BD%AF%E4%BB%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/kms.jpeg" loading="lazy" data-key="" data-hash="/img/kms.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">搭建 KMS 服务器激活微软软件</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/windows-10-ltsc-%E5%AE%89%E8%A3%85%E5%92%8C%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E8%A6%81%E7%82%B9/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/windows_10_desktop.png" loading="lazy" data-key="" data-hash="/img/windows_10_desktop.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 10 LTSC 安装和基本配置要点</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/windows11-laptop.avif" loading="lazy" data-key="" data-hash="/img/windows11-laptop.avif"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Windows 11 使用技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/wsl2.jpeg" loading="lazy" data-key="" data-hash="/img/wsl2.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 推荐后端 WSL2 完全离线安装</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
@@ -997,6 +726,85 @@ fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
 </footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
 
             </main>
         </div>

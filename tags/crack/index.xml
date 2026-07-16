@@ -6,7 +6,89 @@
         <description>Recent content in Crack on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 04 Jun 2026 12:12:56 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/crack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 16 Jul 2026 11:35:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/crack/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Win7虚拟机OEM激活</title>
+        <link>https://localfreedom.pages.dev/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/</link>
+        <pubDate>Thu, 16 Jul 2026 11:35:21 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/win7%E8%99%9A%E6%8B%9F%E6%9C%BAoem%E6%BF%80%E6%B4%BB/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/oem.jpg" alt="Featured image of post Win7虚拟机OEM激活" /&gt;&lt;p&gt;随计算机购买的 OEM 版 Windows7 会在安装完成后自动激活，无需联网且永久有效。
+在虚拟机中回顾 Windows7 使用当年购买计算机时的OEM信息完成激活无疑是最完美的选择。&lt;/p&gt;
+&lt;p&gt;但是当年的计算机也许已遗弃，或者导出OEM信息操作难度较高。
+本文介绍用共享的OEM信息完成虚拟机中 Windows7 激活的流程。&lt;/p&gt;
+&lt;h2 id=&#34;原理&#34;&gt;原理
+&lt;/h2&gt;&lt;p&gt;在预装 Windows7 的计算机中有一个SLIC晶片，其中存储OEM许可信息。
+OEM版本的 Windows7 通过内置的证书检查计算机硬件是否许可此版本的Windows7。&lt;/p&gt;
+&lt;p&gt;证书和SLIC每个厂商的产品基本是通用的。
+OEM版本的 Windows7 和通用版本的区别只在证书。&lt;/p&gt;
+&lt;p&gt;OEM激活 Windows7 虚拟机就是用通用映像安装好Windows7后，导入厂商证书，并虚拟化SLIC硬件信息。
+Windows 7 会自动用证书验证SLIC中存储的信息离线完成激活。&lt;/p&gt;
+&lt;h2 id=&#34;提前准备&#34;&gt;提前准备
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;虚拟机软件
+&lt;ul&gt;
+&lt;li&gt;本文以VMware、VirtualBox、Qemu为例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows 7 安装映像
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://msdn.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MSDN,我告诉你&lt;/a&gt;提供Microsoft原版映像的校验信息和ed2k链接。&lt;/li&gt;
+&lt;li&gt;推荐旗舰版，专业版、家庭版皆可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Certificate
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://forums.mydigitallife.net/threads/oa-2-x-slic-oemcert-collection.5952/page-53#post-514521&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyDigitalLife论坛&lt;/a&gt;有人收集了泄漏的各个厂商的OEM证书。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SLIC ROM
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://forums.mydigitallife.net/threads/oa-2-x-slic-oemcert-collection.5952/page-53#post-514521&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyDigitalLife论坛&lt;/a&gt;有人收集了泄漏的各个厂商的SLIC，可直接用于VirtualBox和Qemu。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://archive.org/download/oemcert-and-slic/VMBIOS_FOR_SLIC2.1.zip&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;局域自由分享了&lt;/a&gt;可以直接用于 VMware 的 SLIC ROM 文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;在vmware虚拟机安装oemwin7&#34;&gt;在VMware虚拟机安装OEMwin7
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在 VMware Player 或 WorkStation 新建一个用原版Win7映像安装的虚拟机，配置密钥的时候可略过。&lt;/li&gt;
+&lt;li&gt;等待安装完成(可以顺便装好增强工具)，将虚拟机关闭。&lt;/li&gt;
+&lt;li&gt;将准备好的各个厂商的SLIC的ROM解压选择喜欢的品牌(如&lt;code&gt;VM7.0-DELL.ROM&lt;/code&gt;)的ROM文件拷贝到虚拟机的目录(如&lt;code&gt;X:\Virtual Machines\Win7&lt;/code&gt;,最好和vmx文件同一个路径)&lt;/li&gt;
+&lt;li&gt;用记事本或其他文本编辑器打开.vmx文件
+&lt;ul&gt;
+&lt;li&gt;在最后添加一行 &lt;code&gt;bios440.filename = &amp;quot;VM7.0-DELL.ROM&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;引号中是相应品牌的ROM文件名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开启虚拟机，将相应品牌的 XRM-MS 文件(如&lt;code&gt;DELL.XRM-MS&lt;/code&gt;)复制到虚拟机中一个好找的位置(如C盘根目录)。&lt;/li&gt;
+&lt;li&gt;在win7虚拟机中用管理员权限运行cmd(预设路径应该在system32),导入证书文件，如 &lt;code&gt;slmgr.vbs -ilc DELL.XRM-MS&lt;/code&gt;。
+之后计算机属性中应该就显示激活了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;在virtualbox中安装oemwin7&#34;&gt;在VirtualBox中安装OEMwin7
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在VirtualBox中新建虚拟机，配置好先不启动。&lt;/li&gt;
+&lt;li&gt;将准备好的各个厂商的SLIC和证书资料解压，并从中随意挑选一个同一个子文件夹下的某个BIN文件(如&lt;code&gt;DELL.BIN&lt;/code&gt;)和XRM-MS文件(如&lt;code&gt;DELL-DD981F15.XRM-MS&lt;/code&gt;)，其中BIN文件需要拷贝到一个尽量没有特殊符号的路径(推荐虚拟机所在路径)，且自身名称也不应有特殊符号(如[])。&lt;/li&gt;
+&lt;li&gt;导入BIN到虚拟机
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;VBoxManage setextradata &amp;quot;Win7&amp;quot; &amp;quot;VBoxInternal/Devices/acpi/0/Config/CustomTable&amp;quot; &amp;quot;/home/user/VirtualBox VMs/Win7/DELL.BIN&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其中&amp;quot;Win7&amp;quot;是虚拟机名称，&amp;quot;/home/user/VirtualBox VMs/Win7/DELL.BIN&amp;quot;是BIN文件绝对路径,其他不变,注意路径中的空格没有转义字符。&lt;/li&gt;
+&lt;li&gt;这条指令每次执行会覆盖之前的结果,BIN路径留空等于重置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;开启虚拟机安装Win7及增强工具(便于拖拽复制)，可以不输入密钥。&lt;/li&gt;
+&lt;li&gt;将之前挑选的XRM-MS证书文件(如&lt;code&gt;DELL.XRM-MS&lt;/code&gt;)复制到虚拟机中一个好找的位置(如C盘根目录)。&lt;/li&gt;
+&lt;li&gt;在win7虚拟机中用管理员权限运行cmd(预设路径应该在system32),导入证书文件，如&lt;code&gt;slmgr -ilc DELL.XRM-MS&lt;/code&gt;。
+之后计算机属性中应该就显示激活了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;在qemu中&#34;&gt;在QEMU中
+&lt;/h2&gt;&lt;p&gt;步骤类似VirtualBox，在启动命令添加BIN文件即可。
+&lt;code&gt;-acpitable file=DELL.BIN&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>E-book 资源站分享</title>
         <link>https://localfreedom.pages.dev/p/e-book-%E8%B5%84%E6%BA%90%E7%AB%99%E5%88%86%E4%BA%AB/</link>
         <pubDate>Thu, 04 Jun 2026 12:12:56 +0000</pubDate>
