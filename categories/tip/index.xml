@@ -6,7 +6,37 @@
         <description>Recent content in Tip on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 24 May 2026 06:21:48 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Aug 2026 08:06:03 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/categories/tip/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Edge浏览器离线安装包官方下载渠道</title>
+        <link>https://localfreedom.pages.dev/p/edge%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD%E6%B8%A0%E9%81%93/</link>
+        <pubDate>Sat, 01 Aug 2026 08:06:03 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/edge%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD%E6%B8%A0%E9%81%93/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/Edge-offline-installer.jpg" alt="Featured image of post Edge浏览器离线安装包官方下载渠道" /&gt;&lt;p&gt;Edge是Win10默认集成的浏览器，也支持Windows7。
+Edge不仅用于浏览网页，还有PDF浏览等功能，深度融入Windows之中，这就很有必要存档一份离线安装包，即可以用于离线计算机部署，也可以避免Microsoft未来分发平台出问题而无法下载。
+本文介绍两种官方途径下载离线安装包，都是带有数字签名的版本。&lt;/p&gt;
+&lt;h2 id=&#34;business-channel&#34;&gt;Business Channel
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/edge&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Edge官网&lt;/a&gt;默认的下载方式是Web安装包，并不能完成离线安装。
+但为企业用户提供的批量部署的安装包下载，和一般安装的包是完全一样的，可以作为离线安装包。&lt;/p&gt;
+&lt;p&gt;在官网上方的标签中选择&lt;code&gt;For Business&lt;/code&gt;下拉选单，打开&lt;code&gt;Enterprise Download&lt;/code&gt;,即可进入离线安装包下载区。&lt;/p&gt;
+&lt;p&gt;向下滑动页面，找到旧版下载的区域&lt;code&gt;Looking for an older version of Edge?&lt;/code&gt;，右侧就可以选择版本并下载。&lt;/p&gt;
+&lt;p&gt;这里可以下载最近几个稳定版和测试版的msi离线安装包，可以选择具体的build,适配Windows/Linux/MacOS的都可以，&lt;strong&gt;但更早的版本就不行了&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;microsoft-update-catalog&#34;&gt;Microsoft Update Catalog
+&lt;/h2&gt;&lt;p&gt;Edge是Windows10/11系统的一部分，所以Microsoft的更新也会包括Edge。&lt;/p&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://www.catalog.update.microsoft.com/Home.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Microsoft Update Catalog&lt;/a&gt;直接搜索&lt;code&gt;Edge&lt;/code&gt;就可以看到相应的更新补丁。
+想下载具体版本，比如支持Win7的最后一版可以搜索&lt;code&gt;Edge 109&lt;/code&gt;即可缩小范围。&lt;/p&gt;
+&lt;p&gt;每个版本的补丁分为x64/x86/arm64等，根据硬件情况选择，通常下载x64的，Win7/10/11都是通用的安装包。
+下载得到的cab格式压缩包解压后就是官网能得到的msi离线安装包，同版本完全一致。&lt;/p&gt;
+&lt;p&gt;这里能下载适用于Windows系统的所有版本Edge浏览器，&lt;strong&gt;但没有Linux/MacOS的版本&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/en-us/answers/questions/1388497/ms-edge-for-w7-offline-standalone-installer-downlo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://learn.microsoft.com/en-us/answers/questions/1388497/ms-edge-for-w7-offline-standalone-installer-downlo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Ubuntu中的浏览器无法播放视频</title>
         <link>https://localfreedom.pages.dev/p/ubuntu%E4%B8%AD%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91/</link>
         <pubDate>Sun, 24 May 2026 06:21:48 +0000</pubDate>
