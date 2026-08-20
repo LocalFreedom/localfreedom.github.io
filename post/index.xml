@@ -6,7 +6,73 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 01 Aug 2026 08:06:03 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Aug 2026 14:16:03 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>BTC闪电网络使用指南</title>
+        <link>https://localfreedom.pages.dev/p/btc%E9%97%AA%E7%94%B5%E7%BD%91%E7%BB%9C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Wed, 19 Aug 2026 14:16:03 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/btc%E9%97%AA%E7%94%B5%E7%BD%91%E7%BB%9C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/bitcoin-lightning-network.png" alt="Featured image of post BTC闪电网络使用指南" /&gt;&lt;p&gt;越多人越方便的使用加密货币，这种自由经济手段才能更好的营造自由市场空间，也有助于扩充局域自由空间。
+本文介绍一种日常商务中便捷使用加密货币的方法。&lt;/p&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;闪电网路(LightningNetwork)是位于比特币之上的“第2层”支付协定，旨在实现参与节点之间的快速交易。&lt;/p&gt;
+&lt;p&gt;原理大致是参与者将一些BTC转移到闪电网络的通道中，在闪电网络内部通过临时记账和共同签名的方式快速交易，等达到一定规模或有节点要退出，再将结果广播到BTC区块链。
+可以理解为在BTC网络中建立一个稍微中心化的节点来记账小额临时交易以求快速，闪电网络的优势在于其通道设计也是相对分散式的，并不是一个小额资金暂存央行。&lt;/p&gt;
+&lt;p&gt;闪电网络基于BTC设计，也可以用于其他加密货币，已达到小额多次快速支付，并减少手续费。&lt;/p&gt;
+&lt;h2 id=&#34;开通&#34;&gt;开通
+&lt;/h2&gt;&lt;p&gt;这里以BTC最佳钱包 &lt;a class=&#34;link&#34; href=&#34;https://electrum.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Electrum&lt;/a&gt; 为例。
+钱包软件版本应尽可能新，老旧版本可能无法兼容新的网络交易要求。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用闪电网络需要先同步闪电网络节点状态，只要网络正常很快即可自动完成。&lt;/li&gt;
+&lt;li&gt;开启通道
+&lt;ul&gt;
+&lt;li&gt;Channels -&amp;gt; NewChannel&lt;/li&gt;
+&lt;li&gt;通道对手方预设(Electrum trampoline)即可，钱包会自动从其中选择一个节点。&lt;/li&gt;
+&lt;li&gt;总额介面会提示最小投入资金要求，通常是1-5mBTC, Amount建议比最低要求多 1mBTC，然后点 OK 确认即可。&lt;/li&gt;
+&lt;li&gt;设置手续费确认区块越少越贵，预设的5区块确认ETA方式即可。&lt;/li&gt;
+&lt;li&gt;可能发生各种错误，金额太小被拒绝，排队过多，超时等，如果失败再重复上述流程即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;备份通道种子
+&lt;ul&gt;
+&lt;li&gt;开通成功开始等待区块确认时，会弹出一个二维码，提示通道相关资金和数据无法通过钱包私钥还原，提示单独备份。&lt;/li&gt;
+&lt;li&gt;毕竟闪电通道是单独的网络，不能用主钱包的私钥恢复其中数据资金，可以下载二维码或者直接复制二维码的信息。&lt;/li&gt;
+&lt;li&gt;当然存储是和钱包文件集成在一起的，迁移软件或重装系统别弄丢钱包文件即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;等待确认
+&lt;ul&gt;
+&lt;li&gt;每区块确认需要十几分钟，预设5区块大约需要1小时。&lt;/li&gt;
+&lt;li&gt;确认由矿工进行，只要开启成功，即请求已提交到区块，就可以关闭钱包等待矿工挖矿确认。&lt;/li&gt;
+&lt;li&gt;通常交易都会被确认，万一失败就再重复之前的操作吧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;付款
+&lt;ul&gt;
+&lt;li&gt;一些商家支持闪电网络付款，会提供一个类似邮箱的地址。&lt;/li&gt;
+&lt;li&gt;在4.5及以上版本的 Electrum 中Send介面粘贴地址即可付款。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关闭通道
+&lt;ul&gt;
+&lt;li&gt;闪电网络通道的任何一方可以强行关闭通道，关闭会损失一些BTC。&lt;/li&gt;
+&lt;li&gt;如果被对方关闭的通道，下次连上闪电网络才会更新状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通道状态不正常
+&lt;ul&gt;
+&lt;li&gt;闪电网络的 Channels 和 BTC 本身并不连接到相同的节点&lt;/li&gt;
+&lt;li&gt;如果 Channels 一直显示 &lt;code&gt;Disconnected&lt;/code&gt; 而BTC钱包其他部分正常可能是所链接的闪电网络节点异常，有些ISP可能单独限制闪电网络的链接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Edge浏览器离线安装包官方下载渠道</title>
         <link>https://localfreedom.pages.dev/p/edge%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD%E6%B8%A0%E9%81%93/</link>
         <pubDate>Sat, 01 Aug 2026 08:06:03 +0000</pubDate>
