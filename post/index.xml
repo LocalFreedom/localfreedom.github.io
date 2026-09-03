@@ -6,7 +6,67 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 19 Aug 2026 14:16:03 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 03 Sep 2026 10:19:54 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>迁移VirtualBox的虚拟机到VMware</title>
+        <link>https://localfreedom.pages.dev/p/%E8%BF%81%E7%A7%BBvirtualbox%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%B0vmware/</link>
+        <pubDate>Thu, 03 Sep 2026 10:19:54 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E8%BF%81%E7%A7%BBvirtualbox%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%B0vmware/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/virtualbox-vmware.jpeg" alt="Featured image of post 迁移VirtualBox的虚拟机到VMware" /&gt;&lt;h2 id=&#34;tldr&#34;&gt;TL;DR
+&lt;/h2&gt;&lt;p&gt;从Virtualbox导出虚拟机时选择 &lt;code&gt;开放式虚拟机格式1.0&lt;/code&gt;，会得到一个ova文件。
+将ova文件导入VMware时会提示一致性检查失败，重试即可完成导入。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;: 导入后网络模式和网卡信息需要重新设定。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;20虚拟机导出格式的不兼容情况&#34;&gt;2.0虚拟机导出格式的不兼容情况
+&lt;/h2&gt;&lt;p&gt;从Virtualbox导出时如果选择 &lt;code&gt;开放式虚拟机格式2.0&lt;/code&gt;，导入VMware时候会报错 &lt;code&gt;Line XX: Unsupported element StorageItem...&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;说明到2026年这两个虚拟机软件对2.0格式兼容仍然不一致，这个错误是不能重试完成的。&lt;/p&gt;
+&lt;h2 id=&#34;手动修正virtualbox导出以兼容vmware&#34;&gt;手动修正VirtualBox导出以兼容VMware
+&lt;/h2&gt;&lt;p&gt;修复方式是用压缩软件打开ova文件，编辑其中的ovf文件，找到上述对应行报错, 将节点类型改变一下, 如 &lt;code&gt;StorageItem&lt;/code&gt; -&amp;gt; &lt;code&gt;Item&lt;/code&gt;, 子节点类型前的 &lt;code&gt;sasd&lt;/code&gt; 全改为 &lt;code&gt;rasd&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &amp;lt;StorageItem&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:AddressOnParent&amp;gt;0&amp;lt;/rasd:AddressOnParent&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:Caption&amp;gt;disk1&amp;lt;/rasd:Caption&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:Description&amp;gt;Disk Image&amp;lt;/rasd:Description&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:HostResource&amp;gt;/disk/vmdisk1&amp;lt;/rasd:HostResource&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:InstanceID&amp;gt;6&amp;lt;/rasd:InstanceID&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:Parent&amp;gt;5&amp;lt;/rasd:Parent&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;lt;rasd:ResourceType&amp;gt;17&amp;lt;/rasd:ResourceType&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &amp;lt;/StorageItem&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;调整完成后, 计算一下该文件的 SHA256 值, 并更新在同目录中的mf文件。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mf&#34; data-lang=&#34;mf&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;SHA256&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;(XXX.ovf)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 76d5c2fbbba4c1b0579ee49f571ac8147fecb0cca06bb592905baf773fdf6202
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;SHA256&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;(XXX-disk001.vmdk)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 074ef37e7f75b53b6fdff7df1a06c6f48ba32427e97b26b687aaca14f07c2d1c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;对比ova1.0格式可以发现1.0格式中就是&lt;code&gt;rasd&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;ova文件详情&#34;&gt;OVA文件详情
+&lt;/h2&gt;&lt;p&gt;OVA文件是一个压缩包，其中包含磁碟文件、设定文件、摘要文件。
+磁碟文件只有一个，说明会合并快照。
+设定文件中会略去说明、网络等信息。
+摘要文件记录另外两个文件的散列值。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>BTC闪电网络使用指南</title>
         <link>https://localfreedom.pages.dev/p/btc%E9%97%AA%E7%94%B5%E7%BD%91%E7%BB%9C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
         <pubDate>Wed, 19 Aug 2026 14:16:03 +0000</pubDate>
