@@ -6,7 +6,105 @@
         <description>Recent content in Posts on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 03 Sep 2026 10:19:54 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 10 Sep 2026 10:28:42 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Android 自带虚拟机——工作资料入门指南</title>
+        <link>https://localfreedom.pages.dev/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Thu, 10 Sep 2026 10:28:42 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/work-profile.webp" alt="Featured image of post Android 自带虚拟机——工作资料入门指南" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+&lt;/h2&gt;&lt;p&gt;Android Work Profile (工作资料)是Google在 Android 5 引入的隔离机制，用于将工作应用和数据与个人应用和数据分开，一方面与生活分开，另一方面企业IT管理员可以统一配置。&lt;/p&gt;
+&lt;p&gt;Work Profile 的隔离性，可以发挥一个系统自带虚拟机的作用，将危险的App隔离其中，阻断个人数据泄漏。&lt;/p&gt;
+&lt;h3 id=&#34;隐私意义&#34;&gt;隐私意义
+&lt;/h3&gt;&lt;p&gt;手机不同于电脑，形态多样，贴近生活，意味着有更丰富的设备指纹，也关联更多个人信息。&lt;/p&gt;
+&lt;p&gt;对于临时使用的App，重新安装并不确保能刷新用户资料，App通过共享设备指纹、公共数据空间缓存等方式可以实现新装应用和之前删除关系的关联。
+虽然这对于误删或降级，有利于保持原有Profile，但是对于想无痕模式就很麻烦了。&lt;/p&gt;
+&lt;p&gt;借助工作资料，可以将不登入账号的临时App装在工作资料这个类似虚拟机的环境中，很容易的清空有限隔离环境，阻断App运营者的追踪。&lt;/p&gt;
+&lt;p&gt;当然，Work Profile 主要是隔离数据，对于设备指纹只能一定程度上破坏一致性。&lt;/p&gt;
+&lt;h2 id=&#34;机制&#34;&gt;机制
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;同一时间只能配置一个 Work Profile，配置新工作环境需要删除旧环境。&lt;/li&gt;
+&lt;li&gt;Work Profile 需要应用程序来配置启用，没有系统开关直接开启。&lt;/li&gt;
+&lt;li&gt;启用 Work Profile 后会有按钮可以随时suspend，非常利于限制后台。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用
+&lt;/h2&gt;&lt;h3 id=&#34;选型&#34;&gt;选型
+&lt;/h3&gt;&lt;p&gt;一般的工作资料应用由企业运营，并不能做个人用途。&lt;/p&gt;
+&lt;p&gt;开源的 Work Profile 应用有 Shelter, Insular 等。
+这里推荐使用&lt;a class=&#34;link&#34; href=&#34;https://gitea.angry.im/PeterCxy/Shelter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Shelter&lt;/strong&gt;&lt;/a&gt;,考虑到其在&lt;a class=&#34;link&#34; href=&#34;https://alternativeto.net/software/shelter-app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AlternativeTo&lt;/a&gt;上有更高评分，相比Insular有文件互通传送功能。
+Insular作者有个&lt;a class=&#34;link&#34; href=&#34;https://secure-system.gitlab.io/Insular/faq.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;比较&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;经测试在博主的几台设备上上Shelter均有更好的兼容性。&lt;/p&gt;
+&lt;h3 id=&#34;以lineageos为例&#34;&gt;以LineageOS为例
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;⚠️操作前提醒
+&lt;ul&gt;
+&lt;li&gt;创建或启停 WorkProfile 可能唤醒一些应用如Telegram,需做好网络限制并及时用雹等应用批量强停无关应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;参考操作流程
+&lt;ol&gt;
+&lt;li&gt;删除已有的 WorkProfile (新装跳过)
+&lt;ul&gt;
+&lt;li&gt;Settings设置 -&amp;gt; Passwords,passkeys&amp;amp;accounts密码、通行密钥和账号 -&amp;gt; Work工作 -&amp;gt; Remove work profile 移除工作资料&lt;/li&gt;
+&lt;li&gt;原 WorkProfile 中应用图标如果主系统也有会留在原位转为主系统应用图标，需删掉，重开不会转换回去。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;打开 Shelter 创建 WorkProfile。
+&lt;ul&gt;
+&lt;li&gt;这里开发者会提示 Shelter 不是万能的，请自行处理兼容性问题。所以本文以最通用的开源系统LineageOS为例。&lt;/li&gt;
+&lt;li&gt;一路下一步即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Shelter 右上角设置，开启文件穿梭功能。
+&lt;ul&gt;
+&lt;li&gt;根据提示在 Work Profile 内外都赋予 Shelter 悬浮窗/档案管理权限。&lt;/li&gt;
+&lt;li&gt;Work Profile 管理App除了这两个可选权限还有很多特权，所以选择可信赖的开源应用就非常重要了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;迁入浏览器 Fennec/Firefox 并设置。
+&lt;ul&gt;
+&lt;li&gt;浏览器是非常必要的基础应用，而WorkProfile初始预设App并不包含。&lt;/li&gt;
+&lt;li&gt;全面启用 HTTPS-Only&lt;/li&gt;
+&lt;li&gt;DoH https://1.1.1.1/dns-query&lt;/li&gt;
+&lt;li&gt;退出时删除浏览数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;迁入输入法
+&lt;ul&gt;
+&lt;li&gt;如 fcixt5 小企鹅输入法&lt;/li&gt;
+&lt;li&gt;桌面中间上划打开应用抽屉 -&amp;gt; Work工作 -&amp;gt; Settings设置 -&amp;gt; 系统 -&amp;gt; 键盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;迁入应用批量管理App如&lt;code&gt;雹Hail&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;外部 &lt;code&gt;Shizuku&lt;/code&gt; 给予 WorkProfile 中 &lt;code&gt;雹Hail&lt;/code&gt; 权限以及时停止工作空间中闲置应用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;通过Shelter迁移必要的应用，并创建图标，复刻权限设置和流量管理。&lt;/li&gt;
+&lt;li&gt;下载Apk安装需隔离的App。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;收尾事项
+&lt;ul&gt;
+&lt;li&gt;检查迁入应用是否创建桌面图标。&lt;/li&gt;
+&lt;li&gt;检查 WorkProfile 中应用的流量设置。&lt;/li&gt;
+&lt;li&gt;WorkProfile 中应用批量管理App如雹Hail的清单是否完整&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;停用&#34;&gt;停用
+&lt;/h2&gt;&lt;p&gt;虽然 Work Profile 启用需要专门的App进行，但关闭以至弃用则是Android的系统功能。&lt;/p&gt;
+&lt;p&gt;通常系统顶部下拉菜单中会有 Work Profile 的按钮，用于暂停/开启 Work Profile。&lt;/p&gt;
+&lt;p&gt;一般在系统设置的账户设置中，会有个人和工作两个标签页，进入工作标签页可以找到删除 Work Profile 的选项。
+删除后 Work Profile 中的内容就都没了。&lt;/p&gt;
+&lt;h2 id=&#34;展望&#34;&gt;展望
+&lt;/h2&gt;&lt;p&gt;按照Google的介绍，Work Profile管理App是能访问其中数据的，也许可以通过Work Profile机制实现底层数据导出。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>迁移VirtualBox的虚拟机到VMware</title>
         <link>https://localfreedom.pages.dev/p/%E8%BF%81%E7%A7%BBvirtualbox%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%B0vmware/</link>
         <pubDate>Thu, 03 Sep 2026 10:19:54 +0000</pubDate>

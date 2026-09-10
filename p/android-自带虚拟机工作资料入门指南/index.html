@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Mastering Android Work Profile: Your Gateway to a 'Virtual' workspace.">
+<title>Android 自带虚拟机——工作资料入门指南</title>
+
+<link rel='canonical' href='https://localfreedom.pages.dev/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Android 自带虚拟机——工作资料入门指南">
+<meta property='og:description' content="Mastering Android Work Profile: Your Gateway to a 'Virtual' workspace.">
+<meta property='og:url' content='https://localfreedom.pages.dev/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/'>
+<meta property='og:site_name' content='局域自由博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='VM' /><meta property='article:published_time' content='2026-09-10T10:28:42&#43;00:00'/><meta property='article:modified_time' content='2026-09-10T10:28:42&#43;00:00'/><meta property='og:image' content='https://localfreedom.pages.dev/img/work-profile.webp' />
+<meta name="twitter:title" content="Android 自带虚拟机——工作资料入门指南">
+<meta name="twitter:description" content="Mastering Android Work Profile: Your Gateway to a 'Virtual' workspace."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://localfreedom.pages.dev/img/work-profile.webp' />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/aVatar_hu15199967034214377255.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">局域自由博客</a></h1>
+            <h2 class="site-description">梳理技术堆栈，以尽可能离线的方式摆脱在线服务的监控，捍卫个人数字权利。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://alternativeto.net/user/localfreedom/'
+                        target="_blank"
+                        title="AlternativeTo"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Capa_2" data-name="Capa 2" viewBox="0 0 500 500">
+    <defs>
+        <style>
+            .cls-1{fill:#0c9ef0;stroke-width:0}
+        </style>
+    </defs>
+    <path d="M250 8.66c133.29 0 241.34 108.05 241.34 241.34S383.29 491.34 250 491.34 8.66 383.28 8.66 250 116.71 8.66 250 8.66M250 0C112.15 0 0 112.15 0 250s112.15 250 250 250 250-112.15 250-250S387.84 0 250 0Z" class="cls-1"/>
+    <path d="M385.6 377.84c-.39.08-.77.17-1.16.25.71 2.47 1.37 4.82 1.96 7.19 1.4 5.64 2.81 11.28 4.21 16.91 9.54-8.85 18.25-18.57 26.01-29.04-6.35.75-12.86 1.53-19.23 2.43-3.92.55-7.75 1.38-11.8 2.26Z" class="cls-1"/>
+    <path d="M405 288.35c-78.81-12.75-161.7 12.77-228.94 53.36-15.77 9.52-33.12 18.95-44.36 34-7.65 10.28-11.68 22.52-14.14 35 6.45 5.28 13.23 10.18 20.31 14.67.01-.69.02-1.38.04-2.07.27-8.54 1.34-17.22 4.77-25.12 3.8-8.75 9.96-14.14 17.56-19.54 15.75-11.21 33.3-20.14 50.25-29.01 1.16-.61 2.81-.6 4.22-.88.32 1.28.99 2.59.9 3.85-.43 5.88-.3 11.81-.16 17.71.46 21.16 1.84 42.32 3.27 63.47.49 7.29 1 14.58 1.5 21.85a210.03 210.03 0 0 0 28.99 2.02c47.79 0 91.82-16.12 126.94-43.21-2.94-10.22-5.89-20.43-8.85-30.64-.12-.44-.27-.87-.43-1.3-.45.1-.9.21-1.33.34-25.77 7.16-51.97 17.21-80.11 30.75-.24.12-.49.25-.74.38-1.23.65-2.91 1.54-4.94 1.55h-.04c-2.47 0-5.79-1.37-7.08-3.94-1.33-2.67-.35-6.37 1.33-8.29 1.37-1.57 3.16-2.52 4.59-3.29l.79-.43a380.648 380.648 0 0 1 79.26-33.27c.75-.22 1.5-.45 2.25-.68-.48-1.23-.97-2.47-1.45-3.73-2.1-5.43-4.28-11.04-6.68-16.45-3.08-6.93-6.59-13.87-9.99-20.58l-1.75-3.47c-1.13-2.24-2.28-5.18-1.14-8.09.5-1.28 1.65-3.01 4.27-3.99 3.64-1.35 9.07 1.35 10.65 4.46 8.63 17 16.03 32.19 22.63 46.44.29.62.49.98.62 1.17.19-.02.51-.06.97-.16 16.55-3.77 32.97-5.37 48.79-4.77a206.84 206.84 0 0 0 18.46-39.79c-11.35-14.57-24.88-25.64-41.25-28.3Z" class="cls-1"/>
+    <path d="M455.59 229.46c-.46-4.53-1.19-9.03-2.04-13.52-.63-3.33-1.32-6.65-2.01-9.96-.74-3.57-1.38-7.17-2.26-10.71a191.17 191.17 0 0 0-16.52-43.66 198.68 198.68 0 0 0-7.62-13.22c-2.7-4.28-5.56-8.45-8.58-12.5a198.04 198.04 0 0 0-9.48-11.76c-3.3-3.79-6.74-7.45-10.31-10.98-3.56-3.52-7.26-6.92-11.07-10.17-3.81-3.26-7.75-6.36-11.78-9.33-4.04-2.97-8.18-5.79-12.42-8.47-4.24-2.68-8.58-5.2-13-7.56-4.43-2.37-8.94-4.58-13.52-6.64a214.17 214.17 0 0 0-28.32-10.37c-9.71-2.8-19.61-4.89-29.62-6.28-5.03-.69-10.08-1.21-15.14-1.54a210.5 210.5 0 0 0-15.28-.43c-5.12.05-10.25.29-15.35.71-5.14.44-10.27 1.06-15.36 1.89a202.245 202.245 0 0 0-30.51 7.42 194.41 194.41 0 0 0-15.01 5.59c-5.02 2.1-9.94 4.39-14.77 6.88-2.28 1.17-4.52 2.42-6.77 3.64-59.26 34.17-98.24 95-104.51 163.13-1.04 19.63.34 39.3 4.04 58.6h-.03s3.98 23.43 6.22 27.81c10.96 41.42 30.06 77.99 55.15 71.21a3.466 3.466 0 0 0 2.33-4.32c-.05-.15-.1-.31-.17-.45a19.924 19.924 0 0 1-10.91-7.84c-13.87-23.27 56.73-73.11 153.16-109.78 88.57-33.73 168.56-44.67 186.77-26.77 3.6 2.95 5 7.84 3.49 12.25a63.244 63.244 0 0 1-19.45 29.8c-.76.73-1.2 1.74-1.2 2.79s.43 2.07 1.19 2.8a3.783 3.783 0 0 0 5.1.24 73.937 73.937 0 0 0 24.37-35.04c.58-1.78.7-3.89.94-5.75.24-1.96.42-3.93.52-5.9.2-3.93.11-7.89-.29-11.83Zm-325.31 76.13c-11.8 8.37-32.37 23.36-40.98 40.1-3.36 6.45-6.5 1.43-8.46-2.24a203.578 203.578 0 0 1-11.27-31.61c-.01-.02-.02-.05-.03-.07-1.38-5.03-5.87-21.66-6.31-26.6.01-.01.02-.03.03-.03a223.567 223.567 0 0 1-3.9-54.95c5.86-62.88 41.87-119 96.56-150.56 4.94-2.76 9.9-5.27 14.9-7.55 4.9-2.23 24.81-9.65 5.11 7.81a175.388 175.388 0 0 0-56.81 114.21c-1.91 22.42 4.6 64.4 16.1 95.21 3.62 9.65.66 12.34-4.95 16.29Zm233.46-103.5a9.082 9.082 0 0 1-6.16 4.02 354.99 354.99 0 0 0-65.42 15.52c-2.48.75-5.17.42-7.4-.93a9.109 9.109 0 0 1-4.23-6.14l-1.68-7.68c-.41-1.94.57-3.91 2.37-4.74 24.87-9.94 51.13-16 77.84-17.97 1.99-.1 3.75 1.29 4.12 3.26l1.75 7.39c.64 2.48.21 5.12-1.19 7.26Zm42.35-39.08a3.47 3.47 0 0 1-3.82 2.2c-61.41-9.13-147.26 22.36-147.26 22.36a368.787 368.787 0 0 0-84.37 39.83c-4.73 3.11-11.09 1.79-14.2-2.95-.74-1.13-1.25-2.39-1.5-3.71-1.48-7.84-2.38-15.77-2.73-23.73-1.71-21.62 2.42-43.3 11.97-62.77.58-1.08 1.16-2.16 1.82-3.2.08-.27.21-.53.38-.76l.3-.54.74-1.25.36-.55c29.76-48.75 96.58-68.19 149.92-52.31 26.73 8.2 50.75 23.48 69.49 44.23 2.93 3.44 22.71 30.94 18.9 43.15Z" class="cls-1"/>
+    <path d="m374.15 129.69-.05.11A83.714 83.714 0 0 0 334.38 95a121.444 121.444 0 0 0-58.84-8.95c-7.13.56-14.13 2.11-20.83 4.58a2.832 2.832 0 0 0-2.02 3.07 2.816 2.816 0 0 0 2.74 2.45 172.28 172.28 0 0 1 45.36 1.21c55.24 11.04 72.92 37.62 74.86 38.67.55.27 1.21-.27.94-.82-.72-1.88-1.54-3.73-2.44-5.53Z" class="cls-1"/>
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://bsky.app/profile/localfreedom.bsky.social'
+                        target="_blank"
+                        title="Bluesky"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m123.97 25.42c-.32-11.8-10.13-15.93-15.43-15.82s-17.58 3.81-29.59 14.96-17.1 25.97-17.1 25.97-.76 0-1.41-.32-4.93-8.46-10.23-16.47-15.69-19.26-23.05-23.27c-7.36-4-18.29-2.6-20.99 2.71-2.71 5.3-2.16 14.07-2.06 24.13.11 10.06.11 14.39 2.81 25.75 2.71 11.36 14.93 14.07 14.93 14.07s-5.63 4.44-8.55 8.12-3.14 12.55 3.25 21.21c6.38 8.66 18.68 16.8 30.04 11.93s16.99-15.91 16.99-15.91c11.25 16.88 22.18 17.86 32.9 12.12 10.71-5.74 15.15-16.12 14.5-24.67s-9.04-14.09-9.04-14.09c4-1.08 14.67-4.09 17.27-12.31s5.09-26.3 4.76-38.09zm-5.58 1.82c-.65 8.33-1.62 25.75-6.6 33.65s-12.01 11.58-16.67 12.12c-4.65.54-7.47-.32-8.44.54s-.76 2.38 3.9 3.35c4.65.97 15.15 2.81 14.72 10.6s-6.71 18.94-19.05 21.75-21.75-14.18-22.18-16.67.11-5.41-2.16-5.41-1.73 5.52-6.17 11.8-11.25 11.9-20.78 12.77c-9.52.87-19.37-12.34-19.8-16.88s1.73-10.5 6.71-13.53 14.07-6.71 16.12-7.79c2.06-1.08 1.08-4.55-1.41-3.46-2.49 1.08-16.23 3.57-22.29-5.3-4.32-6.32-6.82-14.5-7.03-26.51-.22-12.01-.22-22.72 3.03-24.89 3.25-2.16 13.2-1.62 20.78 4.76 7.57 6.38 16.77 18.4 21.53 28.78 4.76 10.39 6.17 12.99 8.66 13.09 2.49.11 2.71-2.81 4.98-8.33s9.41-17.96 20.02-26.51c10.6-8.55 17.64-12.12 24.02-11.36s8.77 5.09 8.12 13.42zm-101.07-11.15c-4.98-.43-6.49 1.3-7.03 3.68s-.76 13.2.11 14.28 3.03 1.3 3.68-.11-.32-8.77.22-12.12 3.9-2.38 4.33-3.25.12-2.37-1.3-2.49zm8.55 67.2c-1.84.22-6.17 5.09-5.84 11.25s6.28 7.14 6.82 5.52-2.27-2.38-2.49-6.28 3.03-6.38 3.68-7.9c.65-1.51-.76-2.76-2.16-2.6zm76.18-60.71c.65-1.08.65-3.14-.87-3.25s-3.14.97-9.85 6.28c-6.71 5.3-12.29 11.65-13.09 13.53-.65 1.51 1.95 3.25 2.92 2.38s3.35-4.54 9.2-10.6c5.84-6.06 11.04-7.25 11.69-8.33zm-22.32 75.73c-1.14-.49-3.12 1.99-2.6 2.68.81 1.06 6.66 5.84 7.14 6.01.49.16 2.44-.73 2.44-1.54s-5.84-6.66-6.98-7.14zm2.19-1.54c.81 1.05 8.93 8.12 9.41 8.28.49.16 2.43-.73 2.43-1.54s-8.12-8.93-9.25-9.41c-1.14-.49-3.12 1.99-2.6 2.68zm13.15 3.24c.49.16 2.43-.73 2.43-1.54s-5.68-6.66-6.82-7.14c-1.14-.49-3.12 1.99-2.6 2.68.81 1.06 6.49 5.84 6.98 6.01zm3.73-4.62c.49.16 1.87-1.22 1.87-2.03s-3.81-4.79-4.95-5.28-3.12 1.99-2.6 2.68c.81 1.06 5.19 4.46 5.68 4.63zm.9-6.82c.49.08.97-.81 1.05-1.7s-1.79-3-2.68-3-2.34 1.65-1.79 2.27c.73.81 2.92 2.35 3.41 2.43zm-8.36-27.03c-.81-.24-3.35 1.73-2.92 2.44.49.81 6.25 6.01 6.9 6.41.65.41 2.11-.73 2.27-1.46s-5.44-7.14-6.25-7.39zm3.73-2.51c-.89.08-2.6 1.38-2.19 1.79 1.06 1.05 6.66 7.63 6.98 7.71s2.03-.49 2.27-1.46-6.17-8.12-7.06-8.03zm5.03-3.25c-.81 0-3.6.94-2.92 1.79.97 1.22 7.87 7.22 8.36 7.14s1.7-.73 1.38-1.46-6.01-7.47-6.82-7.47zm5.03-3.9c-.49-.08-2.87 1.48-2.52 2.03.57.89 5.76 6.41 6.57 6.66.81.24 1.62-1.14 1.7-2.03s-5.28-6.57-5.76-6.66zm3.33-5.43c-.97-.08-2.84 1.43-2.27 2.19.49.65 5.28 4.95 5.6 5.03s1.3-.81 1.38-2.11-3.73-5.03-4.71-5.11zm1.22-7.06c-.73-.16-2.25 1.86-1.95 2.35.65 1.05 4.3 3.98 4.79 3.98s1.54-.81 1.62-1.62-3.73-4.55-4.46-4.71zm1.54-5.85c-.97-.16-1.82 1.95-1.46 2.68.41.81 2.68 2.35 3.33 2.35s1.14-.81 1.22-2.11-2.11-2.76-3.08-2.92zm.41-6.17c-1.22-.08-2.1 2.37-1.46 3.33.32.49 1.54 1.46 2.35 1.79.81.32 1.95-.08 2.19-1.06.24-.97-1.87-3.98-3.08-4.06zm2.11-2.92c1.14-1.79-1.21-3.45-2.43-1.87-1.38 1.79 1.3 3.65 2.43 1.87z" fill="#1d1d1b"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://codeberg.org/LocalFreedom'
+                        target="_blank"
+                        title="Codeberg"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg xmlns="http://www.w3.org/2000/svg"
+aria-label="Codeberg" role="img"
+viewBox="0 0 512 512"><rect
+width="512" height="512"
+rx="15%"
+fill="#ffffff"/><defs><linearGradient id="A" x1="259.804" x2="383.132" y1="161.4" y2="407.835" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#71c2ff"/><stop offset="1" stop-color="#39aaff"/></linearGradient></defs><path fill="url(#A)" d="M259.804 161.4c-.44 0-1.1 0-1.32.44l-.44 1.1L332.04 440.21a192.039 192.039 0 0 0 86.77-74.437L261.125 162.06a1.762 1.762 0 0 0-1.321-.661z" opacity=".5" paint-order="stroke markers fill"/><path fill="#2185d0" d="M255.3 71.8a192 192 0 0 0-162 294l160.1-207c.5-.6 1.5-1 2.6-1s2 .4 2.6 1l160 207a192 192 0 0 0 29.4-102c0-106-86-192-192-192a192 192 0 0 0-.7 0z" paint-order="stroke markers fill"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/LocalFreedom'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://archive.org/details/@localfreedom'
+                        target="_blank"
+                        title="InternetArchive"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg height="86" viewBox="0 0 76 86" width="76" xmlns="http://www.w3.org/2000/svg"><path d="m76 82v4h-76l.00080851-4zm-3-6v5h-70v-5zm-62.6696277-54 .8344146.4217275.4176066 6.7436084.4176065 10.9576581v10.5383496l-.4176065 13.1364492-.0694681 8.8498268-1.1825531.3523804h-4.17367003l-1.25202116-.3523804-.48627608-8.8498268-.41840503-13.0662957v-10.5375432l.41840503-11.028618.38167482-6.7798947.87034634-.3854412zm60.0004653 0 .8353798.4217275.4168913 6.7436084.4168913 10.9576581v10.5383496l-.4168913 13.1364492-.0686832 8.8498268-1.1835879.3523804h-4.1737047l-1.2522712-.3523804-.4879704-8.8498268-.4168913-13.0662957v-10.5375432l.4168913-11.028618.3833483-6.7798947.8697215-.3854412zm-42.000632 0 .8344979.4217275.4176483 6.7436084.4176482 10.9576581v10.5383496l-.4176482 13.1364492-.0686764 8.8498268-1.1834698.3523804h-4.1740866l-1.2529447-.3523804-.4863246-8.8498268-.4168497-13.0662957v-10.5375432l.4168497-11.028618.38331-6.7798947.8688361-.3854412zm23 0 .8344979.4217275.4176483 6.7436084.4176482 10.9576581v10.5383496l-.4176482 13.1364492-.0686764 8.8498268-1.1834698.3523804h-4.1740866l-1.2521462-.3523804-.4871231-8.8498268-.4168497-13.0662957v-10.5375432l.4168497-11.028618.38331-6.7798947.8696347-.3854412zm21.6697944-9v7h-70v-7zm-35.7200748-13 36.7200748 8.4088317-1.4720205 2.5911683h-70.32799254l-2.19998696-2.10140371z" fill="#2c2c2c" fill-rule="evenodd"/></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#简介">简介</a>
+      <ol>
+        <li><a href="#隐私意义">隐私意义</a></li>
+      </ol>
+    </li>
+    <li><a href="#机制">机制</a></li>
+    <li><a href="#使用">使用</a>
+      <ol>
+        <li><a href="#选型">选型</a></li>
+        <li><a href="#以lineageos为例">以LineageOS为例</a></li>
+      </ol>
+    </li>
+    <li><a href="#停用">停用</a></li>
+    <li><a href="#展望">展望</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
+                
+                    <img src="/img/work-profile.webp" loading="lazy" alt="Featured image of post Android 自带虚拟机——工作资料入门指南" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/usage/" >
+                Usage
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/android-%E8%87%AA%E5%B8%A6%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B7%A5%E4%BD%9C%E8%B5%84%E6%96%99%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">Android 自带虚拟机——工作资料入门指南</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Mastering Android Work Profile: Your Gateway to a &#39;Virtual&#39; workspace.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 10, 2026</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="简介">简介
+</h2><p>Android Work Profile (工作资料)是Google在 Android 5 引入的隔离机制，用于将工作应用和数据与个人应用和数据分开，一方面与生活分开，另一方面企业IT管理员可以统一配置。</p>
+<p>Work Profile 的隔离性，可以发挥一个系统自带虚拟机的作用，将危险的App隔离其中，阻断个人数据泄漏。</p>
+<h3 id="隐私意义">隐私意义
+</h3><p>手机不同于电脑，形态多样，贴近生活，意味着有更丰富的设备指纹，也关联更多个人信息。</p>
+<p>对于临时使用的App，重新安装并不确保能刷新用户资料，App通过共享设备指纹、公共数据空间缓存等方式可以实现新装应用和之前删除关系的关联。
+虽然这对于误删或降级，有利于保持原有Profile，但是对于想无痕模式就很麻烦了。</p>
+<p>借助工作资料，可以将不登入账号的临时App装在工作资料这个类似虚拟机的环境中，很容易的清空有限隔离环境，阻断App运营者的追踪。</p>
+<p>当然，Work Profile 主要是隔离数据，对于设备指纹只能一定程度上破坏一致性。</p>
+<h2 id="机制">机制
+</h2><ul>
+<li>同一时间只能配置一个 Work Profile，配置新工作环境需要删除旧环境。</li>
+<li>Work Profile 需要应用程序来配置启用，没有系统开关直接开启。</li>
+<li>启用 Work Profile 后会有按钮可以随时suspend，非常利于限制后台。</li>
+</ul>
+<h2 id="使用">使用
+</h2><h3 id="选型">选型
+</h3><p>一般的工作资料应用由企业运营，并不能做个人用途。</p>
+<p>开源的 Work Profile 应用有 Shelter, Insular 等。
+这里推荐使用<a class="link" href="https://gitea.angry.im/PeterCxy/Shelter"  target="_blank" rel="noopener"
+    ><strong>Shelter</strong></a>,考虑到其在<a class="link" href="https://alternativeto.net/software/shelter-app/"  target="_blank" rel="noopener"
+    >AlternativeTo</a>上有更高评分，相比Insular有文件互通传送功能。
+Insular作者有个<a class="link" href="https://secure-system.gitlab.io/Insular/faq.html"  target="_blank" rel="noopener"
+    >比较</a>。</p>
+<p>经测试在博主的几台设备上上Shelter均有更好的兼容性。</p>
+<h3 id="以lineageos为例">以LineageOS为例
+</h3><ul>
+<li>⚠️操作前提醒
+<ul>
+<li>创建或启停 WorkProfile 可能唤醒一些应用如Telegram,需做好网络限制并及时用雹等应用批量强停无关应用。</li>
+</ul>
+</li>
+<li>参考操作流程
+<ol>
+<li>删除已有的 WorkProfile (新装跳过)
+<ul>
+<li>Settings设置 -&gt; Passwords,passkeys&amp;accounts密码、通行密钥和账号 -&gt; Work工作 -&gt; Remove work profile 移除工作资料</li>
+<li>原 WorkProfile 中应用图标如果主系统也有会留在原位转为主系统应用图标，需删掉，重开不会转换回去。</li>
+</ul>
+</li>
+<li>打开 Shelter 创建 WorkProfile。
+<ul>
+<li>这里开发者会提示 Shelter 不是万能的，请自行处理兼容性问题。所以本文以最通用的开源系统LineageOS为例。</li>
+<li>一路下一步即可。</li>
+</ul>
+</li>
+<li>Shelter 右上角设置，开启文件穿梭功能。
+<ul>
+<li>根据提示在 Work Profile 内外都赋予 Shelter 悬浮窗/档案管理权限。</li>
+<li>Work Profile 管理App除了这两个可选权限还有很多特权，所以选择可信赖的开源应用就非常重要了。</li>
+</ul>
+</li>
+<li>迁入浏览器 Fennec/Firefox 并设置。
+<ul>
+<li>浏览器是非常必要的基础应用，而WorkProfile初始预设App并不包含。</li>
+<li>全面启用 HTTPS-Only</li>
+<li>DoH https://1.1.1.1/dns-query</li>
+<li>退出时删除浏览数据</li>
+</ul>
+</li>
+<li>迁入输入法
+<ul>
+<li>如 fcixt5 小企鹅输入法</li>
+<li>桌面中间上划打开应用抽屉 -&gt; Work工作 -&gt; Settings设置 -&gt; 系统 -&gt; 键盘</li>
+</ul>
+</li>
+<li>迁入应用批量管理App如<code>雹Hail</code>
+<ul>
+<li>外部 <code>Shizuku</code> 给予 WorkProfile 中 <code>雹Hail</code> 权限以及时停止工作空间中闲置应用。</li>
+</ul>
+</li>
+<li>通过Shelter迁移必要的应用，并创建图标，复刻权限设置和流量管理。</li>
+<li>下载Apk安装需隔离的App。</li>
+</ol>
+</li>
+<li>收尾事项
+<ul>
+<li>检查迁入应用是否创建桌面图标。</li>
+<li>检查 WorkProfile 中应用的流量设置。</li>
+<li>WorkProfile 中应用批量管理App如雹Hail的清单是否完整</li>
+</ul>
+</li>
+</ul>
+<h2 id="停用">停用
+</h2><p>虽然 Work Profile 启用需要专门的App进行，但关闭以至弃用则是Android的系统功能。</p>
+<p>通常系统顶部下拉菜单中会有 Work Profile 的按钮，用于暂停/开启 Work Profile。</p>
+<p>一般在系统设置的账户设置中，会有个人和工作两个标签页，进入工作标签页可以找到删除 Work Profile 的选项。
+删除后 Work Profile 中的内容就都没了。</p>
+<h2 id="展望">展望
+</h2><p>按照Google的介绍，Work Profile管理App是能访问其中数据的，也许可以通过Work Profile机制实现底层数据导出。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/android/">Android</a>
+        
+            <a href="/tags/vm/">VM</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/virtualbox-%E8%AE%BE%E5%AE%9A%E5%92%8C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/virtualbox.png" loading="lazy" data-key="" data-hash="/img/virtualbox.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VirtualBox 设定和使用指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/llama.cpp-llm%E6%97%B6%E4%BB%A3%E6%A0%B8%E5%BF%83%E5%BC%95%E6%93%8E%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/llamacpp.png" loading="lazy" data-key="" data-hash="/img/llamacpp.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">llama.cpp LLM时代核心引擎指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/libretranslate/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LibreTranslate</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/docker%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/docker.jpeg" loading="lazy" data-key="" data-hash="/img/docker.jpeg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker的安装与日常使用技巧</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/btc%E9%97%AA%E7%94%B5%E7%BD%91%E7%BB%9C%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/bitcoin-lightning-network.png" loading="lazy" data-key="" data-hash="/img/bitcoin-lightning-network.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">BTC闪电网络使用指南</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2026 局域自由博客
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "828fe12e847a40f5b768caa3208478ba"}'></script>
+
+
+<script src="https://keepandroidopen.org/banner.js"></script>
+
+    </body>
+</html>
