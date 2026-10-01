@@ -1378,6 +1378,17 @@ Windows安装的时候记得勾选添加命令到PATH。
 &lt;h2 id=&#34;随机mac地址&#34;&gt;随机Mac地址
 &lt;/h2&gt;&lt;p&gt;可以在连上的Wifi中设置随机mac地址每日更换。
 该功能需要网卡驱动配合支持。&lt;/p&gt;
+&lt;h2 id=&#34;关闭应用商店自动更新&#34;&gt;关闭应用商店自动更新
+&lt;/h2&gt;&lt;p&gt;2026年更新后Windows应用商店不能在设置中关闭自动更新，只能延期至多5周。
+可以使用组策略实现禁用应用商店的自动更新。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开组策略，&lt;code&gt;win&lt;/code&gt;+&lt;code&gt;R&lt;/code&gt; 运行 &lt;code&gt;gpedit.msc&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;从左侧窗格导航找到: 本地计算机策略 -&amp;gt; 计算机配置 -&amp;gt; 管理模板 -&amp;gt; Windows组件 -&amp;gt; 应用商店。&lt;/li&gt;
+&lt;li&gt;在右侧，双击 &lt;code&gt;关闭自动下载和安装更新&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;选中&lt;code&gt;已启用&lt;/code&gt;按钮，然后&lt;code&gt;应用&lt;/code&gt;和&lt;code&gt;确定&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;已管理员权限启动命令终端执行 &lt;code&gt;gpupdate/force&lt;/code&gt; 使组策略生效。&lt;/li&gt;
+&lt;li&gt;回到应用商店设置，确认自动更新关闭并且为灰色。&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         
