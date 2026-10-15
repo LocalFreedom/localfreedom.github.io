@@ -6,7 +6,61 @@
         <description>Recent content in OS on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 02 Jul 2026 10:32:39 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 15 Oct 2026 04:08:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/os/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows EFI 引导分区重建</title>
+        <link>https://localfreedom.pages.dev/p/windows-efi-%E5%BC%95%E5%AF%BC%E5%88%86%E5%8C%BA%E9%87%8D%E5%BB%BA/</link>
+        <pubDate>Thu, 15 Oct 2026 04:08:21 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/windows-efi-%E5%BC%95%E5%AF%BC%E5%88%86%E5%8C%BA%E9%87%8D%E5%BB%BA/</guid>
+        <description>&lt;h2 id=&#34;efi简介&#34;&gt;EFI简介
+&lt;/h2&gt;&lt;p&gt;Windows 7/8/10/11等系统均支持UEFI引导启动，UEFI也是微软大力支持的标准。
+UEFI启动通过硬盘上一个单独的EFI分区，通常是最朴素的FAT格式，放置引导文件，以引导作业系统启动。
+相比MBR传统方式，EFI引导分区可以存放更大的引导文件，也便于SecureBoot进行启动验证。
+如果EFI引导文件损坏，Windows系统将无法正常启动。&lt;/p&gt;
+&lt;h2 id=&#34;windows引导机制&#34;&gt;Windows引导机制
+&lt;/h2&gt;&lt;p&gt;误格式化硬盘，安装其他操作系统共存，意外断电都有可能破坏Windows的引导文件。
+如果还能启动安装的Windows,那么可以进入恢复模式尝试重建引导。
+如果是误格式化硬盘分区，则需要另外的Windows环境，比如PE来提供重建引导的基础条件。
+Windows引导文件的创建配置由&lt;code&gt;bcd&lt;/code&gt;程序提供，其他类型的操作系统暂未提供修复Windows引导的工具。&lt;/p&gt;
+&lt;h2 id=&#34;重建参考流程&#34;&gt;重建参考流程
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;首先进入Windows恢复模式或PE环境。&lt;/li&gt;
+&lt;li&gt;打开命令行，安装映像进入安装介面可以按&lt;code&gt;Shift+F10&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;使用Windows自带磁盘工具 &lt;code&gt;diskpart&lt;/code&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;diskpart
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; list disk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; select disk 代号根据实际安装系统位置选择
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; list partition
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; create partition efi (如果已有就不用创建了)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; select partition 代号选择EFI的分区
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;DISKPART&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; assign letter=u	# u是分区代号可以自行选择
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;重建引导 &lt;code&gt;bcdboot c:\windows /s u: /f uefi /l zh-cn&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;待恢复系统不一定在操作环境下的C盘&lt;/li&gt;
+&lt;li&gt;/s 指定EFI分区，就是上一步创建或选择的u&lt;/li&gt;
+&lt;li&gt;/f 指定启动方式&lt;/li&gt;
+&lt;li&gt;/l 指定语言&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;之后移除安装映像重新启动即可恢复正常。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Win7 虚拟机装配</title>
         <link>https://localfreedom.pages.dev/p/win7-%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%A3%85%E9%85%8D/</link>
         <pubDate>Thu, 02 Jul 2026 10:32:39 +0000</pubDate>
