@@ -6,13 +6,47 @@
         <description>Recent content on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 15 Oct 2026 04:08:21 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 18 Oct 2026 02:03:47 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>手动制作 Windows 10/11 安装USB盘</title>
+        <link>https://localfreedom.pages.dev/p/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9C-windows-10/11-%E5%AE%89%E8%A3%85usb%E7%9B%98/</link>
+        <pubDate>Sun, 18 Oct 2026 02:03:47 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9C-windows-10/11-%E5%AE%89%E8%A3%85usb%E7%9B%98/</guid>
+        <description>&lt;p&gt;现代电脑大多没有光盘机了，从Microsoft官网下载的Windows10/11安装映像通常要放在USB盘中使用。
+win10/11 映像不是 Hybird 模式，直接仿烧录或&lt;code&gt;dd&lt;/code&gt;到USB盘是不能启动安装的。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rufus.ie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Rufus&lt;/a&gt;是目前制作Windows安装U盘或WinToGo的最佳实践。
+本文主要介绍不使用工具软件，手动制作可启动Windows安装USB。&lt;/p&gt;
+&lt;h2 id=&#34;手动制作windows安装usb其实很简单&#34;&gt;手动制作Windows安装USB其实很简单。
+&lt;/h2&gt;&lt;p&gt;Microsoft官网下载的 Win10/11 的ISO映像自带 UEFI 引导档案，安装 Windows10/11 的电脑通常也默认UEFI引导。&lt;/p&gt;
+&lt;p&gt;只要USB盘使用GPT分区表，安装分区格式化成FAT32，把Windows安装ISO映像中的档案复制进去，计算机从USB启动时就能自动识别其中的uefi引导完成启动。
+甚至无需设置启动标志。
+Windows10开始自带虚拟光盘机，可以直接打开ISO映像，从中提取和复制。&lt;/p&gt;
+&lt;h2 id=&#34;windows臃肿超过fat32限制&#34;&gt;Windows臃肿超过FAT32限制
+&lt;/h2&gt;&lt;p&gt;FAT32格式有个限制，单个档案不能超过4GiB。
+随着Windows系统越来越臃肿，大概从 &lt;code&gt;Win10 21H2&lt;/code&gt; 开始安装映像中的 &lt;code&gt;sources/install.wim&lt;/code&gt; 超过了4GiB无法放入FAT32分区。
+一个简易的变更是将分区格式改成NTFS,这样就就支持安装映像中超过4GiB的档案了，但不是每台计算机的UEFI启动都支持从NFTS分区引导。&lt;/p&gt;
+&lt;h2 id=&#34;手动重组安装映像到usb&#34;&gt;手动重组安装映像到USB
+&lt;/h2&gt;&lt;p&gt;如果计算机不支持从NTFS分区的UEFI启动就需要手动拆分安装映像。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;My Computer(right click) -&amp;gt; Computer Management -&amp;gt; Storage-&amp;gt; Disk Management&lt;/code&gt; 重新将USB盘分区。
+首先要有一个FAT32分区用于完成UEFI引导启动，随后建立一个NTFS分区用于存放安装映像中过大的单个档案。&lt;/p&gt;
+&lt;p&gt;免去手动关联两个分区，推荐FAT32分区至少1GiB。
+将所有小于4GiB的档案，也就是除了 sources/install.wim 都复制到FAT32分区。&lt;/p&gt;
+&lt;p&gt;再将整个安装映像，包括已经复制到FAT32分区的，都往NTFS分区复制一份。&lt;/p&gt;
+&lt;p&gt;如果想减少复制到FAT32的规模，&lt;code&gt;sources&lt;/code&gt;中可以只复制&lt;code&gt;boot.wim&lt;/code&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://serverfault.com/questions/1191017/how-to-make-windows-10-11-usb-flash-install-media-from-linux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://serverfault.com/questions/1191017/how-to-make-windows-10-11-usb-flash-install-media-from-linux&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Windows EFI 引导分区重建</title>
         <link>https://localfreedom.pages.dev/p/windows-efi-%E5%BC%95%E5%AF%BC%E5%88%86%E5%8C%BA%E9%87%8D%E5%BB%BA/</link>
         <pubDate>Thu, 15 Oct 2026 04:08:21 +0000</pubDate>
         
         <guid>https://localfreedom.pages.dev/p/windows-efi-%E5%BC%95%E5%AF%BC%E5%88%86%E5%8C%BA%E9%87%8D%E5%BB%BA/</guid>
-        <description>&lt;h2 id=&#34;efi简介&#34;&gt;EFI简介
+        <description>&lt;img src="https://localfreedom.pages.dev/img/win-efi-recover.jpg" alt="Featured image of post Windows EFI 引导分区重建" /&gt;&lt;h2 id=&#34;efi简介&#34;&gt;EFI简介
 &lt;/h2&gt;&lt;p&gt;Windows 7/8/10/11等系统均支持UEFI引导启动，UEFI也是微软大力支持的标准。
 UEFI启动通过硬盘上一个单独的EFI分区，通常是最朴素的FAT格式，放置引导文件，以引导作业系统启动。
 相比MBR传统方式，EFI引导分区可以存放更大的引导文件，也便于SecureBoot进行启动验证。
