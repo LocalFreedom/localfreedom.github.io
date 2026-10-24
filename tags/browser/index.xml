@@ -6,7 +6,173 @@
         <description>Recent content in Browser on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 01 Aug 2026 08:06:03 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/browser/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 Oct 2026 12:16:20 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/browser/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Firefox 153 基本设定参考</title>
+        <link>https://localfreedom.pages.dev/p/firefox-153-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</link>
+        <pubDate>Sat, 24 Oct 2026 12:16:20 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/firefox-153-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/firefox-153.png" alt="Featured image of post Firefox 153 基本设定参考" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;Firefox 是当前最知名、最重要的自由开源浏览器，由 Mozilla 基金会开发维护。
+&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/firefox-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&#34; &gt;之前博文&lt;/a&gt;介绍过Firefox使用和设定，在AI时代 Firefox 也有了很多新的功能和调整，这里补充153及之后版本的变化，及新的设定参考。&lt;/p&gt;
+&lt;h2 id=&#34;其他差异&#34;&gt;其他差异
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;独立地址栏的添加从设定迁移到了介面定义(顶部右侧三个横线下拉设定菜单-&amp;gt;&lt;code&gt;More tools&lt;/code&gt;-&amp;gt;&lt;code&gt;Customize toolbar&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;多 Profile 在基本设定时即可完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本设定参考&#34;&gt;基本设定参考
+&lt;/h2&gt;&lt;p&gt;about:preferences&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Account and sync
+&lt;ul&gt;
+&lt;li&gt;Default browser&lt;/li&gt;
+&lt;li&gt;Profiles&lt;/li&gt;
+&lt;li&gt;Backup
+&lt;ul&gt;
+&lt;li&gt;Restore your data	恢复之前导出的设定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Home and startup
+&lt;ul&gt;
+&lt;li&gt;Homepage 保持预设&lt;code&gt;Firefox Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Firefox Home
+&lt;ul&gt;
+&lt;li&gt;[停用] Sponsored shortcuts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Search
+&lt;ul&gt;
+&lt;li&gt;Default Search Engine
+&lt;ul&gt;
+&lt;li&gt;Bing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Additional search engines
+&lt;ul&gt;
+&lt;li&gt;添加 Startpage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Search engine suggestions
+&lt;ul&gt;
+&lt;li&gt;[停用] Treading search suggestions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Privacy &amp;amp; Security
+&lt;ul&gt;
+&lt;li&gt;Enhanced Tracking Protection
+&lt;ul&gt;
+&lt;li&gt;Customize tracking protection
+&lt;ul&gt;
+&lt;li&gt;Reset to strict 再编辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Browsering data
+&lt;ul&gt;
+&lt;li&gt;Clear cookies and site data every time you close Firefox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;History
+&lt;ul&gt;
+&lt;li&gt;Use custom settings for history
+&lt;ul&gt;
+&lt;li&gt;Clear history when Firefox closes
+&lt;ul&gt;
+&lt;li&gt;除了 Site settings 都清理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Additional protections
+&lt;ul&gt;
+&lt;li&gt;[启用] Tell websites not to sell or share my data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DNS over HTTPS
+&lt;ul&gt;
+&lt;li&gt;Custom&lt;/li&gt;
+&lt;li&gt;Always warn me if secure DNS isn’t available&lt;/li&gt;
+&lt;li&gt;provider 不预设附带联网从Mozilla官方获取
+&lt;ul&gt;
+&lt;li&gt;预设 &lt;a class=&#34;link&#34; href=&#34;https://mozilla.cloudflare-dns.com/dns-query&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mozilla.cloudflare-dns.com/dns-query&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;参考 https://101.101.101.101/dns-query&lt;/li&gt;
+&lt;li&gt;大陆 https://223.5.5.5/dns-query&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exceptions
+&lt;ul&gt;
+&lt;li&gt;.cn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Connection and software security
+&lt;ul&gt;
+&lt;li&gt;Enable HTTPS-Only Mode in all windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tabs and Browsering
+&lt;ul&gt;
+&lt;li&gt;Page navigation
+&lt;ul&gt;
+&lt;li&gt;[停用] Enable link previews&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Recommendations
+&lt;ul&gt;
+&lt;li&gt;酌情停用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Languages
+&lt;ul&gt;
+&lt;li&gt;Translations
+&lt;ul&gt;
+&lt;li&gt;预下载中文、日文等语言包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;AI controls
+&lt;ul&gt;
+&lt;li&gt;酌情停用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Permissions and data
+&lt;ul&gt;
+&lt;li&gt;Firefox Data Collection and Use
+&lt;ul&gt;
+&lt;li&gt;博主建议勾选以支持 Firefox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;About Firefox
+&lt;ul&gt;
+&lt;li&gt;Firefox updates
+&lt;ul&gt;
+&lt;li&gt;Manually&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Edge浏览器离线安装包官方下载渠道</title>
         <link>https://localfreedom.pages.dev/p/edge%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E5%AE%98%E6%96%B9%E4%B8%8B%E8%BD%BD%E6%B8%A0%E9%81%93/</link>
         <pubDate>Sat, 01 Aug 2026 08:06:03 +0000</pubDate>
@@ -37,12 +203,12 @@ Edge不仅用于浏览网页，还有PDF浏览等功能，深度融入Windows之
 </description>
         </item>
         <item>
-        <title>Firefox 基本设定参考</title>
-        <link>https://localfreedom.pages.dev/p/firefox-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</link>
+        <title>Firefox 使用指南</title>
+        <link>https://localfreedom.pages.dev/p/firefox-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
         <pubDate>Sun, 07 Jun 2026 03:02:30 +0000</pubDate>
         
-        <guid>https://localfreedom.pages.dev/p/firefox-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/</guid>
-        <description>&lt;img src="https://localfreedom.pages.dev/img/mozilla-firefox-logo-evolution.png" alt="Featured image of post Firefox 基本设定参考" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
+        <guid>https://localfreedom.pages.dev/p/firefox-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/mozilla-firefox-logo-evolution.png" alt="Featured image of post Firefox 使用指南" /&gt;&lt;h2 id=&#34;简介&#34;&gt;简介
 &lt;/h2&gt;&lt;p&gt;Firefox 是当前最知名、最重要的自由开源浏览器，由 Mozilla 基金会开发维护。
 Firefox 使用独立的 Gecko 渲染引擎，而非常见的 Chromium 或 WebKit，这也使得 Firefox 是主流浏览器中唯一不依赖大公司核心引擎的浏览器，也成为大多数提倡自由的开源OS的默认浏览器。&lt;/p&gt;
 &lt;p&gt;这里主要记录Firefox的基本配置作为日常使用参考。&lt;/p&gt;
@@ -165,8 +331,7 @@ ESR或老版本启动 Profile 管理介面需要通过命令行执行并添加�
 &lt;/li&gt;
 &lt;li&gt;Firefox Data Collection and Use
 &lt;ul&gt;
-&lt;li&gt;常用和涉及帐号的时候都不选&lt;/li&gt;
-&lt;li&gt;偏测试和仅浏览环境都选做贡献&lt;/li&gt;
+&lt;li&gt;博主建议勾选以支持 Firefox&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;HTTPS-Only Mode
