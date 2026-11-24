@@ -6,7 +6,254 @@
         <description>Recent content in Windows on 局域自由博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 18 Oct 2026 02:03:47 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 24 Nov 2026 03:50:15 +0000</lastBuildDate><atom:link href="https://localfreedom.pages.dev/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Windows 11 LTSC 2024 软件测试环境配置</title>
+        <link>https://localfreedom.pages.dev/p/windows-11-ltsc-2024-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+        <pubDate>Tue, 24 Nov 2026 03:50:15 +0000</pubDate>
+        
+        <guid>https://localfreedom.pages.dev/p/windows-11-ltsc-2024-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+        <description>&lt;img src="https://localfreedom.pages.dev/img/windows-11-enterprise-2024-ltsc.webp" alt="Featured image of post Windows 11 LTSC 2024 软件测试环境配置" /&gt;&lt;p&gt;在 Windows 11 的时代，打造易用的离线工作环境首选LTSC版本作为基础系统。
+本文梳理配置 Windows 11 LTSC 可移动版的流程以供离线安装各型号 Windows 11 参考。&lt;/p&gt;
+&lt;h2 id=&#34;image&#34;&gt;Image
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://msdn.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原MSDN, I tell you!&lt;/a&gt;不再提供Win11及之后新系统的下载，可在&lt;a class=&#34;link&#34; href=&#34;https://next.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;next版&lt;/a&gt;下载Win11映像。
+考虑next版强制注册登陆，尽管可以用临时邮箱完成，但还是推荐激活组织&lt;a class=&#34;link&#34; href=&#34;https://massgrave.dev/windows_ltsc_links&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MAS的下载链接&lt;/a&gt;，LTSC2024直接可下载，与&lt;a class=&#34;link&#34; href=&#34;https://next.itellyou.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;next版 MSDN, I tell you!&lt;/a&gt;一致。&lt;/p&gt;
+&lt;p&gt;制作映像采用&lt;a class=&#34;link&#34; href=&#34;https://rufus.ie&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rufus&lt;/a&gt;的 &lt;code&gt;windows to go&lt;/code&gt; 功能，可直接跳过各种限制和安装过程。
+如果手动安装可参考 &lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/windows-11-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/&#34; &gt;Windows 11 使用技巧&lt;/a&gt; 解除限制。&lt;/p&gt;
+&lt;h2 id=&#34;system-setup&#34;&gt;System Setup
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Shutdown all the privacy items.&lt;/li&gt;
+&lt;li&gt;在控制面板的电源管理中关闭睡眠和快速启动&lt;/li&gt;
+&lt;li&gt;关闭休眠以腾出C:中约记忆体容量的hiberfil.sys &lt;code&gt;powercfg -h off&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用UTC时间和Linux一致 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal 设置为dword或qword十六进制1&lt;/li&gt;
+&lt;li&gt;settings
+&lt;ul&gt;
+&lt;li&gt;system 系统
+&lt;ul&gt;
+&lt;li&gt;电源和电池 -&amp;gt; 盖子和电源按钮控件: 不睡眠&lt;/li&gt;
+&lt;li&gt;可选功能 -&amp;gt; 更多Windows功能
+&lt;ul&gt;
+&lt;li&gt;适用于Linux的Windows子系统 (用于Docker)&lt;/li&gt;
+&lt;li&gt;.Net Framework 3.5 (用于老旧软件)
+&lt;ul&gt;
+&lt;li&gt;无法直接离线启用&lt;/li&gt;
+&lt;li&gt;假设挂载安装介质到E:后管理员运行 &lt;code&gt;dism.exe /online /enable-feature /featurename:netfx3 /Source:E:\sources\sxs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Internet
+&lt;ul&gt;
+&lt;li&gt;WLAN
+&lt;ul&gt;
+&lt;li&gt;RandomHardwareAddress随机硬件地址 启用 &lt;em&gt;可能需要先安装无线网络卡驱动才出现此选项&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;管理已知网络 -&amp;gt; SSID -&amp;gt; 随机硬件地址 -&amp;gt; 每天更改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;蓝牙和其他设备
+&lt;ul&gt;
+&lt;li&gt;关闭蓝牙 &lt;em&gt;可能需要先安装无线网卡驱动才出现此选项&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;个性化&lt;/li&gt;
+&lt;li&gt;privacy 隐私和安全性
+&lt;ul&gt;
+&lt;li&gt;能关就关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;资源管理器上方选项(显示隐藏文件及扩展名、打开此电脑)&lt;/li&gt;
+&lt;li&gt;任务管理器显示GPU列&lt;/li&gt;
+&lt;li&gt;Edge
+&lt;ul&gt;
+&lt;li&gt;隐私、搜索和服务: 关闭时清除数据&lt;/li&gt;
+&lt;li&gt;开始、主页和新建标签页: 禁用预加载&lt;/li&gt;
+&lt;li&gt;下载: 每次询问&lt;/li&gt;
+&lt;li&gt;系统和性能: 禁用后台&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LTSC解锁图片查看器 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations 新建键为图片后缀名如 .jpg 的字串值 PhotoViewer.FileAssoc.Tiff 即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-reg&#34; data-lang=&#34;reg&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;RealTimeIsUniversal&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;hex(b)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;01,00,00,00,00,00,00,00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;设置硬件时钟为UTC&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows Photo Viewer\Capabilities\FileAssociations]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.bmp&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.ico&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.jpeg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.jpg&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PhotoViewer.FileAssoc.Tiff&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;LTSC将图片关联到自带的图片查看器打开&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;创建无需联网的局域热点
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/win10/11-%E4%B8%8D%E8%81%94%E7%BD%91%E5%BC%BA%E5%88%B6%E5%BC%80%E5%90%AF%E7%A7%BB%E5%8A%A8%E7%83%AD%E7%82%B9/&#34; &gt;Win10/11 不联网强制开启移动热点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;设备管理器添加 &lt;code&gt;Microsoft KM-TEST 回环适配器&lt;/code&gt; 并重命名为&lt;code&gt;Loopback&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;设置PowerShell执行策略 &lt;code&gt;Set-ExecutionPolicy RemoteSigned CurrentUser&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;热点开启脚本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ps1&#34; data-lang=&#34;ps1&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$profile&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Networking&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Connectivity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NetworkInformation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Networking&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Connectivity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ContentType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WindowsRuntime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetConnectionProfiles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;where &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;profilename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-eq&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;loopback&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$tether&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Networking&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;NetworkOperators&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NetworkOperatorTetheringManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;Networking&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NetworkOperators&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ContentType&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WindowsRuntime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;createFromConnectionProfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$profile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$tether&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;py&#34;&gt;StartTetheringAsync&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pause&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;update&#34;&gt;Update
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.microsoft.com/en-us/servicing/os/windows-11/2024/09/windows-11-version-24h2-update-history&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;LCS 最新月度积累更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://support.microsoft.com/en-us/servicing/dotnetframework/windows-11/25h2/october-13-2026-5127690&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;.Net积累更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Drivers
+&lt;ul&gt;
+&lt;li&gt;Nvidia
+&lt;ul&gt;
+&lt;li&gt;596.36版本后不再集成控制面板必须装APP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;高通 &lt;a class=&#34;link&#34; href=&#34;https://catalog.s.download.windowsupdate.com/c/msdownload/update/driver/drvs/2016/04/20855130_dae427ffe0a2d6268aa209d782d05ea874aad0dc.cab&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;9008驱动&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://qpsttool.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;QPST&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;software-configure&#34;&gt;Software Configure
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;VMwareWorkstationPro&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/desktop/release-notes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DockerDesktop&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;使用WSL2后端需&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/docker-%E6%8E%A8%E8%8D%90%E5%90%8E%E7%AB%AF-wsl2-%E5%AE%8C%E5%85%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/&#34; &gt;离线准备&lt;/a&gt;或联网初始化。&lt;/li&gt;
+&lt;li&gt;设置
+&lt;ul&gt;
+&lt;li&gt;General -&amp;gt; Send usage statistics [Disable]&lt;/li&gt;
+&lt;li&gt;Docker Engine&lt;/li&gt;
+&lt;li&gt;Software update -&amp;gt; Automatically check for updates [Disable]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;应用
+&lt;ul&gt;
+&lt;li&gt;不能用于本机激活&lt;/li&gt;
+&lt;li&gt;AI工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MS Office LTSC 2024&lt;/li&gt;
+&lt;li&gt;FirefoxESR
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://localfreedom.pages.dev/p/firefox-153-%E5%9F%BA%E6%9C%AC%E8%AE%BE%E5%AE%9A%E5%8F%82%E8%80%83/&#34; &gt;Firefox 153 基本设定参考&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;WinRAR&lt;/li&gt;
+&lt;li&gt;Rufus&lt;/li&gt;
+&lt;li&gt;git
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/git-for-windows/git/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git for Windows&lt;/a&gt;含Bash&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sourceforge.net/projects/urlget/files/uget%20%28stable%29&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;uget&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VScode
+&lt;ul&gt;
+&lt;li&gt;Settings: 搜索&lt;code&gt;update&lt;/code&gt;和&lt;code&gt;tele&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VisualStudioEnterprise2022LTSC
+&lt;ul&gt;
+&lt;li&gt;企业版输入通用激活码后无需登陆微软账号&lt;/li&gt;
+&lt;li&gt;VHF9H-NXBBB-638P6-6JHCY-88JWH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Anaconda&lt;/li&gt;
+&lt;li&gt;AndroidStudio&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;JetBrains(AI时代不太需要它们了)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;application&#34;&gt;Application
+&lt;/h2&gt;&lt;p&gt;Win11LTSC 环境主要用途就是快捷的测试不可信的AI应用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;共享模型文件不能通过快捷方式可以用系统命令mklink实现类似Linux/MacOS的软链接。
+具体需要用管理员权限运行 &lt;code&gt;cmd.exe&lt;/code&gt; (PowerShell或WindowsTerminal暂时无此命令)。
+直接输入 &lt;code&gt;mklink&lt;/code&gt; 即可看到帮助，通常 &lt;code&gt;mklink 链接档案 原档案&lt;/code&gt; &lt;code&gt;mklink /D 链接目录 原目录&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;LLM(text)
+&lt;ul&gt;
+&lt;li&gt;LM Studio
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~\.lmstudio\models\作者\模型名\模型档案.gguf&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Jan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;影像和影片
+&lt;ul&gt;
+&lt;li&gt;ComfyUI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Voice
+&lt;ul&gt;
+&lt;li&gt;vibe&lt;/li&gt;
+&lt;li&gt;clone-voice&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Agent
+&lt;ul&gt;
+&lt;li&gt;Opencode&lt;/li&gt;
+&lt;li&gt;OpenAI Codex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>手动制作 Windows 10/11 安装USB盘</title>
         <link>https://localfreedom.pages.dev/p/%E6%89%8B%E5%8A%A8%E5%88%B6%E4%BD%9C-windows-10/11-%E5%AE%89%E8%A3%85usb%E7%9B%98/</link>
         <pubDate>Sun, 18 Oct 2026 02:03:47 +0000</pubDate>
